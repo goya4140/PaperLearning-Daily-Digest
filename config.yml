@@ -41,12 +41,11 @@ selection:
 
 llm:
   enabled: true
-  model: gpt-4.1-mini
-  base_url: https://api.openai.com/v1
+  model: qwen-plus
+  base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
   temperature: 0.1
 
 delivery:
   subject_prefix: "PaperLearning 每日发现"
-  smtp_provider: "163"
+  smtp_provider: "auto"
   send_empty_digest: true
-

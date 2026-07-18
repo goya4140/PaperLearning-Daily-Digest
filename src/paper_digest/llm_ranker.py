@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from typing import Any
 
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 
 from .selection import deterministic_shortlist
 
@@ -45,17 +46,24 @@ def rerank(candidates: list[dict[str, Any]], selection: dict[str, Any], llm: dic
     api_key = os.environ.get("LLM_API_KEY", "").strip()
     if not llm.get("enabled", True) or not api_key:
         return deterministic_shortlist(candidates, selection)
-    client = OpenAI(api_key=api_key, base_url=os.environ.get("LLM_BASE_URL") or llm.get("base_url"))
-    response = client.chat.completions.create(
-        model=os.environ.get("LLM_MODEL") or llm.get("model", "gpt-4.1-mini"),
-        temperature=float(llm.get("temperature", 0.1)),
-        response_format={"type": "json_object"},
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": json.dumps(_payload(candidates, selection), ensure_ascii=False)},
-        ],
-    )
-    parsed = json.loads(response.choices[0].message.content or "{}")
+    try:
+        client = OpenAI(api_key=api_key, base_url=os.environ.get("LLM_BASE_URL") or llm.get("base_url"))
+        response = client.chat.completions.create(
+            model=os.environ.get("LLM_MODEL") or llm.get("model", "qwen-plus"),
+            temperature=float(llm.get("temperature", 0.1)),
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": json.dumps(_payload(candidates, selection), ensure_ascii=False)},
+            ],
+        )
+        parsed = json.loads(response.choices[0].message.content or "{}")
+    except (OpenAIError, json.JSONDecodeError, KeyError, TypeError, ValueError) as exc:
+        print(
+            f"[warning] LLM reranking failed ({type(exc).__name__}); using deterministic fallback.",
+            file=sys.stderr,
+        )
+        return deterministic_shortlist(candidates, selection)
     selected = parsed.get("papers", parsed.get("selected", []))
     by_id = {item["id"]: item for item in candidates}
     limits = {"focus": int(selection.get("focus_count", 4)), "explore": int(selection.get("explore_count", 4))}
@@ -88,4 +96,3 @@ def rerank(candidates: list[dict[str, Any]], selection: dict[str, Any], llm: dic
                 output.append(item)
                 counts[lane] += 1
     return sorted(output, key=lambda item: (0 if item["lane"] == "focus" else 1, -(item.get("llm_score") or 0), item.get("rank", 10**9)))
-

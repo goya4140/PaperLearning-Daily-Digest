@@ -45,10 +45,12 @@ Repository variables：
 
 | 名称 | 默认值 |
 |---|---|
-| `LLM_BASE_URL` | `https://api.openai.com/v1` |
-| `LLM_MODEL` | `gpt-4.1-mini` |
+| `LLM_BASE_URL` | `https://dashscope.aliyuncs.com/compatible-mode/v1` |
+| `LLM_MODEL` | `qwen-plus` |
 
 定时运行会正式发送；首次配置后应先通过 `Run workflow` 选择 `dry_run: true` 验证 Artifact，再手动选择 `false` 验证邮件。
+
+默认使用阿里云百炼中国内地 DashScope OpenAI 兼容接口。若 API Key 属于国际站，请将 `LLM_BASE_URL` 改为对应国际站地址。LLM 鉴权、额度或输出解析失败时，任务会自动使用确定性 shortlist 继续生成和投递日报。
 
 ## 与 Vault 的边界
 
