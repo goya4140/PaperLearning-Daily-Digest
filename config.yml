@@ -1,10 +1,18 @@
 version: 1
 timezone: Asia/Shanghai
 
-papers_cool:
-  base_url: https://papers.cool/arxiv
+arxiv:
+  api_url: https://export.arxiv.org/api/query
+  rss_url: https://arxiv.org/rss
+  rss_fallback: true
   categories: [cs.CL, cs.LG, cs.CV, cs.AI]
   page_size: 1000
+  request_interval_seconds: 3.1
+  # Beijing-time digest day normally corresponds to the preceding UTC submission day.
+  submission_lag_days: 1
+  reuse_latest_on_non_announcement_days: true
+  # Optional. ARXIV_CONTACT_EMAIL overrides this value in CI/local runs.
+  contact_email: ""
 
 selection:
   # Deterministic selection happens before the single batched LLM request.

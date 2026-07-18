@@ -3,62 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="PaperLearning-Daily-Digest">
   <title>PaperLearning 每日发现 · {{ report.date }}</title>
+  <style>
+    :root{--ink:#17211f;--muted:#63706c;--paper:#fff;--ground:#f3f0e8;--focus:#176b5b;--explore:#9a4c18;--xhs:#c4324a;--line:#dce4df}
+    *{box-sizing:border-box}body{margin:0;background:var(--ground);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
+    a{color:inherit}.shell{max-width:1040px;margin:0 auto;padding:24px 14px 56px}.hero{padding:34px;border-radius:24px;background:linear-gradient(135deg,#153b36,#215d50);color:#fff;box-shadow:0 18px 45px #173c3422}
+    .eyebrow{font-size:11px;letter-spacing:2px;color:#add8ca}.hero h1{margin:8px 0;font-size:clamp(27px,5vw,46px)}.hero p{margin:0;color:#d1e8e1;line-height:1.7}.metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.metric{padding:9px 12px;border:1px solid #ffffff35;border-radius:999px;background:#ffffff12;font-size:12px}
+    .notice{margin:18px 0;padding:13px 15px;border-left:4px solid #e3a824;border-radius:8px;background:#fff5d8;font-size:13px;line-height:1.65}.toolbar{position:sticky;top:8px;z-index:4;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;padding:12px;border:1px solid var(--line);border-radius:16px;background:#fffffff0;backdrop-filter:blur(12px)}
+    .toolbar button,.toolbar input{border:1px solid var(--line);border-radius:999px;background:#fff;padding:9px 13px;color:var(--ink);font:inherit}.toolbar button{cursor:pointer}.toolbar button.active{background:var(--ink);color:#fff}.toolbar input{min-width:220px;flex:1}.section{margin-top:28px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.section h2{margin:0;font-size:22px}.section p.sub{margin:5px 0 12px;color:var(--muted);font-size:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}.card{display:flex;flex-direction:column;min-height:100%;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:0 8px 24px #183c330d}.card[data-channel="focus"]{border-top:4px solid var(--focus)}.card[data-channel="explore"]{border-top:4px solid var(--explore)}.card[data-channel="xhs"]{border-top:4px solid var(--xhs)}
+    .meta{font-size:11px;font-weight:750;letter-spacing:.3px}.focus{color:var(--focus)}.explore{color:var(--explore)}.xhs{color:var(--xhs)}.card h3{margin:8px 0 5px;font-size:17px;line-height:1.45}.authors{color:var(--muted);font-size:12px}.summary{font-size:14px;line-height:1.7}.reason{padding:9px 11px;border-radius:9px;background:#f6f7f4;color:#5e6864;font-size:12px;line-height:1.55}.links{display:flex;gap:14px;margin-top:auto;padding-top:14px;font-size:12px;font-weight:750}.card details{margin-top:11px;color:var(--muted);font-size:12px;line-height:1.65}.card summary{cursor:pointer;font-weight:700}.empty{padding:18px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);background:#ffffff88}.footer{margin-top:32px;color:#737e79;font-size:11px;line-height:1.7}.hidden{display:none!important}
+    @media(max-width:600px){.shell{padding:10px 8px 40px}.hero{padding:24px 20px;border-radius:18px}.toolbar{top:4px}.toolbar input{order:-1;flex-basis:100%;min-width:0}}
+  </style>
 </head>
-<body style="margin:0;background:#f4f1ea;color:#17211f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f4f1ea;padding:24px 12px;">
-    <tr><td align="center">
-      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:760px;background:white;border-radius:18px;overflow:hidden;">
-        <tr><td style="padding:30px;background:#163a35;color:white;">
-          <div style="font-size:12px;letter-spacing:2px;color:#a9d5c8;">PAPERLEARNING · DISCOVERY</div>
-          <h1 style="margin:8px 0 6px;font-size:26px;">每日论文发现</h1>
-          <div style="color:#cae3dc;">{{ report.date }} · 论文 {{ report.raw_candidate_count }} → {{ report.focus|length + report.explore|length }} 篇 · 小红书 {{ report.xhs|length }} 条</div>
-        </td></tr>
-        <tr><td style="padding:24px 28px 10px;">
-          <p style="margin:0;padding:12px 14px;background:#fff6da;border-left:4px solid #e3a824;font-size:13px;line-height:1.6;">{{ report.disclaimer }}</p>
-        </td></tr>
-        {% for lane, title, color, papers in [('focus', '关注方向', '#176b5b', report.focus), ('explore', '探索方向', '#9a4c18', report.explore)] %}
-        <tr><td style="padding:18px 28px 4px;">
-          <h2 style="margin:0;color:{{ color }};font-size:20px;">{{ title }} <span style="font-size:12px;font-weight:400;">{{ papers|length }} 篇</span></h2>
-        </td></tr>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">PAPERLEARNING · DISCOVERY RADAR</div>
+      <h1>每日发现预览</h1>
+      <p>{{ report.date }} · arXiv 官方元数据与小红书实践趋势的双通道预浏</p>
+      <div class="metrics">
+        <span class="metric">arXiv 原始候选 {{ report.raw_candidate_count }}</span>
+        <span class="metric">关注 {{ report.focus|length }}</span>
+        <span class="metric">探索 {{ report.explore|length }}</span>
+        <span class="metric">小红书 {{ report.xhs|length }}</span>
+      </div>
+    </header>
+
+    <p class="notice">{{ report.disclaimer }}</p>
+
+    <nav class="toolbar" aria-label="预览筛选">
+      <input id="search" type="search" placeholder="搜索标题、作者、摘要或小红书内容…" aria-label="搜索">
+      <button class="active" data-filter="all" type="button">全部</button>
+      <button data-filter="focus" type="button">关注论文</button>
+      <button data-filter="explore" type="button">探索论文</button>
+      <button data-filter="xhs" type="button">小红书</button>
+    </nav>
+
+    {% for lane, title, color_class, papers, description in [
+      ('focus', '关注方向', 'focus', report.focus, '与当前研究意图高匹配的候选'),
+      ('explore', '探索方向', 'explore', report.explore, '用于打破固定关注边界的多样化候选')
+    ] %}
+    <section class="section" data-section="{{ lane }}">
+      <div class="section-head"><h2 class="{{ color_class }}">{{ title }}</h2><span>{{ papers|length }} 篇</span></div>
+      <p class="sub">{{ description }}</p>
+      <div class="grid">
         {% for paper in papers %}
-        <tr><td style="padding:10px 28px;">
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #dde4df;border-radius:12px;">
-            <tr><td style="padding:16px;">
-              <div style="font-size:11px;color:{{ color }};font-weight:700;">{{ paper.categories|join(' · ') }}{% if paper.llm_score %} · 推荐 {{ paper.llm_score }}/10{% endif %}</div>
-              <h3 style="margin:7px 0;font-size:17px;line-height:1.4;"><a href="{{ paper.url }}" style="color:#17211f;text-decoration:none;">{{ paper.title }}</a></h3>
-              <div style="font-size:12px;color:#63706c;">{{ paper.authors[:5]|join(', ') }}</div>
-              <p style="margin:12px 0 7px;line-height:1.65;font-size:14px;">{{ paper.one_liner }}</p>
-              <p style="margin:0;color:#6b746f;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ paper.reason }}</p>
-              <div style="margin-top:12px;"><a href="{{ paper.url }}" style="color:{{ color }};font-size:12px;font-weight:700;">arXiv</a>&nbsp;&nbsp;<a href="{{ paper.pdf_url }}" style="color:{{ color }};font-size:12px;font-weight:700;">PDF</a>&nbsp;&nbsp;<a href="{{ paper.papers_cool_url }}" style="color:{{ color }};font-size:12px;font-weight:700;">Papers Cool</a></div>
-            </td></tr>
-          </table>
-        </td></tr>
+        <article class="card" data-channel="{{ lane }}" data-search="{{ paper.title }} {{ paper.authors|join(' ') }} {{ paper.categories|join(' ') }} {{ paper.one_liner }} {{ paper.abstract }}">
+          <div class="meta {{ color_class }}">{{ paper.categories|join(' · ') }}{% if paper.llm_score %} · 推荐 {{ paper.llm_score }}/10{% endif %}</div>
+          <h3><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+          <div class="authors">{{ paper.authors[:6]|join(', ') }}</div>
+          <p class="summary">{{ paper.one_liner }}</p>
+          <p class="reason"><strong>入选理由：</strong>{{ paper.reason }}</p>
+          <details><summary>查看 arXiv 摘要</summary><p>{{ paper.abstract }}</p></details>
+          <div class="links"><a href="{{ paper.url }}">arXiv</a><a href="{{ paper.pdf_url }}">PDF</a></div>
+        </article>
         {% endfor %}
-        {% if not papers %}<tr><td style="padding:10px 28px;color:#7b8581;">本通道今天没有达到要求的候选。</td></tr>{% endif %}
-        {% endfor %}
-        <tr><td style="padding:22px 28px 4px;">
-          <h2 style="margin:0;color:#c4324a;font-size:20px;">小红书实践与趋势 <span style="font-size:12px;font-weight:400;">{{ report.xhs|length }} 条 · {{ report.xhs_status }}</span></h2>
-        </td></tr>
+        {% if not papers %}<div class="empty">本通道今天没有达到要求的候选。</div>{% endif %}
+      </div>
+    </section>
+    {% endfor %}
+
+    <section class="section" data-section="xhs">
+      <div class="section-head"><h2 class="xhs">小红书实践与趋势</h2><span>{{ report.xhs|length }} 条 · {{ report.xhs_status }}</span></div>
+      <p class="sub">补充论文之外的工具实测、开源项目、使用经验与新兴趋势</p>
+      <div class="grid">
         {% for note in report.xhs %}
-        <tr><td style="padding:10px 28px;">
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #eed9dd;border-radius:12px;">
-            <tr><td style="padding:16px;">
-              <div style="font-size:11px;color:#c4324a;font-weight:700;">小红书{% if note.liked_count %} · {{ note.liked_count }} 赞{% endif %}{% if note.score %} · 推荐 {{ note.score }}/10{% endif %}</div>
-              <h3 style="margin:7px 0;font-size:17px;line-height:1.4;"><a href="{{ note.url }}" style="color:#17211f;text-decoration:none;">{{ note.title }}</a></h3>
-              <p style="margin:12px 0 7px;line-height:1.65;font-size:14px;">{{ note.summary_zh }}</p>
-              <p style="margin:0;color:#6b746f;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ note.reason }}</p>
-              <div style="margin-top:12px;"><a href="{{ note.url }}" style="color:#c4324a;font-size:12px;font-weight:700;">打开小红书</a></div>
-            </td></tr>
-          </table>
-        </td></tr>
+        <article class="card" data-channel="xhs" data-search="{{ note.title }} {{ note.content }} {{ note.summary_zh }} {{ note.matched_keywords|default([])|join(' ') }}">
+          <div class="meta xhs">小红书{% if note.liked_count %} · {{ note.liked_count }} 赞{% endif %}{% if note.score %} · 推荐 {{ note.score }}/10{% endif %}</div>
+          <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
+          <p class="summary">{{ note.summary_zh }}</p>
+          <p class="reason"><strong>入选理由：</strong>{{ note.reason }}</p>
+          {% if note.content %}<details><summary>查看候选文本</summary><p>{{ note.content }}</p></details>{% endif %}
+          <div class="links"><a href="{{ note.url }}">打开小红书</a></div>
+        </article>
         {% endfor %}
-        {% if not report.xhs %}<tr><td style="padding:10px 28px;color:#7b8581;">当前没有可推送的小红书内容。Cookie 未配置或过期时，论文推送仍会正常运行。</td></tr>{% endif %}
-        <tr><td style="padding:24px 28px 30px;color:#78817d;font-size:11px;line-height:1.6;">
-          这封邮件只负责发现与预筛。正式研究判断应在 PaperLearning Vault 中阅读原文、建立证据账本后形成。
-        </td></tr>
-      </table>
-    </td></tr>
-  </table>
+        {% if not report.xhs %}<div class="empty">当前没有可预览的小红书内容。Cookie 未配置或过期时，arXiv 论文预览仍会正常生成。</div>{% endif %}
+      </div>
+    </section>
+
+    <footer class="footer">
+      数据源：arXiv 官方元数据接口 `{{ report.source }}`（日报日 {{ report.date }}，UTC 查询日 {{ report.arxiv_query_date }}，窗口 {{ report.query_window_utc|join(' → ') }}）。小红书只作为实践信号，不写入论文 Inbox 或索引。正式研究判断必须在 PaperLearning Vault 阅读原文并完成证据账本。
+    </footer>
+  </main>
+  <script>
+    (()=>{const cards=[...document.querySelectorAll('.card')],sections=[...document.querySelectorAll('[data-section]')],buttons=[...document.querySelectorAll('[data-filter]')],search=document.getElementById('search');let filter='all';function apply(){const q=search.value.trim().toLowerCase();cards.forEach(card=>{const channel=card.dataset.channel;const hit=(filter==='all'||channel===filter)&&(!q||(card.dataset.search||'').toLowerCase().includes(q));card.classList.toggle('hidden',!hit)});sections.forEach(section=>{const sectionMatch=filter==='all'||section.dataset.section===filter;const sectionCards=[...section.querySelectorAll('.card')];const visible=sectionCards.some(card=>!card.classList.contains('hidden'));const show=sectionMatch&&(visible||(!q&&sectionCards.length===0));section.classList.toggle('hidden',!show)})}buttons.forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;buttons.forEach(item=>item.classList.toggle('active',item===button));apply()}));search.addEventListener('input',apply)})();
+  </script>
 </body>
 </html>

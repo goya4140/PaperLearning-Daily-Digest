@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: "Papers Cool date (YYYY-MM-DD); empty means today"
+        description: "Digest date (YYYY-MM-DD); arXiv query lag comes from config"
         required: false
         type: string
       dry_run:
@@ -47,6 +47,7 @@ jobs:
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           XHS_COOKIE: ${{ secrets.XHS_COOKIE }}
+          ARXIV_CONTACT_EMAIL: ${{ vars.ARXIV_CONTACT_EMAIL }}
           PYTHONPATH: src:vendor/daily-digest-assistant
         run: |
           args=()
@@ -65,11 +66,11 @@ jobs:
             preview.html
             out/shortlist.json
             out/delivery.json
-      - name: Archive HTML
+      - name: Archive sync data and HTML
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/daily/
+          git add docs/daily/ docs/data/
           if ! git diff --cached --quiet; then
             git commit -m "archive daily digest"
             git push
