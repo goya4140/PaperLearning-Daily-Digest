@@ -1,0 +1,70 @@
+name: Daily Paper Discovery
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # 13:00 Asia/Shanghai
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Papers Cool date (YYYY-MM-DD); empty means today"
+        required: false
+        type: string
+      dry_run:
+        description: "Render without sending email"
+        required: true
+        default: true
+        type: boolean
+
+concurrency:
+  group: daily-paper-discovery
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Build and optionally send digest
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          PYTHONPATH: src
+        run: |
+          args=()
+          if [ -n "${{ inputs.date }}" ]; then args+=(--date "${{ inputs.date }}"); fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then args+=(--dry-run); fi
+          if [ -z "$EMAIL_USER" ] || [ -z "$EMAIL_PASS" ] || [ -z "$EMAIL_TO" ]; then
+            echo "Email secrets are incomplete; falling back to dry-run."
+            args+=(--dry-run)
+          fi
+          python -m paper_digest.main "${args[@]}"
+      - name: Upload digest artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-digest-${{ github.run_id }}
+          path: |
+            preview.html
+            out/shortlist.json
+            out/delivery.json
+      - name: Archive HTML
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/daily/
+          if ! git diff --cached --quiet; then
+            git commit -m "archive daily digest"
+            git push
+          fi

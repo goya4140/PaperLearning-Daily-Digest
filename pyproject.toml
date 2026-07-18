@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperlearning-daily-digest"
+version = "0.1.0"
+description = "Two-lane paper discovery and email delivery for PaperLearning Vault"
+requires-python = ">=3.11"
+dependencies = [
+  "Jinja2==3.1.6",
+  "openai==1.93.0",
+  "PyYAML==6.0.2",
+]
+
+[project.scripts]
+paper-digest = "paper_digest.main:cli"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

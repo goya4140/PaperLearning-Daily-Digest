@@ -1,0 +1,52 @@
+version: 1
+timezone: Asia/Shanghai
+
+papers_cool:
+  base_url: https://papers.cool/arxiv
+  categories: [cs.CL, cs.LG, cs.CV, cs.AI]
+  page_size: 1000
+
+selection:
+  # Deterministic selection happens before the single batched LLM request.
+  deterministic_pool_per_lane: 30
+  llm_candidate_limit: 36
+  focus_count: 4
+  explore_count: 4
+  diversity_penalty: 0.45
+
+  # A profile describes a research intent, not a required literal keyword.
+  # Add related phrases freely; the exploration lane never depends on these.
+  focus_profiles:
+    - id: affective-reasoning
+      label: Affective Reasoning
+      categories: [cs.AI, cs.CL, cs.CV, cs.HC, cs.MA]
+      concepts:
+        - [affective reasoning, emotion reasoning, emotion cause]
+        - [theory of mind, social reasoning, mental state reasoning]
+        - [multimodal emotion, emotion understanding]
+    - id: agent-capabilities
+      label: Agent Capabilities and Skills
+      categories: [cs.AI, cs.CL, cs.LG, cs.RO, cs.MA]
+      concepts:
+        - [agent skill, skill library, skill discovery, skill evolution]
+        - [tool learning, tool use, agent memory, agent planning]
+        - [multi-agent, agentic system, autonomous agent]
+    - id: reward-and-evaluation
+      label: Reward, Verification and Evaluation
+      categories: [cs.AI, cs.CL, cs.LG]
+      concepts:
+        - [reward model, process reward, preference learning]
+        - [verifier model, llm-as-judge, rubric evaluation]
+        - [reward hacking, alignment evaluation]
+
+llm:
+  enabled: true
+  model: gpt-4.1-mini
+  base_url: https://api.openai.com/v1
+  temperature: 0.1
+
+delivery:
+  subject_prefix: "PaperLearning 每日发现"
+  smtp_provider: "163"
+  send_empty_digest: true
+
