@@ -146,7 +146,7 @@ def fetch(settings: dict[str, Any], target_date: dt.date) -> dict[str, Any]:
     total_match = re.search(r"\bTotal:\s*(\d+)", page)
     page_date = page_date_match.group(1) if page_date_match else target_date.isoformat()
     total_reported = int(total_match.group(1)) if total_match else len(parser.papers)
-    if not parser.papers:
+    if not parser.papers and total_reported != 0:
         raise RuntimeError(f"Papers Cool returned no parseable papers for {page_date}")
     if total_reported != len(parser.papers):
         raise RuntimeError(f"Papers Cool count mismatch: page={total_reported}, parsed={len(parser.papers)}")
@@ -159,4 +159,3 @@ def fetch(settings: dict[str, Any], target_date: dt.date) -> dict[str, Any]:
         "total_reported": total_reported,
         "papers": parser.papers,
     }
-

@@ -1,6 +1,6 @@
 # PaperLearning Daily Digest
 
-PaperLearning Vault 的独立发现与推送层。它把低价值的每日筛选从主研究会话移到 GitHub Actions，让主会话集中在原文精读、证据账本和跨论文综合。
+PaperLearning Vault 的独立发现与推送层。它把低价值的每日筛选从主研究会话移到 GitHub Actions，让主会话集中在原文精读、证据账本和跨论文综合。邮件包含论文关注/探索双通道，以及独立的小红书实践与趋势通道。
 
 ## 核心设计
 
@@ -40,6 +40,7 @@ Repository secrets：
 | `EMAIL_USER` | 发件邮箱 |
 | `EMAIL_PASS` | SMTP 授权码 |
 | `EMAIL_TO` | 收件邮箱，多个地址用逗号分隔 |
+| `XHS_COOKIE` | 可选；小红书网页版完整 Cookie，缺失或过期时跳过小红书 |
 
 Repository variables：
 
@@ -56,8 +57,11 @@ Repository variables：
 
 - 本仓库不保存 PDF、LaTeX、私人笔记或 Vault 状态。
 - 本仓库只负责发现、预筛和投递。
+- 小红书内容仅进入邮件，不写入 Vault 或论文索引。
 - 论文的正式结论必须回到 PaperLearning Vault，完成 `acquired → explained → indexed` 三阶段流程。
 
 ## Inspiration
 
 邮件投递与 GitHub Actions 思路受到 [yzbcs/Daily-Digest-Assistant](https://github.com/yzbcs/Daily-Digest-Assistant) 启发。本项目采用独立实现，并保留对原项目的致谢。
+
+小红书抓取与请求签名运行时固定使用该项目 commit `4957c3e40354816edbb2114e3aad7a3b53be47d4`。Cookie 通常约 30 天需要更新；请仅以低频个人学习用途使用，并遵守平台条款。

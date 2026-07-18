@@ -45,6 +45,20 @@ llm:
   base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
   temperature: 0.1
 
+xhs:
+  enabled: true
+  # Focus + exploration queries. XHS search uses OR across separate requests.
+  keywords:
+    - AI Agent
+    - 智能体实践
+    - AI论文
+    - 开源AI
+    - 多模态AI
+    - AI研究趋势
+  candidate_pool: 24
+  max_items: 5
+  min_score: 6
+
 delivery:
   subject_prefix: "PaperLearning 每日发现"
   smtp_provider: "auto"
