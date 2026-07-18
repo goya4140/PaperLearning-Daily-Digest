@@ -33,6 +33,11 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: pip install -r requirements.txt
+      - name: Install pinned XHS fetcher and signing runtime
+        run: |
+          git clone https://github.com/yzbcs/Daily-Digest-Assistant.git vendor/daily-digest-assistant
+          git -C vendor/daily-digest-assistant checkout 4957c3e40354816edbb2114e3aad7a3b53be47d4
+          npm ci --prefix vendor/daily-digest-assistant
       - name: Build and optionally send digest
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
@@ -41,7 +46,8 @@ jobs:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
-          PYTHONPATH: src
+          XHS_COOKIE: ${{ secrets.XHS_COOKIE }}
+          PYTHONPATH: src:vendor/daily-digest-assistant
         run: |
           args=()
           if [ -n "${{ inputs.date }}" ]; then args+=(--date "${{ inputs.date }}"); fi

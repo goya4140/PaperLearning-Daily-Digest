@@ -4,8 +4,10 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import yaml
 
@@ -14,6 +16,7 @@ from .llm_ranker import rerank
 from .papers_cool import fetch
 from .rendering import render
 from .selection import deterministic_candidates
+from .xhs_digest import fetch_notes, rank_notes
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -31,6 +34,12 @@ def run(target_date: dt.date, config_path: Path, dry_run: bool) -> dict[str, Any
     snapshot = fetch(config["papers_cool"], target_date)
     candidates = deterministic_candidates(snapshot["papers"], config["selection"])
     shortlist = rerank(candidates, config["selection"], config.get("llm", {}))
+    local_today = dt.datetime.now(ZoneInfo(config.get("timezone", "Asia/Shanghai"))).date()
+    if target_date == local_today:
+        xhs_candidates, xhs_status = fetch_notes(config.get("xhs", {}), os.environ.get("XHS_COOKIE", ""))
+        xhs_notes = rank_notes(xhs_candidates, config.get("xhs", {}), config.get("llm", {}))
+    else:
+        xhs_candidates, xhs_notes, xhs_status = [], [], "historical-date-skipped"
     report = {
         "version": 1,
         "date": snapshot["page_date"],
@@ -40,6 +49,9 @@ def run(target_date: dt.date, config_path: Path, dry_run: bool) -> dict[str, Any
         "llm_candidate_count": len(candidates),
         "focus": [item for item in shortlist if item["lane"] == "focus"],
         "explore": [item for item in shortlist if item["lane"] == "explore"],
+        "xhs": xhs_notes,
+        "xhs_candidate_count": len(xhs_candidates),
+        "xhs_status": xhs_status,
         "ranking_source": sorted({item["ranking_source"] for item in shortlist}),
         "disclaimer": "发现阶段摘要：仅基于 Papers Cool 元数据、标题和摘要，不等同于论文精读结论。",
     }
@@ -78,9 +90,9 @@ def cli() -> None:
     print(
         f"Digest {report['date']}: {report['raw_candidate_count']} raw -> "
         f"{report['llm_candidate_count']} ranked -> {len(report['focus'])} focus + {len(report['explore'])} explore"
+        f" + {len(report['xhs'])} XHS ({report['xhs_status']})"
     )
 
 
 if __name__ == "__main__":
     cli()
-
