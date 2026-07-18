@@ -15,3 +15,12 @@ def render(report: dict[str, Any], template_dir: Path) -> str:
     )
     return environment.get_template("digest.html").render(report=report)
 
+
+def render_email(report: dict[str, Any], template_dir: Path) -> str:
+    environment = Environment(
+        loader=FileSystemLoader(template_dir),
+        autoescape=select_autoescape(["html", "xml"]),
+        trim_blocks=True,
+        lstrip_blocks=True,
+    )
+    return environment.get_template("email.html").render(report=report)

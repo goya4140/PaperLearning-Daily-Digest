@@ -64,6 +64,7 @@ jobs:
           name: paper-digest-${{ github.run_id }}
           path: |
             preview.html
+            out/email.html
             out/shortlist.json
             out/delivery.json
       - name: Archive sync data and HTML

@@ -14,7 +14,7 @@ from .delivery import send_email
 from .archive import archive_report, seal_report
 from .llm_ranker import rerank
 from .arxiv_api import fetch
-from .rendering import render
+from .rendering import render, render_email
 from .selection import deterministic_candidates
 from .vault_export import export_to_vault
 from .xhs_digest import fetch_notes, rank_notes
@@ -81,7 +81,9 @@ def run(target_date: dt.date, config_path: Path, dry_run: bool, vault_path: Path
     json_text = json.dumps(report, ensure_ascii=False, indent=2) + "\n"
     json_path.write_text(json_text, encoding="utf-8")
     html = render(report, ROOT / "templates")
+    email_html = render_email(report, ROOT / "templates")
     (ROOT / "preview.html").write_text(html, encoding="utf-8")
+    (output_dir / "email.html").write_text(email_html, encoding="utf-8")
     archive_dir = ROOT / "docs" / "daily" / report["date"][:4] / report["date"][5:7]
     archive_dir.mkdir(parents=True, exist_ok=True)
     (archive_dir / f"{report['date']}.html").write_text(html, encoding="utf-8")
@@ -96,7 +98,7 @@ def run(target_date: dt.date, config_path: Path, dry_run: bool, vault_path: Path
     }
     if not dry_run and (shortlist or xhs_notes or config["delivery"].get("send_empty_digest", True)):
         subject = f"{config['delivery'].get('subject_prefix', 'PaperLearning 每日发现')} · {report['date']}"
-        send_email(html, subject, str(config["delivery"].get("smtp_provider", "163")))
+        send_email(email_html, subject, str(config["delivery"].get("smtp_provider", "163")))
         state["delivered"] = True
     (output_dir / "delivery.json").write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return report

@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from paper_digest.rendering import render
+from paper_digest.rendering import render, render_email
 
 
 def test_preview_contains_arxiv_and_xhs_channels():
@@ -43,3 +43,31 @@ def test_preview_contains_arxiv_and_xhs_channels():
     assert 'data-channel="xhs"' in html
     assert "PaperLearning-Daily-Digest" in html
     assert "Papers Cool" not in html
+
+
+def test_email_uses_gmail_safe_single_column_tables():
+    report = {
+        "date": "2026-07-18",
+        "arxiv_query_date": "2026-07-16",
+        "raw_candidate_count": 1,
+        "focus": [{
+            "title": "Agent Skill Test", "authors": ["Ada"], "categories": ["cs.AI"],
+            "one_liner": "发现摘要", "reason": "主题匹配", "llm_score": 8,
+            "url": "https://arxiv.org/abs/2607.12345", "pdf_url": "https://arxiv.org/pdf/2607.12345",
+        }],
+        "explore": [],
+        "xhs": [{
+            "title": "工具实测", "summary_zh": "实践经验", "reason": "有复盘",
+            "liked_count": 10, "score": 8, "url": "https://www.xiaohongshu.com/explore/test",
+        }],
+        "disclaimer": "discovery only",
+    }
+    html = render_email(report, Path(__file__).parents[1] / "templates")
+    lowered = html.lower()
+    assert '<table role="presentation"' in lowered
+    assert "display:grid" not in lowered
+    assert "display:flex" not in lowered
+    assert "<script" not in lowered
+    assert "<details" not in lowered
+    assert "Agent Skill Test" in html
+    assert "工具实测" in html

@@ -30,6 +30,7 @@ PYTHONPATH=src python -m paper_digest.main --dry-run --date 2026-07-17 \
 输出：
 
 - `preview.html`：邮件预览；
+- `out/email.html`：采用单列 table 与全内联样式的 Gmail 兼容正文；
 - `out/shortlist.json`：结构化双通道 shortlist；
 - `out/delivery.json`：本次投递状态；
 - `docs/daily/YYYY/MM/YYYY-MM-DD.html`：每日归档。
