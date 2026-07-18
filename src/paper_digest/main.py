@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -11,7 +12,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from .delivery import send_email
-from .archive import archive_report, seal_report
+from .archive import archive_report, canonical_payload, seal_report
 from .llm_ranker import rerank
 from .arxiv_api import fetch
 from .rendering import render, render_email
@@ -41,40 +42,62 @@ def load_config(path: Path) -> dict[str, Any]:
     return config
 
 
-def run(target_date: dt.date, config_path: Path, dry_run: bool, vault_path: Path | None = None) -> dict[str, Any]:
+def load_archived_report(target_date: dt.date, root: Path = ROOT) -> dict[str, Any]:
+    date = target_date.isoformat()
+    path = root / "docs" / "data" / date[:4] / date[5:7] / f"{date}.json"
+    report = json.loads(path.read_text(encoding="utf-8"))
+    if report.get("schema_version") != 1 or report.get("version") != 2 or report.get("date") != date:
+        raise ValueError(f"invalid archived digest: {path}")
+    expected = hashlib.sha256(canonical_payload(report)).hexdigest()
+    if report.get("content_sha256") != expected:
+        raise ValueError(f"archived digest hash mismatch: {path}")
+    return report
+
+
+def run(
+    target_date: dt.date,
+    config_path: Path,
+    dry_run: bool,
+    vault_path: Path | None = None,
+    reuse_archive: bool = False,
+) -> dict[str, Any]:
     config = load_config(config_path)
-    query_date = arxiv_query_date(target_date, config["arxiv"])
-    snapshot = fetch(config["arxiv"], query_date)
-    candidates = deterministic_candidates(snapshot["papers"], config["selection"])
-    shortlist = rerank(candidates, config["selection"], config.get("llm", {}))
-    local_today = dt.datetime.now(ZoneInfo(config.get("timezone", "Asia/Shanghai"))).date()
-    if target_date == local_today:
-        xhs_candidates, xhs_status = fetch_notes(config.get("xhs", {}), os.environ.get("XHS_COOKIE", ""))
-        xhs_notes = rank_notes(xhs_candidates, config.get("xhs", {}), config.get("llm", {}))
+    if reuse_archive:
+        report = load_archived_report(target_date)
+        print(f"Reusing sealed archive {report['content_sha256'][:12]} for delivery")
     else:
-        xhs_candidates, xhs_notes, xhs_status = [], [], "historical-date-skipped"
-    report = seal_report({
-        "version": 2,
-        "date": target_date.isoformat(),
-        "arxiv_query_date": query_date.isoformat(),
-        "arxiv_reused_latest": query_date != target_date - dt.timedelta(
-            days=int(config["arxiv"].get("submission_lag_days", 1))
-        ),
-        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
-        "source": snapshot["source"],
-        "source_url": snapshot["source_url"],
-        "source_urls": snapshot["source_urls"],
-        "query_window_utc": snapshot["query_window_utc"],
-        "raw_candidate_count": len(snapshot["papers"]),
-        "llm_candidate_count": len(candidates),
-        "focus": [item for item in shortlist if item["lane"] == "focus"],
-        "explore": [item for item in shortlist if item["lane"] == "explore"],
-        "xhs": xhs_notes,
-        "xhs_candidate_count": len(xhs_candidates),
-        "xhs_status": xhs_status,
-        "ranking_source": sorted({item["ranking_source"] for item in shortlist}),
-        "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
-    })
+        query_date = arxiv_query_date(target_date, config["arxiv"])
+        snapshot = fetch(config["arxiv"], query_date)
+        candidates = deterministic_candidates(snapshot["papers"], config["selection"])
+        shortlist = rerank(candidates, config["selection"], config.get("llm", {}))
+        local_today = dt.datetime.now(ZoneInfo(config.get("timezone", "Asia/Shanghai"))).date()
+        if target_date == local_today:
+            xhs_candidates, xhs_status = fetch_notes(config.get("xhs", {}), os.environ.get("XHS_COOKIE", ""))
+            xhs_notes = rank_notes(xhs_candidates, config.get("xhs", {}), config.get("llm", {}))
+        else:
+            xhs_candidates, xhs_notes, xhs_status = [], [], "historical-date-skipped"
+        report = seal_report({
+            "version": 2,
+            "date": target_date.isoformat(),
+            "arxiv_query_date": query_date.isoformat(),
+            "arxiv_reused_latest": query_date != target_date - dt.timedelta(
+                days=int(config["arxiv"].get("submission_lag_days", 1))
+            ),
+            "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "source": snapshot["source"],
+            "source_url": snapshot["source_url"],
+            "source_urls": snapshot["source_urls"],
+            "query_window_utc": snapshot["query_window_utc"],
+            "raw_candidate_count": len(snapshot["papers"]),
+            "llm_candidate_count": len(candidates),
+            "focus": [item for item in shortlist if item["lane"] == "focus"],
+            "explore": [item for item in shortlist if item["lane"] == "explore"],
+            "xhs": xhs_notes,
+            "xhs_candidate_count": len(xhs_candidates),
+            "xhs_status": xhs_status,
+            "ranking_source": sorted({item["ranking_source"] for item in shortlist}),
+            "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+        })
     output_dir = ROOT / "out"
     output_dir.mkdir(parents=True, exist_ok=True)
     json_path = output_dir / "shortlist.json"
@@ -96,7 +119,7 @@ def run(target_date: dt.date, config_path: Path, dry_run: bool, vault_path: Path
         "delivered": False,
         "dry_run": dry_run,
     }
-    if not dry_run and (shortlist or xhs_notes or config["delivery"].get("send_empty_digest", True)):
+    if not dry_run and (report["focus"] or report["explore"] or report["xhs"] or config["delivery"].get("send_empty_digest", True)):
         subject = f"{config['delivery'].get('subject_prefix', 'PaperLearning 每日发现')} · {report['date']}"
         send_email(email_html, subject, str(config["delivery"].get("smtp_provider", "163")))
         state["delivered"] = True
@@ -109,10 +132,11 @@ def cli() -> None:
     parser.add_argument("--date", help="digest date (YYYY-MM-DD); arXiv query lag is configured separately")
     parser.add_argument("--config", type=Path, default=ROOT / "config.yml")
     parser.add_argument("--dry-run", action="store_true", help="render without sending email")
+    parser.add_argument("--reuse-archive", action="store_true", help="redeliver a sealed archived digest without refetching")
     parser.add_argument("--vault", type=Path, help="also export JSON and preview HTML into a local PaperLearning Vault")
     args = parser.parse_args()
     target = dt.date.fromisoformat(args.date) if args.date else dt.date.today()
-    report = run(target, args.config, args.dry_run, args.vault)
+    report = run(target, args.config, args.dry_run, args.vault, args.reuse_archive)
     print(
         f"Digest {report['date']}: {report['raw_candidate_count']} raw -> "
         f"{report['llm_candidate_count']} ranked -> {len(report['focus'])} focus + {len(report['explore'])} explore"

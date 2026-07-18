@@ -22,6 +22,9 @@ pip install -r requirements-dev.txt
 pytest
 PYTHONPATH=src python -m paper_digest.main --dry-run --date 2026-07-17
 
+# 不重新请求 arXiv/Qwen/小红书，校验并重渲染已归档日报
+PYTHONPATH=src python -m paper_digest.main --dry-run --reuse-archive --date 2026-07-17
+
 # 同时将结构化状态和预览 HTML 写入本地 Vault
 PYTHONPATH=src python -m paper_digest.main --dry-run --date 2026-07-17 \
   --vault ../PaperLearning-Vault

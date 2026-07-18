@@ -14,6 +14,11 @@ on:
         required: true
         default: true
         type: boolean
+      reuse_archive:
+        description: "Redeliver the sealed archived digest without refetching sources"
+        required: true
+        default: false
+        type: boolean
 
 concurrency:
   group: daily-paper-discovery
@@ -53,6 +58,7 @@ jobs:
           args=()
           if [ -n "${{ inputs.date }}" ]; then args+=(--date "${{ inputs.date }}"); fi
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then args+=(--dry-run); fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.reuse_archive }}" = "true" ]; then args+=(--reuse-archive); fi
           if [ -z "$EMAIL_USER" ] || [ -z "$EMAIL_PASS" ] || [ -z "$EMAIL_TO" ]; then
             echo "Email secrets are incomplete; falling back to dry-run."
             args+=(--dry-run)
