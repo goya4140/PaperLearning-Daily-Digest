@@ -64,13 +64,21 @@ def rerank(candidates: list[dict[str, Any]], selection: dict[str, Any], llm: dic
             file=sys.stderr,
         )
         return deterministic_shortlist(candidates, selection)
-    selected = parsed.get("papers", parsed.get("selected", []))
+    if isinstance(parsed, list):
+        selected = parsed
+    elif isinstance(parsed, dict):
+        selected = parsed.get("papers", parsed.get("selected", []))
+    else:
+        print("[warning] LLM returned an unsupported JSON root; using deterministic fallback.", file=sys.stderr)
+        return deterministic_shortlist(candidates, selection)
     by_id = {item["id"]: item for item in candidates}
     limits = {"focus": int(selection.get("focus_count", 4)), "explore": int(selection.get("explore_count", 4))}
     counts = {"focus": 0, "explore": 0}
     output: list[dict[str, Any]] = []
     seen: set[str] = set()
     for choice in selected:
+        if not isinstance(choice, dict):
+            continue
         paper_id = str(choice.get("id", ""))
         lane = str(choice.get("lane", ""))
         if paper_id not in by_id or lane not in limits or paper_id in seen or counts[lane] >= limits[lane]:
