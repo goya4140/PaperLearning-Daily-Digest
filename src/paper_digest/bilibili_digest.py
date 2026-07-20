@@ -14,6 +14,7 @@ from openai import OpenAI, OpenAIError
 
 
 SEARCH_URL = "https://api.bilibili.com/x/web-interface/search/type"
+DETAIL_URL = "https://api.bilibili.com/x/web-interface/view"
 TAG_RE = re.compile(r"<[^>]+>")
 
 
@@ -62,6 +63,34 @@ def _search(keywords: list[str], count: int, cookie: str, interval: float) -> li
                 break
         if len(output) >= count:
             break
+    return output
+
+
+def _fetch_video_stats(bvids: list[str], cookie: str, interval: float) -> dict[str, dict[str, int]]:
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (PaperLearning-Daily-Digest; personal research discovery)",
+        "Referer": "https://www.bilibili.com/",
+        "Accept": "application/json, text/plain, */*",
+        "Cookie": cookie.strip(),
+    })
+    output: dict[str, dict[str, int]] = {}
+    for index, bvid in enumerate(bvids):
+        if index:
+            time.sleep(interval)
+        try:
+            response = session.get(DETAIL_URL, params={"bvid": bvid}, timeout=20)
+            response.raise_for_status()
+            payload = response.json()
+            if payload.get("code") != 0:
+                continue
+            stat = (payload.get("data") or {}).get("stat") or {}
+            output[bvid] = {
+                "like_count": _count(stat.get("like")),
+                "favorite_count": _count(stat.get("favorite")),
+            }
+        except (requests.RequestException, ValueError):
+            continue
     return output
 
 
@@ -116,6 +145,37 @@ def fetch_videos(
         }
     normalized = list(by_id.values())[: int(settings.get("candidate_pool", 30))]
     return normalized, "fetched" if normalized else "empty-or-cookie-expired"
+
+
+def enrich_video_stats(
+    videos: list[dict[str, Any]],
+    cookie: str,
+    interval: float = 1.2,
+    fetcher: Callable[[list[str], str, float], dict[str, dict[str, Any]]] | None = None,
+) -> tuple[list[dict[str, Any]], str]:
+    if not videos:
+        return [], "not-needed"
+    if not cookie.strip():
+        return [dict(video) for video in videos], "missing-cookie"
+    fetcher = fetcher or _fetch_video_stats
+    try:
+        stats = fetcher([str(video["bvid"]) for video in videos], cookie, interval)
+    except Exception as exc:
+        print(f"[warning] Bilibili stats fetch failed ({type(exc).__name__}); keeping base metadata.", file=sys.stderr)
+        return [dict(video) for video in videos], "fetch-failed"
+    output = []
+    enriched = 0
+    for video in videos:
+        item = dict(video)
+        stat = stats.get(str(video["bvid"]))
+        if stat is not None:
+            item["like_count"] = _count(stat.get("like_count"))
+            item["favorite_count"] = _count(stat.get("favorite_count"))
+            enriched += 1
+        output.append(item)
+    if enriched == len(videos):
+        return output, "fetched"
+    return output, "partial" if enriched else "fetch-failed"
 
 
 def _score(video: dict[str, Any]) -> float:

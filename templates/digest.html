@@ -92,7 +92,7 @@
       <div class="grid">
         {% for video in report.bilibili|default([]) %}
         <article class="card" data-channel="bilibili" data-search="{{ video.title }} {{ video.author }} {{ video.description }} {{ video.summary_zh }} {{ video.matched_keywords|default([])|join(' ') }}">
-          <div class="meta bilibili">B站{% if video.author %} · {{ video.author }}{% endif %}{% if video.view_count %} · {{ video.view_count }} 播放{% endif %}{% if video.danmaku_count %} · {{ video.danmaku_count }} 弹幕{% endif %}{% if video.duration %} · {{ video.duration }}{% endif %}{% if video.score %} · 推荐 {{ video.score }}/10{% endif %}</div>
+          <div class="meta bilibili">B站{% if video.author %} · {{ video.author }}{% endif %}{% if video.view_count %} · {{ video.view_count }} 播放{% endif %}{% if video.like_count|default %} · {{ video.like_count }} 点赞{% endif %}{% if video.favorite_count|default %} · {{ video.favorite_count }} 收藏{% endif %}{% if video.danmaku_count %} · {{ video.danmaku_count }} 弹幕{% endif %}{% if video.duration %} · {{ video.duration }}{% endif %}{% if video.score %} · 推荐 {{ video.score }}/10{% endif %}</div>
           <h3><a href="{{ video.url }}">{{ video.title }}</a></h3>
           <p class="summary">{{ video.summary_zh }}</p>
           <p class="reason"><strong>入选理由：</strong>{{ video.reason }}</p>

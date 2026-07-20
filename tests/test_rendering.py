@@ -38,7 +38,8 @@ def test_preview_contains_arxiv_xhs_and_bilibili_channels():
         "bilibili": [{
             "title": "AI 产品完整测试", "author": "研究频道", "description": "测试过程",
             "summary_zh": "包含失败案例的产品测试", "reason": "证据完整", "view_count": 12000,
-            "danmaku_count": 88, "duration": "18:20", "score": 8,
+            "danmaku_count": 88, "like_count": 2345, "favorite_count": 678,
+            "duration": "18:20", "score": 8,
             "url": "https://www.bilibili.com/video/BV1test", "matched_keywords": ["产品实测"],
         }],
         "bilibili_status": "fetched",
@@ -50,6 +51,8 @@ def test_preview_contains_arxiv_xhs_and_bilibili_channels():
     assert 'data-channel="xhs"' in html
     assert 'data-channel="bilibili"' in html
     assert "AI 产品完整测试" in html
+    assert "2345 点赞" in html
+    assert "678 收藏" in html
     assert "PaperLearning-Daily-Digest" in html
     assert "Papers Cool" not in html
 
@@ -71,7 +74,8 @@ def test_email_uses_gmail_safe_single_column_tables():
         }],
         "bilibili": [{
             "title": "会议录播", "author": "研究频道", "summary_zh": "技术会议",
-            "reason": "信息密度高", "view_count": 100, "duration": "45:00", "score": 8,
+            "reason": "信息密度高", "view_count": 100, "like_count": 20,
+            "favorite_count": 8, "duration": "45:00", "score": 8,
             "url": "https://www.bilibili.com/video/BV1test",
         }],
         "disclaimer": "discovery only",
@@ -86,3 +90,5 @@ def test_email_uses_gmail_safe_single_column_tables():
     assert "Agent Skill Test" in html
     assert "工具实测" in html
     assert "会议录播" in html
+    assert "20 点赞" in html
+    assert "8 收藏" in html

@@ -19,7 +19,7 @@ from .rendering import render, render_email
 from .selection import deterministic_candidates
 from .vault_export import export_to_vault
 from .xhs_digest import fetch_notes, rank_notes
-from .bilibili_digest import fetch_videos, rank_videos
+from .bilibili_digest import enrich_video_stats, fetch_videos, rank_videos
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -75,15 +75,20 @@ def run(
         if target_date == local_today:
             xhs_candidates, xhs_status = fetch_notes(config.get("xhs", {}), os.environ.get("XHS_COOKIE", ""))
             xhs_notes = rank_notes(xhs_candidates, config.get("xhs", {}), config.get("llm", {}))
-            bilibili_candidates, bilibili_status = fetch_videos(
-                config.get("bilibili", {}), os.environ.get("BILIBILI_COOKIE", "")
-            )
+            bilibili_cookie = os.environ.get("BILIBILI_COOKIE", "")
+            bilibili_candidates, bilibili_status = fetch_videos(config.get("bilibili", {}), bilibili_cookie)
             bilibili_videos = rank_videos(
                 bilibili_candidates, config.get("bilibili", {}), config.get("llm", {})
+            )
+            bilibili_videos, bilibili_stats_status = enrich_video_stats(
+                bilibili_videos,
+                bilibili_cookie,
+                float(config.get("bilibili", {}).get("request_interval_seconds", 1.2)),
             )
         else:
             xhs_candidates, xhs_notes, xhs_status = [], [], "historical-date-skipped"
             bilibili_candidates, bilibili_videos, bilibili_status = [], [], "historical-date-skipped"
+            bilibili_stats_status = "historical-date-skipped"
         report = seal_report({
             "version": 2,
             "date": target_date.isoformat(),
@@ -106,6 +111,7 @@ def run(
             "bilibili": bilibili_videos,
             "bilibili_candidate_count": len(bilibili_candidates),
             "bilibili_status": bilibili_status,
+            "bilibili_stats_status": bilibili_stats_status,
             "ranking_source": sorted({item["ranking_source"] for item in shortlist}),
             "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
         })

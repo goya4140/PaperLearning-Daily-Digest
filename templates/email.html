@@ -56,7 +56,7 @@
   {% for video in report.bilibili|default([]) %}
   <tr><td style="padding:0 0 12px;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border:1px solid #dce4df;border-top:4px solid #1684a7;border-radius:12px;"><tr><td style="padding:18px 20px;word-break:break-word;">
-      <p style="margin:0 0 7px;color:#1684a7;font-size:11px;font-weight:700;">B站{% if video.author %} · {{ video.author }}{% endif %}{% if video.view_count %} · {{ video.view_count }} 播放{% endif %}{% if video.duration %} · {{ video.duration }}{% endif %}{% if video.score %} · 推荐 {{ video.score }}/10{% endif %}</p>
+      <p style="margin:0 0 7px;color:#1684a7;font-size:11px;font-weight:700;">B站{% if video.author %} · {{ video.author }}{% endif %}{% if video.view_count %} · {{ video.view_count }} 播放{% endif %}{% if video.like_count|default %} · {{ video.like_count }} 点赞{% endif %}{% if video.favorite_count|default %} · {{ video.favorite_count }} 收藏{% endif %}{% if video.duration %} · {{ video.duration }}{% endif %}{% if video.score %} · 推荐 {{ video.score }}/10{% endif %}</p>
       <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ video.url }}" style="color:#17211f;text-decoration:underline;">{{ video.title }}</a></h3>
       <p style="margin:0 0 12px;font-size:14px;line-height:1.7;">{{ video.summary_zh }}</p>
       <p style="margin:0 0 14px;padding:10px 12px;background:#eef7fa;border-radius:8px;color:#50676f;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ video.reason }}</p>

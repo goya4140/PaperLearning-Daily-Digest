@@ -61,3 +61,32 @@ def test_deterministic_ranking_needs_no_api_key(monkeypatch):
     ranked = bilibili.rank_videos(videos, {"max_items": 1}, {"enabled": True})
     assert ranked[0]["ranking_source"] == "deterministic-fallback"
     assert ranked[0]["summary_zh"]
+
+
+def test_enriches_selected_videos_with_like_and_favorite_counts():
+    videos, _ = bilibili.fetch_videos(
+        {"enabled": True, "keywords": ["AI"], "candidate_pool": 5},
+        "SESSDATA=test; bili_jct=test",
+        fetcher=lambda keywords, count, cookie, interval: VIDEOS,
+    )
+    enriched, status = bilibili.enrich_video_stats(
+        videos,
+        "SESSDATA=test; bili_jct=test",
+        fetcher=lambda bvids, cookie, interval: {
+            "BV1test123": {"like_count": 2345, "favorite_count": 678}
+        },
+    )
+    assert status == "fetched"
+    assert enriched[0]["like_count"] == 2345
+    assert enriched[0]["favorite_count"] == 678
+
+
+def test_stats_failure_keeps_base_video_metadata():
+    videos = [{"bvid": "BV1test123", "title": "测试", "view_count": 100}]
+    enriched, status = bilibili.enrich_video_stats(
+        videos,
+        "SESSDATA=test",
+        fetcher=lambda bvids, cookie, interval: {},
+    )
+    assert status == "fetch-failed"
+    assert enriched == videos
