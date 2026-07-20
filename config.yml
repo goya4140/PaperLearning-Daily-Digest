@@ -67,6 +67,21 @@ xhs:
   max_items: 5
   min_score: 6
 
+bilibili:
+  enabled: true
+  # Public video search works without a login; BILIBILI_COOKIE is an optional CI secret.
+  keywords:
+    - AI 访谈
+    - 大模型 产品实测
+    - AI Agent 实战
+    - 人工智能 技术演讲
+    - AI 会议录播
+    - 论文解读 大模型
+  candidate_pool: 30
+  max_items: 5
+  min_score: 6
+  request_interval_seconds: 1.2
+
 delivery:
   subject_prefix: "PaperLearning 每日发现"
   smtp_provider: "auto"

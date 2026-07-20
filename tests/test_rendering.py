@@ -3,7 +3,7 @@ from pathlib import Path
 from paper_digest.rendering import render, render_email
 
 
-def test_preview_contains_arxiv_and_xhs_channels():
+def test_preview_contains_arxiv_xhs_and_bilibili_channels():
     report = {
         "date": "2026-07-18",
         "arxiv_query_date": "2026-07-17",
@@ -35,12 +35,21 @@ def test_preview_contains_arxiv_and_xhs_channels():
             }
         ],
         "xhs_status": "fetched",
+        "bilibili": [{
+            "title": "AI 产品完整测试", "author": "研究频道", "description": "测试过程",
+            "summary_zh": "包含失败案例的产品测试", "reason": "证据完整", "view_count": 12000,
+            "danmaku_count": 88, "duration": "18:20", "score": 8,
+            "url": "https://www.bilibili.com/video/BV1test", "matched_keywords": ["产品实测"],
+        }],
+        "bilibili_status": "fetched",
         "disclaimer": "discovery only",
         "query_window_utc": ["2026-07-18T00:00:00Z", "2026-07-18T23:59:59Z"],
     }
     html = render(report, Path(__file__).parents[1] / "templates")
     assert 'data-channel="focus"' in html
     assert 'data-channel="xhs"' in html
+    assert 'data-channel="bilibili"' in html
+    assert "AI 产品完整测试" in html
     assert "PaperLearning-Daily-Digest" in html
     assert "Papers Cool" not in html
 
@@ -60,6 +69,11 @@ def test_email_uses_gmail_safe_single_column_tables():
             "title": "工具实测", "summary_zh": "实践经验", "reason": "有复盘",
             "liked_count": 10, "score": 8, "url": "https://www.xiaohongshu.com/explore/test",
         }],
+        "bilibili": [{
+            "title": "会议录播", "author": "研究频道", "summary_zh": "技术会议",
+            "reason": "信息密度高", "view_count": 100, "duration": "45:00", "score": 8,
+            "url": "https://www.bilibili.com/video/BV1test",
+        }],
         "disclaimer": "discovery only",
     }
     html = render_email(report, Path(__file__).parents[1] / "templates")
@@ -71,3 +85,4 @@ def test_email_uses_gmail_safe_single_column_tables():
     assert "<details" not in lowered
     assert "Agent Skill Test" in html
     assert "工具实测" in html
+    assert "会议录播" in html

@@ -1,17 +1,17 @@
 # PaperLearning Daily Digest
 
-PaperLearning Vault 的独立发现与推送层。它把低价值的每日筛选从主研究会话移到 GitHub Actions，让主会话集中在原文精读、证据账本和跨论文综合。邮件包含论文关注/探索双通道，以及独立的小红书实践与趋势通道。
+PaperLearning Vault 的独立发现与推送层。它把低价值的每日筛选从主研究会话移到 GitHub Actions，让主会话集中在原文精读、证据账本和跨论文综合。邮件包含论文关注/探索、小红书实践趋势，以及 B站深度视频三个内容区域。
 
 ## 核心设计
 
 每日候选直接从 arXiv 官方 Atom API 读取 `cs.CL,cs.LG,cs.CV,cs.AI` 指定 UTC 日期的新投稿，随后经过两级筛选。北京时间日报日与 arXiv UTC 投稿日分开记录，默认查询日为日报日前 1 天：
 
-周五、周六没有 arXiv 新公告，因此周末日报复用最近一个官方投稿窗口，并在 JSON/HTML 中明确保存实际 `arxiv_query_date`；小红书部分仍按当天抓取。
+周五、周六没有 arXiv 新公告，因此周末日报复用最近一个官方投稿窗口，并在 JSON/HTML 中明确保存实际 `arxiv_query_date`；小红书和 B站部分仍按当天抓取。
 
 1. **确定性预筛**：关注方向使用“概念簇”而不是单一关键词；探索方向使用当日语料稀有度、跨分类、来源排序和实证/发布信号，并执行标题多样性约束。
 2. **一次批量 LLM 重排**：只处理最多 36 篇预筛候选，分别选择关注方向与探索方向。没有 API Key 时自动使用确定性结果。
 
-预览 HTML 在同一页面保留 arXiv 关注/探索双通道和小红书实践通道，支持本地搜索和通道筛选；JavaScript 被邮件客户端移除时，所有内容仍可直接阅读。其中判断明确标记为“发现阶段摘要”，不会冒充原文精读结论。
+预览 HTML 在同一页面保留 arXiv 关注/探索、小红书实践和 B站深度内容，支持本地搜索和通道筛选；JavaScript 被邮件客户端移除时，所有内容仍可直接阅读。其中判断明确标记为“发现阶段摘要”，不会冒充原文精读或完整视频观看结论。
 
 ## 本地运行
 
@@ -57,6 +57,7 @@ Repository secrets：
 | `EMAIL_PASS` | SMTP 授权码 |
 | `EMAIL_TO` | 收件邮箱，多个地址用逗号分隔 |
 | `XHS_COOKIE` | 可选；小红书网页版完整 Cookie，缺失或过期时跳过小红书 |
+| `BILIBILI_COOKIE` | 可选；B站 Cookie，可改善公开搜索接口的稳定性；缺失时仍尝试匿名搜索 |
 
 Repository variables：
 
@@ -76,7 +77,7 @@ Repository variables：
 
 - 本仓库不保存 PDF、LaTeX、私人笔记或 Vault 状态。
 - 本仓库只负责发现、预筛和投递。
-- 小红书内容可进入邮件、日报预览 HTML 和对应的生成状态，但不写入 Inbox 论文包或 `02_Indexes/`。
+- 小红书与 B站内容可进入邮件、日报预览 HTML 和对应的生成状态，但不写入 Inbox 论文包或 `02_Indexes/`。
 - 论文的正式结论必须回到 PaperLearning Vault，完成 `acquired → explained → indexed` 三阶段流程。
 
 ## Inspiration
@@ -84,3 +85,5 @@ Repository variables：
 邮件投递与 GitHub Actions 思路受到 [yzbcs/Daily-Digest-Assistant](https://github.com/yzbcs/Daily-Digest-Assistant) 启发。本项目采用独立实现，并保留对原项目的致谢。
 
 小红书抓取与请求签名运行时固定使用该项目 commit `4957c3e40354816edbb2114e3aad7a3b53be47d4`。Cookie 通常约 30 天需要更新；请仅以低频个人学习用途使用，并遵守平台条款。
+
+B站通道的场景设计参考 [tooandy/bili-auto](https://github.com/tooandy/bili-auto)，本项目采用独立的只读公开搜索实现，不执行关注、点赞、投币、评论或下载视频。请保持低频个人学习用途并遵守平台条款。
