@@ -3,7 +3,7 @@
   "date": "2026-07-20",
   "arxiv_query_date": "2026-07-17",
   "arxiv_reused_latest": true,
-  "generated_at": "2026-07-20T04:22:54.861721+00:00",
+  "generated_at": "2026-07-20T05:32:56.992172+00:00",
   "source": "arxiv-api",
   "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607170000+TO+202607172359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
   "source_urls": [
@@ -16,45 +16,6 @@
   "raw_candidate_count": 201,
   "llm_candidate_count": 36,
   "focus": [
-    {
-      "id": "2607.16066",
-      "title": "LLM-Powered Agentic AI for 5G/6G Networks: A Tutorial and Survey on Architectures, Protocols, and Standardization",
-      "authors": [
-        "Mazene Ameur",
-        "Abdelkader Mekrache",
-        "Bouziane Brik",
-        "Adlen Ksentini"
-      ],
-      "abstract": "Agentic Artificial Intelligence (AI), enabled by Large Language Models, marks a shift from rule-based automation toward autonomous, goal-driven control of Next-Generation Networks (NGNs). Existing surveys treat the two domains in isolation, leaving protocol integration, evaluation, and standardization alignment underexplored. To address this gap, a two-part tutorial-and-survey is presented. Part I formalises the control, management, and AI-native planes of 5G and 6G. It then covers the foundations of agentic systems: reasoning, planning, tool use, multi-agent coordination, and evaluation. Part II maps agentic capabilities onto 5G/6G control surfaces, standardization, and major 6G initiatives. Finally, it identifies open challenges shaping autonomous telecommunications.",
-      "categories": [
-        "cs.NI",
-        "cs.AI"
-      ],
-      "primary_category": "cs.NI",
-      "published": "2026-07-17T15:47:23Z",
-      "updated": "2026-07-17T15:47:23Z",
-      "comment": "35 pages, 4 figures, Under review",
-      "url": "https://arxiv.org/abs/2607.16066v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16066v1",
-      "rank": 40,
-      "metadata_source": "arxiv-api",
-      "focus_score": 7.1,
-      "focus_profile": "Agent Capabilities and Skills",
-      "focus_reasons": [
-        "tool learning / tool use / agent memory",
-        "multi-agent / agentic system / autonomous agent"
-      ],
-      "explore_score": 11.425,
-      "explore_reasons": [
-        "daily-corpus novelty",
-        "cross-category"
-      ],
-      "lane": "focus",
-      "llm_score": 10,
-      "reason": "聚焦5G/6G网络中LLM智能体的架构、协议与标准化，紧扣代理能力落地场景。",
-      "one_liner": "首篇系统性综述LLM驱动的通信网络智能体，覆盖控制面映射、标准对齐与开放挑战。",
-      "ranking_source": "batched-llm"
-    },
     {
       "id": "2607.16133",
       "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
@@ -94,9 +55,48 @@
         "empirical/release signal"
       ],
       "lane": "focus",
-      "llm_score": 9,
-      "reason": "从信息瓶颈视角解释多智能体优势条件，提供可验证的β参数化理论与18组实验验证。",
-      "one_liner": "揭示多智能体增益本质是受限通信下的信息压缩权衡，为智能体设计提供理论判据。",
+      "llm_score": 7,
+      "reason": "从信息瓶颈视角解析多智能体系统优势边界，理论+18实验验证，机制清晰",
+      "one_liner": "揭示MAS优于SAS的根本条件：受限中继下的信息压缩收益大于损失",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.16066",
+      "title": "LLM-Powered Agentic AI for 5G/6G Networks: A Tutorial and Survey on Architectures, Protocols, and Standardization",
+      "authors": [
+        "Mazene Ameur",
+        "Abdelkader Mekrache",
+        "Bouziane Brik",
+        "Adlen Ksentini"
+      ],
+      "abstract": "Agentic Artificial Intelligence (AI), enabled by Large Language Models, marks a shift from rule-based automation toward autonomous, goal-driven control of Next-Generation Networks (NGNs). Existing surveys treat the two domains in isolation, leaving protocol integration, evaluation, and standardization alignment underexplored. To address this gap, a two-part tutorial-and-survey is presented. Part I formalises the control, management, and AI-native planes of 5G and 6G. It then covers the foundations of agentic systems: reasoning, planning, tool use, multi-agent coordination, and evaluation. Part II maps agentic capabilities onto 5G/6G control surfaces, standardization, and major 6G initiatives. Finally, it identifies open challenges shaping autonomous telecommunications.",
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "primary_category": "cs.NI",
+      "published": "2026-07-17T15:47:23Z",
+      "updated": "2026-07-17T15:47:23Z",
+      "comment": "35 pages, 4 figures, Under review",
+      "url": "https://arxiv.org/abs/2607.16066v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.16066v1",
+      "rank": 40,
+      "metadata_source": "arxiv-api",
+      "focus_score": 7.1,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory",
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.425,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 7,
+      "reason": "聚焦5G/6G网络中LLM智能体的架构、协议与标准化，强契合Agent Capabilities and Skills",
+      "one_liner": "首篇系统性综述LLM驱动的通信网络智能体，覆盖控制平面、多智能体协同与标准对齐",
       "ranking_source": "batched-llm"
     },
     {
@@ -130,47 +130,49 @@
         "empirical/release signal"
       ],
       "lane": "focus",
-      "llm_score": 9,
-      "reason": "提出数据科学世界模型DSWorld，含结构化状态构建、轻量执行与LLM仿真，加速训练14倍。",
-      "one_liner": "首个面向数据科学工作流的世界模型框架，显著提升自主代理推理效率与可预测性。",
+      "llm_score": 7,
+      "reason": "提出数据科学世界模型DSWorld，含结构化状态构建与反射式优化，加速训练14倍",
+      "one_liner": "首个面向数据科学任务的世界模型框架，显著提升自主代理执行效率",
       "ranking_source": "batched-llm"
     },
     {
-      "id": "2607.15781",
-      "title": "AgentFAIR: A Multi-Agent Collaborative Framework for FAIRness Evaluation of Geospatial Datasets",
+      "id": "2607.15755",
+      "title": "AuEmoChat: Authentic Emotion Understanding and Rendering for Conversational Speech Synthesis",
       "authors": [
-        "Ming Chen",
-        "Pranav Pai"
+        "Zhenqi Jia",
+        "Yuan Zhao",
+        "Aruukhan",
+        "Rui Liu",
+        "Haizhou Li"
       ],
-      "abstract": "Geospatial datasets support applications from urban planning to climate modeling, yet consistent assessment of FAIR compliance is difficult. Existing evaluators use different rubrics and evidence sources and may fail on JavaScript-rendered pages or repository-specific identifiers. For 50 datasets from 10 repositories, the standard deviation of normalized scores across available tools averages 15.0 percentage points and reaches 30.3 for one dataset. Because these outputs are not equivalent measurements, we use them to characterize disagreement and failure modes, not comparative accuracy. We present AgentFAIR, a multi-agent framework combining structured metadata extraction with 13 sub-principle-specific LLM evaluators. Each produces a 0-3 maturity score, cited evidence, and recommendations; a critic checks evidence and consistency and can request targeted re-evaluation. Mean Findability, Accessibility, Interoperability, and Reusability scores are 79.7%, 70.4%, 45.3%, and 72.0%. Rank correlations with four baseline tools range from 0.31 to 0.61; the FAIR-enough comparison is not statistically significant. On a 10-dataset repeated-run subset, sub-principle agreement averages 89% (standard deviation: 3 percentage points), versus 71% without the critic. A preliminary 15-dataset expert study yields Fleiss' kappa of 0.71 and 82% alignment with expert consensus. API cost is approximately USD 0.054 per dataset. These results support auditability and feasibility, while the limited benchmark, incomplete ablations, and single-model-family validation constrain claims about accuracy and generalization.",
+      "abstract": "Conversational Speech Synthesis (CSS) aims to synthesize speech with human-like emotional expression and contextual consistency in user-agent interactions. Existing CSS methods struggle to render authentic human emotions due to limited predefined emotion label spaces (e.g., seven emotion categories), while redundant multimodal tokens in multi-turn dialogue history interfere with context understanding. To address these issues, we propose AuEmoChat, a CSS framework for authentic emotion understanding and rendering. First, we develop AuEmoCodec, which learns a discrete authentic emotion token space from large-scale emotional speech via finite scalar quantization, enabling a more authentic emotion representation than limited basic emotion categories. We further propose AuEmoToMe, an authentic-emotion-guided token merging algorithm that merges redundant tokens in multimodal dialogue history while preserving emotion-relevant context. We integrate it into an autoregressive text-speech model to predict the target authentic emotion token and speech tokens. Finally, we propose Authentic Emotion Flow Matching, which renders speech by jointly conditioning on merged dialogue context, target authentic emotion, and acoustic priors. Extensive experiments on the NCSSD-EmCap dataset demonstrate that AuEmoChat outperforms state-of-the-art CSS baselines and generates more expressive and authentic emotional speech.",
       "categories": [
-        "cs.AI",
-        "cs.ET",
-        "cs.MA"
+        "cs.SD",
+        "cs.AI"
       ],
-      "primary_category": "cs.AI",
-      "published": "2026-07-17T09:32:54Z",
-      "updated": "2026-07-17T09:32:54Z",
-      "comment": "",
-      "url": "https://arxiv.org/abs/2607.15781v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.15781v1",
-      "rank": 116,
+      "primary_category": "cs.SD",
+      "published": "2026-07-17T08:47:58Z",
+      "updated": "2026-07-17T08:47:58Z",
+      "comment": "Accepted by ACM MM 2026",
+      "url": "https://arxiv.org/abs/2607.15755v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.15755v1",
+      "rank": 126,
       "metadata_source": "arxiv-api",
       "focus_score": 6.5,
-      "focus_profile": "Agent Capabilities and Skills",
+      "focus_profile": "Affective Reasoning",
       "focus_reasons": [
-        "multi-agent / agentic system / autonomous agent"
+        "multimodal emotion / emotion understanding"
       ],
-      "explore_score": 10.8481,
+      "explore_score": 11.872,
       "explore_reasons": [
         "daily-corpus novelty",
         "cross-category",
         "empirical/release signal"
       ],
       "lane": "focus",
-      "llm_score": 8,
-      "reason": "AgentFAIR用13个子原则专用LLM评估地理空间数据FAIR性，引入批评者机制提升一致性。",
-      "one_liner": "多智能体协同框架实现可审计、高一致性的地理空间数据FAIR成熟度评估。",
+      "llm_score": 7,
+      "reason": "面向情感真实性建模，提出离散情绪码本与上下文融合算法，效果显著",
+      "one_liner": "AuEmoChat实现更真实的情感语音合成，突破预定义情绪类别限制",
       "ranking_source": "batched-llm"
     }
   ],
@@ -211,8 +213,88 @@
       ],
       "lane": "explore",
       "llm_score": 10,
-      "reason": "ActiveVision首次量化MLLM主动视觉观测能力，揭示其远落后人类（96.1% vs 3.5%）。",
-      "one_liner": "开创性基准揭示当前多模态大模型缺乏闭环主动观察能力，亟需新架构范式。",
+      "reason": "提出热力学计算蓝图，用物理硬件实现能量高效概率学习，范式级探索",
+      "one_liner": "基于超导电路的热力学计算栈，为AI能效瓶颈提供全新硬件路径",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.16165",
+      "title": "An Exam for Active Observers",
+      "authors": [
+        "Jiarui Zhang",
+        "Muzi Tao",
+        "Shangshang Wang",
+        "Ollie Liu",
+        "Xuezhe Ma",
+        "Willie Neiswanger"
+      ],
+      "abstract": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active observation is essential for a wide range of tasks. Whether today's multimodal large language models (MLLMs) exercise active observation is an empirical question that current vision-language benchmarks do not answer. We introduce ActiveVision, a benchmark that makes active observation measurable for MLLMs, comprising 17 tasks across 3 categories. Tasks are designed to force repeated visual perception rather than a single static description. Frontier MLLMs collapse on ActiveVision: the highest-scoring model we evaluate, GPT-5.5 at the highest exposed reasoning-effort tier, solves only 10.6% of items and scores zero on 11 of the 17 tasks, and even Claude Fable 5, despite topping most reasoning and coding leaderboards, solves just 3.5%, far behind three human participants who average 96.1%. Furthermore, much of the gap persists even when models write and run their own vision code: such code is unreliable on realistic imagery, and catching its failures itself requires the active perception the models lack. Together, these results indicate that current MLLMs lack robust active visual observation, motivating architectures and training objectives that close the perception-reasoning loop.",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-17T17:46:23Z",
+      "updated": "2026-07-17T17:46:23Z",
+      "comment": "17 pages, 8 figures, 4 tables. Project page: https://activevision.dev",
+      "url": "https://arxiv.org/abs/2607.16165v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.16165v1",
+      "rank": 13,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.7284,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "构建ActiveVision基准，首次量化MLLM主动视觉观测能力缺失，人机差距巨大",
+      "one_liner": "前沿MLLM仅解10.6%主动视觉题，人类达96.1%，暴露感知-推理闭环缺陷",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.16175",
+      "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+      "authors": [
+        "Md Erfan",
+        "Ahmed Ryan",
+        "Md Kamal Hossain Chowdhury",
+        "Md Rayhanur Rahman"
+      ],
+      "abstract": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These vulnerabilities are commonly documented as plain text in the Common Vulnerabilities and Exposures (CVE) database; however, security practitioners require structured information about affected assets, types of weaknesses, and attack behaviors to effectively mitigate the risks from these vulnerabilities. To this end, we evaluate open-weight Large Language Models (LLMs) for generating Structured Threat Information Expression (STIX), a well-known structured format for representing threat information, for CAV-related CVEs. We construct a dataset called CAV-STIXGen that maps CAV vulnerability descriptions to STIX domain objects (SDO), STIX relationship objects (SRO), Common Weakness Enumeration (CWE), and MITRE ATT&CK techniques mappings. Using this dataset, we evaluated 11 open-weight LLMs (4B to 120B parameters) across various prompting strategies and temperatures. Single-model configurations achieve F1 scores of 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while complete MITRE ATT&CK mapping remains challenging. In a multi-agent setup, Gemma-4-31B and Codestral-22B achieve F1 scores of 0.91 for SDOs and 0.43 for SROs, respectively. Lastly, we analyze CWE and MITRE ATT&CK co-occurrences to identify recurring threat patterns in the CAV domain, demonstrating how AI-assisted vulnerability-to-STIX translation can automate threat intelligence and prioritize defense in transportation security.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-07-17T17:55:19Z",
+      "updated": "2026-07-17T17:55:19Z",
+      "comment": "9 pages",
+      "url": "https://arxiv.org/abs/2607.16175v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.16175v1",
+      "rank": 10,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.2485,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "将CVE漏洞文本转为STIX结构化威胁情报，填补CAV安全自动化空白",
+      "one_liner": "首个面向自动驾驶汽车的LLM漏洞结构化翻译框架，支持MITRE ATT&CK映射",
       "ranking_source": "batched-llm"
     },
     {
@@ -254,87 +336,9 @@
         "empirical/release signal"
       ],
       "lane": "explore",
-      "llm_score": 10,
-      "reason": "PRISA框架用路侧LiDAR实现实时交叉口风险预测，端到端延迟仅194ms，具工程落地性。",
-      "one_liner": "面向真实路口的边缘端多智能体安全评估系统，支持PPET/TTC双指标实时冲突预警。",
-      "ranking_source": "batched-llm"
-    },
-    {
-      "id": "2607.15740",
-      "title": "Debiasing Text-to-Image Evaluation via Implicit Cultural Alignment Reward Modeling",
-      "authors": [
-        "Bo-An Chang",
-        "Yu-Chih Chen"
-      ],
-      "abstract": "As Text-to-Image (T2I) systems rapidly advance, evaluating the cultural authenticity of synthesized content has become increasingly important for fair and trustworthy generative AI. Existing T2I evaluation metrics and multimodal judges often rely on visual-semantic representations that underrepresent implicit cultural norms, leading to biased preference judgments and the omission of fine-grained cultural cues. In addition, visual question answering (VQA)-based evaluators typically depend on autoregressive text generation, which limits their scalability for real-time reward modeling. To address these limitations, we introduce an Implicit Cultural Alignment Reward Model built upon a lightweight 4.2-billion-parameter Multimodal Large Language Model (MLLM). Our framework integrates an Implicit Cultural Probe with a Skip-connection Cross-Attention (SkipCA) mechanism, enabling late-stage semantic features to directly attend to early-stage visual representations and better preserve culturally salient details. Evaluations on 3,323 challenging and carefully curated image pairs from the CulturalFrames benchmark show that our approach achieves 80.54% pairwise accuracy, with Pearson and Kendall correlation coefficients of 0.546 and 0.377, respectively, outperforming representative vision-language metrics and MLLM-based evaluators. Moreover, by bypassing autoregressive text generation, our model processes each evaluation in 0.21 seconds under our local inference setup, achieving a $10\\times$ speedup over standard VQA-based evaluators. These results suggest that the proposed reward model can provide an efficient and culturally aware scalar signal for preference optimization pipelines such as Reinforcement Learning from Human Feedback and Direct Preference Optimization.",
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.MM"
-      ],
-      "primary_category": "cs.CV",
-      "published": "2026-07-17T08:23:03Z",
-      "updated": "2026-07-17T08:23:03Z",
-      "comment": "15 pages, 2 figures",
-      "url": "https://arxiv.org/abs/2607.15740v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.15740v1",
-      "rank": 131,
-      "metadata_source": "arxiv-api",
-      "focus_score": 6.5,
-      "focus_profile": "Reward, Verification and Evaluation",
-      "focus_reasons": [
-        "reward model / process reward / preference learning"
-      ],
-      "explore_score": 10.2979,
-      "explore_reasons": [
-        "daily-corpus novelty",
-        "cross-category",
-        "empirical/release signal"
-      ],
-      "lane": "explore",
-      "llm_score": 10,
-      "reason": "提出隐式文化对齐奖励模型，跳过自回归生成，实现10倍加速与文化敏感评估。",
-      "one_liner": "首个面向文本到图像生成的文化真实性奖励模型，兼顾高效性与细粒度文化感知。",
-      "ranking_source": "batched-llm"
-    },
-    {
-      "id": "2607.16177",
-      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
-      "authors": [
-        "Matteo Tomasetto",
-        "Nicolò Botteghi",
-        "Gabriele Bruni",
-        "Andrea Manzoni"
-      ],
-      "abstract": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strategies. Consequently, applications of RL are typically limited to sparse sensors and actuators due to the curse of dimensionality entailed by the exploration-exploitation dilemma in high-dimensional spaces. In this work, we bridge RL and traditional optimal control for dynamical system with a novel Physics-EnhAnced Reinforcement Learning (PEARL) paradigm tailored to the control of high-dimensional and parametric dynamical systems, exploiting the differentibility of their dynamics. Specifically, PEARL employs an actor-adjoint algorithm that leverages automatic differentiation to compute policy gradients over short horizons and adjoint-based sensitivities of future returns approximated via neural networks, significantly reducing the number of environment interactions, while mitigating long-term gradient instabilities. Through two challenging parametric navigation problems in unsteady flows, we show that PEARL (i) effectively exploits differentiable environments to outperform state-of-the-art RL algorithms, (ii) is sample efficient, thanks to the physics-guided policy learning, (iii) generalizes across multiple scenarios, which is crucial when dealing with parametric systems, and (iv) enables scaling RL to high-dimensional state and action spaces, without requiring low-dimensional state representations or multi-agent strategies.",
-      "categories": [
-        "cs.LG",
-        "math.OC"
-      ],
-      "primary_category": "cs.LG",
-      "published": "2026-07-17T17:56:05Z",
-      "updated": "2026-07-17T17:56:05Z",
-      "comment": "",
-      "url": "https://arxiv.org/abs/2607.16177v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.16177v1",
-      "rank": 9,
-      "metadata_source": "arxiv-api",
-      "focus_score": 2.7,
-      "focus_profile": "Agent Capabilities and Skills",
-      "focus_reasons": [
-        "multi-agent / agentic system / autonomous agent"
-      ],
-      "explore_score": 10.8802,
-      "explore_reasons": [
-        "daily-corpus novelty",
-        "cross-category",
-        "empirical/release signal"
-      ],
-      "lane": "explore",
       "llm_score": 9,
-      "reason": "PEARL将物理导数融入强化学习，解决高维动力系统控制中的样本效率与泛化难题。",
-      "one_liner": "物理增强型强化学习范式，显著提升动态系统实时最优控制的样本效率与跨场景泛化性。",
+      "reason": "首创路侧LiDAR框架PRISA，实现实时多智能体交叉口风险预测，工程落地强",
+      "one_liner": "PRISA在真实路口部署，毫秒级延迟实现行人/车辆冲突主动预警",
       "ranking_source": "batched-llm"
     }
   ],
@@ -350,7 +354,7 @@
       "author": "青柠智信",
       "duration": "43:21",
       "published_at": 1784471269,
-      "view_count": 326,
+      "view_count": 357,
       "danmaku_count": 0,
       "cover_url": "https://i1.hdslb.com/bfs/archive/29bd279d03097e480f3c8c8b41e47142103141c2.jpg",
       "url": "https://www.bilibili.com/video/BV1XhKr69ENv",
@@ -358,9 +362,11 @@
         "AI 访谈"
       ],
       "score": 8,
-      "summary_zh": "SpaceX早期投资人访谈，聚焦未来三年AI代码、机器人与超级智能趋势",
-      "reason": "高质量行业专家访谈，主题聚焦技术演进与落地趋势",
-      "ranking_source": "batched-llm"
+      "summary_zh": "SpaceX早期投资人谈未来三年AI代码、机器人与超级智能趋势",
+      "reason": "高质量行业专家访谈，聚焦技术演进与落地风向",
+      "ranking_source": "batched-llm",
+      "like_count": 22,
+      "favorite_count": 8
     },
     {
       "id": "BV1doEi6yEMv",
@@ -377,10 +383,12 @@
       "matched_keywords": [
         "大模型 产品实测"
       ],
-      "score": 9,
-      "summary_zh": "Claude Fable 5四场景实测：截图转代码、交互式时间线等真实任务验证",
-      "reason": "严谨产品实测，覆盖具体任务、工具链与可复现结果",
-      "ranking_source": "batched-llm"
+      "score": 7,
+      "summary_zh": "Claude Fable 5 四项真实产品任务实测，含截图转代码等",
+      "reason": "具体、可验证的模型能力实测，拒绝跑分空谈",
+      "ranking_source": "batched-llm",
+      "like_count": 10,
+      "favorite_count": 1
     },
     {
       "id": "BV1g9KB6GEbQ",
@@ -390,7 +398,7 @@
       "author": "fengzhizi715",
       "duration": "10:54",
       "published_at": 1784459981,
-      "view_count": 126,
+      "view_count": 144,
       "danmaku_count": 0,
       "cover_url": "https://i2.hdslb.com/bfs/archive/7069ead2c6c69ce95792fcdb6acf53c4c4f926d6.jpg",
       "url": "https://www.bilibili.com/video/BV1g9KB6GEbQ",
@@ -398,9 +406,11 @@
         "AI Agent 实战"
       ],
       "score": 7,
-      "summary_zh": "AI Agent平台工程实战首期，解析从Chat页面到完整Agent平台的演进逻辑",
-      "reason": "一线开发者工程复盘，含架构演进与平台设计决策",
-      "ranking_source": "batched-llm"
+      "summary_zh": "AI Agent平台工程实战首期，解析从Chat页面到复杂工作流演进",
+      "reason": "一线开发者工程复盘，有架构演进逻辑和实践动因",
+      "ranking_source": "batched-llm",
+      "like_count": 3,
+      "favorite_count": 7
     },
     {
       "id": "BV1WrZ1YREfJ",
@@ -417,10 +427,12 @@
       "matched_keywords": [
         "AI 会议录播"
       ],
-      "score": 8,
-      "summary_zh": "WasmEdge构建MCP代理服务器录播，含Rust实战、安全沙箱对比与社区会议全记录",
-      "reason": "技术会议录播+实操演示，聚焦MCP协议与轻量化部署前沿实践",
-      "ranking_source": "batched-llm"
+      "score": 7,
+      "summary_zh": "WasmEdge构建MCP代理服务器全流程录播，含安全沙箱对比",
+      "reason": "会议录播含完整技术演示与轻量化部署实证",
+      "ranking_source": "batched-llm",
+      "like_count": 3,
+      "favorite_count": 2
     },
     {
       "id": "BV1ATKT6VE8x",
@@ -430,25 +442,28 @@
       "author": "熊二等兵",
       "duration": "16:17",
       "published_at": 1784407361,
-      "view_count": 41,
+      "view_count": 42,
       "danmaku_count": 0,
       "cover_url": "https://i0.hdslb.com/bfs/archive/a8d44fec8c898884d15875821110b1c464836900.jpg",
       "url": "https://www.bilibili.com/video/BV1ATKT6VE8x",
       "matched_keywords": [
         "论文解读 大模型"
       ],
-      "score": 7,
-      "summary_zh": "解读视觉大模型OOD泛化失败原因，指出长度泛化与局部性核心痛点",
-      "reason": "论文解读聚焦关键科学问题，有明确技术洞见与归因分析",
-      "ranking_source": "batched-llm"
+      "score": 6,
+      "summary_zh": "解读视觉大模型OOD泛化失败原因，聚焦长度泛化痛点",
+      "reason": "论文解读直击核心问题，作者与方法论信息明确",
+      "ranking_source": "batched-llm",
+      "like_count": 21,
+      "favorite_count": 4
     }
   ],
   "bilibili_candidate_count": 30,
   "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
   "ranking_source": [
     "batched-llm"
   ],
   "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
   "schema_version": 1,
-  "content_sha256": "8bb4e1dace57bba2e75ea04fc369521dcf09f8bd6546e6fa042952c98dc6f657"
+  "content_sha256": "40af6e44315f83dcdd7932f7cc80e8ab344eb6d31eb8c5a79d9b9a0861c1d6d4"
 }
