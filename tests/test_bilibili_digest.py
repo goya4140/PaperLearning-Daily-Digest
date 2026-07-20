@@ -21,9 +21,26 @@ def test_disabled_source_skips_without_network():
     assert status == "disabled"
 
 
+def test_missing_cookie_skips_without_network():
+    called = False
+
+    def fetcher(keywords, count, cookie, interval):
+        nonlocal called
+        called = True
+        return VIDEOS
+
+    videos, status = bilibili.fetch_videos(
+        {"enabled": True, "keywords": ["AI"]}, "", fetcher=fetcher
+    )
+    assert videos == []
+    assert status == "missing-cookie"
+    assert called is False
+
+
 def test_fetch_normalizes_public_video_metadata():
     videos, status = bilibili.fetch_videos(
         {"enabled": True, "keywords": ["AI 产品实测"], "candidate_pool": 5},
+        "SESSDATA=test; bili_jct=test",
         fetcher=lambda keywords, count, cookie, interval: VIDEOS,
     )
     assert status == "fetched"
@@ -38,6 +55,7 @@ def test_deterministic_ranking_needs_no_api_key(monkeypatch):
     monkeypatch.delenv("LLM_API_KEY", raising=False)
     videos, _ = bilibili.fetch_videos(
         {"enabled": True, "keywords": ["AI"], "candidate_pool": 5},
+        "SESSDATA=test; bili_jct=test",
         fetcher=lambda keywords, count, cookie, interval: VIDEOS,
     )
     ranked = bilibili.rank_videos(videos, {"max_items": 1}, {"enabled": True})

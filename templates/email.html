@@ -64,7 +64,7 @@
     </td></tr></table>
   </td></tr>
   {% endfor %}
-  {% if not report.bilibili|default([]) %}<tr><td style="padding:16px;background:#ffffff;color:#63706c;border:1px dashed #dce4df;">当前没有可推送的 B站内容。</td></tr>{% endif %}
+  {% if not report.bilibili|default([]) %}<tr><td style="padding:16px;background:#ffffff;color:#63706c;border:1px dashed #dce4df;">当前没有可推送的 B站内容。请检查 BILIBILI_COOKIE 是否已配置或过期。</td></tr>{% endif %}
 
   <tr><td style="padding:24px 4px;color:#737e79;font-size:11px;line-height:1.7;">数据源：arXiv 官方元数据接口、B站公开视频搜索与小红书公开页面（日报日 {{ report.date }}，UTC 查询日 {{ report.arxiv_query_date }}）。邮件仅提供发现阶段摘要；正式判断请回到 PaperLearning Vault 阅读原文或观看原视频。</td></tr>
 </table>

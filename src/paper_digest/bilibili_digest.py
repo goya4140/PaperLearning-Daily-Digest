@@ -72,6 +72,8 @@ def fetch_videos(
 ) -> tuple[list[dict[str, Any]], str]:
     if not settings.get("enabled", True):
         return [], "disabled"
+    if not cookie.strip():
+        return [], "missing-cookie"
     keywords = [str(item).strip() for item in settings.get("keywords", []) if str(item).strip()]
     if not keywords:
         return [], "missing-keywords"
@@ -113,7 +115,7 @@ def fetch_videos(
             "matched_keywords": sorted(matched),
         }
     normalized = list(by_id.values())[: int(settings.get("candidate_pool", 30))]
-    return normalized, "fetched" if normalized else "empty"
+    return normalized, "fetched" if normalized else "empty-or-cookie-expired"
 
 
 def _score(video: dict[str, Any]) -> float:

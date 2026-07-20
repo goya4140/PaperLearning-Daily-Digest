@@ -57,7 +57,7 @@ Repository secrets：
 | `EMAIL_PASS` | SMTP 授权码 |
 | `EMAIL_TO` | 收件邮箱，多个地址用逗号分隔 |
 | `XHS_COOKIE` | 可选；小红书网页版完整 Cookie，缺失或过期时跳过小红书 |
-| `BILIBILI_COOKIE` | 可选；B站 Cookie，可改善公开搜索接口的稳定性；缺失时仍尝试匿名搜索 |
+| `BILIBILI_COOKIE` | 必需（B站通道）；B站网页版完整 Cookie，缺失时跳过 B站 |
 
 Repository variables：
 
@@ -86,4 +86,4 @@ Repository variables：
 
 小红书抓取与请求签名运行时固定使用该项目 commit `4957c3e40354816edbb2114e3aad7a3b53be47d4`。Cookie 通常约 30 天需要更新；请仅以低频个人学习用途使用，并遵守平台条款。
 
-B站通道的场景设计参考 [tooandy/bili-auto](https://github.com/tooandy/bili-auto)，本项目采用独立的只读公开搜索实现，不执行关注、点赞、投币、评论或下载视频。请保持低频个人学习用途并遵守平台条款。
+B站通道的场景设计参考 [tooandy/bili-auto](https://github.com/tooandy/bili-auto)，本项目采用独立的 Cookie 会话只读搜索实现；缺失 Cookie 时状态为 `missing-cookie`，不会匿名请求。程序不执行关注、点赞、投币、评论或下载视频。请保持低频个人学习用途并遵守平台条款。

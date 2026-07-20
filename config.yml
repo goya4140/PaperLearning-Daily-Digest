@@ -69,7 +69,7 @@ xhs:
 
 bilibili:
   enabled: true
-  # Public video search works without a login; BILIBILI_COOKIE is an optional CI secret.
+  # BILIBILI_COOKIE is required. Missing credentials skip this channel safely.
   keywords:
     - AI 访谈
     - 大模型 产品实测

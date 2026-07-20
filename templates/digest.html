@@ -100,7 +100,7 @@
           <div class="links"><a href="{{ video.url }}">打开 B站</a></div>
         </article>
         {% endfor %}
-        {% if not report.bilibili|default([]) %}<div class="empty">当前没有可预览的 B站内容。公开接口受限时，其他通道仍会正常生成。</div>{% endif %}
+        {% if not report.bilibili|default([]) %}<div class="empty">当前没有可预览的 B站内容。请检查 BILIBILI_COOKIE 是否已配置或过期；其他通道仍会正常生成。</div>{% endif %}
       </div>
     </section>
 
