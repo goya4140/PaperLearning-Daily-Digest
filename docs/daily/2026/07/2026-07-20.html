@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="PaperLearning-Daily-Digest">
+  <title>PaperLearning 每日发现 · 2026-07-20</title>
+  <style>
+    :root{--ink:#17211f;--muted:#63706c;--paper:#fff;--ground:#f3f0e8;--focus:#176b5b;--explore:#9a4c18;--xhs:#c4324a;--bilibili:#1684a7;--line:#dce4df}
+    *{box-sizing:border-box}body{margin:0;background:var(--ground);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
+    a{color:inherit}.shell{max-width:1040px;margin:0 auto;padding:24px 14px 56px}.hero{padding:34px;border-radius:24px;background:linear-gradient(135deg,#153b36,#215d50);color:#fff;box-shadow:0 18px 45px #173c3422}
+    .eyebrow{font-size:11px;letter-spacing:2px;color:#add8ca}.hero h1{margin:8px 0;font-size:clamp(27px,5vw,46px)}.hero p{margin:0;color:#d1e8e1;line-height:1.7}.metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.metric{padding:9px 12px;border:1px solid #ffffff35;border-radius:999px;background:#ffffff12;font-size:12px}
+    .notice{margin:18px 0;padding:13px 15px;border-left:4px solid #e3a824;border-radius:8px;background:#fff5d8;font-size:13px;line-height:1.65}.toolbar{position:sticky;top:8px;z-index:4;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;padding:12px;border:1px solid var(--line);border-radius:16px;background:#fffffff0;backdrop-filter:blur(12px)}
+    .toolbar button,.toolbar input{border:1px solid var(--line);border-radius:999px;background:#fff;padding:9px 13px;color:var(--ink);font:inherit}.toolbar button{cursor:pointer}.toolbar button.active{background:var(--ink);color:#fff}.toolbar input{min-width:220px;flex:1}.section{margin-top:28px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.section h2{margin:0;font-size:22px}.section p.sub{margin:5px 0 12px;color:var(--muted);font-size:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}.card{display:flex;flex-direction:column;min-height:100%;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:0 8px 24px #183c330d}.card[data-channel="focus"]{border-top:4px solid var(--focus)}.card[data-channel="explore"]{border-top:4px solid var(--explore)}.card[data-channel="xhs"]{border-top:4px solid var(--xhs)}.card[data-channel="bilibili"]{border-top:4px solid var(--bilibili)}
+    .meta{font-size:11px;font-weight:750;letter-spacing:.3px}.focus{color:var(--focus)}.explore{color:var(--explore)}.xhs{color:var(--xhs)}.bilibili{color:var(--bilibili)}.card h3{margin:8px 0 5px;font-size:17px;line-height:1.45}.authors{color:var(--muted);font-size:12px}.summary{font-size:14px;line-height:1.7}.reason{padding:9px 11px;border-radius:9px;background:#f6f7f4;color:#5e6864;font-size:12px;line-height:1.55}.links{display:flex;gap:14px;margin-top:auto;padding-top:14px;font-size:12px;font-weight:750}.card details{margin-top:11px;color:var(--muted);font-size:12px;line-height:1.65}.card summary{cursor:pointer;font-weight:700}.empty{padding:18px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);background:#ffffff88}.footer{margin-top:32px;color:#737e79;font-size:11px;line-height:1.7}.hidden{display:none!important}
+    @media(max-width:600px){.shell{padding:10px 8px 40px}.hero{padding:24px 20px;border-radius:18px}.toolbar{top:4px}.toolbar input{order:-1;flex-basis:100%;min-width:0}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">PAPERLEARNING · DISCOVERY RADAR</div>
+      <h1>每日发现预览</h1>
+      <p>2026-07-20 · arXiv、小红书与 B站内容的统一发现预览</p>
+      <div class="metrics">
+        <span class="metric">arXiv 原始候选 201</span>
+        <span class="metric">关注 4</span>
+        <span class="metric">探索 4</span>
+        <span class="metric">小红书 0</span>
+        <span class="metric">B站 5</span>
+      </div>
+    </header>
+
+    <p class="notice">发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。</p>
+
+    <nav class="toolbar" aria-label="预览筛选">
+      <input id="search" type="search" placeholder="搜索论文、小红书或 B站内容…" aria-label="搜索">
+      <button class="active" data-filter="all" type="button">全部</button>
+      <button data-filter="focus" type="button">关注论文</button>
+      <button data-filter="explore" type="button">探索论文</button>
+      <button data-filter="xhs" type="button">小红书</button>
+      <button data-filter="bilibili" type="button">B站</button>
+    </nav>
+
+    <section class="section" data-section="focus">
+      <div class="section-head"><h2 class="focus">关注方向</h2><span>4 篇</span></div>
+      <p class="sub">与当前研究意图高匹配的候选</p>
+      <div class="grid">
+        <article class="card" data-channel="focus" data-search="LLM-Powered Agentic AI for 5G/6G Networks: A Tutorial and Survey on Architectures, Protocols, and Standardization Mazene Ameur Abdelkader Mekrache Bouziane Brik Adlen Ksentini cs.NI cs.AI 首篇系统性综述LLM驱动的通信网络智能体，覆盖控制面映射、标准对齐与开放挑战。 Agentic Artificial Intelligence (AI), enabled by Large Language Models, marks a shift from rule-based automation toward autonomous, goal-driven control of Next-Generation Networks (NGNs). Existing surveys treat the two domains in isolation, leaving protocol integration, evaluation, and standardization alignment underexplored. To address this gap, a two-part tutorial-and-survey is presented. Part I formalises the control, management, and AI-native planes of 5G and 6G. It then covers the foundations of agentic systems: reasoning, planning, tool use, multi-agent coordination, and evaluation. Part II maps agentic capabilities onto 5G/6G control surfaces, standardization, and major 6G initiatives. Finally, it identifies open challenges shaping autonomous telecommunications.">
+          <div class="meta focus">cs.NI · cs.AI · 推荐 10/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.16066v1">LLM-Powered Agentic AI for 5G/6G Networks: A Tutorial and Survey on Architectures, Protocols, and Standardization</a></h3>
+          <div class="authors">Mazene Ameur, Abdelkader Mekrache, Bouziane Brik, Adlen Ksentini</div>
+          <p class="summary">首篇系统性综述LLM驱动的通信网络智能体，覆盖控制面映射、标准对齐与开放挑战。</p>
+          <p class="reason"><strong>入选理由：</strong>聚焦5G/6G网络中LLM智能体的架构、协议与标准化，紧扣代理能力落地场景。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>Agentic Artificial Intelligence (AI), enabled by Large Language Models, marks a shift from rule-based automation toward autonomous, goal-driven control of Next-Generation Networks (NGNs). Existing surveys treat the two domains in isolation, leaving protocol integration, evaluation, and standardization alignment underexplored. To address this gap, a two-part tutorial-and-survey is presented. Part I formalises the control, management, and AI-native planes of 5G and 6G. It then covers the foundations of agentic systems: reasoning, planning, tool use, multi-agent coordination, and evaluation. Part II maps agentic capabilities onto 5G/6G control surfaces, standardization, and major 6G initiatives. Finally, it identifies open challenges shaping autonomous telecommunications.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.16066v1">arXiv</a><a href="https://arxiv.org/pdf/2607.16066v1">PDF</a></div>
+        </article>
+        <article class="card" data-channel="focus" data-search="When Do Multi-Agent Systems Help? An Information Bottleneck Perspective Wendi Yu Lianhao Zhou Xiangjue Dong Sai Sudarshan Barath Declan Staunton Byung-Jun Yoon Xiaoning Qian James Caverlee Shuiwang Ji cs.LG cs.AI 揭示多智能体增益本质是受限通信下的信息压缩权衡，为智能体设计提供理论判据。 LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings. Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS. Specifically, our key observation is that a SAS accumulates its full reasoning trace in one shared context, while a MAS uses isolated local contexts connected by bounded relay messages. We show that, under infinite relay bandwidth, any SAS can be simulated by a MAS that transmits the full upstream context. Thus, the nontrivial advantage of MAS arises under bounded relays, where compression introduces a fundamental trade-off: reducing redundant context can improve efficiency, but may also incur loss of task-relevant information. We formalize this trade-off as an information bottleneck controlled by an effective parameter $β$, which captures how the balance shifts with model capability, and shows that MAS gains arise when context reduction outweighs relay information loss. We conduct 18 controlled experiments across five benchmarks and three model scales to validate our theoretical studies. We observe that MAS consistently helps when relays are near-sufficient, especially for weaker models. In contrast, MAS gains shrink or reverse when relays incur information loss, especially for stronger models that can already extract useful information from redundant context and thus gain little from compression. Our study shows that multi-agent design is fundamentally an information-bottleneck optimization problem. This perspective explains when bounded inter-agent communication helps or hurts.">
+          <div class="meta focus">cs.LG · cs.AI · 推荐 9/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.16133v1">When Do Multi-Agent Systems Help? An Information Bottleneck Perspective</a></h3>
+          <div class="authors">Wendi Yu, Lianhao Zhou, Xiangjue Dong, Sai Sudarshan Barath, Declan Staunton, Byung-Jun Yoon</div>
+          <p class="summary">揭示多智能体增益本质是受限通信下的信息压缩权衡，为智能体设计提供理论判据。</p>
+          <p class="reason"><strong>入选理由：</strong>从信息瓶颈视角解释多智能体优势条件，提供可验证的β参数化理论与18组实验验证。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings. Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS. Specifically, our key observation is that a SAS accumulates its full reasoning trace in one shared context, while a MAS uses isolated local contexts connected by bounded relay messages. We show that, under infinite relay bandwidth, any SAS can be simulated by a MAS that transmits the full upstream context. Thus, the nontrivial advantage of MAS arises under bounded relays, where compression introduces a fundamental trade-off: reducing redundant context can improve efficiency, but may also incur loss of task-relevant information. We formalize this trade-off as an information bottleneck controlled by an effective parameter $β$, which captures how the balance shifts with model capability, and shows that MAS gains arise when context reduction outweighs relay information loss. We conduct 18 controlled experiments across five benchmarks and three model scales to validate our theoretical studies. We observe that MAS consistently helps when relays are near-sufficient, especially for weaker models. In contrast, MAS gains shrink or reverse when relays incur information loss, especially for stronger models that can already extract useful information from redundant context and thus gain little from compression. Our study shows that multi-agent design is fundamentally an information-bottleneck optimization problem. This perspective explains when bounded inter-agent communication helps or hurts.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.16133v1">arXiv</a><a href="https://arxiv.org/pdf/2607.16133v1">PDF</a></div>
+        </article>
+        <article class="card" data-channel="focus" data-search="DSWorld: A Data Science World Model for Efficient Autonomous Agents Zherui Yang Fan Liu Hao Liu cs.AI 首个面向数据科学工作流的世界模型框架，显著提升自主代理推理效率与可预测性。 Despite strong capabilities in data understanding and decision-making, autonomous data science agents still heavily rely on trial-and-error workflows that involve expensive computation. This bottleneck motivates models that can anticipate the effects of data science operations before real execution. In this paper, we introduce the concept of Data Science World Model, which model the data science execution environment by predicting environment state transitions conditioned on current workflow states and candidate operations. We further propose DSWorld, a practical framework that combines structured state construction, cost-aware routing, lightweight real execution, and an LLM-based simulator for expensive operations. To support training, we construct an 8K-scale transition trajectory dataset and introduce Reflective World Model Optimization, an error-aware reinforcement learning strategy for improving transition prediction. Experiments show that DSWorld accelerates RL-based agent training by approximately $14\times$ and search-based inference by approximately $3$-$6\times$ while maintaining competitive performance, and outperforms the strongest LLM baseline by 35.6% on transition prediction tasks. The code is available at https://anonymous.4open.science/r/DSWorld.">
+          <div class="meta focus">cs.AI · 推荐 9/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.15901v1">DSWorld: A Data Science World Model for Efficient Autonomous Agents</a></h3>
+          <div class="authors">Zherui Yang, Fan Liu, Hao Liu</div>
+          <p class="summary">首个面向数据科学工作流的世界模型框架，显著提升自主代理推理效率与可预测性。</p>
+          <p class="reason"><strong>入选理由：</strong>提出数据科学世界模型DSWorld，含结构化状态构建、轻量执行与LLM仿真，加速训练14倍。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>Despite strong capabilities in data understanding and decision-making, autonomous data science agents still heavily rely on trial-and-error workflows that involve expensive computation. This bottleneck motivates models that can anticipate the effects of data science operations before real execution. In this paper, we introduce the concept of Data Science World Model, which model the data science execution environment by predicting environment state transitions conditioned on current workflow states and candidate operations. We further propose DSWorld, a practical framework that combines structured state construction, cost-aware routing, lightweight real execution, and an LLM-based simulator for expensive operations. To support training, we construct an 8K-scale transition trajectory dataset and introduce Reflective World Model Optimization, an error-aware reinforcement learning strategy for improving transition prediction. Experiments show that DSWorld accelerates RL-based agent training by approximately $14\times$ and search-based inference by approximately $3$-$6\times$ while maintaining competitive performance, and outperforms the strongest LLM baseline by 35.6% on transition prediction tasks. The code is available at https://anonymous.4open.science/r/DSWorld.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.15901v1">arXiv</a><a href="https://arxiv.org/pdf/2607.15901v1">PDF</a></div>
+        </article>
+        <article class="card" data-channel="focus" data-search="AgentFAIR: A Multi-Agent Collaborative Framework for FAIRness Evaluation of Geospatial Datasets Ming Chen Pranav Pai cs.AI cs.ET cs.MA 多智能体协同框架实现可审计、高一致性的地理空间数据FAIR成熟度评估。 Geospatial datasets support applications from urban planning to climate modeling, yet consistent assessment of FAIR compliance is difficult. Existing evaluators use different rubrics and evidence sources and may fail on JavaScript-rendered pages or repository-specific identifiers. For 50 datasets from 10 repositories, the standard deviation of normalized scores across available tools averages 15.0 percentage points and reaches 30.3 for one dataset. Because these outputs are not equivalent measurements, we use them to characterize disagreement and failure modes, not comparative accuracy. We present AgentFAIR, a multi-agent framework combining structured metadata extraction with 13 sub-principle-specific LLM evaluators. Each produces a 0-3 maturity score, cited evidence, and recommendations; a critic checks evidence and consistency and can request targeted re-evaluation. Mean Findability, Accessibility, Interoperability, and Reusability scores are 79.7%, 70.4%, 45.3%, and 72.0%. Rank correlations with four baseline tools range from 0.31 to 0.61; the FAIR-enough comparison is not statistically significant. On a 10-dataset repeated-run subset, sub-principle agreement averages 89% (standard deviation: 3 percentage points), versus 71% without the critic. A preliminary 15-dataset expert study yields Fleiss&#39; kappa of 0.71 and 82% alignment with expert consensus. API cost is approximately USD 0.054 per dataset. These results support auditability and feasibility, while the limited benchmark, incomplete ablations, and single-model-family validation constrain claims about accuracy and generalization.">
+          <div class="meta focus">cs.AI · cs.ET · cs.MA · 推荐 8/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.15781v1">AgentFAIR: A Multi-Agent Collaborative Framework for FAIRness Evaluation of Geospatial Datasets</a></h3>
+          <div class="authors">Ming Chen, Pranav Pai</div>
+          <p class="summary">多智能体协同框架实现可审计、高一致性的地理空间数据FAIR成熟度评估。</p>
+          <p class="reason"><strong>入选理由：</strong>AgentFAIR用13个子原则专用LLM评估地理空间数据FAIR性，引入批评者机制提升一致性。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>Geospatial datasets support applications from urban planning to climate modeling, yet consistent assessment of FAIR compliance is difficult. Existing evaluators use different rubrics and evidence sources and may fail on JavaScript-rendered pages or repository-specific identifiers. For 50 datasets from 10 repositories, the standard deviation of normalized scores across available tools averages 15.0 percentage points and reaches 30.3 for one dataset. Because these outputs are not equivalent measurements, we use them to characterize disagreement and failure modes, not comparative accuracy. We present AgentFAIR, a multi-agent framework combining structured metadata extraction with 13 sub-principle-specific LLM evaluators. Each produces a 0-3 maturity score, cited evidence, and recommendations; a critic checks evidence and consistency and can request targeted re-evaluation. Mean Findability, Accessibility, Interoperability, and Reusability scores are 79.7%, 70.4%, 45.3%, and 72.0%. Rank correlations with four baseline tools range from 0.31 to 0.61; the FAIR-enough comparison is not statistically significant. On a 10-dataset repeated-run subset, sub-principle agreement averages 89% (standard deviation: 3 percentage points), versus 71% without the critic. A preliminary 15-dataset expert study yields Fleiss&#39; kappa of 0.71 and 82% alignment with expert consensus. API cost is approximately USD 0.054 per dataset. These results support auditability and feasibility, while the limited benchmark, incomplete ablations, and single-model-family validation constrain claims about accuracy and generalization.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.15781v1">arXiv</a><a href="https://arxiv.org/pdf/2607.15781v1">PDF</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" data-section="explore">
+      <div class="section-head"><h2 class="explore">探索方向</h2><span>4 篇</span></div>
+      <p class="sub">用于打破固定关注边界的多样化候选</p>
+      <div class="grid">
+        <article class="card" data-channel="explore" data-search="A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing Owen Lockwood Jérémy Béjanin Joost Bus Christopher Chamberland Patrick Huembeli Frank Schäfer Guillaume Verdon cs.LG cs.ET physics.app-ph 开创性基准揭示当前多模态大模型缺乏闭环主动观察能力，亟需新架构范式。 To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based thermodynamic computing where the stochastic process is well described by Langevin dynamics with tunable energy potentials. The implementation of such potentials in physical hardware enables us to generate and sample from basic parameterized energy-based models. We demonstrate how to construct and train popular classes of machine learning models based on these hardware-native energy-based models, using the framework of probabilistic graphical models. We analyze the runtime and energy consumption of different models in this thermodynamic paradigm based on theoretical considerations and numerical studies. As a preliminary experimental realization of such hardware, we present our stochastic analog superconducting circuits driven by thermal noise. Together, these results outline a path toward energy-efficient thermodynamic hardware for probabilistic machine learning.">
+          <div class="meta explore">cs.LG · cs.ET · physics.app-ph · 推荐 10/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.16183v1">A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing</a></h3>
+          <div class="authors">Owen Lockwood, Jérémy Béjanin, Joost Bus, Christopher Chamberland, Patrick Huembeli, Frank Schäfer</div>
+          <p class="summary">开创性基准揭示当前多模态大模型缺乏闭环主动观察能力，亟需新架构范式。</p>
+          <p class="reason"><strong>入选理由：</strong>ActiveVision首次量化MLLM主动视觉观测能力，揭示其远落后人类（96.1% vs 3.5%）。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based thermodynamic computing where the stochastic process is well described by Langevin dynamics with tunable energy potentials. The implementation of such potentials in physical hardware enables us to generate and sample from basic parameterized energy-based models. We demonstrate how to construct and train popular classes of machine learning models based on these hardware-native energy-based models, using the framework of probabilistic graphical models. We analyze the runtime and energy consumption of different models in this thermodynamic paradigm based on theoretical considerations and numerical studies. As a preliminary experimental realization of such hardware, we present our stochastic analog superconducting circuits driven by thermal noise. Together, these results outline a path toward energy-efficient thermodynamic hardware for probabilistic machine learning.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.16183v1">arXiv</a><a href="https://arxiv.org/pdf/2607.16183v1">PDF</a></div>
+        </article>
+        <article class="card" data-channel="explore" data-search="PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment Tam Bang Hussam Abubakr Emiliano de la Garza Villarreal Truc Phuong Nguyen Austin Harris Toru Hirano Mina Sartipi Yunfei Xu Hoang H. Nguyen cs.LG eess.SY 面向真实路口的边缘端多智能体安全评估系统，支持PPET/TTC双指标实时冲突预警。 Urban intersections are among the most hazardous locations in road networks, posing significant risks to vehicles and vulnerable road users (VRUs) such as pedestrians and cyclists. The complexity of multi-agent interactions demands continuous, real-time monitoring systems capable of anticipating conflicts before they escalate into crashes. We present PRISA, a modular infrastructure LiDAR framework leveraging privacy-preserving, low-light-robust roadside sensors for long-term traffic observation and real-time risk detection at the edge. The framework comprises two core components: a sensing and perception layer and a plug-and-play risk assessment module. The latter automatically curates site-specific training data from accumulated perception outputs to train a trajectory prediction model without manual annotation. It then deploys the trained model for continuous motion forecasting and dual surrogate safety evaluation, using Time-to-Collision (TTC) for longitudinal conflicts and Predicted Post-Encroachment Time (PPET) for crossing and VRU-involved interactions. PRISA is evaluated on the public R-LiViT dataset and deployed on an NVIDIA Jetson AGX Thor at a live signalized intersection in Chattanooga, Tennessee. PPET-based assessment operates at 194~ms end-to-end latency over a 2.4-second predictive horizon, with TTC-based detection and perception remaining within real-time constraints, demonstrating practical feasibility for proactive multi-agent intersection safety monitoring.">
+          <div class="meta explore">cs.LG · eess.SY · 推荐 10/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.16156v1">PRISA: Proactive Infrastructure LiDAR Framework for Intersection Safety Assessment</a></h3>
+          <div class="authors">Tam Bang, Hussam Abubakr, Emiliano de la Garza Villarreal, Truc Phuong Nguyen, Austin Harris, Toru Hirano</div>
+          <p class="summary">面向真实路口的边缘端多智能体安全评估系统，支持PPET/TTC双指标实时冲突预警。</p>
+          <p class="reason"><strong>入选理由：</strong>PRISA框架用路侧LiDAR实现实时交叉口风险预测，端到端延迟仅194ms，具工程落地性。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>Urban intersections are among the most hazardous locations in road networks, posing significant risks to vehicles and vulnerable road users (VRUs) such as pedestrians and cyclists. The complexity of multi-agent interactions demands continuous, real-time monitoring systems capable of anticipating conflicts before they escalate into crashes. We present PRISA, a modular infrastructure LiDAR framework leveraging privacy-preserving, low-light-robust roadside sensors for long-term traffic observation and real-time risk detection at the edge. The framework comprises two core components: a sensing and perception layer and a plug-and-play risk assessment module. The latter automatically curates site-specific training data from accumulated perception outputs to train a trajectory prediction model without manual annotation. It then deploys the trained model for continuous motion forecasting and dual surrogate safety evaluation, using Time-to-Collision (TTC) for longitudinal conflicts and Predicted Post-Encroachment Time (PPET) for crossing and VRU-involved interactions. PRISA is evaluated on the public R-LiViT dataset and deployed on an NVIDIA Jetson AGX Thor at a live signalized intersection in Chattanooga, Tennessee. PPET-based assessment operates at 194~ms end-to-end latency over a 2.4-second predictive horizon, with TTC-based detection and perception remaining within real-time constraints, demonstrating practical feasibility for proactive multi-agent intersection safety monitoring.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.16156v1">arXiv</a><a href="https://arxiv.org/pdf/2607.16156v1">PDF</a></div>
+        </article>
+        <article class="card" data-channel="explore" data-search="Debiasing Text-to-Image Evaluation via Implicit Cultural Alignment Reward Modeling Bo-An Chang Yu-Chih Chen cs.CV cs.AI cs.LG cs.MM 首个面向文本到图像生成的文化真实性奖励模型，兼顾高效性与细粒度文化感知。 As Text-to-Image (T2I) systems rapidly advance, evaluating the cultural authenticity of synthesized content has become increasingly important for fair and trustworthy generative AI. Existing T2I evaluation metrics and multimodal judges often rely on visual-semantic representations that underrepresent implicit cultural norms, leading to biased preference judgments and the omission of fine-grained cultural cues. In addition, visual question answering (VQA)-based evaluators typically depend on autoregressive text generation, which limits their scalability for real-time reward modeling. To address these limitations, we introduce an Implicit Cultural Alignment Reward Model built upon a lightweight 4.2-billion-parameter Multimodal Large Language Model (MLLM). Our framework integrates an Implicit Cultural Probe with a Skip-connection Cross-Attention (SkipCA) mechanism, enabling late-stage semantic features to directly attend to early-stage visual representations and better preserve culturally salient details. Evaluations on 3,323 challenging and carefully curated image pairs from the CulturalFrames benchmark show that our approach achieves 80.54% pairwise accuracy, with Pearson and Kendall correlation coefficients of 0.546 and 0.377, respectively, outperforming representative vision-language metrics and MLLM-based evaluators. Moreover, by bypassing autoregressive text generation, our model processes each evaluation in 0.21 seconds under our local inference setup, achieving a $10\times$ speedup over standard VQA-based evaluators. These results suggest that the proposed reward model can provide an efficient and culturally aware scalar signal for preference optimization pipelines such as Reinforcement Learning from Human Feedback and Direct Preference Optimization.">
+          <div class="meta explore">cs.CV · cs.AI · cs.LG · cs.MM · 推荐 10/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.15740v1">Debiasing Text-to-Image Evaluation via Implicit Cultural Alignment Reward Modeling</a></h3>
+          <div class="authors">Bo-An Chang, Yu-Chih Chen</div>
+          <p class="summary">首个面向文本到图像生成的文化真实性奖励模型，兼顾高效性与细粒度文化感知。</p>
+          <p class="reason"><strong>入选理由：</strong>提出隐式文化对齐奖励模型，跳过自回归生成，实现10倍加速与文化敏感评估。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>As Text-to-Image (T2I) systems rapidly advance, evaluating the cultural authenticity of synthesized content has become increasingly important for fair and trustworthy generative AI. Existing T2I evaluation metrics and multimodal judges often rely on visual-semantic representations that underrepresent implicit cultural norms, leading to biased preference judgments and the omission of fine-grained cultural cues. In addition, visual question answering (VQA)-based evaluators typically depend on autoregressive text generation, which limits their scalability for real-time reward modeling. To address these limitations, we introduce an Implicit Cultural Alignment Reward Model built upon a lightweight 4.2-billion-parameter Multimodal Large Language Model (MLLM). Our framework integrates an Implicit Cultural Probe with a Skip-connection Cross-Attention (SkipCA) mechanism, enabling late-stage semantic features to directly attend to early-stage visual representations and better preserve culturally salient details. Evaluations on 3,323 challenging and carefully curated image pairs from the CulturalFrames benchmark show that our approach achieves 80.54% pairwise accuracy, with Pearson and Kendall correlation coefficients of 0.546 and 0.377, respectively, outperforming representative vision-language metrics and MLLM-based evaluators. Moreover, by bypassing autoregressive text generation, our model processes each evaluation in 0.21 seconds under our local inference setup, achieving a $10\times$ speedup over standard VQA-based evaluators. These results suggest that the proposed reward model can provide an efficient and culturally aware scalar signal for preference optimization pipelines such as Reinforcement Learning from Human Feedback and Direct Preference Optimization.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.15740v1">arXiv</a><a href="https://arxiv.org/pdf/2607.15740v1">PDF</a></div>
+        </article>
+        <article class="card" data-channel="explore" data-search="Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems Matteo Tomasetto Nicolò Botteghi Gabriele Bruni Andrea Manzoni cs.LG math.OC 物理增强型强化学习范式，显著提升动态系统实时最优控制的样本效率与跨场景泛化性。 Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strategies. Consequently, applications of RL are typically limited to sparse sensors and actuators due to the curse of dimensionality entailed by the exploration-exploitation dilemma in high-dimensional spaces. In this work, we bridge RL and traditional optimal control for dynamical system with a novel Physics-EnhAnced Reinforcement Learning (PEARL) paradigm tailored to the control of high-dimensional and parametric dynamical systems, exploiting the differentibility of their dynamics. Specifically, PEARL employs an actor-adjoint algorithm that leverages automatic differentiation to compute policy gradients over short horizons and adjoint-based sensitivities of future returns approximated via neural networks, significantly reducing the number of environment interactions, while mitigating long-term gradient instabilities. Through two challenging parametric navigation problems in unsteady flows, we show that PEARL (i) effectively exploits differentiable environments to outperform state-of-the-art RL algorithms, (ii) is sample efficient, thanks to the physics-guided policy learning, (iii) generalizes across multiple scenarios, which is crucial when dealing with parametric systems, and (iv) enables scaling RL to high-dimensional state and action spaces, without requiring low-dimensional state representations or multi-agent strategies.">
+          <div class="meta explore">cs.LG · math.OC · 推荐 9/10</div>
+          <h3><a href="https://arxiv.org/abs/2607.16177v1">Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems</a></h3>
+          <div class="authors">Matteo Tomasetto, Nicolò Botteghi, Gabriele Bruni, Andrea Manzoni</div>
+          <p class="summary">物理增强型强化学习范式，显著提升动态系统实时最优控制的样本效率与跨场景泛化性。</p>
+          <p class="reason"><strong>入选理由：</strong>PEARL将物理导数融入强化学习，解决高维动力系统控制中的样本效率与泛化难题。</p>
+          <details><summary>查看 arXiv 摘要</summary><p>Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strategies. Consequently, applications of RL are typically limited to sparse sensors and actuators due to the curse of dimensionality entailed by the exploration-exploitation dilemma in high-dimensional spaces. In this work, we bridge RL and traditional optimal control for dynamical system with a novel Physics-EnhAnced Reinforcement Learning (PEARL) paradigm tailored to the control of high-dimensional and parametric dynamical systems, exploiting the differentibility of their dynamics. Specifically, PEARL employs an actor-adjoint algorithm that leverages automatic differentiation to compute policy gradients over short horizons and adjoint-based sensitivities of future returns approximated via neural networks, significantly reducing the number of environment interactions, while mitigating long-term gradient instabilities. Through two challenging parametric navigation problems in unsteady flows, we show that PEARL (i) effectively exploits differentiable environments to outperform state-of-the-art RL algorithms, (ii) is sample efficient, thanks to the physics-guided policy learning, (iii) generalizes across multiple scenarios, which is crucial when dealing with parametric systems, and (iv) enables scaling RL to high-dimensional state and action spaces, without requiring low-dimensional state representations or multi-agent strategies.</p></details>
+          <div class="links"><a href="https://arxiv.org/abs/2607.16177v1">arXiv</a><a href="https://arxiv.org/pdf/2607.16177v1">PDF</a></div>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="section" data-section="xhs">
+      <div class="section-head"><h2 class="xhs">小红书实践与趋势</h2><span>0 条 · empty-or-cookie-expired</span></div>
+      <p class="sub">补充论文之外的工具实测、开源项目、使用经验与新兴趋势</p>
+      <div class="grid">
+<div class="empty">当前没有可预览的小红书内容。Cookie 未配置或过期时，arXiv 论文预览仍会正常生成。</div>      </div>
+    </section>
+
+    <section class="section" data-section="bilibili">
+      <div class="section-head"><h2 class="bilibili">B站深度内容</h2><span>5 条 · fetched</span></div>
+      <p class="sub">访谈、产品实测、技术演讲、会议录播与论文解读</p>
+      <div class="grid">
+        <article class="card" data-channel="bilibili" data-search="采访SpaceX早期投资人：未来三年的AI代码、机器人和超级智能风向 青柠智信  SpaceX早期投资人访谈，聚焦未来三年AI代码、机器人与超级智能趋势 AI 访谈">
+          <div class="meta bilibili">B站 · 青柠智信 · 326 播放 · 43:21 · 推荐 8/10</div>
+          <h3><a href="https://www.bilibili.com/video/BV1XhKr69ENv">采访SpaceX早期投资人：未来三年的AI代码、机器人和超级智能风向</a></h3>
+          <p class="summary">SpaceX早期投资人访谈，聚焦未来三年AI代码、机器人与超级智能趋势</p>
+          <p class="reason"><strong>入选理由：</strong>高质量行业专家访谈，主题聚焦技术演进与落地趋势</p>
+          <div class="links"><a href="https://www.bilibili.com/video/BV1XhKr69ENv">打开 B站</a></div>
+        </article>
+        <article class="card" data-channel="bilibili" data-search="我把 Claude Fable 5 拉来做4个离谱实测：截图直接变代码、一把过俄罗斯方块 opus精译 Claude Fable 5 刚发布，号称目前最强的视觉模型。2026年6月这期，我不看跑分、不听公关那套，直接丢给它4个真实的产品设计 / 前端任务，看它到底行不行。
+
+四个实测：
+1. 截图转代码——只给一张「真实在跑的 Autodesk 企业级应用」截图，让它在 Cursor 里凭一张图重建整个界面（自己选框架、Tailwind + Lucide、输出单个 HTML），看它能不能复刻原应用的设计规范。
+2. 荷马《奥德赛》交互式时间线——做一个奥德修斯返乡之旅的页面，看它怎么用 SVG 和配色把故事 Claude Fable 5四场景实测：截图转代码、交互式时间线等真实任务验证 大模型 产品实测">
+          <div class="meta bilibili">B站 · opus精译 · 42 播放 · 10:53 · 推荐 9/10</div>
+          <h3><a href="https://www.bilibili.com/video/BV1doEi6yEMv">我把 Claude Fable 5 拉来做4个离谱实测：截图直接变代码、一把过俄罗斯方块</a></h3>
+          <p class="summary">Claude Fable 5四场景实测：截图转代码、交互式时间线等真实任务验证</p>
+          <p class="reason"><strong>入选理由：</strong>严谨产品实测，覆盖具体任务、工具链与可复现结果</p>
+<details><summary>查看候选简介</summary><p>Claude Fable 5 刚发布，号称目前最强的视觉模型。2026年6月这期，我不看跑分、不听公关那套，直接丢给它4个真实的产品设计 / 前端任务，看它到底行不行。
+
+四个实测：
+1. 截图转代码——只给一张「真实在跑的 Autodesk 企业级应用」截图，让它在 Cursor 里凭一张图重建整个界面（自己选框架、Tailwind + Lucide、输出单个 HTML），看它能不能复刻原应用的设计规范。
+2. 荷马《奥德赛》交互式时间线——做一个奥德修斯返乡之旅的页面，看它怎么用 SVG 和配色把故事</p></details>          <div class="links"><a href="https://www.bilibili.com/video/BV1doEi6yEMv">打开 B站</a></div>
+        </article>
+        <article class="card" data-channel="bilibili" data-search="AI Agent 平台工程实战 Vol.01｜我为什么要做一个 AI Agent 平台？ fengzhizi715 这是《AI Agent 平台工程实战》系列的第一期。
+很多 AI 应用的第一步，都是做一个 Chat 页面。
+
+但当用户的问题开始变复杂，只靠一次模型调用已经无法满足需求。
+
+一个真实的 AI 应用，需要理解任务、选择 Agent、检索知识、调用工具、执行 Workflow，并且能够记录整个执行过程。
+
+这也是我为什么开始重新设计 OpenVitamin —— 从一个本地 AI 推理平台，逐步演进成一个完整的 AI Agent 平台。
+
+《AI Agent 平台工程实战》第一期，我们先从整体定位开始，聊聊 AI Agent平台工程实战首期，解析从Chat页面到完整Agent平台的演进逻辑 AI Agent 实战">
+          <div class="meta bilibili">B站 · fengzhizi715 · 126 播放 · 10:54 · 推荐 7/10</div>
+          <h3><a href="https://www.bilibili.com/video/BV1g9KB6GEbQ">AI Agent 平台工程实战 Vol.01｜我为什么要做一个 AI Agent 平台？</a></h3>
+          <p class="summary">AI Agent平台工程实战首期，解析从Chat页面到完整Agent平台的演进逻辑</p>
+          <p class="reason"><strong>入选理由：</strong>一线开发者工程复盘，含架构演进与平台设计决策</p>
+<details><summary>查看候选简介</summary><p>这是《AI Agent 平台工程实战》系列的第一期。
+很多 AI 应用的第一步，都是做一个 Chat 页面。
+
+但当用户的问题开始变复杂，只靠一次模型调用已经无法满足需求。
+
+一个真实的 AI 应用，需要理解任务、选择 Agent、检索知识、调用工具、执行 Workflow，并且能够记录整个执行过程。
+
+这也是我为什么开始重新设计 OpenVitamin —— 从一个本地 AI 推理平台，逐步演进成一个完整的 AI Agent 平台。
+
+《AI Agent 平台工程实战》第一期，我们先从整体定位开始，聊聊</p></details>          <div class="links"><a href="https://www.bilibili.com/video/BV1g9KB6GEbQ">打开 B站</a></div>
+        </article>
+        <article class="card" data-channel="bilibili" data-search="【手把手教学】用WasmEdge打造安全MCP代理服务器！LLM工具链实战+4月社区会议全录播 MCP server demo + Docker model Second_State 1️⃣ @hydai_tw 实战演示：用Rust+WasmEdge构建MCP代理服务器，从代码到部署全流程！
+2️⃣ 本地运行LLM工具链：无需高性能GPU，在笔记本上玩转大模型与工具调用！
+3️⃣ 安全开发新思路：对比Docker与WasmEdge，揭秘轻量化、沙箱化部署的优势！
+🔗 资源直达：会议完整录播+代码示例👉 https://community.cncf.io/events/deta...
+💡 技术亮点：
+MCP协议如何连接AI模型与本地/云端服务？
+WasmEdge如何用20MB替代千兆容器 WasmEdge构建MCP代理服务器录播，含Rust实战、安全沙箱对比与社区会议全记录 AI 会议录播">
+          <div class="meta bilibili">B站 · Second_State · 121 播放 · 46:10 · 推荐 8/10</div>
+          <h3><a href="https://www.bilibili.com/video/BV1WrZ1YREfJ">【手把手教学】用WasmEdge打造安全MCP代理服务器！LLM工具链实战+4月社区会议全录播 MCP server demo + Docker model</a></h3>
+          <p class="summary">WasmEdge构建MCP代理服务器录播，含Rust实战、安全沙箱对比与社区会议全记录</p>
+          <p class="reason"><strong>入选理由：</strong>技术会议录播+实操演示，聚焦MCP协议与轻量化部署前沿实践</p>
+<details><summary>查看候选简介</summary><p>1️⃣ @hydai_tw 实战演示：用Rust+WasmEdge构建MCP代理服务器，从代码到部署全流程！
+2️⃣ 本地运行LLM工具链：无需高性能GPU，在笔记本上玩转大模型与工具调用！
+3️⃣ 安全开发新思路：对比Docker与WasmEdge，揭秘轻量化、沙箱化部署的优势！
+🔗 资源直达：会议完整录播+代码示例👉 https://community.cncf.io/events/deta...
+💡 技术亮点：
+MCP协议如何连接AI模型与本地/云端服务？
+WasmEdge如何用20MB替代千兆容器</p></details>          <div class="links"><a href="https://www.bilibili.com/video/BV1WrZ1YREfJ">打开 B站</a></div>
+        </article>
+        <article class="card" data-channel="bilibili" data-search="为什么全局视觉大模型都过不了OOD测试？这篇论文点破了视觉推理长度泛化的核心痛点 【计算机视觉】【AI论文解读】 熊二等兵 本期解读论文：On Locality and Length Generalization in Visual Reasoning
+
+作者：Pulkit Madan, Sanjay Haresh, Reza Ebrahimi, Sunny Panchal, Apratim Bhattacharyya, Roland Memisevic (Qualcomm AI Research)
+论文链接：https://arxiv.org/abs/2607.09061
+代码库：暂未公开
+
+核心亮点：
+1. **全新视觉推 解读视觉大模型OOD泛化失败原因，指出长度泛化与局部性核心痛点 论文解读 大模型">
+          <div class="meta bilibili">B站 · 熊二等兵 · 41 播放 · 16:17 · 推荐 7/10</div>
+          <h3><a href="https://www.bilibili.com/video/BV1ATKT6VE8x">为什么全局视觉大模型都过不了OOD测试？这篇论文点破了视觉推理长度泛化的核心痛点 【计算机视觉】【AI论文解读】</a></h3>
+          <p class="summary">解读视觉大模型OOD泛化失败原因，指出长度泛化与局部性核心痛点</p>
+          <p class="reason"><strong>入选理由：</strong>论文解读聚焦关键科学问题，有明确技术洞见与归因分析</p>
+<details><summary>查看候选简介</summary><p>本期解读论文：On Locality and Length Generalization in Visual Reasoning
+
+作者：Pulkit Madan, Sanjay Haresh, Reza Ebrahimi, Sunny Panchal, Apratim Bhattacharyya, Roland Memisevic (Qualcomm AI Research)
+论文链接：https://arxiv.org/abs/2607.09061
+代码库：暂未公开
+
+核心亮点：
+1. **全新视觉推</p></details>          <div class="links"><a href="https://www.bilibili.com/video/BV1ATKT6VE8x">打开 B站</a></div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      数据源：arXiv 官方元数据接口 `arxiv-api`（日报日 2026-07-20，UTC 查询日 2026-07-17，窗口 2026-07-17T00:00:00Z → 2026-07-17T23:59:59Z）、B站公开视频搜索与小红书公开页面。B站和小红书只作为发现信号，不写入论文 Inbox 或索引。
+    </footer>
+  </main>
+  <script>
+    (()=>{const cards=[...document.querySelectorAll('.card')],sections=[...document.querySelectorAll('[data-section]')],buttons=[...document.querySelectorAll('[data-filter]')],search=document.getElementById('search');let filter='all';function apply(){const q=search.value.trim().toLowerCase();cards.forEach(card=>{const channel=card.dataset.channel;const hit=(filter==='all'||channel===filter)&&(!q||(card.dataset.search||'').toLowerCase().includes(q));card.classList.toggle('hidden',!hit)});sections.forEach(section=>{const sectionMatch=filter==='all'||section.dataset.section===filter;const sectionCards=[...section.querySelectorAll('.card')];const visible=sectionCards.some(card=>!card.classList.contains('hidden'));const show=sectionMatch&&(visible||(!q&&sectionCards.length===0));section.classList.toggle('hidden',!show)})}buttons.forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;buttons.forEach(item=>item.classList.toggle('active',item===button));apply()}));search.addEventListener('input',apply)})();
+  </script>
+</body>
+</html>
