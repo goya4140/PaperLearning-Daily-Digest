@@ -67,6 +67,27 @@ xhs:
   max_items: 5
   min_score: 6
 
+bilibili:
+  enabled: true
+  # BILIBILI_COOKIE is required. Missing credentials skip this channel safely.
+  keywords:
+    - AI 访谈
+    - 大模型 产品实测
+    - AI Agent 实战
+    - 人工智能 技术演讲
+    - AI 会议录播
+    - 论文解读 大模型
+  candidate_pool: 30
+  detail_pool: 12
+  max_items: 5
+  min_score: 65
+  max_age_days: 30
+  min_duration_seconds: 180
+  max_per_author: 1
+  max_per_content_type: 2
+  blocked_terms: [招生, 训练营, 付费群, 加微信, 课程优惠, 接广告, 纯搬运]
+  request_interval_seconds: 1.2
+
 delivery:
   subject_prefix: "PaperLearning 每日发现"
   smtp_provider: "auto"

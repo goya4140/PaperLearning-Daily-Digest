@@ -19,6 +19,7 @@ from .rendering import render, render_email
 from .selection import deterministic_candidates
 from .vault_export import export_to_vault
 from .xhs_digest import fetch_notes, rank_notes
+from .bilibili_digest import enrich_video_stats, fetch_videos, prepare_video_candidates, rank_videos
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -74,8 +75,24 @@ def run(
         if target_date == local_today:
             xhs_candidates, xhs_status = fetch_notes(config.get("xhs", {}), os.environ.get("XHS_COOKIE", ""))
             xhs_notes = rank_notes(xhs_candidates, config.get("xhs", {}), config.get("llm", {}))
+            bilibili_cookie = os.environ.get("BILIBILI_COOKIE", "")
+            bilibili_candidates, bilibili_status = fetch_videos(config.get("bilibili", {}), bilibili_cookie)
+            bilibili_rank_candidates = prepare_video_candidates(
+                bilibili_candidates, config.get("bilibili", {})
+            )[: int(config.get("bilibili", {}).get("detail_pool", 12))]
+            bilibili_rank_candidates, bilibili_stats_status = enrich_video_stats(
+                bilibili_rank_candidates,
+                bilibili_cookie,
+                float(config.get("bilibili", {}).get("request_interval_seconds", 1.2)),
+            )
+            bilibili_videos = rank_videos(
+                bilibili_rank_candidates, config.get("bilibili", {}), config.get("llm", {})
+            )
         else:
             xhs_candidates, xhs_notes, xhs_status = [], [], "historical-date-skipped"
+            bilibili_candidates, bilibili_videos, bilibili_status = [], [], "historical-date-skipped"
+            bilibili_rank_candidates = []
+            bilibili_stats_status = "historical-date-skipped"
         report = seal_report({
             "version": 2,
             "date": target_date.isoformat(),
@@ -95,6 +112,11 @@ def run(
             "xhs": xhs_notes,
             "xhs_candidate_count": len(xhs_candidates),
             "xhs_status": xhs_status,
+            "bilibili": bilibili_videos,
+            "bilibili_candidate_count": len(bilibili_candidates),
+            "bilibili_qualified_count": len(bilibili_rank_candidates),
+            "bilibili_status": bilibili_status,
+            "bilibili_stats_status": bilibili_stats_status,
             "ranking_source": sorted({item["ranking_source"] for item in shortlist}),
             "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
         })
@@ -119,7 +141,7 @@ def run(
         "delivered": False,
         "dry_run": dry_run,
     }
-    if not dry_run and (report["focus"] or report["explore"] or report["xhs"] or config["delivery"].get("send_empty_digest", True)):
+    if not dry_run and (report["focus"] or report["explore"] or report["xhs"] or report.get("bilibili", []) or config["delivery"].get("send_empty_digest", True)):
         subject = f"{config['delivery'].get('subject_prefix', 'PaperLearning 每日发现')} · {report['date']}"
         send_email(email_html, subject, str(config["delivery"].get("smtp_provider", "163")))
         state["delivered"] = True
@@ -141,6 +163,7 @@ def cli() -> None:
         f"Digest {report['date']}: {report['raw_candidate_count']} raw -> "
         f"{report['llm_candidate_count']} ranked -> {len(report['focus'])} focus + {len(report['explore'])} explore"
         f" + {len(report['xhs'])} XHS ({report['xhs_status']})"
+        f" + {len(report.get('bilibili', []))} Bilibili ({report.get('bilibili_status', 'unavailable')})"
     )
 
 
