@@ -1,0 +1,397 @@
+{
+  "version": 2,
+  "date": "2026-07-21",
+  "arxiv_query_date": "2026-07-20",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-07-21T07:29:41.830305+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607200000+TO+202607202359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607200000+TO+202607202359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-07-20T00:00:00Z",
+    "2026-07-20T23:59:59Z"
+  ],
+  "raw_candidate_count": 265,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2607.17621",
+      "title": "Mechanistic Attention Guidance for Agent Memory Refinement",
+      "authors": [
+        "Yechao Hong",
+        "Haiquan Qiu",
+        "Yaqing Wang",
+        "Quanming Yao"
+      ],
+      "abstract": "Existing self-evolving memory systems mainly improve agent memory based on textual outputs, such as task trajectories and reflections. However, this text-based paradigm rarely incorporates internal mechanistic signals, leaving how retrieved memory is actually utilized during task execution underexplored. This limitation can lead to unreliable error attribution and hallucinated memory modifications. In this work, we show that retrieval-head attention provides a mechanistic signal for revealing segment-level memory utilization. By aggregating attention over memory segments and decision steps, we construct a context utilization matrix that exposes recurring memory-use patterns and indicates corresponding refinement strategies. Building on this observation, we propose Attention-Guided Memory Refinement (AGMR), a framework that uses utilization patterns revealed by attention to guide targeted segment-level memory updates. AGMR corrects or enhances memory for failed executions, simplifies memory for successful executions, and verifies each update through re-execution. Experiments on interactive decision-making benchmarks show that AGMR improves both task performance and memory efficiency over text-only memory refinement baselines. Code is available at https://anonymous.4open.science/r/AGMR_code-3262/",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-20T07:17:50Z",
+      "updated": "2026-07-20T07:17:50Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.17621v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.17621v1",
+      "rank": 204,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 8.8232,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "机制化注意力引导记忆精炼，提升代理能力",
+      "one_liner": "提出基于检索头注意力的AGMR框架，实现段级记忆精准更新",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.17461",
+      "title": "HyCoRec: Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation",
+      "authors": [
+        "Yongsen Zheng",
+        "Ruilin Xu",
+        "Ziliang Chen",
+        "Guohua Wang",
+        "Mingjie Qian",
+        "Jinghui Qin",
+        "Liang Lin"
+      ],
+      "abstract": "The Matthew effect is a notorious issue in Recommender Systems (RSs), \\emph{i.e.}, the rich get richer and the poor get poorer, wherein popular items are overexposed while less popular ones are regularly ignored. Most methods examine Matthew effect in static or nearly-static recommendation scenarios. However, the Matthew effect will be increasingly amplified when the user interacts with the system over time. To address these issues, we propose a novel paradigm, Hypergraph-Enhanced Multi-Preference Learning for Alleviating Matthew Effect in Conversational Recommendation (HyCoRec), which aims to alleviate the Matthew effect in conversational recommendation. Concretely, HyCoRec devotes to alleviate the Matthew effect by learning multi-aspect preferences, \\emph{i.e.}, item-, entity-, word-, review-, and knowledge-aspect preferences, to effectively generate responses in the conversational task and accurately predict items in the recommendation task when the user chats with the system over time. Extensive experiments conducted on two benchmarks validate that HyCoRec achieves new state-of-the-art performance and the superior of alleviating Matthew effect. Our code is available at https://github.com/zysensmile/HyCoRec.",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "primary_category": "cs.IR",
+      "published": "2026-07-20T01:22:06Z",
+      "updated": "2026-07-20T01:22:06Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.17461v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.17461v1",
+      "rank": 260,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning"
+      ],
+      "explore_score": 12.5403,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "超图增强多偏好学习缓解对话推荐马太效应",
+      "one_liner": "HyCoRec通过多维度偏好建模，在对话推荐中有效抑制马太效应",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.18109",
+      "title": "SpEmoC: A Balanced Speaker-Segment Multimodal Emotion Benchmark",
+      "authors": [
+        "Sania Bano",
+        "Shahzad Ahmad",
+        "Santosh Kumar Vipparthi",
+        "Sukalpa Chanda",
+        "Subrahmanyam Murala"
+      ],
+      "abstract": "Understanding human emotions in spoken conversations is a key challenge in affective computing, with applications in empathetic AI, human computer interaction, and mental health monitoring. However, existing datasets vary in scale, emotion distribution, modality alignment, and data partitioning strategies, which can influence reliable cross-dataset generalization and minority-emotion modeling. We introduce SpEmoC a Speaking segment Emotion for Conversations comprising 306,544 raw clips from 3,100 English language movies and TV series. From these, 30,000 high quality, class balanced clips are curated, featuring synchronized visual, audio, and textual modalities annotated for seven emotions through a hybrid pipeline that integrates pretrained models with human validation. SpEmoC uses strict movie- and series-level splits to prevent content overlap between split sets, allowing more reliable evaluation of model generalization. The dataset also maintains a near-balanced distribution across seven emotions, including minority classes such as Fear and Disgust, which supports more balanced learning across categories. Extensive experiments, including in-domain benchmarking, cross-dataset transfer, low-data training, class-imbalance analysis, and modality transfer show that balanced data and careful splitting lead to more stable performance across emotions when models are evaluated on other datasets. These results highlight the importance of dataset design for robust and transferable multimodal emotion recognition.",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-20T16:08:24Z",
+      "updated": "2026-07-20T16:08:24Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.18109v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18109v1",
+      "rank": 40,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [
+        "multimodal emotion / emotion understanding"
+      ],
+      "explore_score": 12.259,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Understanding human emotions in spoken conversations is a key challenge in affective computing, with applications in empathetic AI, human computer interaction, and mental health monitoring. However, existing datasets var…",
+      "reason": "multimodal emotion / emotion understanding",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.18006",
+      "title": "MADA-RL: Multi-Agent Debate-Aware Reinforcement Learning for Parameter-Efficient Reasoning in Compact Models",
+      "authors": [
+        "Martino M. L. Pulici",
+        "Cuong Xuan Chu",
+        "Evgeny Kharlamov",
+        "Zifeng Ding",
+        "Volker Tresp",
+        "Yunpu Ma"
+      ],
+      "abstract": "Large language models achieve strong reasoning performance, but often at prohibitive training cost - a challenge that is especially acute for compact models ($\\leq 4 \\, \\mathrm{B}$ parameters) trained under limited budgets. We introduce MADA-RL, a post-training framework that specializes compact models into generator and critic roles and trains them with a debate-aware learning signal, fine-tuning only a small subset of parameters via LoRA adapters. Our central contribution is a counterfactual critic advantage: a dynamic, role-conditioned baseline that redefines the critic's advantage as its reward minus the generator ensemble's per-instance accuracy. This explicitly optimizes critics to improve over generator consensus rather than to merely reproduce a correct answer, yielding more targeted credit assignment than static mean-reward normalization. At deployment, the specialized agents are composed in a lightweight multi-round protocol. Across five mathematical reasoning benchmarks, MADA-RL raises the accuracy of the DeepSeek-R1-Distill-Qwen-1.5B model from $39.9 \\, \\%$ to $41.9 \\, \\%$ ($+2.0$ points, $p < 0.001$) using $16$ times fewer trainable parameters than fully fine-tuned baselines, placing it on the accuracy-trainable-parameter Pareto front. It approaches, but does not surpass, the strongest baselines (DeepScaleR, STILL-3), which are trained on substantially larger datasets; we analyse this gap and the associated inference-time cost directly. A controlled study isolates the source of MADA-RL's gains: the counterfactual advantage produces the highest critic improvement rate of any model evaluated, indicating that trained critics learn to correct generator errors rather than to imitate them.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T14:38:00Z",
+      "updated": "2026-07-20T14:38:00Z",
+      "comment": "20 pages, 3 figures, 9 tables, 2 algorithms, under review at TMLR",
+      "url": "https://arxiv.org/abs/2607.18006v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18006v1",
+      "rank": 80,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.0285,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Large language models achieve strong reasoning performance, but often at prohibitive training cost - a challenge that is especially acute for compact models ($\\leq 4 \\, \\mathrm{B}$ parameters) trained under limited budge…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2607.18102",
+      "title": "FinSAgent: Corpus-Aligned Multi-Agent RAG Framework for Evidence-Grounded SEC Filing Question Answering",
+      "authors": [
+        "Jijun Chi",
+        "Zhenghan Tai",
+        "Hanwei Wu",
+        "Tung Sum Thomas Kwok",
+        "Hailin He",
+        "Zixing Liao",
+        "Bohuai Xiao",
+        "Chaolong Jiang",
+        "Jianliang Lei",
+        "Jerry Huang",
+        "Peng Lu",
+        "Muzhi Li",
+        "Liheng Ma",
+        "Yihong Wu",
+        "Sicheng Lyu",
+        "Jingrui Tian",
+        "Yihan Li",
+        "Yanzhang Ma",
+        "Dingtao Hu",
+        "Yufei Cui",
+        "Ling Zhou",
+        "Lei Ding",
+        "Xinyu Wang"
+      ],
+      "abstract": "Financial question answering over U.S. Securities and Exchange Commission (SEC) filings requires retrieving and synthesizing heterogeneous evidence dispersed across long, standardized, and highly redundant disclosures. Existing retrieval-augmented and multi-agent systems typically derive retrieval queries directly from the user's question and rank candidates by semantic similarity. Together, these choices create prior-corpus misalignment: a mismatch between model priors and the target filings' structure, terminology, and evidence standards. As a result, query generation misses corpus-specific evidence, while semantic reranking favors topically similar but evidentially invalid false-positive chunks. We propose FinSAgent, an evidence-grounded multi-agent framework that reframes SEC filing QA as corpus-aligned retrieval planning and corrects both ends with a single principle: inject corpus-side conditioning wherever model priors would otherwise dominate. FinSAgent combines (1) role-specialized agents anchored to the mandated 10-K item structure, (2) database-aware query decomposition that conditions each agent's sub-queries on a lightweight, summary-level view of the local corpus, and (3) multi-path retrieval with a learned feature-gated reranker that separates evidential validity from semantic similarity. Across five offline financial QA benchmarks, FinSAgent improves retrieval coverage and answer correctness over strong single-agent and multi-agent baselines; in a three-arm randomized online experiment with 1,000 anonymous user ratings, it also receives higher scores than baselines.",
+      "categories": [
+        "cs.IR",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "primary_category": "cs.IR",
+      "published": "2026-07-20T16:03:15Z",
+      "updated": "2026-07-20T16:03:15Z",
+      "comment": "20 pages, 14 figures, 9 tables",
+      "url": "https://arxiv.org/abs/2607.18102v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18102v1",
+      "rank": 41,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.4664,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "面向SEC文件的证据扎根多智能体RAG框架",
+      "one_liner": "FinSAgent实现财报问答中语料对齐的检索规划与有效性重排序",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.17724",
+      "title": "Lifelong Multi-Subsystem Pickup and Delivery with Buffer-Limited Handover Stations",
+      "authors": [
+        "Chuanlong Zang",
+        "Isabelle Barz",
+        "Anna Mannucci",
+        "Philipp Schillinger",
+        "Florian Lier",
+        "Wolfgang Hönig"
+      ],
+      "abstract": "Coordinating payload transfers between subsystems is a critical challenge in lifelong Multi-Agent Pickup and Delivery (MAPD). We study systems where agents are confined to separate regions and must exchange payloads through shared handover stations. These stations, equipped with single docks and finite buffers, are inherently vulnerable to blocking and starvation. We formalize this problem as Multi-Subsystem MAPD with Buffer-limited Handover Stations (MS-MAPD-BHS). We then propose Handover-Aware Reservation and Routing (HARR), an online controller that couples per-subsystem planners. HARR uses a shared dock reservation calendar and a deterministic rolling-horizon projection of buffer occupancy to coordinate actions. A candidate route is accepted only if its dock interval is free and the resulting buffer occupancy projection remains within capacity. Under perfect execution, these checks ensure collision-free dock use and buffer-safe committed operations within the reservation horizon. In simulation, HARR achieves up to 77% higher throughput and 92% lower backlog than a fixed-dock ablation at moderate load, while also reducing planning time relative to a coupled station-aware Token Passing baseline. These results show that explicit interface coordination substantially improves stability in modular multi-subsystem transport.",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-07-20T09:14:38Z",
+      "updated": "2026-07-20T09:14:38Z",
+      "comment": "IROS 2026",
+      "url": "https://arxiv.org/abs/2607.17724v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.17724v1",
+      "rank": 166,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 13.7696,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "缓冲受限交接站下的终身多子系统P&D协调",
+      "one_liner": "MS-MAPD-BHS问题建模与HARR在线控制器显著提升吞吐与稳定性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.18148",
+      "title": "Totally Positive Matrices and the Highest-Order Coefficients of the Characteristic Polynomial",
+      "authors": [
+        "Tiago Closs",
+        "Leandro Farina"
+      ],
+      "abstract": "We investigate the extent to which totally positive matrices can be distinguished through the highest-order coefficients of their characteristic polynomials. To identify the most informative coefficients, we also employed neural-network classifiers together with feature-attribution methods. Using datasets built from several structured totally positive families, including products of positive bidiagonal matrices, Vandermonde matrices, and Cauchy matrices, we find that the coefficients (a_{n-1}, a_{n-2}, a_{n-3}) already contain strong discriminatory information for separating totally positive from non-totally positive matrices in dimensions 5, 10, and 30. The resulting separation is markedly nonlinear and admits a natural geometric description in the corresponding three-dimensional coefficient space by means of Mahalanobis ellipsoids. These ellipsoids enclose the totally positive samples while excluding most non-totally positive ones. Moreover, different structured totally positive families exhibit distinct ellipsoidal signatures, and the separation between these signatures increases with the dimension. These observations lead us to formulate a conjecture on the geometric separation of structured totally positive families in the space determined by the three highest-order characteristic coefficients.",
+      "categories": [
+        "cs.LG",
+        "math.RA"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T16:48:24Z",
+      "updated": "2026-07-20T16:48:24Z",
+      "comment": "26 pages, 12 figures, 3 tables. Published open access in Linear Algebra and its Applications",
+      "url": "https://arxiv.org/abs/2607.18148v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18148v1",
+      "rank": 29,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 13.7787,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "We investigate the extent to which totally positive matrices can be distinguished through the highest-order coefficients of their characteristic polynomials. To identify the most informative coefficients, we also employe…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.17810",
+      "title": "Vis2Reg: Visibility-Aware Landmark-Free Geometric 3D--2D Registration for Liver Laparoscopy",
+      "authors": [
+        "Jiaming Feng",
+        "Xukun Zhang",
+        "Shahid Farid",
+        "Sharib Ali"
+      ],
+      "abstract": "Accurate 3D--2D liver registration, which aligns preoperative 3D models to partial, view-dependent intraoperative surface observations, is critical for AR-guided laparoscopic surgery but remains challenging due to severe occlusion, limited visibility, and the lack of 3D ground-truth supervision. Existing landmark-free approaches perform partial-to-complete geometric alignment, yet robust self-supervision under extreme partial visibility remains difficult. We propose Vis2Reg, a visibility-aware registration framework that explicitly constrains deformation using mask-consistent visible regions. We introduce a visibility-aware self-supervision that derives a visible-domain 3D supervision signal from intraoperative masks, enabled by differentiable point rasterization and mask-guided back-projection. This formulation improves robustness under severe occlusion while maintaining fully self-supervised learning. Vis2Reg combines a robust geometric rigid initialization module with an implicit neural deformation field for stable alignment. Vis2Reg achieves a Dice score of 92.6\\% and a Chamfer Distance of 1.43 mm on real intraoperative datasets, with 111 ms per-frame inference time, demonstrating both accuracy and practical efficiency.",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-20T10:56:52Z",
+      "updated": "2026-07-20T10:56:52Z",
+      "comment": "11 pages",
+      "url": "https://arxiv.org/abs/2607.17810v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.17810v1",
+      "rank": 135,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.5995,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Accurate 3D--2D liver registration, which aligns preoperative 3D models to partial, view-dependent intraoperative surface observations, is critical for AR-guided laparoscopic surgery but remains challenging due to severe…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [
+    {
+      "id": "BV1JNKW6UEu4",
+      "bvid": "BV1JNKW6UEu4",
+      "title": "英伟达开源长视频音视频理解大模型！15分钟复杂视频全理解，超越SOTA 【多模态大模型】",
+      "description": "本期解读论文：Nemotron-Labs-Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Videos\n\n作者：Sreyan Ghosh, Arushi Goel 等 (NVIDIA, USA & University of Maryland, USA)\n论文链接：https://arxiv.org/abs/2607.16107\n项目信息：完全开源，包含模型、训练代码、推理代码、数据集与Demo\n\n核心亮",
+      "author": "熊二等兵",
+      "duration": "17:2",
+      "published_at": 1784574991,
+      "view_count": 15,
+      "danmaku_count": 0,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/c9ce7da62e8a3ed75f25300e88d24c64881e0abd.jpg",
+      "url": "https://www.bilibili.com/video/BV1JNKW6UEu4",
+      "matched_keywords": [
+        "论文解读 大模型"
+      ],
+      "content_type": "论文解读",
+      "pre_score": 62,
+      "like_count": 2,
+      "favorite_count": 1,
+      "score": 66,
+      "summary_zh": "本期解读论文：Nemotron-Labs-Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Vide…",
+      "reason": "相关性、信息密度、可信度、实践价值与新鲜度综合评分",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "d5d1a0b5fa2037b2ed068b24372d0e81b71833a26fb66378bcce57bc6c905dec"
+}
