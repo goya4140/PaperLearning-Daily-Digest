@@ -1,0 +1,352 @@
+{
+  "version": 2,
+  "date": "2026-07-22",
+  "arxiv_query_date": "2026-07-21",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-07-22T07:31:28.990923+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607210000+TO+202607212359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607210000+TO+202607212359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-07-21T00:00:00Z",
+    "2026-07-21T23:59:59Z"
+  ],
+  "raw_candidate_count": 246,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2607.19096",
+      "title": "Supra Cognitive Modes: A Routed Architecture for Agent Memory",
+      "authors": [
+        "Joshua Tobkin",
+        "David Yang"
+      ],
+      "abstract": "Agent-memory workloads mix direct factual lookup, relation-chain and current-state reasoning, and broad synthesis over long histories. We describe Supra Cognitive Modes (SCM), an architecture that maps explicit or automatically selected per-query modes to retrieval and synthesis payloads over one shared ingest substrate. A frozen semantic classifier and runtime gates dispatch queries among fused lexical and dense lookup, graph or iterative multi-hop handling, and stratified long-form synthesis. The substrate combines multi-granularity embeddings, extracted triples, fact-version metadata, and optional asynchronous enrichments. We characterize the deployed configuration on three benchmarks: Long-term Conversational Memory (LoCoMo; n = 1,986), MemoryAgentBench (MAB; n = 3,671), and LongMemEval (n = 500). The reference run records 84.87% on LoCoMo factoid categories and 68.61% on adversarial abstention, 61.49% on MAB across two repetitions, and 86.00% on LongMemEval. A repository-backed reproduction produces similar aggregate scores and supports task- and mode-conditioned failure analysis. Raw baseline outputs, aligned end-to-end timing for LoCoMo and LongMemEval, and complete token ledgers are unavailable; stored rows also omit some final runtime decisions. The results characterize one implemented routed configuration and its diagnostic failure patterns, while source inspection verifies the per-query control interface and shared-substrate design. Causal routing effects, efficiency gains, and statistical significance remain outside the available evidence.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-21T13:37:17Z",
+      "updated": "2026-07-21T13:37:17Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19096v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19096v1",
+      "rank": 81,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 11.1957,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "提出SCM路由架构，显式建模代理记忆的多模式检索与合成",
+      "one_liner": "Supra Cognitive Modes：面向代理记忆的显式多模式路由架构",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19339",
+      "title": "OmniReasoner: Thinking with Long Audio-Video via Native Tool Use",
+      "authors": [
+        "Yu Chen",
+        "Caorui Li",
+        "Ziyu Xiong",
+        "Yidong Wang",
+        "Mingqi Gao",
+        "Shuman Liu",
+        "Biao Liu",
+        "Chunfeng Yang",
+        "Anxiang Zeng",
+        "Haibo Zhang",
+        "Chaofan Chen"
+      ],
+      "abstract": "Long audio-video reasoning is difficult for omnimodal LLMs because the decisive evidence is often sparse, cross-modal, and too expensive to preserve with uniformly high-fidelity inputs. We introduce OmniReasoner, a tool-use post-training framework for Thinking with Long Audio-Video: omni-modal LLMs learn, via supervised fine-tuning and reinforcement learning, to decide whether and where to call a zoom-in tool before answering. OmniReasoner first builds a low-cost global preview of the full stream and then, when needed, calls the zoom-in tool with a requested temporal interval for higher-fidelity visual and audio inspection before answering. Because the model observes different sampling granularities before and after this call -- a sparse global preview and a denser local clip -- we introduce TimeAnchor, which keeps the tool's temporal argument valid and round-trip-consistent across these granularities, rather than tied to frame indices from a particular sampling rate. To make this tool-use behavior trainable without expensive manual interval annotation, we build a Temporal Augmented Data Engine that synthesizes tool-use post-training trajectories by video editing and composition. Experiments across omnimodal and video benchmarks show that OmniReasoner improves both answer accuracy and temporal grounding while concentrating high-fidelity computation on informative regions. Code is available at https://github.com/RockyChen0205/OmniReasoner.",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-21T17:57:50Z",
+      "updated": "2026-07-21T17:57:50Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19339v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19339v1",
+      "rank": 5,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.0,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 12.1596,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "OmniReasoner实现长音视频推理中的原生工具调用与时间锚定机制",
+      "one_liner": "OmniReasoner：支持长音视频稀疏证据定位的原生工具调用框架",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19117",
+      "title": "Comparative Study of Multi-Agent Actor-Critic Algorithms in Parameterized Action Reinforcement Learning",
+      "authors": [
+        "Ubayd Ali Bapoo",
+        "Clement N Nyirenda"
+      ],
+      "abstract": "Parameterized action reinforcement learning has shown strong performance in environments requiring both discrete action selection and continuous parameterization. Prior work established the effectiveness of single-agent actor-critic algorithms - Greedy Actor-Critic (GAC), Soft Actor-Critic (SAC), and Truncated Quantile Critics (TQC) - on benchmark parameterized action tasks, but their extension to multi-agent settings remains largely unexplored. This paper presents a comparative study of shared-experience multi-agent extensions of these algorithms: Multi-Agent Greedy Actor-Critic (MAGAC), Multi-Agent Soft Actor-Critic (MASAC), and Multi-Agent Truncated Quantile Critics (MATQC). Rather than following the centralized training, decentralized execution (CTDE) paradigm, the proposed framework uses multiple independent actor-critic agents that share a replay buffer while maintaining separate policy and value networks. We evaluate the algorithms on the Platform-v0 and Goal-v0 benchmarks against their single-agent counterparts, using three-, five-, and ten-agent configurations to assess scalability. Performance is measured by average evaluation return and training time across ten independent runs, with one-way ANOVA and Tukey HSD post-hoc tests used to assess statistical significance. Results show that the multi-agent framework consistently improves Greedy Actor-Critic performance, while MASAC and MATQC show comparatively modest gains over their single-agent versions. Increasing the number of agents beyond five yields limited additional performance while substantially raising computational cost, particularly for MAGAC. These results highlight a trade-off between learning performance and computational efficiency, offering insight into the scalability of shared-experience multi-agent actor-critic methods for parameterized action reinforcement learning.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-21T14:03:29Z",
+      "updated": "2026-07-21T14:03:29Z",
+      "comment": "9 pages, 2 figures",
+      "url": "https://arxiv.org/abs/2607.19117v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19117v1",
+      "rank": 73,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.8078,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Parameterized action reinforcement learning has shown strong performance in environments requiring both discrete action selection and continuous parameterization. Prior work established the effectiveness of single-agent…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.18719",
+      "title": "Strategy-Following Multi-Agent Deep Reinforcement Learning Considering Control Strategies Provided to Other Agents",
+      "authors": [
+        "Yamato Takahagi",
+        "Gentoku Nakasone",
+        "Yoshinari Motokawa",
+        "Toshiharu Sugawara"
+      ],
+      "abstract": "This study proposes a learning method for multi-agent systems that allows agents to be controlled through human manager instructions after learning and enables uninstructed agents to implicitly complement the overall work based on the actions of other agents. Multi-agent applications using deep learning have shown potential; thus, to achieve extensive social applications, humans should be able to control learned agents using simple methods to respond to environmental and social changes. Even without such changes, learned coordination often does not match the expectations of human managers, making it preferable to control coordination structures to match human intentions. Some studies have aimed to control agent behavior using simple instructions. However, they assumed that instructions are provided to all agents, which is time-consuming and not evident when designing a better cooperation regime. Ideally, specific agents should receive key action instructions, while others should automatically complete the remaining tasks. The proposed method, which extends previous work on controllability in multi-agent deep reinforcement learning, enables uninstructed agents to adaptively complement overlooked tasks and areas. The experimental results show that agents using the proposed method can shift to another cooperative structure and achieve better performance than those using conventional methods.",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "primary_category": "cs.MA",
+      "published": "2026-07-21T05:19:49Z",
+      "updated": "2026-07-21T05:19:49Z",
+      "comment": "8 pages, 14 figures, 24th IEEE/WIC International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT 2025)",
+      "url": "https://arxiv.org/abs/2607.18719v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.18719v1",
+      "rank": 209,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 7.8679,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "This study proposes a learning method for multi-agent systems that allows agents to be controlled through human manager instructions after learning and enables uninstructed agents to implicitly complement the overall wor…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2607.19297",
+      "title": "Graph-Based Agentic AI with LangGraph: Workflow Pathways for Long-Running Stateful Business Processes",
+      "authors": [
+        "Daniel Pearson",
+        "Sidney Shapiro",
+        "Emiliano Sebastian Gonzalez Venegas",
+        "Sanad Al-Khatib",
+        "Aurora Pinzón Arzola"
+      ],
+      "abstract": "This paper is a practitioner guide to graph-based workflow pathways for long-running, stateful, multi-step generative AI systems in business processes. Rather than treating LangGraph, a low-level orchestration framework for stateful agents, as a model-quality benchmark target, we present three executable recipes -- SQL analytics with repair loops, agentic retrieval-augmented generation with evidence gating, and human-in-the-loop policy review with interrupt and checkpoint recovery -- to show how typed state, conditional routing, deterministic tools, retries, interrupts, checkpoints, and traces fit together. LangGraph is positioned by workflow-complexity fit, not as a universal default: simpler ReAct-style or plain SDK loops may be better for basic tool use, schema-first tools for structured extraction and validation, and DSPy when prompt or program optimization is the main goal. Each recipe explains when LangGraph is worth the extra structure and which implementation patterns make routes, pauses, and audit trails explicit product behavior rather than hidden prompt logic.",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-21T17:07:13Z",
+      "updated": "2026-07-21T17:07:13Z",
+      "comment": "25 pages, 2 figures. With ancillary code",
+      "url": "https://arxiv.org/abs/2607.19297v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19297v1",
+      "rank": 26,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 12.1129,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "首次系统化实践LangGraph在状态化业务流程中的图工作流工程",
+      "one_liner": "LangGraph实战指南：面向长期状态化业务流程的图工作流工程",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19292",
+      "title": "The safety failures we are not instrumenting: a perspective on hidden safety-critical challenges in modern AI systems",
+      "authors": [
+        "Gjergji Kasneci",
+        "Enkelejda Kasneci"
+      ],
+      "abstract": "Current AI safety discourse still focuses disproportionately on visible failures, including obvious harms, dramatic misuse, and hypothetical catastrophic scenarios. That focus is incomplete. In deployed systems, many of the most consequential failures are quieter: plausible rather than spectacular, distributed across components rather than localized in a single output, and normalized by workflows before they are recognized as hazards. We argue that a central safety challenge in modern AI systems is increasingly not only whether a model emits a harmful response, but whether the broader socio-technical system preserves the conditions under which errors remain visible, contestable, containable, and recoverable. We propose a five-layer framework for diagnosing these hidden risks: (1) epistemic integrity, concerning whether evidence and uncertainty are represented honestly enough to support calibrated reliance; (2) control integrity, concerning whether authority, permissions, and action boundaries remain robust under attack and optimization; (3) temporal integrity, concerning whether safety holds across sessions, memory updates, and deployment drift; (4) organizational integrity, concerning whether institutions retain the capacity to audit, assign responsibility, and intervene effectively; and (5) ecosystem integrity, concerning whether AI systems preserve rather than erode the information environment on which future oversight depends. Across these layers, we identify under-recognized risk patterns, including overreliance, uncertainty and legitimacy laundering in retrieval, prompt injection, reward hacking, memory poisoning, evaluation deception, fictional human oversight, synthetic evidence pollution, and model collapse. We conclude with design and governance recommendations and a research agenda for shifting AI safety from model-centric evaluation toward socio-technical reliability.",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CY",
+      "published": "2026-07-21T17:02:37Z",
+      "updated": "2026-07-21T17:02:37Z",
+      "comment": "Email by the arXiv Support Team: \"Dear Gjergji, Thank you for your patience. Your appeal was accepted. You are welcome to resubmit this work at your convenience to cs.CY (cs.AI, cs.HC) Regards, arXiv Support\"",
+      "url": "https://arxiv.org/abs/2607.19292v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19292v1",
+      "rank": 27,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward hacking / alignment evaluation"
+      ],
+      "explore_score": 9.7757,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "提出五层隐性安全框架，揭示AI系统中未被量化的深层风险模式",
+      "one_liner": "隐性安全挑战：五层框架诊断AI系统中未被仪器化的失败",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19235",
+      "title": "MeetingToM: Evaluating Multimodal LLMs on Theory-of-Mind Reasoning in Multi-Party Meetings",
+      "authors": [
+        "Ziyi Wang",
+        "Yuhang Wu",
+        "Dongxu Piao",
+        "Xingyu Liu",
+        "Tianhui Zhou",
+        "Miao Liu"
+      ],
+      "abstract": "Theory of Mind (ToM), the ability to infer other's beliefs, intentions, and states of knowledge, is central to social interaction, yet remains challenging for current Multimodal Large Language Models (MLLMs), especially in multi-party meetings where cues are distributed across speech and behavior. Existing multimodal ToM benchmarks mainly focus on video-grounded question answering over overt, externally verifiable signals, and provide limited coverage of latent social states and group dynamics. We introduce MeetingToM, a benchmark for complex social behavior reasoning in naturalistic multi-party meetings. MeetingToM targets meeting-specific phenomena such as \\textbf{pseudo-consensus}, where apparent agreement masks private dissent under social pressure. The benchmark is hierarchically organized to evaluate ToM at increasing levels of social granularity, including (i) subject-level mental state prediction, (ii) dyadic-level addressee understanding, and (iii) group-level consensus reasoning. We provide a unified evaluation protocol and conduct systematic analyses of representative MLLMs, revealing persistent limitations in integrating non-verbal cues, inferring hidden attitudes, and distinguishing genuine consensus from pseudo-consensus. Our results highlight key challenges and establish MeetingToM as a testbed for advancing meeting-grounded ToM in multimodal models.",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-21T16:05:49Z",
+      "updated": "2026-07-21T16:05:49Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19235v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19235v1",
+      "rank": 41,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [
+        "theory of mind / social reasoning / mental state reasoning"
+      ],
+      "explore_score": 11.7375,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "构建MeetingToM基准，聚焦多党会议中伪共识等隐性社会推理",
+      "one_liner": "MeetingToM：评估多党会议中隐性社会状态推理的新基准",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19036",
+      "title": "CoGoal3D: Collaborative 3D Object Detection with 3D-Aware Fusion and Refinement",
+      "authors": [
+        "Zhihao Yang",
+        "Zhiyu Xiang",
+        "Peng Xu",
+        "Tianyu Pu",
+        "Kai Wang",
+        "Eryun Liu",
+        "Dongping Zhang",
+        "Yong Ding"
+      ],
+      "abstract": "V2X collaborative object detection features overcoming the limitations of single-vehicle systems by aggregating environmental features from multiple collaborative agents. However, existing mainstream V2X perception methods mainly focus on 2D BEV object detection. When 3D detection task is concerned, inferior results are obtained because they ignore the 3D spatial misalignment caused by differing height and attitude among the collaborators. In this paper, we propose a novel collaborative 3D object detection framework called CoGoal3D, which extracts and refines the 3D feature gradually in a two-stage pipeline. In the first stage, a multiscale 3D-aware global fusion module is designed to mitigate the 3D spatial misalignment. The resulting proposals are then refined in the second stage with an auxiliary task of 3D point reconstruction. An effective multi-agent collaborative data augmentation strategy is further proposed to enrich the training data while minimizing information loss. Extensive experiments on public real-world datasets demonstrate that our CoGoal3D achieves new state-of-the-art performance, with 3D AP@0.7 improvements of 10.86%, 10.34%, and 10.18% on the DAIR-V2X, V2V4Real, and V2X-Real datasets, respectively. Code is available at https://github.com/Megalo-f/CoGoal3D.",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-21T12:20:48Z",
+      "updated": "2026-07-21T12:20:48Z",
+      "comment": "Accepted to ECCV 2026. 17 pages, 8 figures, 6 tables. Code: https://github.com/Megalo-f/CoGoal3D",
+      "url": "https://arxiv.org/abs/2607.19036v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19036v1",
+      "rank": 104,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.4079,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 8,
+      "reason": "CoGoal3D解决V2X协同3D检测中的空间错位问题，具明确技术路径",
+      "one_liner": "CoGoal3D：面向车路协同的3D感知空间对齐与细化框架",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "d70e7858d566fbe29c3d304112b63ef538134e33ed172374f3492a95e4817c63"
+}
