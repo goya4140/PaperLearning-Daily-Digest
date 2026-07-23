@@ -331,7 +331,9 @@ def _score(item: dict[str, Any], settings: dict[str, Any], now_ts: int | None = 
         + (2 if _count(item.get("comment_count")) >= 5 else 0),
     )
     now_ts = now_ts or int(time.time())
-    age = max(0, now_ts - int(item.get("updated_at") or item.get("created_at") or now_ts))
+    # First publication is the meaningful freshness signal for experience posts.
+    # A minor edit must not make an old interview guide look current.
+    age = max(0, now_ts - int(item.get("created_at") or item.get("updated_at") or now_ts))
     max_age_seconds = max(1, int(settings.get("max_age_days", 730))) * 86400
     freshness = max(0.0, 10 * (1 - age / max_age_seconds))
     engagement = min(
@@ -354,7 +356,7 @@ def prepare_content_candidates(
     output = []
     for content in contents:
         text = f"{content.get('title', '')} {content.get('excerpt', '')} {content.get('content', '')}".lower()
-        published = int(content.get("updated_at") or content.get("created_at") or 0)
+        published = int(content.get("created_at") or content.get("updated_at") or 0)
         if published and now_ts - published > maximum_age:
             continue
         if any(term in text for term in blocked):

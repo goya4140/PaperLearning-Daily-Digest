@@ -125,7 +125,8 @@ def test_prepare_candidates_filters_ads_short_and_old_content():
             "id": "old",
             "title": "十年前的面试经验",
             "created_at": 1_500_000_000,
-            "updated_at": 1_500_000_000,
+            # A recent edit must not refresh an old experience post.
+            "updated_at": 1_784_419_200,
         },
     ]
     prepared = zhihu.prepare_content_candidates(
