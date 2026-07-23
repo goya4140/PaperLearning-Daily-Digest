@@ -1,0 +1,416 @@
+{
+  "version": 2,
+  "date": "2026-07-23",
+  "arxiv_query_date": "2026-07-22",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-07-23T07:28:48.628961+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607220000+TO+202607222359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607220000+TO+202607222359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-07-22T00:00:00Z",
+    "2026-07-22T23:59:59Z"
+  ],
+  "raw_candidate_count": 235,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2607.19899",
+      "title": "Harnessing Disagreement: Detecting Correlated Agreement Blindness in Multi-Agent Triage",
+      "authors": [
+        "Shay Seiya McDonnell",
+        "Avantika Singh",
+        "Quoc-Viet Pham",
+        "Vratislav Havlik",
+        "Gregory M. P. O'Hare"
+      ],
+      "abstract": "Disagreement-triggered escalation can create a structural blind spot in multi-agent arbitration: as base learners improve, they tend to converge, weakening safety monitoring where correlated failures concentrate. We term this correlated agreement blindness and present ARAT (Arbitrated Reasoning Agents for Alarm Triage), a directed-star system combining an inductive Random Forest (RF) agent, an analogical case-based k-nearest neighbour (k-NN) agent, and a calibrated meta-model to mitigate this effect. On 82,332 holdout samples from the UNSW-NB15 network intrusion detection dataset, 57.2% of errors occur under agreement and 90.6% of dangerous under-predictions evade disagreement-based monitoring even after conservative override; ablation shows that strengthening base learners increases error correlation while reducing disagreement. ARAT reduces under-prediction relative to soft voting from 4.80% to 1.70% via conservative override (-2.6pp) and a safety-flag gate (-0.5pp), demonstrating architectural gains. Cross-dataset validation on clinical readmission supports these indicators, suggesting that diversification improves safety only when it generates productive disagreement rather than convergence. These results indicate that disagreement-triggered escalation can be blind to correlated failure, a risk that may intensify as agentic pipelines deploy increasingly capable, correlated models.",
+      "categories": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "primary_category": "cs.MA",
+      "published": "2026-07-22T08:35:00Z",
+      "updated": "2026-07-22T08:35:00Z",
+      "comment": "14 pages, 2 figures, 3 tables. Accepted at PAAMS 2026; this is the author's pre-review submitted version",
+      "url": "https://arxiv.org/abs/2607.19899v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19899v1",
+      "rank": 152,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.3114,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "揭示多智能体仲裁中相关性一致盲点，提出ARAT架构提升安全监控",
+      "one_liner": "提出ARAT框架缓解多智能体协同中的相关性一致盲点，显著降低危险漏报",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19794",
+      "title": "TriAgent: Divergence-Aware Multi-Agent Committees for Cost-Efficient Financial Sentiment Analysis",
+      "authors": [
+        "Isabel Xu",
+        "Cynthia Xu",
+        "Rachel Ren",
+        "Cong Guo",
+        "Jiacheng Ding"
+      ],
+      "abstract": "Production LLM-based financial sentiment analysis faces a structural cost trap: most queries are trivially classifiable, yet expensive cloud reasoners process them all, and the bill scales linearly with user count. We present TriAgent, a multi-agent committee stratified by contextual granularity -- a word-level lexicon (VADER), a sentence-level domain transformer (FinBERT), and a cross-sentence reasoner (Qwen2.5, 0.5B-14B-4bit, with Mistral-7B and Phi-3.5-mini cross-family checks). A three-way Semantic Divergence Index (SDI) measures pairwise disagreement across granularities and routes each query accordingly. Our central finding is the critic plateau: when the LLM is re-tasked as a critic over the smaller agents' outputs, F1 plateaus at ~0.87 across 1.5B-7B Qwen (bootstrap 95% CIs overlap), while a same-size 3-persona vote drops to F1=0.66, which is driven by granularity-stratified diversity. Three corollaries follow from the same SDI signal: (i) a Shared Consensus Dictionary on multilingual sentence-BERT answers 95% of Chinese queries from an English cache at F1=0.99 -- cross-border canonicalization at zero marginal cost; (ii) SDI doubles as a post-hoc LLM-hallucination detector at AUC=0.90; (iii) the SDI single-stage strategy attains the best risk-adjusted return (Sharpe=3.50) on a 20-ticker back-test, dominating both always-FinBERT (1.36) and always-LLM (0.11). At 10M-user scale, TriAgent saves $9.3M/year vs. a GPT-4o-mini baseline. Code, lexicons, and the SCD are released.",
+      "categories": [
+        "cs.CL",
+        "cs.CE",
+        "cs.DB",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-22T06:20:32Z",
+      "updated": "2026-07-22T06:20:32Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19794v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19794v1",
+      "rank": 183,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.5404,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "提出TriAgent多智能体委员会与语义分歧指数，实现成本高效金融情感分析",
+      "one_liner": "TriAgent通过跨粒度分歧路由，大幅节省金融情感分析成本并提升鲁棒性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19985",
+      "title": "Coordinating from Memory: Graph-Structured Experience Reuse for Multi-Agent Adaptation in Dynamic Manufacturing",
+      "authors": [
+        "Chengxiao Dai",
+        "Zhanhui Lin",
+        "Zhaokun Yan",
+        "Youyang Ni",
+        "Chenjun Lei",
+        "Luyan Zhang"
+      ],
+      "abstract": "Dynamic manufacturing environments require multi-agent systems to coordinate effectively under frequent operational disturbances such as machine failures, urgent job arrivals, and processing time variations. Existing multi-agent reinforcement learning approaches treat each disturbance episode independently, discarding valuable coordination experience that could accelerate future adaptation. In this paper, we propose a Graph-Structured Experiential Memory (GSEM) framework for multi-agent coordination in dynamic manufacturing. The framework encodes historical coordination episodes as heterogeneous relational graphs that capture task dependencies, machine states, and inter-agent collaboration patterns. When a new disturbance occurs, a graph neural network-based retrieval mechanism identifies structurally similar past episodes, enabling experience-guided policy adaptation rather than learning from scratch. Experiments on dynamic flexible job-shop scheduling benchmarks with three disturbance types show that GSEM reduces makespan by 4.1%-10.0% and adaptation time by 33%-38% compared to the strongest memory-augmented baseline, with the advantage increasing under higher disturbance frequency. Ablation studies and cross-disturbance transfer experiments further validate the necessity of graph-structured encoding and similarity-based retrieval and demonstrate the cross-disturbance generalizability of learned coordination patterns.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-22T10:17:53Z",
+      "updated": "2026-07-22T10:17:53Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19985v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19985v1",
+      "rank": 126,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.5296,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Dynamic manufacturing environments require multi-agent systems to coordinate effectively under frequent operational disturbances such as machine failures, urgent job arrivals, and processing time variations. Existing mul…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.19865",
+      "title": "DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations",
+      "authors": [
+        "Jiazhen Jiang",
+        "Boxi Cao",
+        "Lingyong Yan",
+        "Yaojie Lu",
+        "Hongyu Lin",
+        "Shuaiqiang Wang",
+        "Dawei Yin",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "abstract": "As autonomous agents rapidly evolve, their ability to reliably manipulate ubiquitous digital documents has become critical for enabling general-purpose AI assistants and automating complex workspace workflows. In this paper, we introduce DocOps, a deterministically verifiable evaluation framework underpinned by a hierarchical taxonomy that deconstructs document operations inspired by real-world practices into atomic dimensions and escalating workflow complexities. Based on DocOps, we systematically evaluate representative closed- and open-source models across various agentic harnesses, revealing that even the most advanced frontier configurations still exhibit profound limitations when handling highly coupled, long-range tasks. Furthermore, a fine-grained analysis of existing agents' manipulation behaviors uncovers 3 key failure modes: long-term state tracking collapse, shallow semantic verification, and destructive editing of structural metadata. Ultimately, our work exposes the capability boundaries of agents in maintaining global document consistency, shedding light on the future design of robust, non-destructive agents for complex digital ecosystems.",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-22T07:52:59Z",
+      "updated": "2026-07-22T07:52:59Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19865v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19865v1",
+      "rank": 163,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.4381,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "As autonomous agents rapidly evolve, their ability to reliably manipulate ubiquitous digital documents has become critical for enabling general-purpose AI assistants and automating complex workspace workflows. In this pa…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2607.20083",
+      "title": "Co-Evolving LLM Evaluators and Policies via DynamicRubric",
+      "authors": [
+        "Beining Wang",
+        "Weihang Su",
+        "Hongtao Tian",
+        "Hao Kong",
+        "Tao Yang",
+        "Ting Yao",
+        "Qingyi Pan",
+        "Yueyue Wu",
+        "Qingyao Ai",
+        "Min Zhang",
+        "Yiqun Liu"
+      ],
+      "abstract": "Post-training with evaluator feedback on policy-induced samples serves as a major mechanism for improving large language models. As policies improve, these sampled responses become close in quality. These close candidates create a bottleneck for policy optimization: collapsed relative evaluator score gaps yield weak or misleading policy supervision. We theoretically characterize why these gaps matter through a probability allocation view, showing that the directional gain of shifting probability mass from one response to another is exactly the evaluator score gap between them. This identifies relative score gaps as the policy optimization signals that guide updates. Motivated by this view, we propose DynamicRubric, a response-set-conditioned evaluator--policy co-evolution framework that generates weighted binary rubric items for each candidate set and aggregates the resulting judgments into response-level scores. In our experiments with 8B backbones, DynamicRubric improves evaluator performance and provides stronger policy supervision than baselines using a 70B reward model or a 235B static rubric generator. DynamicRubric-optimized policies also show gains on verifiable reasoning and coding tasks. A DynamicRubric-optimized model is fully deployed in WeChat Search's AI answering scenario, where it serves all online traffic across tens of millions of requests per day and improves key online metrics. These results suggest a principle for evaluator-guided post-training: evaluators should evolve with the policies they supervise.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-22T12:35:40Z",
+      "updated": "2026-07-22T12:35:40Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.20083v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20083v1",
+      "rank": 95,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning"
+      ],
+      "explore_score": 11.561,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "提出DynamicRubric动态评估器-策略共进化框架，解决评分塌缩瓶颈",
+      "one_liner": "DynamicRubric使评估器随策略演进，强化RLHF中政策优化信号",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.20255",
+      "title": "The Ethics of Autonomous AI Agents for Offensive Security",
+      "authors": [
+        "Andreas Happe",
+        "Jürgen Cito",
+        "Jasmin Wachter"
+      ],
+      "abstract": "LLM-driven autonomous agents are reshaping offensive security. Unlike traditional penetration-testing tooling -- deterministic, narrowly scoped, and operated by trained practitioners -- agentic security tools exhibit \\textit{indeterminacy} along three independent dimensions. First, their actions are drawn from a non-deterministic policy whose outputs resist both ex-ante and ex-post explanation, frustrating incident attribution and pre-deployment safety review. Second, their impact is open-ended due to the non-deterministic actions, agency of utilized models, and opaque LLM supply-chains. Third, their user population is indeterminate in both size and required skill: the operating skill floor for using or developing offensive capabilities has dropped sharply. These three properties are linked thematically, but are not derivable from one another. Combined with the structural cost asymmetry between offense and defense, they enable the industrialization of offensive capability. The net short-term effect favors attackers, even if the same technology may, in the long run, democratize access to defensive practice. Existing dual-use cybersecurity and AI-ethics frameworks were not designed for this combination. Our work analyzes how moral attribution becomes diffuse between users, tool-makers, and third parties when employing autonomous AI agents for offensive security. We also examine the stakeholder impact of this technology and provide stratified recommendations.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-07-22T15:13:15Z",
+      "updated": "2026-07-22T15:13:15Z",
+      "comment": "accepted at FAIEMA 2026",
+      "url": "https://arxiv.org/abs/2607.20255v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20255v1",
+      "rank": 43,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.6225,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "系统分析自主AI代理用于进攻性安全的三重不确定性伦理挑战",
+      "one_liner": "首次剖析AI代理在进攻性安全中三重不确定性引发的伦理与责任扩散问题",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.20145",
+      "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+      "authors": [
+        "Dongfang Li",
+        "Xiaodong Luo",
+        "Ruoyu Sun",
+        "Xuhui Chen",
+        "Linyuan Qiu",
+        "Jian Meng",
+        "Zhengxuan Lu",
+        "Yiting Wang",
+        "Yucheng Xie",
+        "Tao Guo",
+        "Tianxiang Fang",
+        "Jing Li",
+        "Sihang Chen",
+        "Shihao Hong",
+        "Chang Liu",
+        "Weihua Dai",
+        "Zirong Zeng",
+        "Ziwei Zhu",
+        "Zhuohan Wang",
+        "Zhengjun Yue",
+        "Igor Vasilyev",
+        "Min Liu",
+        "Weijian Sun",
+        "Xin Chen",
+        "Yingmeng Gao",
+        "Jinhua Zhou",
+        "Taolue Chen",
+        "Chenwei Wu",
+        "Dong Zhang",
+        "Wenlong Jin",
+        "Jinmin Xiang",
+        "Barkova Maria",
+        "Ushakov Anton",
+        "Xianfei Jin",
+        "Tian Ding",
+        "Zhihang Lin",
+        "Qian Chen",
+        "Linxin Yang",
+        "Mingzhe Yang",
+        "Bingwei Zhang",
+        "Hongzhang Yang",
+        "Fangxue Zhang",
+        "Shijun Qin",
+        "Jie Yu",
+        "Cuihua Hu",
+        "Tolstykh Vasiliy",
+        "Nosov Ivan",
+        "Abdullin Amir",
+        "Zhichen Zhou",
+        "Xin Zhang",
+        "Zhixiong Ning",
+        "Xutong Zhao",
+        "Junjie Huang",
+        "Jiajun Liu",
+        "Weiyan Kong",
+        "Zheng Zhang",
+        "Wenhan Luo",
+        "Lin Hu",
+        "Yangbo Guo",
+        "Li Zeng",
+        "Shihao Zeng",
+        "Baotian Hu",
+        "Min Zhang",
+        "Haizhou Li",
+        "Zhiquan Luo"
+      ],
+      "abstract": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication overhead, and inefficient kernel execution. While most large-scale LLM training systems are built around GPU-based clusters, this report presents an end-to-end optimization practice on the Ascend NPU SuperPOD. Using the DeepSeek-V4 model family as the target workload, we develop a hierarchical optimization framework spanning model-level parallelism, computation-communication orchestration, and low-level kernel execution. The resulting system achieves 34.22% Model FLOPs Utilization (MFU) with a 2.93x improvement over the open-source baseline recipe while maintaining training stability. Building on this optimized infrastructure, we further establish a CPT and SFT workflow for complex Operations Research (OR) tasks. We refer to the integrated framework as SLAI T-Rex. Using DeepSeek-V4-Flash, we develop OR-oriented CPT and SFT data pipelines that combine collected domain resources with solver-verified synthetic optimization documents. The resulting dataset contains 10K high-quality SFT samples spanning four task categories and three problem representations. The specialized model achieves the highest average zero-shot Pass@1 score among the evaluated models, reaching 71.81% and outperforming GPT-5.4-Mini and the base DeepSeek-V4-Flash model by 3.98 and 11.27 percentage points, respectively. Overall, this work demonstrates a full-stack pathway from efficient trillion-parameter model post-training on Ascend infra to domain-specialized Flash models for solver-grounded mathematical modeling, advancing frontier-model systems for complex reasoning.",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-22T13:49:17Z",
+      "updated": "2026-07-22T13:49:17Z",
+      "comment": "73 pages, 22 figures, 20 tables",
+      "url": "https://arxiv.org/abs/2607.20145v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20145v1",
+      "rank": 76,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.5542,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication over…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.20001",
+      "title": "Are Attributions of Consciousness to AI Chatbots Epistemically Innocent?",
+      "authors": [
+        "Uwe Peters"
+      ],
+      "abstract": "Artificial intelligence (AI) chatbots (e.g., ChatGPT) can communicate in strikingly humanlike ways. This has prompted many chatbot users to attribute psychological properties, including consciousness, to these systems. However, there is little scientific evidence that current AI chatbots are conscious. How, then, should we understand people's consciousness attributions to chatbots? Are they merely metaphorical claims, or do they express genuine beliefs? If these attributions lack evidential support, are users epistemically blameworthy for making them, or might they be epistemically innocent, yielding significant benefits otherwise unattainable? This paper offers a conceptual analysis of consciousness attributions to AI chatbots and develops a multidimensional taxonomy of the attitudes they may express, ranging from non-doxastic stances (e.g., pretence) to different forms of belief, including delusions. This taxonomy helps avoid conflations by showing that linguistically identical attributions can reflect importantly different attitudes and degrees of epistemic commitment to the proposition that chatbots are conscious. The taxonomy also provides a framework for empirical studies to operationalize and measure different forms of epistemic commitment to AI consciousness. Using this taxonomy, I argue that although some consciousness attributions to chatbots are epistemically benign, and even some irrational ones may be epistemically innocent, many others render the attributor epistemically blameworthy.",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CY",
+      "published": "2026-07-22T10:36:26Z",
+      "updated": "2026-07-22T10:36:26Z",
+      "comment": "1 Figure",
+      "url": "https://arxiv.org/abs/2607.20001v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20001v1",
+      "rank": 120,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.5286,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Artificial intelligence (AI) chatbots (e.g., ChatGPT) can communicate in strikingly humanlike ways. This has prompted many chatbot users to attribute psychological properties, including consciousness, to these systems. H…",
+      "reason": "daily-corpus novelty; cross-category",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "6daf0c9cd7ff6997a56979eceb1a08ee1078a5ce2484f929f9b5568d79e944f7"
+}
