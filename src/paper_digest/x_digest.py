@@ -165,6 +165,19 @@ def _expanded_urls(value: Any) -> list[str]:
     return sorted(set(output))
 
 
+def _safe_error_detail(exc: Exception, cookies: dict[str, str]) -> str:
+    detail = SPACE_RE.sub(" ", str(exc)).strip()
+    for value in cookies.values():
+        if len(value) >= 6:
+            detail = detail.replace(value, "***")
+    detail = re.sub(
+        r"(?i)(auth_token|ct0|cookie)(\s*[=:]\s*)[^\s,;]+",
+        r"\1\2***",
+        detail,
+    )
+    return detail[:240]
+
+
 def _account_sets(settings: dict[str, Any]) -> tuple[set[str], set[str]]:
     official = {
         str(item).strip().lstrip("@").lower()
@@ -350,8 +363,11 @@ def fetch_posts(
         print("[warning] X rate limit reached; continuing without X.", file=sys.stderr)
         return [], "rate-limited"
     except Exception as exc:
+        detail = _safe_error_detail(exc, cookies)
+        suffix = f": {detail}" if detail else ""
         print(
-            f"[warning] X fetch failed ({type(exc).__name__}); continuing without X.",
+            f"[warning] X fetch failed ({type(exc).__name__}{suffix}); "
+            "continuing without X.",
             file=sys.stderr,
         )
         return [], "fetch-failed"

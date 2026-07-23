@@ -114,4 +114,4 @@ B站通道的场景设计参考 [tooandy/bili-auto](https://github.com/tooandy/b
 
 知乎请求签名运行时固定使用 [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) commit `0625e01a6bc717a3fc9c96d3dac7fb8957043838` 中的 `libs/zhihu.js`，仅在 GitHub Actions 运行时检出，不复制进本仓库。知乎通道只执行低频只读搜索，不点赞、不评论、不关注，也不抓取个人主页；请仅用于个人学习并遵守平台条款及上游非商业学习许可证。
 
-X 通道使用固定版本的 [d60/twikit](https://github.com/d60/twikit) 解析 Cookie 并执行网页搜索。程序只调用搜索能力，不点赞、不转发、不回复、不关注、不发帖，也不抓取私信。网页内部接口可能随 X 改版而失效，且自动化访问存在账号风控风险；请仅以低频个人学习用途使用并遵守平台条款。若需要长期稳定或商业使用，应改用 X 官方 API。
+X 通道使用 [d60/twikit](https://github.com/d60/twikit) 解析 Cookie 并执行网页搜索，并固定到 [SearchTimeline 兼容修复 PR #419](https://github.com/d60/twikit/pull/419) 的精确 commit；上游发布包含等价修复后应恢复使用正式版本。程序只调用搜索能力，不点赞、不转发、不回复、不关注、不发帖，也不抓取私信。网页内部接口可能随 X 改版而失效，且自动化访问存在账号风控风险；请仅以低频个人学习用途使用并遵守平台条款。若需要长期稳定或商业使用，应改用 X 官方 API。

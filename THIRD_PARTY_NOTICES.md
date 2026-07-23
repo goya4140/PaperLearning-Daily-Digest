@@ -26,9 +26,14 @@ Vault.
 
 The optional X fetch path uses:
 
-- [`d60/twikit`](https://github.com/d60/twikit), version `2.3.3`
+- [`d60/twikit`](https://github.com/d60/twikit), based on version `2.3.3`
+- Temporary compatibility patch:
+  [`d60/twikit#419`](https://github.com/d60/twikit/pull/419), commit
+  `e9b5acf140492fb642b2e5322a9ad55ee10415bc`
 - Copyright (c) d60 and contributors
 - License: MIT
 
 Twikit is used for low-frequency, read-only search with a user-provided session
-Cookie. PaperLearning does not call its posting or engagement methods.
+Cookie. PaperLearning does not call its posting or engagement methods. The
+compatibility commit is pinned because the current PyPI release predates X's
+2026 SearchTimeline and client-transaction changes.

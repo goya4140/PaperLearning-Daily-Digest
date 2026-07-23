@@ -98,6 +98,18 @@ def test_auth_and_rate_limit_failures_have_distinct_statuses():
     assert x_digest.fetch_posts(SETTINGS, cookie, rate_failure)[1] == "rate-limited"
 
 
+def test_error_diagnostics_redact_cookie_values(capsys):
+    def failure(*args):
+        raise RuntimeError("request failed auth_token=secret-token ct0=secret-csrf")
+
+    cookie = "auth_token=secret-token; ct0=secret-csrf"
+    assert x_digest.fetch_posts(SETTINGS, cookie, failure)[1] == "fetch-failed"
+    captured = capsys.readouterr().err
+    assert "RuntimeError" in captured
+    assert "secret-token" not in captured
+    assert "secret-csrf" not in captured
+
+
 def test_prepare_filters_replies_retweets_spam_old_and_duplicate_text():
     valid, _ = x_digest.fetch_posts(
         SETTINGS,
