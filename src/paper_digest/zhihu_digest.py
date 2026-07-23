@@ -31,6 +31,9 @@ DEFAULT_BLOCKED_TERMS = (
     "保 offer",
     "招生",
     "软广",
+    "多平台整理",
+    "全网整理",
+    "来源覆盖多个平台",
 )
 EXPERIENCE_TERMS = (
     "面经",

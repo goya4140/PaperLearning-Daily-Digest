@@ -108,7 +108,7 @@ zhihu:
   min_content_chars: 120
   max_per_author: 1
   max_per_content_type: 2
-  blocked_terms: [加微信, 私信领取, 训练营, 付费咨询, 课程优惠, 求职辅导, 保 offer, 招生, 软广]
+  blocked_terms: [加微信, 私信领取, 训练营, 付费咨询, 课程优惠, 求职辅导, 保 offer, 招生, 软广, 多平台整理, 全网整理, 来源覆盖多个平台]
   search_time: a_year
   request_interval_seconds: 1.5
 

@@ -119,6 +119,12 @@ def test_prepare_candidates_filters_ads_short_and_old_content():
     contents = [
         {**base, "id": "good", "title": "算法面试完整复盘"},
         {**base, "id": "ad", "title": "训练营招生", "content": LONG_BODY + " 加微信"},
+        {
+            **base,
+            "id": "aggregation",
+            "title": "2026 大模型面经汇总（多平台整理）",
+            "content": LONG_BODY,
+        },
         {**base, "id": "short", "title": "一句话经验", "content": "太短了"},
         {
             **base,
