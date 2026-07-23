@@ -119,9 +119,11 @@ def test_current_search_timeline_payload_is_parsed_without_user_model():
                                                         "result": {
                                                             "rest_id": "1",
                                                             "is_blue_verified": True,
-                                                            "legacy": {
+                                                            "core": {
                                                                 "name": "OpenAI",
                                                                 "screen_name": "OpenAI",
+                                                            },
+                                                            "legacy": {
                                                                 "followers_count": 1_000_000,
                                                                 "verified": True,
                                                             },

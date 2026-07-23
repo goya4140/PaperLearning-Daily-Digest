@@ -295,7 +295,10 @@ def _posts_from_search_response(
             user_result = user_result["user"]
         user_legacy = user_result.get("legacy")
         if not isinstance(user_legacy, dict):
-            continue
+            user_legacy = {}
+        user_core = user_result.get("core")
+        if not isinstance(user_core, dict):
+            user_core = {}
         note = (
             ((result.get("note_tweet") or {}).get("note_tweet_results") or {}).get("result")
             or {}
@@ -314,8 +317,12 @@ def _posts_from_search_response(
                 "id": str(result.get("rest_id") or ""),
                 "text": _plain((note or {}).get("text") or legacy.get("full_text")),
                 "created_at": legacy.get("created_at"),
-                "author_name": _plain(user_legacy.get("name")),
-                "author_handle": _plain(user_legacy.get("screen_name")),
+                "author_name": _plain(
+                    user_legacy.get("name") or user_core.get("name")
+                ),
+                "author_handle": _plain(
+                    user_legacy.get("screen_name") or user_core.get("screen_name")
+                ),
                 "author_verified": bool(
                     user_legacy.get("verified") or user_result.get("is_blue_verified")
                 ),
