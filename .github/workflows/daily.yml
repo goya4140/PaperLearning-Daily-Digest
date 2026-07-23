@@ -61,6 +61,7 @@ jobs:
           XHS_COOKIE: ${{ secrets.XHS_COOKIE }}
           BILIBILI_COOKIE: ${{ secrets.BILIBILI_COOKIE }}
           ZHIHU_COOKIE: ${{ secrets.ZHIHU_COOKIE }}
+          X_COOKIE: ${{ secrets.X_COOKIE }}
           ARXIV_CONTACT_EMAIL: ${{ vars.ARXIV_CONTACT_EMAIL }}
           PYTHONPATH: src:vendor/daily-digest-assistant
         run: |

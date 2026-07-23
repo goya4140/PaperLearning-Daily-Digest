@@ -112,6 +112,44 @@ zhihu:
   search_time: a_year
   request_interval_seconds: 1.5
 
+x:
+  enabled: true
+  # X_COOKIE is required and must include auth_token and ct0.
+  # Accounts are editable: official sources receive higher trust, not automatic inclusion.
+  official_accounts:
+    - OpenAI
+    - AnthropicAI
+    - claudeai
+    - GoogleDeepMind
+    - MetaAI
+    - MistralAI
+    - huggingface
+    - NVIDIAAI
+    - xai
+  expert_accounts:
+    - AndrewYNg
+    - karpathy
+    - ylecun
+    - fchollet
+    - drfeifei
+    - JeffDean
+    - demishassabis
+  keyword_queries:
+    - '"AI agent" (release OR benchmark OR open source OR paper)'
+    - '(LLM OR multimodal OR reasoning) (release OR benchmark OR arxiv)'
+    - '("machine learning" OR "artificial intelligence") (dataset OR github OR "technical report")'
+  candidate_pool: 40
+  detail_pool: 24
+  max_items: 6
+  min_score: 65
+  max_age_days: 7
+  min_text_chars: 35
+  languages: [en, zh]
+  max_per_author: 2
+  max_per_content_type: 2
+  blocked_terms: [airdrop, giveaway, whitelist, presale, token sale, free crypto, dm for promo, sponsored post]
+  request_interval_seconds: 2.0
+
 delivery:
   subject_prefix: "PaperLearning 每日发现"
   smtp_provider: "auto"

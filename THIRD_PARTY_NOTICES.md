@@ -23,3 +23,12 @@ The upstream copyright, usage restrictions, and license remain available in its
 The runtime is used only for low-frequency, read-only personal learning at
 GitHub Actions runtime and is not copied into this repository or PaperLearning
 Vault.
+
+The optional X fetch path uses:
+
+- [`d60/twikit`](https://github.com/d60/twikit), version `2.3.3`
+- Copyright (c) d60 and contributors
+- License: MIT
+
+Twikit is used for low-frequency, read-only search with a user-provided session
+Cookie. PaperLearning does not call its posting or engagement methods.

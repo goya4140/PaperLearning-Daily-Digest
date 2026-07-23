@@ -7,7 +7,7 @@
   <tr><td style="padding:28px 26px;background:#195247;color:#ffffff;border-radius:18px;">
     <p style="margin:0 0 8px;font-size:11px;letter-spacing:2px;color:#b8ddd3;">PAPERLEARNING · DISCOVERY RADAR</p>
     <h1 style="margin:0 0 10px;font-size:32px;line-height:1.25;">每日发现</h1>
-    <p style="margin:0 0 18px;color:#d5ebe5;font-size:14px;line-height:1.6;">{{ report.date }} · arXiv、小红书、B 站与知乎发现信号</p>
+    <p style="margin:0 0 18px;color:#d5ebe5;font-size:14px;line-height:1.6;">{{ report.date }} · arXiv、小红书、B 站、知乎与 X 发现信号</p>
     <table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr>
       <td style="padding:7px 10px;border:1px solid #ffffff40;border-radius:20px;font-size:12px;">原始 {{ report.raw_candidate_count }}</td>
       <td width="8"></td><td style="padding:7px 10px;border:1px solid #ffffff40;border-radius:20px;font-size:12px;">关注 {{ report.focus|length }}</td>
@@ -15,6 +15,7 @@
       <td width="8"></td><td style="padding:7px 10px;border:1px solid #ffffff40;border-radius:20px;font-size:12px;">小红书 {{ report.xhs|length }}</td>
       <td width="8"></td><td style="padding:7px 10px;border:1px solid #ffffff40;border-radius:20px;font-size:12px;">B站 {{ report.bilibili|default([])|length }}</td>
       <td width="8"></td><td style="padding:7px 10px;border:1px solid #ffffff40;border-radius:20px;font-size:12px;">知乎 {{ report.zhihu|default([])|length }}</td>
+      <td width="8"></td><td style="padding:7px 10px;border:1px solid #ffffff40;border-radius:20px;font-size:12px;">X {{ report.x|default([])|length }}</td>
     </tr></table>
   </td></tr>
   <tr><td style="padding:14px 16px;background:#fff5d8;border-left:4px solid #e3a824;font-size:13px;line-height:1.6;">{{ report.disclaimer }}</td></tr>
@@ -81,7 +82,21 @@
   {% endfor %}
   {% if not report.zhihu|default([]) %}<tr><td style="padding:16px;background:#ffffff;color:#63706c;border:1px dashed #dce4df;">当前没有可推送的知乎内容。请检查 ZHIHU_COOKIE 是否包含 d_c0、是否已过期或触发风控。</td></tr>{% endif %}
 
-  <tr><td style="padding:24px 4px;color:#737e79;font-size:11px;line-height:1.7;">数据源：arXiv 官方元数据接口、B站公开视频搜索、小红书与知乎公开页面（日报日 {{ report.date }}，UTC 查询日 {{ report.arxiv_query_date }}）。邮件仅提供发现阶段摘要；正式判断请回到 PaperLearning Vault 阅读原文或原始内容。</td></tr>
+  <tr><td style="padding:26px 2px 8px;"><h2 style="margin:0;color:#111827;font-size:22px;line-height:1.4;">X 前沿动态 · {{ report.x|default([])|length }} 条</h2><p style="margin:4px 0 0;color:#63706c;font-size:12px;">AI 公司官方消息、研究者观点、论文、开源项目与产品发布</p></td></tr>
+  {% for post in report.x|default([]) %}
+  <tr><td style="padding:0 0 12px;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border:1px solid #dce4df;border-top:4px solid #111827;border-radius:12px;"><tr><td style="padding:18px 20px;word-break:break-word;">
+      <p style="margin:0 0 7px;color:#111827;font-size:11px;font-weight:700;">X{% if post.content_type %} · {{ post.content_type }}{% endif %}{% if post.source_tier %} · {{ post.source_tier }}{% endif %}{% if post.author_handle %} · @{{ post.author_handle }}{% endif %}{% if post.like_count %} · <span title="点赞量">❤️ {{ post.like_count }}</span>{% endif %}{% if post.retweet_count %} · <span title="转发量">🔁 {{ post.retweet_count }}</span>{% endif %}{% if post.reply_count %} · <span title="回复量">💬 {{ post.reply_count }}</span>{% endif %}{% if post.view_count %} · <span title="浏览量">👁️ {{ post.view_count }}</span>{% endif %}{% if post.published_date %} · <span title="发布日期">🗓️ {{ post.published_date }}</span>{% endif %}{% if post.score %} · 推荐 {{ post.score }}/100{% endif %}</p>
+      <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer" style="color:#17211f;text-decoration:underline;">{{ post.title }}</a></h3>
+      <p style="margin:0 0 12px;font-size:14px;line-height:1.7;">{{ post.summary_zh }}</p>
+      <p style="margin:0 0 14px;padding:10px 12px;background:#f2f4f7;border-radius:8px;color:#515866;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ post.reason }}</p>
+      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer" style="color:#111827;">打开 X</a>{% for url in post.external_urls[:2] %}&nbsp;&nbsp;·&nbsp;&nbsp;<a href="{{ url }}" target="_blank" rel="noopener noreferrer" style="color:#111827;">外部链接 {{ loop.index }}</a>{% endfor %}</p>
+    </td></tr></table>
+  </td></tr>
+  {% endfor %}
+  {% if not report.x|default([]) %}<tr><td style="padding:16px;background:#ffffff;color:#63706c;border:1px dashed #dce4df;">当前没有可推送的 X 内容。请检查 X_COOKIE 是否包含 auth_token 与 ct0、是否过期或触发风控。</td></tr>{% endif %}
+
+  <tr><td style="padding:24px 4px;color:#737e79;font-size:11px;line-height:1.7;">数据源：arXiv 官方元数据接口、B站公开视频搜索、小红书、知乎与 X 公开页面（日报日 {{ report.date }}，UTC 查询日 {{ report.arxiv_query_date }}）。邮件仅提供发现阶段摘要；正式判断请回到 PaperLearning Vault 阅读原文或原始内容。</td></tr>
 </table>
 </td></tr></table>
 </body></html>
