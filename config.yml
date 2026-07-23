@@ -88,6 +88,30 @@ bilibili:
   blocked_terms: [招生, 训练营, 付费群, 加微信, 课程优惠, 接广告, 纯搬运]
   request_interval_seconds: 1.2
 
+zhihu:
+  enabled: true
+  # ZHIHU_COOKIE is required and must include d_c0. Missing credentials skip this channel safely.
+  keywords:
+    - 大厂 面试 经验
+    - 算法工程师 面经 复盘
+    - 大模型 岗位 面试
+    - AI 科研 方向 选择
+    - 读博 科研 经验
+    - 机器学习 原理 解读
+    - AI Agent 知识 解读
+    - 论文 阅读 研究方法
+  candidate_pool: 32
+  detail_pool: 16
+  max_items: 5
+  min_score: 65
+  max_age_days: 730
+  min_content_chars: 120
+  max_per_author: 1
+  max_per_content_type: 2
+  blocked_terms: [加微信, 私信领取, 训练营, 付费咨询, 课程优惠, 求职辅导, 保 offer, 招生, 软广, 多平台整理, 全网整理, 来源覆盖多个平台]
+  search_time: a_year
+  request_interval_seconds: 1.5
+
 delivery:
   subject_prefix: "PaperLearning 每日发现"
   smtp_provider: "auto"
