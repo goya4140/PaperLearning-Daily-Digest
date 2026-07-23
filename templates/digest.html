@@ -6,14 +6,14 @@
   <meta name="generator" content="PaperLearning-Daily-Digest">
   <title>PaperLearning 每日发现 · {{ report.date }}</title>
   <style>
-    :root{--ink:#17211f;--muted:#63706c;--paper:#fff;--ground:#f3f0e8;--focus:#176b5b;--explore:#9a4c18;--xhs:#c4324a;--bilibili:#1684a7;--line:#dce4df}
+    :root{--ink:#17211f;--muted:#63706c;--paper:#fff;--ground:#f3f0e8;--focus:#176b5b;--explore:#9a4c18;--xhs:#c4324a;--bilibili:#1684a7;--zhihu:#056de8;--line:#dce4df}
     *{box-sizing:border-box}body{margin:0;background:var(--ground);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
     a{color:inherit}.shell{max-width:1040px;margin:0 auto;padding:24px 14px 56px}.hero{padding:34px;border-radius:24px;background:linear-gradient(135deg,#153b36,#215d50);color:#fff;box-shadow:0 18px 45px #173c3422}
     .eyebrow{font-size:11px;letter-spacing:2px;color:#add8ca}.hero h1{margin:8px 0;font-size:clamp(27px,5vw,46px)}.hero p{margin:0;color:#d1e8e1;line-height:1.7}.metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.metric{padding:9px 12px;border:1px solid #ffffff35;border-radius:999px;background:#ffffff12;font-size:12px}
     .notice{margin:18px 0;padding:13px 15px;border-left:4px solid #e3a824;border-radius:8px;background:#fff5d8;font-size:13px;line-height:1.65}.toolbar{position:sticky;top:8px;z-index:4;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;padding:12px;border:1px solid var(--line);border-radius:16px;background:#fffffff0;backdrop-filter:blur(12px)}
     .toolbar button,.toolbar input{border:1px solid var(--line);border-radius:999px;background:#fff;padding:9px 13px;color:var(--ink);font:inherit}.toolbar button{cursor:pointer}.toolbar button.active{background:var(--ink);color:#fff}.toolbar input{min-width:220px;flex:1}.section{margin-top:28px}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.section h2{margin:0;font-size:22px}.section p.sub{margin:5px 0 12px;color:var(--muted);font-size:12px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}.card{display:flex;flex-direction:column;min-height:100%;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:0 8px 24px #183c330d}.card[data-channel="focus"]{border-top:4px solid var(--focus)}.card[data-channel="explore"]{border-top:4px solid var(--explore)}.card[data-channel="xhs"]{border-top:4px solid var(--xhs)}.card[data-channel="bilibili"]{border-top:4px solid var(--bilibili)}
-    .meta{font-size:11px;font-weight:750;letter-spacing:.3px}.focus{color:var(--focus)}.explore{color:var(--explore)}.xhs{color:var(--xhs)}.bilibili{color:var(--bilibili)}.card h3{margin:8px 0 5px;font-size:17px;line-height:1.45}.authors{color:var(--muted);font-size:12px}.summary{font-size:14px;line-height:1.7}.reason{padding:9px 11px;border-radius:9px;background:#f6f7f4;color:#5e6864;font-size:12px;line-height:1.55}.links{display:flex;gap:14px;margin-top:auto;padding-top:14px;font-size:12px;font-weight:750}.card details{margin-top:11px;color:var(--muted);font-size:12px;line-height:1.65}.card summary{cursor:pointer;font-weight:700}.empty{padding:18px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);background:#ffffff88}.footer{margin-top:32px;color:#737e79;font-size:11px;line-height:1.7}.hidden{display:none!important}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}.card{display:flex;flex-direction:column;min-height:100%;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:0 8px 24px #183c330d}.card[data-channel="focus"]{border-top:4px solid var(--focus)}.card[data-channel="explore"]{border-top:4px solid var(--explore)}.card[data-channel="xhs"]{border-top:4px solid var(--xhs)}.card[data-channel="bilibili"]{border-top:4px solid var(--bilibili)}.card[data-channel="zhihu"]{border-top:4px solid var(--zhihu)}
+    .meta{font-size:11px;font-weight:750;letter-spacing:.3px}.focus{color:var(--focus)}.explore{color:var(--explore)}.xhs{color:var(--xhs)}.bilibili{color:var(--bilibili)}.zhihu{color:var(--zhihu)}.card h3{margin:8px 0 5px;font-size:17px;line-height:1.45}.authors{color:var(--muted);font-size:12px}.summary{font-size:14px;line-height:1.7}.reason{padding:9px 11px;border-radius:9px;background:#f6f7f4;color:#5e6864;font-size:12px;line-height:1.55}.links{display:flex;gap:14px;margin-top:auto;padding-top:14px;font-size:12px;font-weight:750}.card details{margin-top:11px;color:var(--muted);font-size:12px;line-height:1.65}.card summary{cursor:pointer;font-weight:700}.empty{padding:18px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);background:#ffffff88}.footer{margin-top:32px;color:#737e79;font-size:11px;line-height:1.7}.hidden{display:none!important}
     @media(max-width:600px){.shell{padding:10px 8px 40px}.hero{padding:24px 20px;border-radius:18px}.toolbar{top:4px}.toolbar input{order:-1;flex-basis:100%;min-width:0}}
   </style>
 </head>
@@ -22,25 +22,27 @@
     <header class="hero">
       <div class="eyebrow">PAPERLEARNING · DISCOVERY RADAR</div>
       <h1>每日发现预览</h1>
-      <p>{{ report.date }} · arXiv、小红书与 B站内容的统一发现预览</p>
+      <p>{{ report.date }} · arXiv、小红书、B站与知乎内容的统一发现预览</p>
       <div class="metrics">
         <span class="metric">arXiv 原始候选 {{ report.raw_candidate_count }}</span>
         <span class="metric">关注 {{ report.focus|length }}</span>
         <span class="metric">探索 {{ report.explore|length }}</span>
         <span class="metric">小红书 {{ report.xhs|length }}</span>
         <span class="metric">B站 {{ report.bilibili|default([])|length }}</span>
+        <span class="metric">知乎 {{ report.zhihu|default([])|length }}</span>
       </div>
     </header>
 
     <p class="notice">{{ report.disclaimer }}</p>
 
     <nav class="toolbar" aria-label="预览筛选">
-      <input id="search" type="search" placeholder="搜索论文、小红书或 B站内容…" aria-label="搜索">
+      <input id="search" type="search" placeholder="搜索论文、小红书、B站或知乎内容…" aria-label="搜索">
       <button class="active" data-filter="all" type="button">全部</button>
       <button data-filter="focus" type="button">关注论文</button>
       <button data-filter="explore" type="button">探索论文</button>
       <button data-filter="xhs" type="button">小红书</button>
       <button data-filter="bilibili" type="button">B站</button>
+      <button data-filter="zhihu" type="button">知乎</button>
     </nav>
 
     {% for lane, title, color_class, papers, description in [
@@ -104,8 +106,26 @@
       </div>
     </section>
 
+    <section class="section" data-section="zhihu">
+      <div class="section-head"><h2 class="zhihu">知乎经验与知识</h2><span>{{ report.zhihu|default([])|length }} 条 · {{ report.zhihu_status|default('unavailable') }}</span></div>
+      <p class="sub">大厂面试复盘、科研方向讨论、知识机制解读与成长经验</p>
+      <div class="grid">
+        {% for item in report.zhihu|default([]) %}
+        <article class="card" data-channel="zhihu" data-search="{{ item.title }} {{ item.author }} {{ item.excerpt }} {{ item.content }} {{ item.summary_zh }} {{ item.matched_keywords|default([])|join(' ') }}">
+          <div class="meta zhihu">知乎{% if item.content_type %} · {{ item.content_type }}{% endif %}{% if item.author %} · {{ item.author }}{% endif %}{% if item.voteup_count %} · <span title="赞同数">👍 {{ item.voteup_count }}</span>{% endif %}{% if item.comment_count %} · <span title="评论数">💬 {{ item.comment_count }}</span>{% endif %}{% if item.published_date %} · <span title="发布日期">🗓️ {{ item.published_date }}</span>{% endif %}{% if item.score %} · 推荐 {{ item.score }}/100{% endif %}</div>
+          <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+          <p class="summary">{{ item.summary_zh }}</p>
+          <p class="reason"><strong>入选理由：</strong>{{ item.reason }}</p>
+          {% if item.excerpt or item.content %}<details><summary>查看候选文本</summary><p>{{ item.excerpt or item.content[:1200] }}</p></details>{% endif %}
+          <div class="links"><a href="{{ item.url }}">打开知乎</a></div>
+        </article>
+        {% endfor %}
+        {% if not report.zhihu|default([]) %}<div class="empty">当前没有可预览的知乎内容。请检查 ZHIHU_COOKIE 是否包含 d_c0、是否已过期或触发风控；其他通道仍会正常生成。</div>{% endif %}
+      </div>
+    </section>
+
     <footer class="footer">
-      数据源：arXiv 官方元数据接口 `{{ report.source }}`（日报日 {{ report.date }}，UTC 查询日 {{ report.arxiv_query_date }}，窗口 {{ report.query_window_utc|join(' → ') }}）、B站公开视频搜索与小红书公开页面。B站和小红书只作为发现信号，不写入论文 Inbox 或索引。
+      数据源：arXiv 官方元数据接口 `{{ report.source }}`（日报日 {{ report.date }}，UTC 查询日 {{ report.arxiv_query_date }}，窗口 {{ report.query_window_utc|join(' → ') }}）、B站公开视频搜索、小红书与知乎公开页面。B站、小红书和知乎只作为发现信号，不写入论文 Inbox 或索引。
     </footer>
   </main>
   <script>

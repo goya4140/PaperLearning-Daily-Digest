@@ -43,6 +43,13 @@ jobs:
           git clone https://github.com/yzbcs/Daily-Digest-Assistant.git vendor/daily-digest-assistant
           git -C vendor/daily-digest-assistant checkout 4957c3e40354816edbb2114e3aad7a3b53be47d4
           npm ci --prefix vendor/daily-digest-assistant
+      - name: Install pinned Zhihu signing runtime
+        run: |
+          git init vendor/mediacrawler
+          git -C vendor/mediacrawler remote add origin https://github.com/NanmiCoder/MediaCrawler.git
+          git -C vendor/mediacrawler sparse-checkout set --no-cone libs/zhihu.js
+          git -C vendor/mediacrawler fetch --depth 1 origin 0625e01a6bc717a3fc9c96d3dac7fb8957043838
+          git -C vendor/mediacrawler checkout FETCH_HEAD
       - name: Build and optionally send digest
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
@@ -53,6 +60,7 @@ jobs:
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           XHS_COOKIE: ${{ secrets.XHS_COOKIE }}
           BILIBILI_COOKIE: ${{ secrets.BILIBILI_COOKIE }}
+          ZHIHU_COOKIE: ${{ secrets.ZHIHU_COOKIE }}
           ARXIV_CONTACT_EMAIL: ${{ vars.ARXIV_CONTACT_EMAIL }}
           PYTHONPATH: src:vendor/daily-digest-assistant
         run: |
