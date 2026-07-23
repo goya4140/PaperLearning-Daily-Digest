@@ -75,7 +75,17 @@ EXPLANATION_TERMS = (
 CONTENT_TYPES = {
     "大厂面经": ("面试", "面经", "实习", "校招", "社招", "offer", "求职"),
     "科研方向": ("科研", "研究方向", "读博", "博士", "实验室", "选题", "学术"),
-    "知识解读": ("原理", "机制", "解读", "推导", "为什么", "如何理解", "本质"),
+    "知识解读": (
+        "原理",
+        "机制",
+        "理论",
+        "知识",
+        "解读",
+        "推导",
+        "为什么",
+        "如何理解",
+        "本质",
+    ),
     "成长复盘": ("复盘", "经验", "踩坑", "教训", "职业发展", "学习路线"),
 }
 
@@ -304,11 +314,27 @@ def fetch_contents(
 
 
 def _content_type(item: dict[str, Any]) -> str:
-    text = f"{item.get('title', '')} {item.get('excerpt', '')} {item.get('content', '')}".lower()
-    for label, terms in CONTENT_TYPES.items():
-        if any(term.lower() in text for term in terms):
-            return label
-    return "经验讨论"
+    title = str(item.get("title", "")).lower()
+    title_scores = {
+        label: sum(term.lower() in title for term in terms)
+        for label, terms in CONTENT_TYPES.items()
+    }
+    title_label, title_score = max(title_scores.items(), key=lambda pair: pair[1])
+    if title_score:
+        return title_label
+    fields = (
+        (str(item.get("excerpt", "")).lower(), 2),
+        (str(item.get("content", "")).lower(), 1),
+    )
+    scores = {
+        label: sum(
+            weight * sum(term.lower() in text for term in terms)
+            for text, weight in fields
+        )
+        for label, terms in CONTENT_TYPES.items()
+    }
+    label, score = max(scores.items(), key=lambda pair: pair[1])
+    return label if score else "经验讨论"
 
 
 def _score(item: dict[str, Any], settings: dict[str, Any], now_ts: int | None = None) -> int:

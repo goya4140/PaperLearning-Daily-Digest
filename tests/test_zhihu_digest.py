@@ -145,6 +145,25 @@ def test_prepare_candidates_filters_ads_short_and_old_content():
     assert 0 <= prepared[0]["pre_score"] <= 100
 
 
+def test_content_type_weights_title_over_incidental_body_terms():
+    content = {
+        "id": "theory",
+        "title": "机器学习理论部分感觉很难学怎么办？",
+        "excerpt": "从直觉、机制和推导三个层次理解理论知识",
+        "content": LONG_BODY + "这些知识偶尔也会出现在面试中。",
+        "created_at": 1_784_419_200,
+        "updated_at": 1_784_419_200,
+        "author": "研究者",
+        "voteup_count": 10,
+        "comment_count": 2,
+        "matched_keywords": ["机器学习 原理 解读"],
+    }
+    prepared = zhihu.prepare_content_candidates(
+        [content], {"min_content_chars": 120}, now_ts=1_784_505_600
+    )
+    assert prepared[0]["content_type"] == "知识解读"
+
+
 def test_fallback_enforces_question_author_and_type_diversity(monkeypatch):
     monkeypatch.delenv("LLM_API_KEY", raising=False)
     base = {
