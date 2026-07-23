@@ -84,6 +84,69 @@ def test_fetch_normalizes_and_deduplicates_posts():
     assert posts[0]["matched_queries"] == ["official", "topic-1"]
 
 
+def test_current_search_timeline_payload_is_parsed_without_user_model():
+    response = {
+        "data": {
+            "search_by_raw_query": {
+                "search_timeline": {
+                    "timeline": {
+                        "instructions": [{
+                            "entries": [{
+                                "entryId": "tweet-101",
+                                "content": {
+                                    "itemContent": {
+                                        "tweet_results": {
+                                            "result": {
+                                                "rest_id": "101",
+                                                "legacy": {
+                                                    "full_text": LONG_POST,
+                                                    "created_at": "Thu Jul 23 06:00:00 +0000 2026",
+                                                    "favorite_count": 25,
+                                                    "retweet_count": 4,
+                                                    "reply_count": 2,
+                                                    "quote_count": 1,
+                                                    "bookmark_count": 3,
+                                                    "lang": "en",
+                                                    "is_quote_status": False,
+                                                    "entities": {
+                                                        "urls": [{
+                                                            "expanded_url": "https://example.com/report"
+                                                        }]
+                                                    },
+                                                },
+                                                "core": {
+                                                    "user_results": {
+                                                        "result": {
+                                                            "rest_id": "1",
+                                                            "is_blue_verified": True,
+                                                            "legacy": {
+                                                                "name": "OpenAI",
+                                                                "screen_name": "OpenAI",
+                                                                "followers_count": 1_000_000,
+                                                                "verified": True,
+                                                            },
+                                                        }
+                                                    }
+                                                },
+                                                "views": {"count": "1000"},
+                                            }
+                                        }
+                                    }
+                                },
+                            }]
+                        }]
+                    }
+                }
+            }
+        }
+    }
+    posts = x_digest._posts_from_search_response(response, "official")
+    assert len(posts) == 1
+    assert posts[0]["author_handle"] == "OpenAI"
+    assert posts[0]["view_count"] == 1000
+    assert posts[0]["urls"] == ["https://example.com/report"]
+
+
 def test_auth_and_rate_limit_failures_have_distinct_statuses():
     def auth_failure(*args):
         raise x_digest.XAuthError("401")

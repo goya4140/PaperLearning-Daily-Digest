@@ -248,6 +248,95 @@ def _tweet_dict(tweet: Any, matched_query: str) -> dict[str, Any]:
     }
 
 
+def _find_first(value: Any, key: str) -> Any:
+    if isinstance(value, dict):
+        if key in value:
+            return value[key]
+        for child in value.values():
+            found = _find_first(child, key)
+            if found is not None:
+                return found
+    elif isinstance(value, list):
+        for child in value:
+            found = _find_first(child, key)
+            if found is not None:
+                return found
+    return None
+
+
+def _posts_from_search_response(
+    response: dict[str, Any], matched_query: str
+) -> list[dict[str, Any]]:
+    """Parse current SearchTimeline payloads without Twikit model assumptions."""
+    entries_match = _find_first(response, "entries")
+    entries = entries_match if isinstance(entries_match, list) else []
+    output: list[dict[str, Any]] = []
+    for entry in entries:
+        if not isinstance(entry, dict) or not str(entry.get("entryId", "")).startswith(
+            ("tweet", "search-grid")
+        ):
+            continue
+        container = _find_first(entry, "tweet_results")
+        if not isinstance(container, dict):
+            continue
+        result = container.get("result")
+        if not isinstance(result, dict):
+            continue
+        if isinstance(result.get("tweet"), dict):
+            result = result["tweet"]
+        legacy = result.get("legacy")
+        core = result.get("core")
+        if not isinstance(legacy, dict) or not isinstance(core, dict):
+            continue
+        user_result = ((core.get("user_results") or {}).get("result") or {})
+        if not isinstance(user_result, dict):
+            continue
+        if isinstance(user_result.get("user"), dict):
+            user_result = user_result["user"]
+        user_legacy = user_result.get("legacy")
+        if not isinstance(user_legacy, dict):
+            continue
+        note = (
+            ((result.get("note_tweet") or {}).get("note_tweet_results") or {}).get("result")
+            or {}
+        )
+        if not isinstance(note, dict):
+            note = {}
+        note_entities = note.get("entity_set")
+        legacy_entities = legacy.get("entities") or {}
+        urls = (
+            (note_entities or {}).get("urls")
+            if isinstance(note_entities, dict)
+            else None
+        ) or legacy_entities.get("urls") or []
+        output.append(
+            {
+                "id": str(result.get("rest_id") or ""),
+                "text": _plain((note or {}).get("text") or legacy.get("full_text")),
+                "created_at": legacy.get("created_at"),
+                "author_name": _plain(user_legacy.get("name")),
+                "author_handle": _plain(user_legacy.get("screen_name")),
+                "author_verified": bool(
+                    user_legacy.get("verified") or user_result.get("is_blue_verified")
+                ),
+                "author_followers": _count(user_legacy.get("followers_count")),
+                "like_count": _count(legacy.get("favorite_count")),
+                "retweet_count": _count(legacy.get("retweet_count")),
+                "reply_count": _count(legacy.get("reply_count")),
+                "quote_count": _count(legacy.get("quote_count")),
+                "bookmark_count": _count(legacy.get("bookmark_count")),
+                "view_count": _count((result.get("views") or {}).get("count")),
+                "lang": _plain(legacy.get("lang")),
+                "in_reply_to": legacy.get("in_reply_to_status_id_str"),
+                "is_retweet": bool(legacy.get("retweeted_status_result")),
+                "is_quote": bool(legacy.get("is_quote_status")),
+                "urls": _expanded_urls(urls),
+                "matched_queries": [matched_query],
+            }
+        )
+    return output
+
+
 async def _search_async(
     queries: list[dict[str, str]], count: int, cookie: str, interval: float
 ) -> list[dict[str, Any]]:
@@ -262,13 +351,28 @@ async def _search_async(
         if index:
             await asyncio.sleep(interval)
         try:
-            tweets = await client.search_tweet(query["query"], "Latest", count=per_query)
+            response, _ = await client.gql.search_timeline(
+                query["query"], "Latest", per_query, None
+            )
         except (Unauthorized, Forbidden) as exc:
             raise XAuthError(str(exc)) from exc
         except TooManyRequests as exc:
             raise XRateLimitError(str(exc)) from exc
-        for tweet in tweets:
-            output.append(_tweet_dict(tweet, query["label"]))
+        errors = response.get("errors") if isinstance(response, dict) else None
+        if errors:
+            messages = "; ".join(
+                str(item.get("message") or item.get("code") or "unknown error")
+                for item in errors
+                if isinstance(item, dict)
+            )
+            raise RuntimeError(f"SearchTimeline returned errors: {messages or 'unknown error'}")
+        posts = _posts_from_search_response(response, query["label"])
+        print(
+            f"[info] X search {query['label']} returned {len(posts)} posts.",
+            file=sys.stderr,
+        )
+        for post in posts:
+            output.append(post)
             if len(output) >= count:
                 return output
     return output
