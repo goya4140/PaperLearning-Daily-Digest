@@ -28,11 +28,11 @@
   <tr><td style="padding:0 0 12px;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border:1px solid #dce4df;border-top:4px solid {{ color }};border-radius:12px;"><tr><td style="padding:18px 20px;word-break:break-word;">
       <p style="margin:0 0 7px;color:{{ color }};font-size:11px;font-weight:700;">{{ paper.categories|join(' · ') }}{% if paper.llm_score %} · 推荐 {{ paper.llm_score }}/10{% endif %}</p>
-      <h3 style="margin:0 0 6px;font-size:18px;line-height:1.45;"><a href="{{ paper.url }}" style="color:#17211f;text-decoration:underline;">{{ paper.title }}</a></h3>
+      <h3 style="margin:0 0 6px;font-size:18px;line-height:1.45;"><a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer" style="color:#17211f;text-decoration:underline;">{{ paper.title }}</a></h3>
       <p style="margin:0 0 13px;color:#63706c;font-size:12px;line-height:1.5;">{{ paper.authors[:6]|join(', ') }}</p>
       <p style="margin:0 0 12px;font-size:14px;line-height:1.7;">{{ paper.one_liner }}</p>
       <p style="margin:0 0 14px;padding:10px 12px;background:#f6f7f4;border-radius:8px;color:#5e6864;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ paper.reason }}</p>
-      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ paper.url }}" style="color:{{ color }};">arXiv</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="{{ paper.pdf_url }}" style="color:{{ color }};">PDF</a></p>
+      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer" style="color:{{ color }};">arXiv</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="{{ paper.pdf_url }}" target="_blank" rel="noopener noreferrer" style="color:{{ color }};">PDF</a></p>
     </td></tr></table>
   </td></tr>
   {% endfor %}
@@ -44,10 +44,10 @@
   <tr><td style="padding:0 0 12px;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border:1px solid #dce4df;border-top:4px solid #c4324a;border-radius:12px;"><tr><td style="padding:18px 20px;word-break:break-word;">
       <p style="margin:0 0 7px;color:#c4324a;font-size:11px;font-weight:700;">小红书{% if note.liked_count %} · {{ note.liked_count }} 赞{% endif %}{% if note.score %} · 推荐 {{ note.score }}/10{% endif %}</p>
-      <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ note.url }}" style="color:#17211f;text-decoration:underline;">{{ note.title }}</a></h3>
+      <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ note.url }}" target="_blank" rel="noopener noreferrer" style="color:#17211f;text-decoration:underline;">{{ note.title }}</a></h3>
       <p style="margin:0 0 12px;font-size:14px;line-height:1.7;">{{ note.summary_zh }}</p>
       <p style="margin:0 0 14px;padding:10px 12px;background:#f8f3f4;border-radius:8px;color:#6f5b60;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ note.reason }}</p>
-      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ note.url }}" style="color:#c4324a;">打开小红书</a></p>
+      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ note.url }}" target="_blank" rel="noopener noreferrer" style="color:#c4324a;">打开小红书</a></p>
     </td></tr></table>
   </td></tr>
   {% endfor %}
@@ -58,10 +58,10 @@
   <tr><td style="padding:0 0 12px;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border:1px solid #dce4df;border-top:4px solid #1684a7;border-radius:12px;"><tr><td style="padding:18px 20px;word-break:break-word;">
       <p style="margin:0 0 7px;color:#1684a7;font-size:11px;font-weight:700;">B站{% if video.content_type %} · {{ video.content_type }}{% endif %}{% if video.author %} · {{ video.author }}{% endif %}{% if video.view_count %} · <span title="播放量">▶️ {{ video.view_count }}</span>{% endif %}{% if video.like_count|default %} · <span title="点赞量">👍 {{ video.like_count }}</span>{% endif %}{% if video.favorite_count|default %} · <span title="收藏量">⭐ {{ video.favorite_count }}</span>{% endif %}{% if video.duration %} · <span title="时长">⏱️ {{ video.duration }}</span>{% endif %}{% if video.score %} · 推荐 {{ video.score }}/100{% endif %}</p>
-      <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ video.url }}" style="color:#17211f;text-decoration:underline;">{{ video.title }}</a></h3>
+      <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ video.url }}" target="_blank" rel="noopener noreferrer" style="color:#17211f;text-decoration:underline;">{{ video.title }}</a></h3>
       <p style="margin:0 0 12px;font-size:14px;line-height:1.7;">{{ video.summary_zh }}</p>
       <p style="margin:0 0 14px;padding:10px 12px;background:#eef7fa;border-radius:8px;color:#50676f;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ video.reason }}</p>
-      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ video.url }}" style="color:#1684a7;">打开 B站</a></p>
+      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ video.url }}" target="_blank" rel="noopener noreferrer" style="color:#1684a7;">打开 B站</a></p>
     </td></tr></table>
   </td></tr>
   {% endfor %}
@@ -72,10 +72,10 @@
   <tr><td style="padding:0 0 12px;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;border:1px solid #dce4df;border-top:4px solid #056de8;border-radius:12px;"><tr><td style="padding:18px 20px;word-break:break-word;">
       <p style="margin:0 0 7px;color:#056de8;font-size:11px;font-weight:700;">知乎{% if item.content_type %} · {{ item.content_type }}{% endif %}{% if item.author %} · {{ item.author }}{% endif %}{% if item.voteup_count %} · <span title="赞同数">👍 {{ item.voteup_count }}</span>{% endif %}{% if item.comment_count %} · <span title="评论数">💬 {{ item.comment_count }}</span>{% endif %}{% if item.published_date %} · <span title="发布日期">🗓️ {{ item.published_date }}</span>{% endif %}{% if item.score %} · 推荐 {{ item.score }}/100{% endif %}</p>
-      <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ item.url }}" style="color:#17211f;text-decoration:underline;">{{ item.title }}</a></h3>
+      <h3 style="margin:0 0 9px;font-size:17px;line-height:1.45;"><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color:#17211f;text-decoration:underline;">{{ item.title }}</a></h3>
       <p style="margin:0 0 12px;font-size:14px;line-height:1.7;">{{ item.summary_zh }}</p>
       <p style="margin:0 0 14px;padding:10px 12px;background:#eef5ff;border-radius:8px;color:#506478;font-size:12px;line-height:1.55;"><strong>入选理由：</strong>{{ item.reason }}</p>
-      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ item.url }}" style="color:#056de8;">打开知乎</a></p>
+      <p style="margin:0;font-size:12px;font-weight:700;"><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color:#056de8;">打开知乎</a></p>
     </td></tr></table>
   </td></tr>
   {% endfor %}

@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from paper_digest.rendering import render, render_email
@@ -72,6 +73,10 @@ def test_preview_contains_arxiv_xhs_bilibili_and_zhihu_channels():
     assert "💬 28" in html
     assert "🗓️ 2026-07-19" in html
     assert "推荐 84/100" in html
+    anchors = re.findall(r"<a\b[^>]*>", html)
+    assert anchors
+    assert all('target="_blank"' in anchor for anchor in anchors)
+    assert all('rel="noopener noreferrer"' in anchor for anchor in anchors)
     assert "PaperLearning-Daily-Digest" in html
     assert "Papers Cool" not in html
 
@@ -127,3 +132,7 @@ def test_email_uses_gmail_safe_single_column_tables():
     assert "💬 12" in html
     assert "🗓️ 2026-07-20" in html
     assert "推荐 81/100" in html
+    anchors = re.findall(r"<a\b[^>]*>", html)
+    assert anchors
+    assert all('target="_blank"' in anchor for anchor in anchors)
+    assert all('rel="noopener noreferrer"' in anchor for anchor in anchors)

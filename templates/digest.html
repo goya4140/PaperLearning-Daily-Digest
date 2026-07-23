@@ -56,12 +56,12 @@
         {% for paper in papers %}
         <article class="card" data-channel="{{ lane }}" data-search="{{ paper.title }} {{ paper.authors|join(' ') }} {{ paper.categories|join(' ') }} {{ paper.one_liner }} {{ paper.abstract }}">
           <div class="meta {{ color_class }}">{{ paper.categories|join(' · ') }}{% if paper.llm_score %} · 推荐 {{ paper.llm_score }}/10{% endif %}</div>
-          <h3><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+          <h3><a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a></h3>
           <div class="authors">{{ paper.authors[:6]|join(', ') }}</div>
           <p class="summary">{{ paper.one_liner }}</p>
           <p class="reason"><strong>入选理由：</strong>{{ paper.reason }}</p>
           <details><summary>查看 arXiv 摘要</summary><p>{{ paper.abstract }}</p></details>
-          <div class="links"><a href="{{ paper.url }}">arXiv</a><a href="{{ paper.pdf_url }}">PDF</a></div>
+          <div class="links"><a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">arXiv</a><a href="{{ paper.pdf_url }}" target="_blank" rel="noopener noreferrer">PDF</a></div>
         </article>
         {% endfor %}
         {% if not papers %}<div class="empty">本通道今天没有达到要求的候选。</div>{% endif %}
@@ -77,11 +77,11 @@
         {% for note in report.xhs %}
         <article class="card" data-channel="xhs" data-search="{{ note.title }} {{ note.content }} {{ note.summary_zh }} {{ note.matched_keywords|default([])|join(' ') }}">
           <div class="meta xhs">小红书{% if note.liked_count %} · {{ note.liked_count }} 赞{% endif %}{% if note.score %} · 推荐 {{ note.score }}/10{% endif %}</div>
-          <h3><a href="{{ note.url }}">{{ note.title }}</a></h3>
+          <h3><a href="{{ note.url }}" target="_blank" rel="noopener noreferrer">{{ note.title }}</a></h3>
           <p class="summary">{{ note.summary_zh }}</p>
           <p class="reason"><strong>入选理由：</strong>{{ note.reason }}</p>
           {% if note.content %}<details><summary>查看候选文本</summary><p>{{ note.content }}</p></details>{% endif %}
-          <div class="links"><a href="{{ note.url }}">打开小红书</a></div>
+          <div class="links"><a href="{{ note.url }}" target="_blank" rel="noopener noreferrer">打开小红书</a></div>
         </article>
         {% endfor %}
         {% if not report.xhs %}<div class="empty">当前没有可预览的小红书内容。Cookie 未配置或过期时，arXiv 论文预览仍会正常生成。</div>{% endif %}
@@ -95,11 +95,11 @@
         {% for video in report.bilibili|default([]) %}
         <article class="card" data-channel="bilibili" data-search="{{ video.title }} {{ video.author }} {{ video.description }} {{ video.summary_zh }} {{ video.matched_keywords|default([])|join(' ') }}">
           <div class="meta bilibili">B站{% if video.content_type %} · {{ video.content_type }}{% endif %}{% if video.author %} · {{ video.author }}{% endif %}{% if video.view_count %} · <span title="播放量">▶️ {{ video.view_count }}</span>{% endif %}{% if video.like_count|default %} · <span title="点赞量">👍 {{ video.like_count }}</span>{% endif %}{% if video.favorite_count|default %} · <span title="收藏量">⭐ {{ video.favorite_count }}</span>{% endif %}{% if video.danmaku_count %} · {{ video.danmaku_count }} 弹幕{% endif %}{% if video.duration %} · <span title="时长">⏱️ {{ video.duration }}</span>{% endif %}{% if video.score %} · 推荐 {{ video.score }}/100{% endif %}</div>
-          <h3><a href="{{ video.url }}">{{ video.title }}</a></h3>
+          <h3><a href="{{ video.url }}" target="_blank" rel="noopener noreferrer">{{ video.title }}</a></h3>
           <p class="summary">{{ video.summary_zh }}</p>
           <p class="reason"><strong>入选理由：</strong>{{ video.reason }}</p>
           {% if video.description %}<details><summary>查看候选简介</summary><p>{{ video.description }}</p></details>{% endif %}
-          <div class="links"><a href="{{ video.url }}">打开 B站</a></div>
+          <div class="links"><a href="{{ video.url }}" target="_blank" rel="noopener noreferrer">打开 B站</a></div>
         </article>
         {% endfor %}
         {% if not report.bilibili|default([]) %}<div class="empty">当前没有可预览的 B站内容。请检查 BILIBILI_COOKIE 是否已配置或过期；其他通道仍会正常生成。</div>{% endif %}
@@ -113,11 +113,11 @@
         {% for item in report.zhihu|default([]) %}
         <article class="card" data-channel="zhihu" data-search="{{ item.title }} {{ item.author }} {{ item.excerpt }} {{ item.content }} {{ item.summary_zh }} {{ item.matched_keywords|default([])|join(' ') }}">
           <div class="meta zhihu">知乎{% if item.content_type %} · {{ item.content_type }}{% endif %}{% if item.author %} · {{ item.author }}{% endif %}{% if item.voteup_count %} · <span title="赞同数">👍 {{ item.voteup_count }}</span>{% endif %}{% if item.comment_count %} · <span title="评论数">💬 {{ item.comment_count }}</span>{% endif %}{% if item.published_date %} · <span title="发布日期">🗓️ {{ item.published_date }}</span>{% endif %}{% if item.score %} · 推荐 {{ item.score }}/100{% endif %}</div>
-          <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+          <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></h3>
           <p class="summary">{{ item.summary_zh }}</p>
           <p class="reason"><strong>入选理由：</strong>{{ item.reason }}</p>
           {% if item.excerpt or item.content %}<details><summary>查看候选文本</summary><p>{{ item.excerpt or item.content[:1200] }}</p></details>{% endif %}
-          <div class="links"><a href="{{ item.url }}">打开知乎</a></div>
+          <div class="links"><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">打开知乎</a></div>
         </article>
         {% endfor %}
         {% if not report.zhihu|default([]) %}<div class="empty">当前没有可预览的知乎内容。请检查 ZHIHU_COOKIE 是否包含 d_c0、是否已过期或触发风控；其他通道仍会正常生成。</div>{% endif %}
