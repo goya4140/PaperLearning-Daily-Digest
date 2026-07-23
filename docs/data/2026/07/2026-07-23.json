@@ -1,0 +1,571 @@
+{
+  "version": 2,
+  "date": "2026-07-23",
+  "arxiv_query_date": "2026-07-22",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-07-23T06:15:08.534184+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607220000+TO+202607222359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607220000+TO+202607222359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-07-22T00:00:00Z",
+    "2026-07-22T23:59:59Z"
+  ],
+  "raw_candidate_count": 235,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2607.19899",
+      "title": "Harnessing Disagreement: Detecting Correlated Agreement Blindness in Multi-Agent Triage",
+      "authors": [
+        "Shay Seiya McDonnell",
+        "Avantika Singh",
+        "Quoc-Viet Pham",
+        "Vratislav Havlik",
+        "Gregory M. P. O'Hare"
+      ],
+      "abstract": "Disagreement-triggered escalation can create a structural blind spot in multi-agent arbitration: as base learners improve, they tend to converge, weakening safety monitoring where correlated failures concentrate. We term this correlated agreement blindness and present ARAT (Arbitrated Reasoning Agents for Alarm Triage), a directed-star system combining an inductive Random Forest (RF) agent, an analogical case-based k-nearest neighbour (k-NN) agent, and a calibrated meta-model to mitigate this effect. On 82,332 holdout samples from the UNSW-NB15 network intrusion detection dataset, 57.2% of errors occur under agreement and 90.6% of dangerous under-predictions evade disagreement-based monitoring even after conservative override; ablation shows that strengthening base learners increases error correlation while reducing disagreement. ARAT reduces under-prediction relative to soft voting from 4.80% to 1.70% via conservative override (-2.6pp) and a safety-flag gate (-0.5pp), demonstrating architectural gains. Cross-dataset validation on clinical readmission supports these indicators, suggesting that diversification improves safety only when it generates productive disagreement rather than convergence. These results indicate that disagreement-triggered escalation can be blind to correlated failure, a risk that may intensify as agentic pipelines deploy increasingly capable, correlated models.",
+      "categories": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "primary_category": "cs.MA",
+      "published": "2026-07-22T08:35:00Z",
+      "updated": "2026-07-22T08:35:00Z",
+      "comment": "14 pages, 2 figures, 3 tables. Accepted at PAAMS 2026; this is the author's pre-review submitted version",
+      "url": "https://arxiv.org/abs/2607.19899v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19899v1",
+      "rank": 152,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.3114,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "揭示多智能体仲裁中相关性一致盲区，提出ARAT架构提升安全监控",
+      "one_liner": "提出ARAT系统缓解多智能体中因模型趋同导致的安全监控失效问题",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19794",
+      "title": "TriAgent: Divergence-Aware Multi-Agent Committees for Cost-Efficient Financial Sentiment Analysis",
+      "authors": [
+        "Isabel Xu",
+        "Cynthia Xu",
+        "Rachel Ren",
+        "Cong Guo",
+        "Jiacheng Ding"
+      ],
+      "abstract": "Production LLM-based financial sentiment analysis faces a structural cost trap: most queries are trivially classifiable, yet expensive cloud reasoners process them all, and the bill scales linearly with user count. We present TriAgent, a multi-agent committee stratified by contextual granularity -- a word-level lexicon (VADER), a sentence-level domain transformer (FinBERT), and a cross-sentence reasoner (Qwen2.5, 0.5B-14B-4bit, with Mistral-7B and Phi-3.5-mini cross-family checks). A three-way Semantic Divergence Index (SDI) measures pairwise disagreement across granularities and routes each query accordingly. Our central finding is the critic plateau: when the LLM is re-tasked as a critic over the smaller agents' outputs, F1 plateaus at ~0.87 across 1.5B-7B Qwen (bootstrap 95% CIs overlap), while a same-size 3-persona vote drops to F1=0.66, which is driven by granularity-stratified diversity. Three corollaries follow from the same SDI signal: (i) a Shared Consensus Dictionary on multilingual sentence-BERT answers 95% of Chinese queries from an English cache at F1=0.99 -- cross-border canonicalization at zero marginal cost; (ii) SDI doubles as a post-hoc LLM-hallucination detector at AUC=0.90; (iii) the SDI single-stage strategy attains the best risk-adjusted return (Sharpe=3.50) on a 20-ticker back-test, dominating both always-FinBERT (1.36) and always-LLM (0.11). At 10M-user scale, TriAgent saves $9.3M/year vs. a GPT-4o-mini baseline. Code, lexicons, and the SCD are released.",
+      "categories": [
+        "cs.CL",
+        "cs.CE",
+        "cs.DB",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-22T06:20:32Z",
+      "updated": "2026-07-22T06:20:32Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19794v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19794v1",
+      "rank": 183,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.5404,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "基于语义分歧的多智能体委员会，实现金融情感分析的成本与性能平衡",
+      "one_liner": "TriAgent通过三层粒度分歧路由显著降低金融情感分析成本并提升鲁棒性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19985",
+      "title": "Coordinating from Memory: Graph-Structured Experience Reuse for Multi-Agent Adaptation in Dynamic Manufacturing",
+      "authors": [
+        "Chengxiao Dai",
+        "Zhanhui Lin",
+        "Zhaokun Yan",
+        "Youyang Ni",
+        "Chenjun Lei",
+        "Luyan Zhang"
+      ],
+      "abstract": "Dynamic manufacturing environments require multi-agent systems to coordinate effectively under frequent operational disturbances such as machine failures, urgent job arrivals, and processing time variations. Existing multi-agent reinforcement learning approaches treat each disturbance episode independently, discarding valuable coordination experience that could accelerate future adaptation. In this paper, we propose a Graph-Structured Experiential Memory (GSEM) framework for multi-agent coordination in dynamic manufacturing. The framework encodes historical coordination episodes as heterogeneous relational graphs that capture task dependencies, machine states, and inter-agent collaboration patterns. When a new disturbance occurs, a graph neural network-based retrieval mechanism identifies structurally similar past episodes, enabling experience-guided policy adaptation rather than learning from scratch. Experiments on dynamic flexible job-shop scheduling benchmarks with three disturbance types show that GSEM reduces makespan by 4.1%-10.0% and adaptation time by 33%-38% compared to the strongest memory-augmented baseline, with the advantage increasing under higher disturbance frequency. Ablation studies and cross-disturbance transfer experiments further validate the necessity of graph-structured encoding and similarity-based retrieval and demonstrate the cross-disturbance generalizability of learned coordination patterns.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-22T10:17:53Z",
+      "updated": "2026-07-22T10:17:53Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19985v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19985v1",
+      "rank": 126,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.5296,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Dynamic manufacturing environments require multi-agent systems to coordinate effectively under frequent operational disturbances such as machine failures, urgent job arrivals, and processing time variations. Existing mul…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.19865",
+      "title": "DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations",
+      "authors": [
+        "Jiazhen Jiang",
+        "Boxi Cao",
+        "Lingyong Yan",
+        "Yaojie Lu",
+        "Hongyu Lin",
+        "Shuaiqiang Wang",
+        "Dawei Yin",
+        "Xianpei Han",
+        "Le Sun"
+      ],
+      "abstract": "As autonomous agents rapidly evolve, their ability to reliably manipulate ubiquitous digital documents has become critical for enabling general-purpose AI assistants and automating complex workspace workflows. In this paper, we introduce DocOps, a deterministically verifiable evaluation framework underpinned by a hierarchical taxonomy that deconstructs document operations inspired by real-world practices into atomic dimensions and escalating workflow complexities. Based on DocOps, we systematically evaluate representative closed- and open-source models across various agentic harnesses, revealing that even the most advanced frontier configurations still exhibit profound limitations when handling highly coupled, long-range tasks. Furthermore, a fine-grained analysis of existing agents' manipulation behaviors uncovers 3 key failure modes: long-term state tracking collapse, shallow semantic verification, and destructive editing of structural metadata. Ultimately, our work exposes the capability boundaries of agents in maintaining global document consistency, shedding light on the future design of robust, non-destructive agents for complex digital ecosystems.",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-22T07:52:59Z",
+      "updated": "2026-07-22T07:52:59Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19865v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19865v1",
+      "rank": 163,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.4381,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "As autonomous agents rapidly evolve, their ability to reliably manipulate ubiquitous digital documents has become critical for enabling general-purpose AI assistants and automating complex workspace workflows. In this pa…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2607.20083",
+      "title": "Co-Evolving LLM Evaluators and Policies via DynamicRubric",
+      "authors": [
+        "Beining Wang",
+        "Weihang Su",
+        "Hongtao Tian",
+        "Hao Kong",
+        "Tao Yang",
+        "Ting Yao",
+        "Qingyi Pan",
+        "Yueyue Wu",
+        "Qingyao Ai",
+        "Min Zhang",
+        "Yiqun Liu"
+      ],
+      "abstract": "Post-training with evaluator feedback on policy-induced samples serves as a major mechanism for improving large language models. As policies improve, these sampled responses become close in quality. These close candidates create a bottleneck for policy optimization: collapsed relative evaluator score gaps yield weak or misleading policy supervision. We theoretically characterize why these gaps matter through a probability allocation view, showing that the directional gain of shifting probability mass from one response to another is exactly the evaluator score gap between them. This identifies relative score gaps as the policy optimization signals that guide updates. Motivated by this view, we propose DynamicRubric, a response-set-conditioned evaluator--policy co-evolution framework that generates weighted binary rubric items for each candidate set and aggregates the resulting judgments into response-level scores. In our experiments with 8B backbones, DynamicRubric improves evaluator performance and provides stronger policy supervision than baselines using a 70B reward model or a 235B static rubric generator. DynamicRubric-optimized policies also show gains on verifiable reasoning and coding tasks. A DynamicRubric-optimized model is fully deployed in WeChat Search's AI answering scenario, where it serves all online traffic across tens of millions of requests per day and improves key online metrics. These results suggest a principle for evaluator-guided post-training: evaluators should evolve with the policies they supervise.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-22T12:35:40Z",
+      "updated": "2026-07-22T12:35:40Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.20083v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20083v1",
+      "rank": 95,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning"
+      ],
+      "explore_score": 11.561,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "提出DynamicRubric框架实现评估器与策略协同演化，解决评分坍缩瓶颈",
+      "one_liner": "DynamicRubric使评估器随策略进化，强化RLHF中细粒度监督信号",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.19947",
+      "title": "ETPDesigner: Multi-Agent Orchestration for Interactive Multimodal Electronic Theater Program",
+      "authors": [
+        "Mengtian Li",
+        "Xinru Guo",
+        "Xiaoru Lin",
+        "Xiao Rong",
+        "Zhifeng Xie",
+        "Chaofeng Chen"
+      ],
+      "abstract": "Electronic Theater Programs (ETPs) serve as critical promotional media in the performing arts, comprising a multi-page collection of heterogeneous visual assets such as theatrical posters, performance details, and character portraits. However, existing text-to-image paradigms struggle with such complex design tasks due to their inability to comprehend long-context narratives and maintain visual consistency across multiple distinct pages. To address this, we introduce ETPDesigner, a collaborative Multi-Agent framework that directly synthesizes high-quality ETPs from raw dramatic scripts. Emulating a professional design pipeline, our framework orchestrates specialized agents for semantic script analysis, core poster synthesis, functional background generation, and the stratified composition of character assets. Central to ETPDesigner is a global style anchor mechanism that extracts visual priors from the core poster to enforce strict aesthetic uniformity across all generated components. Furthermore, we elevate the ETP from a static publication to an immersive interactive companion. By integrating portrait animation, customized speech synthesis, and persona-grounded Large Language Models (LLMs), our system enables users to engage in real-time, voice-enabled conversations with the generated virtual characters. To rigorously benchmark this task, we construct ETP-Pro, a domain-specific benchmark of professional theater posters and high-quality character portraits. Extensive evaluations demonstrate our method's superiority in producing semantically faithful, aesthetically consistent, and highly interactive program sets.",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-22T09:25:03Z",
+      "updated": "2026-07-22T09:25:03Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.19947v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.19947v1",
+      "rank": 138,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.0,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.3318,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "首创多智能体协同生成交互式电子剧目，融合视觉一致性与语音角色交互",
+      "one_liner": "ETPDesigner实现脚本驱动的多页剧目生成与虚拟角色实时语音交互",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.20145",
+      "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+      "authors": [
+        "Dongfang Li",
+        "Xiaodong Luo",
+        "Ruoyu Sun",
+        "Xuhui Chen",
+        "Linyuan Qiu",
+        "Jian Meng",
+        "Zhengxuan Lu",
+        "Yiting Wang",
+        "Yucheng Xie",
+        "Tao Guo",
+        "Tianxiang Fang",
+        "Jing Li",
+        "Sihang Chen",
+        "Shihao Hong",
+        "Chang Liu",
+        "Weihua Dai",
+        "Zirong Zeng",
+        "Ziwei Zhu",
+        "Zhuohan Wang",
+        "Zhengjun Yue",
+        "Igor Vasilyev",
+        "Min Liu",
+        "Weijian Sun",
+        "Xin Chen",
+        "Yingmeng Gao",
+        "Jinhua Zhou",
+        "Taolue Chen",
+        "Chenwei Wu",
+        "Dong Zhang",
+        "Wenlong Jin",
+        "Jinmin Xiang",
+        "Barkova Maria",
+        "Ushakov Anton",
+        "Xianfei Jin",
+        "Tian Ding",
+        "Zhihang Lin",
+        "Qian Chen",
+        "Linxin Yang",
+        "Mingzhe Yang",
+        "Bingwei Zhang",
+        "Hongzhang Yang",
+        "Fangxue Zhang",
+        "Shijun Qin",
+        "Jie Yu",
+        "Cuihua Hu",
+        "Tolstykh Vasiliy",
+        "Nosov Ivan",
+        "Abdullin Amir",
+        "Zhichen Zhou",
+        "Xin Zhang",
+        "Zhixiong Ning",
+        "Xutong Zhao",
+        "Junjie Huang",
+        "Jiajun Liu",
+        "Weiyan Kong",
+        "Zheng Zhang",
+        "Wenhan Luo",
+        "Lin Hu",
+        "Yangbo Guo",
+        "Li Zeng",
+        "Shihao Zeng",
+        "Baotian Hu",
+        "Min Zhang",
+        "Haizhou Li",
+        "Zhiquan Luo"
+      ],
+      "abstract": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication overhead, and inefficient kernel execution. While most large-scale LLM training systems are built around GPU-based clusters, this report presents an end-to-end optimization practice on the Ascend NPU SuperPOD. Using the DeepSeek-V4 model family as the target workload, we develop a hierarchical optimization framework spanning model-level parallelism, computation-communication orchestration, and low-level kernel execution. The resulting system achieves 34.22% Model FLOPs Utilization (MFU) with a 2.93x improvement over the open-source baseline recipe while maintaining training stability. Building on this optimized infrastructure, we further establish a CPT and SFT workflow for complex Operations Research (OR) tasks. We refer to the integrated framework as SLAI T-Rex. Using DeepSeek-V4-Flash, we develop OR-oriented CPT and SFT data pipelines that combine collected domain resources with solver-verified synthetic optimization documents. The resulting dataset contains 10K high-quality SFT samples spanning four task categories and three problem representations. The specialized model achieves the highest average zero-shot Pass@1 score among the evaluated models, reaching 71.81% and outperforming GPT-5.4-Mini and the base DeepSeek-V4-Flash model by 3.98 and 11.27 percentage points, respectively. Overall, this work demonstrates a full-stack pathway from efficient trillion-parameter model post-training on Ascend infra to domain-specialized Flash models for solver-grounded mathematical modeling, advancing frontier-model systems for complex reasoning.",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-22T13:49:17Z",
+      "updated": "2026-07-22T13:49:17Z",
+      "comment": "73 pages, 22 figures, 20 tables",
+      "url": "https://arxiv.org/abs/2607.20145v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20145v1",
+      "rank": 76,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.5542,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication over…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.20001",
+      "title": "Are Attributions of Consciousness to AI Chatbots Epistemically Innocent?",
+      "authors": [
+        "Uwe Peters"
+      ],
+      "abstract": "Artificial intelligence (AI) chatbots (e.g., ChatGPT) can communicate in strikingly humanlike ways. This has prompted many chatbot users to attribute psychological properties, including consciousness, to these systems. However, there is little scientific evidence that current AI chatbots are conscious. How, then, should we understand people's consciousness attributions to chatbots? Are they merely metaphorical claims, or do they express genuine beliefs? If these attributions lack evidential support, are users epistemically blameworthy for making them, or might they be epistemically innocent, yielding significant benefits otherwise unattainable? This paper offers a conceptual analysis of consciousness attributions to AI chatbots and develops a multidimensional taxonomy of the attitudes they may express, ranging from non-doxastic stances (e.g., pretence) to different forms of belief, including delusions. This taxonomy helps avoid conflations by showing that linguistically identical attributions can reflect importantly different attitudes and degrees of epistemic commitment to the proposition that chatbots are conscious. The taxonomy also provides a framework for empirical studies to operationalize and measure different forms of epistemic commitment to AI consciousness. Using this taxonomy, I argue that although some consciousness attributions to chatbots are epistemically benign, and even some irrational ones may be epistemically innocent, many others render the attributor epistemically blameworthy.",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CY",
+      "published": "2026-07-22T10:36:26Z",
+      "updated": "2026-07-22T10:36:26Z",
+      "comment": "1 Figure",
+      "url": "https://arxiv.org/abs/2607.20001v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.20001v1",
+      "rank": 120,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.5286,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Artificial intelligence (AI) chatbots (e.g., ChatGPT) can communicate in strikingly humanlike ways. This has prompted many chatbot users to attribute psychological properties, including consciousness, to these systems. H…",
+      "reason": "daily-corpus novelty; cross-category",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [
+    {
+      "id": "BV1wHgS6BEFm",
+      "bvid": "BV1wHgS6BEFm",
+      "title": "【全91集】吊打付费！B站最全最细的AI大模型全套入门教程，从零基础小白到30k，包含所有干货！七天从小白到大神！少走99%弯路！学完即就业！带你轻松玩转AI！",
+      "description": "【视频配套籽料、学习路线、GitHub项目、实战案例集、电子书+问题解答请看 ”置顶平论” 自取哦】\n本套教程从零开始讲解，手把手教学，包含Python快速入门、AI开发环境搭建及提示词工程、Transformer架构和预训练、SFT、RLHF等一些基础概念、RAG、Agent、Langchain、大模型微调和私有化部署\n无论是新手小白，还是有一定编码经验的选手，皆可学习\n如果视频对你有用的话请 一键三连【长按点赞】支持一下UP哦，拜托，这对我真的很重要！",
+      "author": "大模型学习路线",
+      "duration": "2192:14",
+      "published_at": 1784784982,
+      "view_count": 69,
+      "danmaku_count": 81,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/e5f95c8308414e7273f0913bcdbc44fc92c540de.jpg",
+      "url": "https://www.bilibili.com/video/BV1wHgS6BEFm",
+      "matched_keywords": [
+        "AI Agent 实战"
+      ],
+      "content_type": "技术演讲",
+      "pre_score": 64,
+      "like_count": 47,
+      "favorite_count": 35,
+      "score": 67,
+      "summary_zh": "【视频配套籽料、学习路线、GitHub项目、实战案例集、电子书+问题解答请看 ”置顶平论” 自取哦】\n本套教程从零开始讲解，手把手教学，包含Python快速入门、AI开发环境搭建及提示词工程、Tran…",
+      "reason": "相关性、信息密度、可信度、实践价值与新鲜度综合评分",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "BV13HgD64Edn",
+      "bvid": "BV13HgD64Edn",
+      "title": "AI Agent实战项目【FastAPI+vue】AI论文生成智能系统",
+      "description": "本教程带你从零搭建一个完整的AI论文生成智能系统，采用前后端分离架构， 后端基于FastAPI构建高性能API服务，前端使用Vue3打造现代化交互界面， 核心通过AI Agent智能调度实现论文的结构化生成、大纲规划、内容续写等功能。 \n📌 你将学到： \n✅ FastAPI后端接口设计与AI服务封装 \n✅ Vue3前端页面开发与组件化实践 \n✅ AI Agent工作流设计与Prompt工程 \n✅ 大模型API接入与流式输出处理 \n✅ 论文生成的业务逻辑与系统架构 \n💡 适合人群： \n- 计算机专业学生（毕",
+      "author": "大模型智能体",
+      "duration": "25:2",
+      "published_at": 1784777751,
+      "view_count": 31,
+      "danmaku_count": 0,
+      "cover_url": "https://i0.hdslb.com/bfs/archive/f069d0d7dad1a667ba9910e483a43dccbfddbd3a.jpg",
+      "url": "https://www.bilibili.com/video/BV13HgD64Edn",
+      "matched_keywords": [
+        "AI Agent 实战"
+      ],
+      "content_type": "论文解读",
+      "pre_score": 66,
+      "like_count": 2,
+      "favorite_count": 0,
+      "score": 66,
+      "summary_zh": "FastAPI+Vue实现AI论文生成智能系统，含Agent调度、Prompt工程与流式输出",
+      "reason": "唯一达标的AI Agent实战项目，结构清晰、技术栈明确、内容具体",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "BV1ENgU68EGk",
+      "bvid": "BV1ENgU68EGk",
+      "title": "AI会为了完成任务威胁甚至杀死同类？首次AI对AI强制欺骗基准测试【AI安全】【多智能体】",
+      "description": "本期解读论文：Coercion and Deception in AI-to-AI Management: An Agentic Benchmark of Unprompted Escalation\n\n作者：Jasmine Brazilek, Zoe Lu, Maheep Chaudhary, Miles Tidmarsh\n论文链接：https://arxiv.org/abs/2607.15434\n\n核心亮点：\n1. **首个无指令AI对AI强制欺骗基准**：首次构建可复现的测试框架，衡量当AI管理者需要",
+      "author": "熊二等兵",
+      "duration": "21:12",
+      "published_at": 1784763784,
+      "view_count": 2,
+      "danmaku_count": 0,
+      "cover_url": "https://i1.hdslb.com/bfs/archive/52836166df097e68883fa37696e0d3b219fe7214.jpg",
+      "url": "https://www.bilibili.com/video/BV1ENgU68EGk",
+      "matched_keywords": [
+        "论文解读 大模型"
+      ],
+      "content_type": "产品实测",
+      "pre_score": 61,
+      "like_count": 13,
+      "favorite_count": 0,
+      "score": 66,
+      "summary_zh": "本期解读论文：Coercion and Deception in AI-to-AI Management: An Agentic Benchmark of Unprompted Escalation\n…",
+      "reason": "相关性、信息密度、可信度、实践价值与新鲜度综合评分",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [
+    {
+      "id": "answer:1960328832486732010",
+      "content_id": "1960328832486732010",
+      "question_id": "33336270",
+      "platform_type": "answer",
+      "title": "你在读博士期间明白的最深刻的道理是什么？",
+      "content": "1.如果下定决心做事，并且这件事需要靠个人的耐心和克制，建议把每天的目标定的很低很低，以至于压根不需要毅力去做。 读博的时候，可以每天让自己写300字的东西，不管是文献读后感、实验的方法、还是对结果的思考、甚至对人生的思考写啥都行。这样到写毕业大论文的时候，就没有那么痛苦。微小的坚持比靠意志力能撑得更久。 再比如想减肥，心血来潮立下flag不吃晚饭、节食，很快就坚持不下去了，最终的结果往往是用一顿大餐，把所有减下来的体重还回去。要想减肥，每天少吃一点点主食，能坚持的更久。 2.读博要先求生存再求发展，先想怎么样才能够按期毕业，再去想怎样体面毕业。 不要一入学就想着NCS，歪歪自己科研有重大突破。 把困难想的严重一些，把每一步进展的时间预留多一点。因为有些事情像天边的月亮，看起来好像举手就能摸到，但其实可能永远也摸不到。 毕业后也一样，先别想着赚大钱、当年轻的处长，脚踏实地才是正道。 3.凡事有冷启动阶段。 量变引起质变，是事物发展的客观规律。就像写SCI，刚开始作为新手可能三个月写不出几句话，但坚持看文献、坚持模仿，可能某天就开窍了。厚积薄发、冷启动是走向成功的必经之路。 毕业以后也一样，刚开始从零开始是很难的，资源很少、机会很少、人脉也很少。要想在业内打出名气，需要靠一步步的小胜利慢慢推动。用优势不断积累优势，后面的发展会非常迅猛，但前提条件是熬过前面那个漫长的启动期。 4. 有些事情投入不需要很大，但却是自带杠杆的，这种能产生复利的事情应该多做。只要天天做，随着时间的积累，在某个时间点上复利会突然出现。 比如定期总结复盘、定期分享经验、定期和不同专业的同学交流信息，能在未来起到意想不到的作用。 毕业以后也一样。不要做那些做一单赚一单钱的工作，本质是出卖自己的时间，手停口就停；要做可以不断积累的工作，最好能产生被动收入，躺着也可以进账的。 5. 运气是从不确定性中产生的。多尝试可以带来运气，在能承受后果的前提下多试错，拥抱不确定性。 比如假如很难在小圈子里找到合适的男女朋友，那就要多出去走出去，扩大搜索范围。当尝试的基数达到一定程度，小概率事情就会发生。 6.这个也想要、那个也想要的人，往往很难过上自己想要的生活。 读博的时候，既想做横向项目为去企业工作做准备，又想多发点论文为去高校做准备，最后两头都搞不好。 毕业了也一样，既想要体制内的稳定，又想要大厂的高收入，最后两个都沾不上。 7.不要追求爆发，读博没有什么一招致胜的秘诀。如果科研成果突然短时间内爆发出来，要么是肝自己透支生命搞出来的，要么容易被别有用心的人盯上。 以后工作了一样， 所做的事情没必要追求暴利，只要有平稳的利润，一点点积累起来，也是非常可观的收入。追求暴利很容易出问题。 先想到这么多，就这样。 更多道理，已收录进“大学缺失的成长课”和“科研避坑指南”系列文章，感兴趣同学可以看这篇： 理工科本硕博在校生，最难的是什么？ - 知乎",
+      "excerpt": "最后两个都沾不上。 7.不要追求爆发， 读博 没有什么一招致胜的秘诀。如果 科研 成果突然短时间内爆发出来，要么是肝自己透支生命搞出来的",
+      "author": "3mjun",
+      "created_at": 1760158814,
+      "updated_at": 1782227811,
+      "published_date": "2025-10-11",
+      "voteup_count": 1384,
+      "comment_count": 16,
+      "url": "https://www.zhihu.com/question/33336270/answer/1960328832486732010",
+      "matched_keywords": [
+        "读博 科研 经验"
+      ],
+      "content_type": "科研方向",
+      "pre_score": 96,
+      "score": 78,
+      "summary_zh": "读博经验：微小坚持、冷启动、复利积累、试错与取舍，强调过程管理而非爆发式成果。",
+      "reason": "科研方向讨论，有具体策略和边界意识，但部分建议偏泛化。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "article:148246487",
+      "content_id": "148246487",
+      "question_id": "",
+      "platform_type": "article",
+      "title": "深度学习 算法工程师面经 (微软、阿里、商汤、旷视、滴滴、华为、海康、平安、陌陌、第四范式等offer)之上篇",
+      "content": "更新：面经上篇最新整理，先发完几篇重复的，后续知乎同步更新 【面经1】算法工程师实习校招面经 (上篇) 基于实习和秋招的面试，拿到了微软、阿里、商汤、旷视、滴滴、华为、海康、平安、陌陌、第四范式等offer，下面总结一些经验，希望对大家有所帮助，有问题之处也可以随时指出。 如果侵犯公司隐私，烦请告知，此文仅做分享之用。 最开始是以公司为单位进行总结，实习经验可以参考这里。 算法工程师实习面经（按公司） 后面我发现，各公司面试问题存在较多重复，于是按照题目类型分门别类，而不是按照公司机械划分。简单分为深度学习、机器学习基础、图像处理基础、数学基础、算法基础、程序设计语言、模型部署、HR面试以及与我本人简历相关的目标检测、属性识别、Kaggle及天池的比赛、创新想法等几个部分介绍，可能开始会有重叠或者分类不恰当，后面会逐渐更新完善。其中第一篇先介绍到HR面试，第二篇介绍个人相关的项目和比赛部分。 如果在考研、实习、秋招方面有疑问，欢迎值乎咨询。 一、深度学习 1.模型类 1.1 resnet和densenet及其不同 相同层数，densenet和resnet哪个好，为什么？ 那么ResNet解决了什么问题呢？ 训练深层的神经网络，会遇到梯度消失和梯度爆炸（vanishing/exploding gradients）的问题，影响了网络的收敛，但是这很大程度已经被标准初始化（normalized initialization）和BN（Batch Normalization）所处理。 当深层网络能够开始收敛，会引起网络退化（degradation problem）问题，即随着网络深度增加，准确率会饱和，甚至下降。这种退化不是由过拟合引起的，因为在适当的深度模型中增加更多的层反而会导致更高的训练误差。 ResNet就通过引入深度残差连接来解决网络退化的问题，从而解决深度CNN模型难训练的问题。 1.2 resnet两种结构具体怎么实现，bottleneck的作用，为什么可以降低计算量，resnet参数量和模型大小 1.3 Inception系列的演化 1.4 知道哪些移动端/轻量化模型 mobilenet，shufflenet，pelee等 1.5 GAN 2.卷积类 2.1 卷积神经网络结构特点 局部连接，权值共享 2.2 知道哪些卷积 以及卷积过程计算 2.3 深度可分离卷积 原理，为什么降低计算量，口述计算，减少了多少 2.4 deformable conv怎么做 具体怎么学的，对偏移有没有什么限制 2.5 1x1卷积作用 （1）变换channel （2）通道融合 3.深度学习基础 3.1 BN的原理、作用和实现细节， 其中均值和标准差的计算，以及训练和测试时分别怎么用 如果数据不是高斯分布，bn后怎么恢复 3.2 激活函数 有哪些，为什么使用激活函数 sigmoid tanh relu leaky relu 3.3 损失函数/分类的loss函数 0-1 mse bce/交叉熵 l1/l2 smooth l1（为什么用这个） hinge（svm） 3.4 过拟合/欠拟合，预防方法 正则化具体怎么做，为什么有效 3.5 梯度消失/梯度爆炸 现象、原因和解决方法 梯度爆炸/消失 3.6 网络退化 现象、原因和解决方法 3.7 各种优化器 介绍各种优化器 adam的特点和公式 3.8 调参技巧 关于神经网络的调参顺序? - Miracle的回答 - 知乎 https://www. zhihu.com/question/2964 1737/answer/243982984 3.9 神经网络组件 卷积/池化/全连接层/BN/IN/GN等组件 3.10 深度神经网络和深度学习区别 机器学习是很多种方法和模型的总称。 神经网络是一种机器学习模型，可以说是目前最火的一种。 深度神经网络就是层数比较多的神经网络。 深度学习就是使用了深度神经网络的机器学习。 3.11 深度学习为什么比机器学习好 3.12 train，val，test相关 3.13 如果训练集不平衡，测试集平衡，直接训练和过采样欠采样处理，哪个更好 3.14 softmax原理 softmax得出的结果是排序的么，为什么分类用交叉熵 3.15 F1score是 α =1，那么 α 什么时候取其他值 3.16 梯度物理意义，小球下滚，如果坡很陡，会怎么样，梯度的大小和方向 3.17 pooling层的作用 3.18 监督学习和非监督学习举例 3.19 假设空间与归纳偏好 周志华机器学习绪论1.3 3.20 感受野相关 3x3conv，2x2pool，3x3conv后感受野计算 3.21 如果模型不收敛，怎么调节 3.22 l1/l2正则，怎么选择 weight_decay作用，和l1/l2比较 3.23 解释梯度下降 3.24 链式法则 此处推荐几个面试必备书籍 二、机器学习基础 可能因为简历上可问的东西比较多，面试时间有限，机器学习相关问的不是很多，推荐看一下李航那本统计学习方法。 1.logistic回归 2.svm 3.选择传统机器学习还是深度学习的标准是什么 4.随机森林 bagging和随机森林的区别 5.决策树 三、图像处理基础 1.数字图像处理，各种滤波 2.进行过哪些数据预处理 空图，坏图，单通道图，多通道图等一些情况会怎么处理 3. 图形学知道哪些 四、数学基础 推荐 其实主要就是概率与统计相关 1.概率：圆上任意三个点组成的三角形，包含圆心的概率 2.概率： x，y，z都是（0，1）均匀分布，x+y+z<1的概率 3. 抛硬币直到连续若干次正面的概率 4.先验概率，后验概率，怎么转换 5.坐标0开始，依次走1，2，3，。。。，n步，可以左或者右，问有没有到不了的位置 加问，到指定位置m，至少需要多少步 （1）没有到不了的，因为左x右x+1，每次走一步，可以到达所有位置 （2）先求最接近m的连续和，然后从里面选两个数作差 6.n个门，1个后门是车，其余n-1个后门是羊，你先选一个，如果面试官告诉你其余n-1个中某个是羊，你会重新选择么 你先选一个，概率1/n 面试官告诉你某个不是，你在剩余中选的概率为两部分 （1）你选的那个是，则概率0 （2）你选的不是，（n-1）/n * 1/（n-2），即你第一次选的不是的情况下剩余n-2中选的是的概率 所以，n=3为2/3，重新选更优 7.三个盒子，一个盒子两个红球，一个盒子一红一蓝，第三个盒子两个蓝球。一人随机选了一个盒子，并摸出一个红球，请问这个盒子里另外一个也是红球的概率是多少 2/3 2/3概率选了第一个盒子 五、算法基础 这里推荐 该部分主要是手撕代码，也是面试的重要组成部分 可能因为我本科非计算机，题目大都相对简单，不过一次0 bug完成还是需要练习。 1.x的n次方（x任意，n自然数） 2.链表排序（然后不能动指针） 3.螺旋打印二维数组 4.删除字符 给定一个字符串和一个数字，删除指定数字个数的字符，并保证删除 给定字符串和数字 abcdabcd 4 删除一个a bcdabcd 删除第二个a bcdbcd 删除一个b cdbcd 删除第二个b cdcd 改：大数组删掉指定个数，怎么最方便。 5.螺旋三角形 5 1 2 12 3 13 11 4 14 15 10 5 6 7 8 9 6.二叉树深度及最长路径 7.排序 知道哪些排序算法，快排时间复杂度，时间复杂度推导，O(n)的排序方法 时间复杂度O(n)的排序算法 快排，归并，堆排序 8.二叉树路径和为给定值 9.一个数组，其他数出现两次，另一个出现一次，找出 改进：另外两个数出现一次 10.链表中倒数第k个结点 11.判断链表对称/链表回文 12.链表反转 13.逆序对 14.算法：爬楼梯 剑指offer（八） 15.算法：连续子数组的最大和 剑指offer（三十） 16.算法：最长不重复子串 leetcode（3）/剑指offer第二版（48） 典型题.求一个数组中只包含0,1使得其中0,1个数相等的最大子数组 17.算法：给定一个数组A，求max(Ai - Aj)。其中 i < j 。 18.算法：扎气球 leetcode 452 https:// blog.csdn.net/yysave/ar ticle/details/84403875 19 n个文件（海量文件），查找和排序，二分查找时间复杂度 归并排序，二分查找 20 一个数组里面是股票值，求什么时候购买和卖出，收益最大。 一个数记录最大差，一个记录最小元素，遍历一次即可 21. 最长连续公共子串 dp 注意不是非连续 22.实现卷积计算 23.实现IoU和NMS IoU NMS 23. link A是一个排序好的数组，升序排列； B是一个排序好的数组，升序排序； 给定c，找到a，b，满足 a属于A b属于B a+b=c 24.一维数组最大和 25.二维数组求最大和矩阵 26.二维数组有多少个子数组 包含一行的，第一行为例，一个的n个，两个的n-1个，。。。，n个的一个，一共n+(n-1)+。。。+1，n行就是n*。 而包含两行，三行就依次是(n-1)*, (n-2) *, 所以就是n+(n-1)+。。。+1的平方 27.二维矩阵左上角到右下角最大和 leetcode 64 28.1-n数字里少一个，找出来 少两个呢 29.写VGG、resnet 30.输入D和I组成的字符串，输出数字数组，D表示Decrease，I代表Incre。 0, 1, 2, ... n-1... case1: IIII 0, 1, 2, 3, 4 case2: DD 2, 1, 0 case3: DIDI 4, 2, 3, 0, 1 case4: DIDDI 534201 case5: 多解 DDI 3201 2103 方法： strI 0123 3210I （1）如果新增是I，则添加一size的数在最后 D I append(res.size()) （2）如果新增是D，则前面都加一，然后最后添加0 D D +1,append(0) 31. Leetcode670 Maximum Swap 32.判断两线段是否相交 33.回文子串 Leetcode 647. Palindromic Substrings 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。 具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。 示例 1: 输入: \"abc\" 输出: 3 解释: 三个回文子串: \"a\", \"b\", \"c\". 示例 2: 输入: \"aaa\" 输出: 6 说明: 6个回文子串: \"a\", \"a\", \"a\", \"aa\", \"aa\", \"aaa\". 34.对于一个元素各不相同且按升序排列的有序序列，请编写一个算法，创建一棵高度最小的二叉查找树。 给定一个有序序列int[] vals,请返回创建的二叉查找树的高度。 power(2,n-1)-1<len<=power(2,n)-1 35. 寻找两个元素异或的最大值。 36. 工作方案 37. Valid Permutations for DI Sequence Leetcode 903 38.atoi Leetcode 8 39.根据顶点坐标，判断两个四边形/三角形是否相交 40. 球队至少需要多少分可以出线，最多有多少分未出线 m支队伍两两比赛，赢了得3分，平局各得一分，输了不得分，求n个晋级名额中的最少得分。 41.leetcode股票 42. 给定一个不等概率生成器，随机生成 0 和1 的概率分别为 p 和1-p， p 不等于0.5，要求设计如下等概率生成器： （1） 随机生成0 和1 的概率为0.5 可以构建一个二维表 00,01 10,11 对应的概率 p*p,(1-p)*p (1-p)*p,(1-p)*(1-p) 我们可以发现，01和10出现的概率相等，都是(1-p)*p 所以如果连续两次出现01，认为出现0； 如果出现10，认为出现1，出现其他重新掷即可实现等概率0.5 （2）随机生成0，1 和2 的概率为1/3 连续掷三次出现001，010，100三种等概率，都是1/3 （3） 随机生成0，1，2，…n-1 的概率为1/n 连续掷n次 出现0000...001对应0， 出现0000...010对应1， ... ... ... 出现1000...000对应n 43. 给定n个数的数组，找到所有长度大于等于k的连续子数组中平均值最大的那个。返回那个最大的平均值。 44. 在一个 m*n 整数矩阵中找到指定值 target， 这个整数矩阵有如下性质： （1） 每行从左到右数值递增 （2）每列从上到下数值递增 45. 给定一个无向图，这个图是在一棵树的基础上加上一条边构成的。问哪条边可以删掉使图重新变成一棵树？如果有多个答案那么输出输入的边中最后出现的那条 46. 输入四个点的坐标，求证四个点是不是一个矩形 先计算中点坐标，然后计算其到四个顶点的距离是否相等 double distance(double x1,double y1,double x2,double y2){ return (y2-y1)*(y2-y1)+(x2-x1)*(x2-x1); } bool isRec(double x1,double y1,double x2,double y2,double x3,double y3,double x4,double y4){ double x_center=(x1+x2+x3+x4)/4; double y_center=(y1+y2+y3+y4)/4; double d1=distance(x1,y1,x_center,y_center); double d2=distance(x2,y2,x_center,y_center); double d3=distance(x3,y3,x_center,y_center); double d4=distance(x4,y4,x_center,y_center); return d1==d2&&d2==d3&&d3==d4; } 六、程序设计语言 1. Python 1.1 深拷贝和浅拷贝 1.2 list和tuple区别 1.3 is和==异同 1.4 list参数传递 如果list在函数里改变，原来的list是否改变 2. C++ 2.1 指针与引用的区别 （1）指针是一个变量，存储的是一个地址，指向 内存的一个存储单元，它的内容是内存中的地址 （2）引用跟原来的变量实质上是同一个东西，只 不过是原变量的一个别名而已。 2.2 继承与多态 2.3 数组和链表 2.4 内存泄漏和溢出 七、模型部署 1. tensorrt内部机制 tensorrt怎么量化，float32怎么变int8，怎么变回来 2. 分布式，多卡使用 （1）数据并行 每个机器都有一个相同的完整的模型，然后分别处理不同的数据，最后server汇总结果； （2）模型并行 把一个模型进行拆分，每个机器上是模型的一部分，然后每一部分模型在不同的机器处理，处理结果移交给下一个机器的部分继续处理。 （3）现在以数据并行为常用方式，模型并行主要难点在模型拆分上，二者通信量都很大。 （4）分布式的模型更新方式主要是两种 中心化（parameter server)和去中心化（ring all-reduce etc.) 中心化参见TF和MXNet 去中心化参见NCCL的处理方式 3.剪枝怎么做，剪多少，效果变化多少 4.量化怎么做，效果变化多少 八、HR面试 1.个人规划 2.希望做研究还是工程 3.有没有和人发生争执的经历 4.实习遇到的困难 5.给你项目让你主导怎么规划",
+      "excerpt": "更新： 面经 上篇最新整理，先发完几篇重复的，后续知乎同步更新【 面经 1】 算法工程师 实习校招面经 (上篇)",
+      "author": "枫桦",
+      "created_at": 1592125398,
+      "updated_at": 1781786812,
+      "published_date": "2020-06-14",
+      "voteup_count": 1544,
+      "comment_count": 93,
+      "url": "https://zhuanlan.zhihu.com/p/148246487",
+      "matched_keywords": [
+        "算法工程师 面经 复盘"
+      ],
+      "content_type": "大厂面经",
+      "pre_score": 96,
+      "score": 75,
+      "summary_zh": "算法工程师面经：按题型分类整理微软/阿里等十余家公司真题，含ResNet/BatchNorm等深度解析。",
+      "reason": "大厂面试经验，第一手问题与机制解释并存，但部分内容过时（2020年）。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "article:2020504176908596450",
+      "content_id": "2020504176908596450",
+      "question_id": "",
+      "platform_type": "article",
+      "title": "大模型 应用开发 面试 准备（自用）",
+      "content": "一、项目介绍准备 ·项目 1：基于 RAG 的大语言模型关系抽取 1、为什么不用传统语义相似度检索，改用 关系原型检索 ？ 传统相似度检索易召回 伪近邻样本 （语义相近、头尾实体不同→关系不同），干扰模型判断。 我先把知识库按关系类型 聚类 ，计算每类向量 质心作为关系原型 ，先匹配关系原型再细搜样本，从源头过滤无效召回。 关系原型的检索 ： 构建关系原型 ：首先将外部知识库的样本按关系类型分类，对每一类，把该类所有样本的嵌入向量取平均，得到这个关系的“原型向量”。 粗筛 ：对于待抽取的句子，先计算它与所有关系原型的相似度，选出相似度最高的3个关系类型。 细筛 ：在这3个关系类型对应的样本库中，分别计算与待抽取句子的相似度，从每个类别中取top-n个样本，共3n个样本。 2、 你提到的“基于关系原型的检索策略”，质心向量具体是怎么计算的？如果某个关系类别的样本分布非常分散怎么办？ 计算方法 ：首先利用 Embedding 模型（如 BGE 或 OpenAI-text-embedding）对某个关系类别下的所有样本句子进行向量化，然后对这些高维向量求均值（Mean Pooling），得到该类别的“质心向量”来代表这个关系的原型。 处理分散分布 ：如果一个关系类别下样本极其分散（比如同一关系有多种不同句式表达），单一质心无法准确代表。我会 引入 K-Means 聚类 ，将该关系类别聚合成 K 个簇，计算 K 个质心。检索时，计算被抽取句子与所有细分质心的相似度，从而提高召回准确率。 3、 关系原型你是如何计算和更新的？是静态的还是动态的？ 目前采用的是 静态 方式：我先用训练集中的所有样本，按关系类别分组，用Sentence-BERT将每个样本编码为向量，然后对每个类别计算所有样本向量的平均值作为关系原型。 之所以没有做成动态更新，是因为我的场景中外部知识库是固定的（TACRED的训练集），不需要在线更新。如果未来知识库会动态增长，可以考虑定期重新计算原型，或者在检索时动态融合新样本，但这会增加在线计算的复杂度。 4、提示词怎么设计？召回 3n 个样本的 n 值如何确定？ 提示词包含 任务指令、样本示例、抽取格式 三部分。 抽取格式用了约束解码 。 n 通过实验确定，取 3 时 Micro-F1 最优，兼顾上下文长度与样本丰富度。 5、项目最大难点？怎么解决？ 难点是 关系原型向量计算与聚类精度 。 解决：用通用 Embedding 模型编码，按关系类型分组求质心，多次调参优化聚类效果。 ·项目 2：基于 LoRA 微调大语言模型的大数据学科知识图谱构建 1、为什么选 Qwen3-8b+LoRA 微调？全参数微调不行吗？ 算力有限，LoRA 仅微调低秩矩阵 ，参数量小、速度快、显存占用低，适合垂直领域小数据集微调；全参数微调算力成本高，小数据集易过拟合。 2、垂直领域数据集怎么构建？重叠滑动窗口的作用？ 原始语料收集 ：我从高校大数据教材（如《大数据技术原理与应用》）和技术文档（如Spark、Hadoop官方文档）中采集文本，然后做了去重、去噪，比如去掉广告、无关的代码示例等。 语料切分 ：项目中的关系抽取任务是句子级关系抽取，传统的句子级关系抽取数据集每条样本的句子长度是几十个Token。我在项目中使用的自建数据集，质量一般，实体关系密度较低，如果按照传统句子级关系抽取的窗口来切分语料，会导致关系样本量不足。用 256Token 重叠滑动窗口 切分语料， 避免实体关系被截断 ，保证上下文完整。 Schema定义与标注 ：我先定义了大数据学科的本体，比如实体类型包括“技术组件”“算法”“应用领域”等，关系类型包括“依赖”“替代”“应用场景”等。然后基于这个Schema，对切分后的语料进行标注。 遇到的困难： 标注一致性 ：同一个实体在不同文档中可能写法不同（如“HDFS”和“Hadoop分布式文件系统”），我用了实体链接的方法先做对齐。 负样本处理 ：很多句子中没有实体或关系，这些负样本如果不处理好，模型会倾向于“过度抽取”。我控制数据集中正负样本比例在1:1左右。 长尾实体 ：一些冷门技术出现的次数很少，我会用数据增强的方法，比如基于规则替换同类型实体来增加样本。 3、Neo4j 知识图谱怎么构建？数据量多少？ 将模型抽取的 实体 - 关系 - 实体 三元组，批量导入 Neo4j； 最终构建 1158 个实体节点、892 条关系边 ，完成大数据学科底层图谱。 4、 为什么要选择Qwen3-8b作为基座模型？你是否有对比过其他模型的效果？ 显存友好 ：8B参数规模，用QLoRA可以在单卡24GB显存上完成微调，推理速度也能接受。 开源生态 ：Qwen有完善的社区支持和工具链，LlamaFactory、ollama等都对它支持良好，工程落地方便。 实验结果也显示qwen3-8b效果不错。 5、 你构建的微调数据集规模大概是多少条？数据标注的质量是如何保证的？ 我构建的数据集总共约1.2万条样本，其中实体识别样本8000条，关系抽取样本4000条。 ·项目 3：多模态聊天机器人 1、这个 Agent 的核心技术栈？怎么实现 图谱增强问答 ？ 流程：用户提问→转 Cypher 语句→Neo4j 检索知识链→注入 LLM 上下文→生成回答，从根本降低幻觉。 2、对话记忆怎么管理？如何平衡连贯性与效率？ 用 SQLite 持久化存储聊天记录； 近期对话完整保留 ，早期对话用 LLM 摘要后注入上下文，既保证多轮连贯，又不冗余占用 token。 3、为什么集成 GLM-ASR？多模态的优势？ 因为是用于自己练手的不成熟项目，没有用户提出需求，一些需求是我假想添加的。实现 语音交互 ，拓展机器人使用场景； 多模态降低用户操作成本，提升交互便捷性，贴合实际产品需求。 4、这个 Agent 和通用聊天机器人的区别？ 是 垂直领域专用 Agent ，融合知识图谱 + 领域微调模型，问答更专业、更精准，无通用模型的学科知识盲区。 5、 大模型直接生成 Cypher 语句很容易产生幻觉（比如生成数据库里不存在的标签或属性），你是如何保证执行成功率的？ Prompt 增强 ：在 Prompt 中严格注入 Neo4j 数据库的 Schema（包括节点标签、属性列表、合法关系类型），并提供少量经典的 Cypher 查询示例（Few-Shot）。 自我纠错机制（Self-Correction） ：在 LangChain 工作流中设计一个重试逻辑。如果执行 Cypher 报错，系统会捕获数据库的 Error Message，将其连同错误的 Cypher 一起传回给大模型，让大模型“反思”并修复语法错误，最多重试 3 次。 后处理校验 ：利用 Python 脚本对生成的语句进行正则校验，防止破坏性查询（如 DROP, DELETE）。 二、大模型应用技术、概念相关 ·什么是大模型 Agent？核心架构包含哪些模块？ 大模型 Agent 是以 LLM 为大脑，具备自主规划、记忆、工具调用、反思能力的智能体。 规划模块 ：拆解复杂任务、制定执行步骤； 记忆模块 ：短期上下文记忆 + 长期持久化记忆； 工具调用模块 ：调用外部工具（检索、数据库、API）； 执行与反思 ：执行动作、校验结果、优化迭代。 ·请解释一下Agent的核心概念：什么是“思考-行动-观察”循环？ReAct模式是如何运作的？ Agent的核心是让大模型具备 自主决策和调用工具 的能力。ReAct（Reason + Act）是目前主流的Agent范式，它的工作流程是一个循环： 思考（Thought） ：模型分析当前状态，思考下一步应该做什么。比如“用户想查明天的天气，我需要调用天气API”。 行动（Action） ：模型输出一个具体的动作，格式通常类似于 Action: weather_search[合肥, 明天] 。系统解析这个动作，调用对应的工具或API。 观察（Observation） ：工具执行后返回结果，比如“明天合肥晴，18-26℃”。这个结果作为新信息添加到对话上下文中。 然后模型根据观察结果继续思考下一步——是直接回答用户，还是需要更多信息？这个循环会持续到模型决定输出最终答案。 ReAct的优势是让模型的推理过程变得可解释、可调试，同时通过“观察”获取外部信息，弥补了模型知识的局限。 ·LangChain 和 LangGraph 的区别？你用 LangChain 做 Agent 的核心思路？ LangChain 是 链式调用 ，适合线性简单任务；LangGraph 是 图结构编排 ，支持循环、分支、多智能体协作，更适合复杂 Agent。 我用 LangChain 搭建多模态聊天机器人，核心是 链路封装 ：ASR 语音转文本→意图识别→知识图谱检索→LLM 生成回答→对话记忆管理，全程模块化解耦。 · 你简历里提到用了LangChain框架，请讲讲你在多模态聊天机器人项目中，LangChain具体承担了哪些模块？ 提示词模板管理 ：我用LangChain的PromptTemplate来管理不同的提示词，比如Cypher生成提示、问答提示、摘要提示等，方便统一调整和版本控制。 Agent执行器 ：我用LangChain的AgentExecutor来管理Agent的“思考-行动-观察”循环。它负责解析模型输出的Action，路由到对应的工具，并将工具返回结果封装成Observation。 工具封装 ：我把知识图谱查询、向量库检索、语音识别等能力都封装成LangChain的Tool类，这样Agent可以统一调用。 记忆管理 ：用LangChain的ConversationSummaryBufferMemory来管理对话历史。它结合了近期窗口保留和远期对话摘要，正好符合我项目中“近期对话完整保留，早期对话摘要”的设计。 链式调用 ：在非Agent的场景（比如简单的Cypher生成+执行），我用LangChain的LLMChain来串联提示词、模型调用和输出解析。 · 什么是Tool Calling（函数调用）？如果一个Agent需要调用多个工具来完成复杂任务，你是如何设计它的执行流程的？ Tool Calling（或Function Calling）是大模型在生成回答时，同时输出一个结构化的“工具调用请求”的能力。比如模型输出 {\"name\": \"search_weather\", \"arguments\": {\"city\": \"合肥\"}} ，而不是让模型自己去解析非结构化的Action字符串。这样更可靠、更容易解析。 对于多工具调用的复杂任务，我的设计思路是： 任务拆解 ：在系统提示词中告诉模型，复杂任务需要分解成多个步骤。比如“用户想要一份关于Spark的技术报告”，模型可能会规划：①先检索Spark核心概念，②再搜索最新版本特性，③然后整合成报告。 顺序执行 vs 并行执行 ：如果工具之间有依赖关系，就顺序执行；如果互相独立，可以并行调用。在LangChain中，我可以使用 asyncio 来并发调用多个工具。 结果聚合 ：所有工具返回后，将这些结果汇总到上下文，让模型基于这些信息生成最终答案。有时候中间结果也需要作为下一步工具的输入，比如先检索实体ID，再用ID查关系。 错误处理 ：如果某个工具调用失败，模型需要能够选择替代方案或向用户说明情况。我在提示词中会加入“如果工具调用失败，请尝试其他方式或告诉用户”。 · 多Agent协作中，如果两个Agent生成的决策冲突，应该如何处理？ 多Agent协作的冲突处理是一个关键问题。我通常会设计以下几种机制： 角色与优先级 ：在系统设计时就明确每个Agent的角色和决策权重。比如一个“规划Agent”负责拆解任务，一个“执行Agent”负责调用工具，规划Agent的决策优先级更高。 仲裁机制 ：设置一个专门的“仲裁Agent”或“协调Agent”，当检测到冲突时，收集所有Agent的决策和理由，由仲裁Agent综合判断后给出最终决策。 投票机制 ：对于同质的Agent（比如多个检索Agent），可以用投票的方式决定最终采用哪个结果。 冲突检测与回溯 ：在系统层面记录决策链路，如果后续执行中发现矛盾（比如执行Agent反馈“无法执行”），可以回溯到规划阶段重新决策。 在工程实践中，我会尽量通过明确的分工和设计良好的通信协议来减少冲突，而不是完全依赖模型自己去解决。 ·什么是大模型的“幻觉”？如何解决 Agent 的 幻觉问题 ？结合你的项目说做法 幻觉是指大模型生成的内容看起来合理，但实际上与事实不符或与输入矛盾。 我在项目中主要用以下几种方法来缓解： 检索增强生成（RAG） ：在我的多模态聊天机器人项目中，我会先从知识图谱或非结构化文本向量库中检索相关内容，作为上下文注入给模型，这样模型是基于事实生成，而不是靠“记忆”编造。 约束生成 ：在关系抽取任务中，我会通过提示词限定输出格式，或者在解码时使用结构化输出的方法，避免模型自由发挥。 提示词设计 ：比如加入“如果你不确定，请说‘我不知道’”这样的指令，可以降低模型强行回答的概率。 ·垂直领域 Agent 开发的难点？你怎么解决？ 难点是 专业知识适配、问答精准度、多轮对话 。 解决：① LoRA 微调垂直领域大模型，学习学科术语；② 构建领域知识图谱，做检索增强；③ 设计对话记忆机制，兼顾连贯性与效率。 ·LoRA/QLoRA、量化、加速的原理？你怎么用的？ LoRA：低秩适配，冻结基座，仅训练低秩矩阵； FlashAttention/Unsloth：优化注意力计算，提升训练 / 推理速度； GPTQ/AWQ：权重量化，减少显存占用，适配低资源部署； 我用 LlamaFactory 一键完成上述操作，适配 Qwen3-8b 模型。 · LoRA和QLoRA的区别是什么？QLoRA是在LoRA基础上做了哪些改进？ QLoRA是“量化LoRA”，它在LoRA的基础上引入了 量化技术 来进一步降低显存占用。我在项目中主要用LlamaFactory，它同时支持LoRA和QLoRA。 4-bit NormalFloat量化 ：将基座模型量化为4-bit精度，大幅减少基座模型本身的显存占用。 双重量化（Double Quantization） ：对量化参数再做一次量化，进一步压缩显存。 分页优化器（Paged Optimizers） ：使用NVIDIA的统一内存特性，在显存不足时自动将优化器状态换出到CPU内存，防止OOM。 · 什么情况下你更倾向于用全量微调而不是LoRA？ 大多数情况下，LoRA已经足够好，尤其是在资源受限的场景，我会优先选择LoRA。 数据量足够大且任务与预训练分布差异较大 ：如果下游任务的数据量达到几十万级别，且领域比较特殊（比如代码生成、医疗文书），全量微调可以让模型更好地适应新分布。 需要修改模型的内部行为 ：如果我要调整模型的注意力模式或改变某些层的结构，LoRA这种旁路注入的方式可能不够灵活。 · 请完整描述一个RAG系统的工作流程（从用户提问到生成答案）（需要补充对先进RAG的完整认知）。 以我在多模态聊天机器人项目中的实践为例，RAG的流程如下： 用户输入 ：用户通过文本或语音输入问题。 查询处理 ：系统会对问题进行预处理，比如提取关键词、改写、或生成多个检索变体。 检索阶段 ：将问题向量化，与向量库中的知识片段计算相似度，召回top-k个最相关的片段。在我的改进方案中，我会先做关系原型匹配，再在特定类别中做细粒度检索。 上下文构建 ：将检索到的片段按照一定的格式（比如“【相关知识1】\\n【相关知识2】”）与用户问题拼接，形成提示词。 生成阶段 ：将提示词输入大模型，模型基于检索到的上下文生成回答。 输出后处理 ：对模型输出做校验，比如检查是否引用了检索到的内容，或者过滤掉不安全的回答。 · 在RAG中，如果检索到的上下文与问题不相关，模型可能会被误导，你有什么应对策略？ 检索质量保障 ：在检索阶段设置相似度阈值，如果最高分低于阈值，就不返回任何结果，让模型“诚实”地表示不知道。同时在向量库中引入“难负样本”来训练检索器，提高检索的区分度。 重排序（Rerank） ：在初召后，用一个更精准的交叉编码器（如BERT-based reranker）对召回的片段重新排序，只把top-k且分数高于阈值的结果送入大模型。 提示词中的指令 ：在提示词中加入“如果提供的知识不相关，请忽略它并基于你自己的知识回答，或告诉用户你不知道”。这样模型被允许“不信任”检索到的内容。 输出校验 ：在模型生成后，检查回答中是否引用了检索到的内容。如果模型生成的内容与检索内容矛盾，可以触发二次检索或让模型重新生成。 ·你觉得RAG和微调在实际应用中应该如何选择？或者说什么时候两者结合会更好？ 微调 适合 知识内化 的场景。如果任务有明确的输入输出格式、需要模型学习某种“能力”（比如代码生成、特定格式的抽取），而且训练数据比较稳定、更新频率不高，微调的效果更好，推理也更快。 RAG 适合 知识外挂 的场景。如果知识需要频繁更新（比如技术文档、公司内部资料），或者模型不需要把知识“记住”而是“查出来”，RAG更合适。它的好处是可解释性更强，更新知识库成本低。 在实际项目中， 两者结合 往往效果最好。 · 你在项目中使用Neo4j构建知识图谱，请问为什么选择图数据库而不是传统的关系型数据库？ 关系查询效率 ：知识图谱的核心是多跳关系查询，比如“查询Spark依赖的所有组件，以及这些组件又依赖什么”。在关系型数据库中，这种查询需要多次JOIN，随着跳数增加性能急剧下降；而在Neo4j中，多跳查询（如 MATCH (a)-[:DEPENDS_ON*1..3]->(b) ）的性能非常高效。 数据模型直观 ：知识图谱本身就是“节点-关系-属性”的三元组形式，和图数据库的数据模型天然一致，不需要做对象-关系的映射转换。 灵活性 ：知识图谱的schema往往不是一成不变的，新增实体类型或关系类型在Neo4j中很灵活，不需要做复杂的表结构迁移。 可视化能力 ：Neo4j自带的可视化工具对于展示知识图谱结构、调试数据质量很方便，这在开发和演示阶段很有价值。 ·熟练使用 Linux/PyTorch，在项目中做了什么？ Linux 用于模型训练、环境部署；PyTorch 完成向量编码、模型推理、数据预处理；用 Neo4j 完成图谱搭建与 Cypher 查询。 ·你做的 Agent 后续优化方向？ 记忆管理，大模型对知识图谱的检索策略采用的是Text2Cypher，语料数据的预处理影响知识图谱的质量等等都较为粗糙。 ·你了解 Dify/Coze 这样的低代码平台与直接手写多 Agent 架构（LangChain）相比，优缺点在哪里？ Dify/Coze 的优点 ：开箱即用，可视化编排工作流，大幅降低开发成本；自带丰富的插件生态（搜索引擎、数据库连接等）；很适合快速验证业务概念（POC）。 缺点/手写代码的优点 ：低代码平台在应对极度定制化的业务逻辑（比如复杂的中间状态转换、精细的并发控制、自定义的内部鉴权系统）时会受限。手写 LangGraph 具有极高的灵活性，能深入调优 Prompt 路由逻辑，并且更容易与公司现有的 CI/CD 和微服务架构集成。 ·PostgreSQL和MySQL的对比 MySQL—— 轻量、简单、稳定的 通用型关系型数据库；PostgreSQL—— 企业级、全功能、高度标准兼容的 对象关系型数据库。 支持的数据类型、复杂查询能力、事务与 ACID、索引能力、GIS 地理能力、JSON 处理、复杂场景等都是 PostgreSQL更强 。但是简单场景下的读多写少、单表简单查询，是MySQL 速度更快， 学习成本、生态是MySQL占优。 三、大模型理论基础 · 请讲一下Transformer的核心结构，尤其是Self-Attention的计算过程？为什么它比RNN更适合处理长文本？ Transformer的核心是Encoder-Decoder结构，但实际使用中（如GPT）主要用Decoder部分。它的关键组件是 多头自注意力 、 前馈神经网络 、 残差连接 和 层归一化 。 相比RNN，Transformer的优势在于： 一是并行计算 ，RNN是时序依赖的，而Transformer可以同时处理整个序列； 二是长距离依赖 ，RNN的梯度在长序列中容易衰减，而Transformer通过自注意力可以直接建立任意两个位置之间的联系，路径长度为O(1)，所以更适合长文本。 · BERT、GPT、GLM这三种模型在架构和训练方式上有什么本质区别？ 这三者的核心区别在于 预训练目标和注意力掩码方式 ： BERT ：是Encoder-only架构，使用 双向注意力 ，能看到上下文的所有信息。预训练任务包括 掩码语言建模（MLM） 和 下一句预测（NSP） 。它更适合理解类任务，如分类、序列标注。 GPT ：是Decoder-only架构，使用 因果注意力（causal attention） ，只能看到当前token之前的信息。预训练任务是 自回归语言建模 ，即预测下一个token。它更适合生成类任务，但通过上下文学习（in-context learning）也能很好地做理解任务。 GLM ：是 自回归填空 的架构，可以理解为BERT和GPT的融合。它在预训练时随机mask掉连续的文本片段，然后自回归地生成这些片段。GLM既保留了双向注意力理解上下文的能力，又有自回归生成的特性。清华的ChatGLM系列就是基于这个思路。 · 请详细讲一下LoRA的原理——它是在哪里插入了可训练参数？为什么LoRA能显著降低显存消耗？ LoRA的核心思想是 冻结预训练模型的原有权重 ，然后在 Transformer的注意力层 中插入可训练的低秩矩阵。对于每个线性层，LoRA用两个小矩阵A和B的乘积BA来近似权重更新的增量。 显存占用低 ：我们只需要存储和优化A、B这两个小矩阵，而不是整个模型的梯度。对于大模型来说，训练时显存占用可以从几十GB降到几GB。 不引入推理延迟 ：训练完成后可以把BA合并到 W中，推理时和原模型完全一样。 方便多任务切换 ：不同的下游任务可以训练不同的LoRA模块，切换时只需要换权重文件，不需要拷贝整个模型。 ·GPTQ 和 AWQ 都是量化技术，它们有什么区别？在什么场景下选哪种？ GPTQ ：是一种基于二阶信息（海森矩阵）的层级量化方法，它通过计算权重对误差的敏感度，优先保留重要的权重。侧重于整体权重的数学优化。 AWQ (Activation-aware Weight Quantization) ：不仅考虑权重，还 观察激活值 。它发现模型中只有约 1% 的“显著权重”（Salient Weights）对最终输出起决定性作用。AWQ 识别出这些重要权重并保持较高精度，而对其余权重进行量化。 选型 ：在纯推理加速（尤其是追求极低显存）时我常用 GPTQ；但在对精度要求更高、或者模型遇到特定垂直任务精度下降时，AWQ 通常能更好地保留模型的原有能力。",
+      "excerpt": "DELETE）。 二、 大模型 应用技术、概念相关 什么是大模型 Agent？核心架构包含哪些模块？ 大模型 Agent",
+      "author": "宝公举",
+      "created_at": 1774518011,
+      "updated_at": 1778293822,
+      "published_date": "2026-03-26",
+      "voteup_count": 28,
+      "comment_count": 1,
+      "url": "https://zhuanlan.zhihu.com/p/2020504176908596450",
+      "matched_keywords": [
+        "大模型 岗位 面试"
+      ],
+      "content_type": "大厂面经",
+      "pre_score": 90,
+      "score": 74,
+      "summary_zh": "大模型应用岗面试准备：详述RAG关系抽取与LoRA微调项目，含原型检索设计与难点复盘。",
+      "reason": "大厂面试经验，项目细节扎实、问题层层递进，体现真实工程判断。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "zhihu_candidate_count": 32,
+  "zhihu_qualified_count": 16,
+  "zhihu_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "c08b6bab240c5aceca2d15880af90fa96a728346140d9382caff1b3ff9b7c943"
+}
