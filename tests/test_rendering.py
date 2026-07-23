@@ -4,7 +4,7 @@ from pathlib import Path
 from paper_digest.rendering import render, render_email
 
 
-def test_preview_contains_arxiv_xhs_bilibili_and_zhihu_channels():
+def test_preview_contains_all_content_channels():
     report = {
         "date": "2026-07-18",
         "arxiv_query_date": "2026-07-17",
@@ -54,6 +54,17 @@ def test_preview_contains_arxiv_xhs_bilibili_and_zhihu_channels():
             "matched_keywords": ["大厂 面试 经验"],
         }],
         "zhihu_status": "fetched",
+        "x": [{
+            "id": "100", "title": "OpenAI 发布新的推理模型", "author_name": "OpenAI",
+            "author_handle": "OpenAI", "source_tier": "官方账号", "content_type": "产品发布",
+            "text": "We are releasing a new reasoning model with a technical report.",
+            "summary_zh": "OpenAI 发布新推理模型及技术报告。", "reason": "官方发布且信息明确",
+            "like_count": 5000, "retweet_count": 900, "reply_count": 300, "view_count": 1200000,
+            "published_date": "2026-07-23", "score": 92,
+            "url": "https://x.com/OpenAI/status/100",
+            "external_urls": ["https://openai.com/example"],
+        }],
+        "x_status": "fetched",
         "disclaimer": "discovery only",
         "query_window_utc": ["2026-07-18T00:00:00Z", "2026-07-18T23:59:59Z"],
     }
@@ -62,6 +73,7 @@ def test_preview_contains_arxiv_xhs_bilibili_and_zhihu_channels():
     assert 'data-channel="xhs"' in html
     assert 'data-channel="bilibili"' in html
     assert 'data-channel="zhihu"' in html
+    assert 'data-channel="x"' in html
     assert "AI 产品完整测试" in html
     assert "▶️ 12000" in html
     assert "👍 2345" in html
@@ -73,6 +85,11 @@ def test_preview_contains_arxiv_xhs_bilibili_and_zhihu_channels():
     assert "💬 28" in html
     assert "🗓️ 2026-07-19" in html
     assert "推荐 84/100" in html
+    assert "OpenAI 发布新的推理模型" in html
+    assert "❤️ 5000" in html
+    assert "🔁 900" in html
+    assert "👁️ 1200000" in html
+    assert "推荐 92/100" in html
     anchors = re.findall(r"<a\b[^>]*>", html)
     assert anchors
     assert all('target="_blank"' in anchor for anchor in anchors)
@@ -110,6 +127,14 @@ def test_email_uses_gmail_safe_single_column_tables():
             "score": 81, "content_type": "科研方向",
             "url": "https://zhuanlan.zhihu.com/p/789",
         }],
+        "x": [{
+            "title": "Anthropic 发布研究更新", "author_name": "Anthropic",
+            "author_handle": "AnthropicAI", "source_tier": "官方账号", "content_type": "官方动态",
+            "summary_zh": "Anthropic 发布新的对齐研究更新。", "reason": "官方一手消息",
+            "like_count": 900, "retweet_count": 120, "reply_count": 30, "view_count": 40000,
+            "published_date": "2026-07-23", "score": 88,
+            "url": "https://x.com/AnthropicAI/status/200", "external_urls": [],
+        }],
         "disclaimer": "discovery only",
     }
     html = render_email(report, Path(__file__).parents[1] / "templates")
@@ -123,6 +148,7 @@ def test_email_uses_gmail_safe_single_column_tables():
     assert "工具实测" in html
     assert "会议录播" in html
     assert "科研方向怎么选" in html
+    assert "Anthropic 发布研究更新" in html
     assert "▶️ 100" in html
     assert "👍 20" in html
     assert "⭐ 8" in html
@@ -132,6 +158,10 @@ def test_email_uses_gmail_safe_single_column_tables():
     assert "💬 12" in html
     assert "🗓️ 2026-07-20" in html
     assert "推荐 81/100" in html
+    assert "❤️ 900" in html
+    assert "🔁 120" in html
+    assert "👁️ 40000" in html
+    assert "推荐 88/100" in html
     anchors = re.findall(r"<a\b[^>]*>", html)
     assert anchors
     assert all('target="_blank"' in anchor for anchor in anchors)

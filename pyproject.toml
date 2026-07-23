@@ -14,6 +14,7 @@ dependencies = [
   "PyExecJS==1.5.1",
   "PyYAML==6.0.2",
   "requests==2.32.4",
+  "twikit @ git+https://github.com/sakenuGOD/twikit.git@e9b5acf140492fb642b2e5322a9ad55ee10415bc",
 ]
 
 [project.scripts]

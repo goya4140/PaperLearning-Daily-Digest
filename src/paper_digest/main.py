@@ -25,6 +25,7 @@ from .zhihu_digest import (
     prepare_content_candidates,
     rank_contents,
 )
+from .x_digest import fetch_posts, prepare_post_candidates, rank_posts
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -102,6 +103,15 @@ def run(
             zhihu_contents = rank_contents(
                 zhihu_rank_candidates, config.get("zhihu", {}), config.get("llm", {})
             )
+            x_candidates, x_status = fetch_posts(
+                config.get("x", {}), os.environ.get("X_COOKIE", "")
+            )
+            x_rank_candidates = prepare_post_candidates(
+                x_candidates, config.get("x", {})
+            )[: int(config.get("x", {}).get("detail_pool", 24))]
+            x_posts = rank_posts(
+                x_rank_candidates, config.get("x", {}), config.get("llm", {})
+            )
         else:
             xhs_candidates, xhs_notes, xhs_status = [], [], "historical-date-skipped"
             bilibili_candidates, bilibili_videos, bilibili_status = [], [], "historical-date-skipped"
@@ -109,6 +119,8 @@ def run(
             bilibili_stats_status = "historical-date-skipped"
             zhihu_candidates, zhihu_contents, zhihu_status = [], [], "historical-date-skipped"
             zhihu_rank_candidates = []
+            x_candidates, x_posts, x_status = [], [], "historical-date-skipped"
+            x_rank_candidates = []
         report = seal_report({
             "version": 2,
             "date": target_date.isoformat(),
@@ -137,6 +149,10 @@ def run(
             "zhihu_candidate_count": len(zhihu_candidates),
             "zhihu_qualified_count": len(zhihu_rank_candidates),
             "zhihu_status": zhihu_status,
+            "x": x_posts,
+            "x_candidate_count": len(x_candidates),
+            "x_qualified_count": len(x_rank_candidates),
+            "x_status": x_status,
             "ranking_source": sorted({item["ranking_source"] for item in shortlist}),
             "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
         })
@@ -167,6 +183,7 @@ def run(
         or report["xhs"]
         or report.get("bilibili", [])
         or report.get("zhihu", [])
+        or report.get("x", [])
         or config["delivery"].get("send_empty_digest", True)
     ):
         subject = f"{config['delivery'].get('subject_prefix', 'PaperLearning 每日发现')} · {report['date']}"
@@ -192,6 +209,7 @@ def cli() -> None:
         f" + {len(report['xhs'])} XHS ({report['xhs_status']})"
         f" + {len(report.get('bilibili', []))} Bilibili ({report.get('bilibili_status', 'unavailable')})"
         f" + {len(report.get('zhihu', []))} Zhihu ({report.get('zhihu_status', 'unavailable')})"
+        f" + {len(report.get('x', []))} X ({report.get('x_status', 'unavailable')})"
     )
 
 
