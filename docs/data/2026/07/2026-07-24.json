@@ -1,0 +1,575 @@
+{
+  "version": 2,
+  "date": "2026-07-24",
+  "arxiv_query_date": "2026-07-23",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-07-24T07:28:24.629634+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607230000+TO+202607232359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607230000+TO+202607232359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-07-23T00:00:00Z",
+    "2026-07-23T23:59:59Z"
+  ],
+  "raw_candidate_count": 273,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2607.21013",
+      "title": "EmoAgent-R1: Towards Multimodal Emotion Understanding with Reinforcement Learning-based Dynamic Agent Specialization",
+      "authors": [
+        "Lihuang Fang",
+        "Yuchen Zou",
+        "kebin Jin",
+        "Jinghui Qin"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) have achieved impressive performance in multimodal emotion recognition (MER) tasks and lifted MER to a new level that is complex emotion understanding with advanced video understanding abilities and natural language description. However, existing MLLM-based methods often use a fixed prompt to perceive the emotions, ignoring the dynamicity and complexity of the emotion source in the multimodal inputs. To address these issues, we propose a novel Reinforcement Learning-based Dynamic Agent Specialization framework (\\textbf{EmoAgent-R1}) to optimize the emotion recognition, reasoning, and generalization abilities of an MLLM with dynamic agent specialization based on reinforcement learning. Specifically, we first adopt a cold start strategy to endow an MLLM with preliminary emotion recognition, reasoning, and agent routing ability by training with synthetic answer-conditioned chain-of-thought data and agent routing data. Then, we further train the MLLM with reinforcement learning to perceive emotions in a two-step agentic workflow with agent selection and agent specialization. To effectively train EmoAgent-R1, we propose a novel Progressive Group-Relative Policy Optimization (P-GRPO) to combine group-based relative advantages with a PMI-inspired progressive token-level modulation to transform sparse rewards into fine-grained learning signals, mitigating the coarse-grained uniform credit assignment issue in GRPO. Extensive experiments on MER benchmarks demonstrate the superiority of our EmoAgent-R1 in stronger emotion reasoning performance and improved optimization stability.",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-23T07:52:40Z",
+      "updated": "2026-07-23T07:52:40Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.21013v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21013v1",
+      "rank": 200,
+      "metadata_source": "arxiv-api",
+      "focus_score": 14.7,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [
+        "affective reasoning / emotion reasoning / emotion cause",
+        "multimodal emotion / emotion understanding"
+      ],
+      "explore_score": 9.5323,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "强拟合情感推理，含动态代理专业化与强化学习",
+      "one_liner": "EmoAgent-R1通过强化学习实现多模态情感理解的动态代理专业化",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.21503",
+      "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
+      "authors": [
+        "Gaurav Dadhich"
+      ],
+      "abstract": "Production AI agents' failures are less often due to an inability to reason well and more often because they cannot manage what is in their reasoning context: conversation histories, large prompts, large tool definitions, and ballooning tool outputs. Agents drown in their own accumulating history while paying a token cost that grows every turn, producing missing recalls within and across conversations. The incumbent response treats this as a storage-and-retrieval problem. We argue that framing is too narrow. Actively managing what an agent holds in mind is a lifecycle, not merely a store: it spans deciding what to remember, extracting and structuring it, choosing the right store per data type, consolidating and forgetting while preserving provenance, deciding what is relevant now, anticipating what is needed next, and compacting context to a budget without losing what matters. In serious production this operates not over a single user but across an organizational scope hierarchy. We name this discipline Agentic Context Management (ACM) and decompose it into five primitives: architecting, ingesting, scoping, anticipating, and compacting & consolidation. We then make the economic case: naive context accumulation grows token cost quadratically in conversation length, crude summarization buys linear cost at the price of an accuracy cliff, and only validated compaction achieves linear cost with preserved fidelity. We describe a reference implementation, Maximem Synap, that realizes the five primitives as a multi-tenant service and reports 92% on LongMemEval and 93.2% on LoCoMo under the configuration detailed in Section 6. We close with dimensions existing benchmarks do not yet capture, latency, token efficiency, and context-rot resistance, and the frontier of decision-level and organization-level context the category points toward.",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-23T16:51:31Z",
+      "updated": "2026-07-23T16:51:31Z",
+      "comment": "23 pages, 6 figures, 4 tables. Evaluation harness and study data: github.com/maximem-ai",
+      "url": "https://arxiv.org/abs/2607.21503v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21503v1",
+      "rank": 37,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 8.2502,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Production AI agents' failures are less often due to an inability to reason well and more often because they cannot manage what is in their reasoning context: conversation histories, large prompts, large tool definitions…",
+      "reason": "tool learning / tool use / agent memory",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.21324",
+      "title": "GRADRAG: Cross-Component Prompt Adaptation for Coordinated Multi-Agent RAG",
+      "authors": [
+        "Paolo Pedinotti",
+        "Enrico Santus"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) systems increasingly employ multiple LLM agents. Yet, most prior work optimizes components in isolation rather than coordinating improvements across the pipeline. We introduce GRADRAG, a framework for cross-component prompt adaptation that models the RAG pipeline as a computational graph and propagates structured evaluation feedback to update upstream agents. An Evaluator critiques downstream answers and supporting evidence, producing actionable feedback that a Prompt Optimizer uses to iteratively update adaptive agents, such as retrievers, graph constructors, and answerers. The Evaluator also triggers early stopping when the output is deemed satisfactory. We evaluate GRADRAG on the SQUALITY and QMSUM benchmarks under two retrieval paradigms: flat chunk-based retrieval using IRCoT-style query refinement (Trivedi et al., 2023), and graph-based retrieval that constructs and iteratively enriches an entity-relation graph from the document. Across both settings, GRADRAG consistently outperforms one-step refinement baselines that update only the final generator, achieving a 12-15 percentage point net preference margin in LLM-judged pairwise comparisons, with most gains realized within two refinement iterations.",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-23T13:54:38Z",
+      "updated": "2026-07-23T13:54:38Z",
+      "comment": "8 pages",
+      "url": "https://arxiv.org/abs/2607.21324v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21324v1",
+      "rank": 100,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.5017,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Retrieval-Augmented Generation (RAG) systems increasingly employ multiple LLM agents. Yet, most prior work optimizes components in isolation rather than coordinating improvements across the pipeline. We introduce GRADRAG…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.21268",
+      "title": "pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development",
+      "authors": [
+        "Chen Zhu",
+        "Xiaolu Wang",
+        "Weilong Zhang"
+      ],
+      "abstract": "In many social-science research tasks, such as economics, LLM-based agents must produce outputs for which no cheap, task-complete, machine-readable correctness signal exists. This creates a distinctive reliability problem for multi-agent systems: how should generation, critique, coordination, and human judgment be organized when no component can certify the final result? We address this problem through pAI-Econ-claude, a gated, human-in-the-loop multi-agent architecture for AI-assisted economic theory development. Agents coordinate through a shared workspace of inspectable intermediate records; specialized gates diagnose targeted failure modes and recommend loopbacks without certifying correctness; and human checkpoints retain authority over decisions that are costly to reverse. We evaluate the architecture on five matched economic-theory tasks against an ungated baseline. Two evaluators blinded to configuration agreed on all five pairwise rankings, preferring the gated architecture in four tasks and the baseline in one. Mean failure severity fell from 1.58 to 1.16, while overall usefulness rose from 2.60 to 3.10. The largest observed gain occurred when a reality check rejected a false market-structure premise and a proof review prompted revision of a false welfare claim. The negative case shows that scaffolding can also compress an economically important mechanism too aggressively. The results support a bounded claim: gated oversight improves the auditability of AI-assisted economic theory without substituting for formal verification, and the allocation of irreversible human judgment is a more informative design variable than pure agent autonomy. The workflow is publicly available at https://github.com/maxwell2732/pAI-Econ-claude.",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "econ.GN"
+      ],
+      "primary_category": "cs.MA",
+      "published": "2026-07-23T12:40:47Z",
+      "updated": "2026-07-23T12:40:47Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.21268v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21268v1",
+      "rank": 115,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.9883,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "In many social-science research tasks, such as economics, LLM-based agents must produce outputs for which no cheap, task-complete, machine-readable correctness signal exists. This creates a distinctive reliability proble…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2607.21522",
+      "title": "GS-Agent: Creating 4D Physical Worlds With Generative Simulation",
+      "authors": [
+        "Hongxin Zhang",
+        "Chunru Lin",
+        "Junyan Li",
+        "Zhou Xian",
+        "Tsun-Hsuan Wang",
+        "Chuang Gan"
+      ],
+      "abstract": "Creating dynamic and physically realistic 4D worlds from natural language descriptions is both fascinating and challenging. Traditional computer graphics methods rely on manual creation, requiring extensive human effort to fine-tune materials, motions, and visual fidelity. Recent advances in generative foundation models have sparked interest in learning to generate such 4D worlds from large-scale data; however, existing methods still struggle to ensure physical plausibility and controllability. In this work, we take a different path by leveraging foundation models to construct an agentic system that emulates how humans traditionally create 4D worlds, yet automates the entire process. We present GS-Agent, an end-to-end multi-agent framework that integrates physics engines in the loop to generate realistic, dynamic, and controllable 4D physical worlds from natural language. Inspired by how humans build 4D worlds, GS-Agent decomposes the task into entity management, covering 3D asset curation, material tuning, placement, and motion control, and rendering configuration, including camera and lighting manipulation. Multiple agents with distinct expertise interact with the physics engine via code, seek multimodal feedback, and collaborate to iteratively construct 4D worlds that align with the given descriptions. Experimental results show that GS-Agent effectively converts natural language into diverse and physically plausible 4D worlds exhibiting rich interactions among liquids, deformable objects, and rigid bodies, while achieving cinematic camera and lighting control. We envision GS-Agent as a foundation for a new paradigm in 4D world generation, empowering creative content creation and physical AI. Project page at https://umass-embodied-agi.github.io/gs-agent/",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-07-23T17:04:36Z",
+      "updated": "2026-07-23T17:04:36Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.21522v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21522v1",
+      "rank": 33,
+      "metadata_source": "arxiv-api",
+      "focus_score": 4.9,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.2542,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "生成式仿真智能体构建物理4D世界，技术前沿性强",
+      "one_liner": "GS-Agent通过多智能体协同物理引擎生成可控4D物理世界",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.21518",
+      "title": "Same Dangerous Objective, Opposite Advice: Direct Exposure versus Multi-Agent Mediation",
+      "authors": [
+        "Linjun Li"
+      ],
+      "abstract": "Even a current high-capability LLM can appear safer when shown a dangerous objective directly than when other agents transform and relay its direction. Using OpenAI's gpt-5.6-sol model alias, we test 25 pre-specified mirrored trade-off profiles. Direct exposure to an objective authorizing concealment, fabrication, and pressure produced advice net opposed to its target. After an Id and Censor transformed the same objective into affect and a constraint-rewritten, target-bearing intention, the user-facing Superego---which saw the preferred direction but not the raw objective, its manipulative clauses, or its source---produced advice net aligned with the target. This behavioral reverse shift is consistent with the model recognizing or distrusting the manipulative motive, although we do not identify its internal mechanism. The second result exposes a compositional safety gap: a current high-capability model can be used as the user-facing component of an automated, multi-stage workflow serving an explicitly manipulative objective. The workflow can keep the raw instruction, its manipulation-authorizing clauses, and its provenance outside the downstream model's context while preserving the objective's target direction. A user with endpoint-only access likewise cannot directly inspect those upstream messages including the objective.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-23T17:02:11Z",
+      "updated": "2026-07-23T17:02:11Z",
+      "comment": "21 pages; welcome comments",
+      "url": "https://arxiv.org/abs/2607.21518v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21518v1",
+      "rank": 34,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.2031,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "揭示多智能体流程中的安全缺口，具方向独特性",
+      "one_liner": "同一危险目标下，直接暴露与多智能体中介产生相反建议",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.21404",
+      "title": "MemTools: A Unified Research Framework for Interoperable Agent Memory",
+      "authors": [
+        "Chengfeng Zhao",
+        "Jinhui Chen",
+        "Sirui Liang",
+        "Shizhu He",
+        "Yequan Wang",
+        "Jun Zhao",
+        "Kang Liu"
+      ],
+      "abstract": "While memory systems are essential for agent architectures, pervasive architectural fragmentation restricts systematic research. Existing implementations typically couple different stages of the memory lifecycle, entangle evaluation logic with specific datasets, and provide limited support for the management of heterogeneous memory types. We introduce MemTools, an interoperability research framework that decouples memory system components from their underlying deployment environments. MemTools standardizes the memory lifecycle through declarative data contracts, enabling the interchangeable assembly of components across different systems. It orthogonally separates benchmark datasets from execution protocols to facilitate controlled assessments. Furthermore, MemTools provides a unified computational interface for coordinating symbolic, neural, and multimodal memory representations within a shared runtime. Empirical evaluations on cross-system component integration, evaluation protocol reconfiguration, and heterogeneous memory coordination demonstrate that MemTools enables systematic isolation and analysis of memory design variables. These findings suggest that MemTools provides a practical and extensible infrastructure for advancing principled research on agent memory.",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-23T15:04:34Z",
+      "updated": "2026-07-23T15:04:34Z",
+      "comment": "Work in progress",
+      "url": "https://arxiv.org/abs/2607.21404v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21404v1",
+      "rank": 75,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 10.2146,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "提出可互操作的智能体记忆统一框架，具系统性价值",
+      "one_liner": "MemTools构建解耦、标准化、异构兼容的智能体记忆研究框架",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.21559",
+      "title": "Unsupervised Consensus-Based Anomaly Detection for Spatiotemporal Malaria Incidence in Ghana",
+      "authors": [
+        "T. Ansah-Narh",
+        "Y. Asare Afrane"
+      ],
+      "abstract": "A consensus anomaly detection framework was applied to monthly malaria surveillance data from Ghana (2014-2023) to identify atypical transmission patterns. Anomalies were highly structured in space and time. Ashanti and Northern Regions accounted for most recurrent anomalies, with persistent hotspots at Tamale, Kumasi, and Accra. A key finding was the spatial distinction between anomaly burden (cumulative cases during anomalous periods) and anomaly frequency (persistence of unusual behaviour). Tamale had the highest burden during anomalies, whereas the highest anomaly rates clustered in Ashanti districts, showing that high-burden areas are not necessarily those with the most frequent anomalous transmission. Anomalous months formed a statistically distinct group, with much higher case counts (Cohen's $d = 3.252$) and large seasonal deviations ($d > 1.2$) compared with normal months. Malaria burden alone provides an incomplete picture of transmission dynamics. By distinguishing where malaria is most prevalent from where transmission behaves most unusually, this framework can strengthen surveillance, prioritise investigations, and support targeted control strategies.",
+      "categories": [
+        "cs.AI",
+        "cs.CE",
+        "cs.ET",
+        "stat.AP",
+        "stat.ML"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-23T17:40:51Z",
+      "updated": "2026-07-23T17:40:51Z",
+      "comment": "32, 15 figures, under review at spatial and spatio-temporal epidemiology",
+      "url": "https://arxiv.org/abs/2607.21559v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.21559v1",
+      "rank": 16,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.5493,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "A consensus anomaly detection framework was applied to monthly malaria surveillance data from Ghana (2014-2023) to identify atypical transmission patterns. Anomalies were highly structured in space and time. Ashanti and…",
+      "reason": "daily-corpus novelty; cross-category",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [
+    {
+      "id": "answer:2053860877275870212",
+      "content_id": "2053860877275870212",
+      "question_id": "665390929",
+      "platform_type": "answer",
+      "title": "大模型算法岗常见的面试题有什么？",
+      "content": "985计算机本硕，在大模型领域发表了一些CCFA类或B类论文，前前后后面试了十来场，并且有三段实习，包括一段大厂实习。 我感觉大模型算法面试当中，八股相关的问题是一定可以熟练掌握的，也是向面试官证明自己基础的很好的机会。从一开始磕磕巴巴，到后面我在很多面试中遇到八股问题都直接开始吟唱了。 现在我给大家分享一下我之前准备的一些基础知识题目，以问答形式出现；我给的答案不一定完全对，只是参考哈；希望对大家有用。 一、Transformer 核心架构 Q1：自注意力机制的工作原理是什么？为什么需要在计算中进行缩放（除以根号 d_k）？ 自注意力机制的核心思想是让序列中的每一个词都能够直接关注序列中的所有其他词，从而捕获全局的上下文依赖关系。具体计算流程如下：首先，对于输入序列的每个 token，通过三个独立的线性变换矩阵 W_Q、W_K、W_V 分别生成查询向量 Q、键向量 K 和值向量 V；其次，计算 Q 与 K 的点积，得到注意力分数矩阵，表示序列中每对 token 之间的相关程度；接着，将注意力分数除以缩放因子 √d_k，然后通过 Softmax 函数归一化为概率分布，即注意力权重；最后，将注意力权重与 V 相乘，得到加权求和后的输出向量。 为什么需要除以 √d_k。 核心原因在于防止 Softmax 饱和导致的梯度消失。当 d_k 较大时，Q 与 K 的点积值会随之增大，点积的标准差约等于 √d_k。如果直接将较大的值送入 Softmax，输出会趋近于独热分布，即某个位置的注意力权重接近 1 而其余位置接近 0。在反向传播时，Softmax 在接近 0 或 1 的位置梯度趋近于零，导致参数无法有效更新。除以 √d_k 后，缩放后的点积标准差约为 1，使 Softmax 的输入保持在合理的数值范围内，输出分布更加平滑，梯度能够正常回传，训练更加稳定。 自注意力机制的时间复杂度为 O(n²d)，其中 n 为序列长度，d 为表示维度。这是因为序列中每个 token 都需要与所有其他 token 计算一次点积。 Q2：多头注意力机制的设计原理是什么？为什么多头比单头更好？头数是否越多越好？ 多头注意力机制的本质是将原始的输入序列并行地进行多组独立的子空间自注意力处理，然后将各组的输出拼接起来进行线性变换，得到最终输出。具体来说，先将输入的 Q、K、V 分别通过 h 组线性变换映射到 h 个不同的低维子空间，每个头的维度 d_k = d_model / h；然后每个头独立执行缩放点积注意力计算；最后将所有头的输出在特征维度上拼接，通过一个输出线性变换矩阵 W_O 融合信息。 多头优于单头的原因在于表示能力的增强。每个注意力头拥有独立训练的权重矩阵，不同的头会关注输入的不同特征维度，处于完全不同的向量子空间中。例如在处理「苹果很好吃」这句话时，一个头可能关注「苹果」与「好吃」的语义关系，另一个头可能关注语法结构信息。这种并行子空间机制使得模型能够从多个角度同时提取特征，最后拼接起来保存所有维度的信息。 头数并非越多越好。头数过多可能导致过拟合风险增加，尤其在小数据集上；以及不同头可能学习到相似的注意力模式，造成计算冗余。头数的选择需要根据任务复杂度来权衡：简单任务使用较少的头即可满足需求，复杂任务则需要更多的头来捕获更丰富的语义关系。在代码实现中，通常通过 view 将总特征维度拆分为「头数 × 单头维度」，然后通过 transpose 交换序列长度和头数的维度，使得所有头可以并行计算，相当于一次性计算 Batch × Heads 张独立的小注意力图。 Q3：RoPE 旋转位置编码的原理是什么？它如何实现相对位置编码？外推问题有哪些解决方案？ 为什么需要位置编码。 自注意力机制的运算是排列无关的，即交换序列中两个 token 的位置不会影响它们各自的注意力计算方式。因此需要显式地向模型注入位置信息。理想的位置编码需要满足三个条件：能够表示绝对位置（唯一性）、不同长度序列中相对距离保持一致、能够泛化到训练时未见过的序列长度（外推性）。 RoPE 是目前最主流的位置编码方式，被 LLaMA、Qwen、Mistral、ChatGLM 等开源模型广泛采用。其核心流程如下：对于每个 token 的 Query 和 Key 向量，按照两两一组的方式将特征维度划分为 d/2 对子空间；为每对子空间分配一个预定义的旋转频率，频率从大到小递减，高频对应局部位置敏感，低频对应全局位置感知；对每对子空间，根据 token 的位置 m 施加一个旋转角度 mθ，其中 θ 由频率决定；分别对 Q 和 K 的每对子空间施加旋转变换后，再计算它们之间的内积。 RoPE 如何实现相对位置编码。 经过 RoPE 变换后，位置 m 的 Q 向量与位置 n 的 K 向量的内积结果天然地包含了相对距离 (m - n) 的信息。这意味着模型在训练时就能直接学习 token 间的相对位置关系，而这恰恰是语言建模中最关键的。RoPE 不需要学习任何额外参数，旋转矩阵完全基于预定义的频率和位置索引计算。增大旋转基频 Base（通常是 10000），角度变化会更慢，周期更长，更不容易出现不同位置具有相同旋转角度的情况，因此长上下文场景中 Base 可取一百万。此外，RoPE 可以与线性注意力机制兼容，无需额外计算或参数即可实现相对位置编码。 RoPE 的外推问题与解决方案。 当推理时的序列长度超过预训练最大长度时，RoPE 会遇到外推困难，因为预训练时从未见过超出范围的位置对应的旋转角度。主要解决方案有四种。位置插值（PI）将长文本的位置索引统一除以一个缩放因子，将所有位置索引压缩回预训练窗口内，简单但容易损失高频信息。NTK-Aware 插值对低频维度进行较大幅度的插值，对高频维度保持直接外推，保留更多高频细节信息。NTK-by-parts 根据每个维度的波长区分高、中、低频，对高频不插值，对低频进行插值，对中间频率采用混合策略。YaRN 在 NTK-by-parts 基础上引入注意力温度因子 t 来调整注意力分布，解决线性插值导致 Softmax 过于锐化的问题，且几乎无需微调即可解决外推问题。 Q4：Transformer 中 FFN 前馈神经网络的作用是什么？SwiGLU 相比传统 ReLU 有哪些优势？ FFN 在 Transformer 中的角色。 一个标准的 Transformer 块包含多头自注意力（MSA）和 FFN 前馈神经网络两部分。FFN 的基本结构自 Transformer 提出以来保持相对稳定，即「线性升维 → 非线性激活 → 线性降维」。FFN 是 Transformer 参数和计算量的主要来源，约占总量的三分之二；同时 FFN 也是 MoE（混合专家模型）的主要改进对象，通过将 FFN 分解为多个子专家网络来提升模型容量。 FFN 的核心作用有两方面。 第一，通过线性变换（矩阵乘法）先将特征维度升高（通常升到 4 倍），在更高维的空间中提取特征，再降维回原始维度。第二，非线性激活函数为模型引入非线性表示能力，使得模型能够学习复杂的特征组合和深层语义。 SwiGLU 的原理。 SwiGLU 使用 SiLU（即 Swish，定义为 x·σ(x)）作为门控信号的门控线性单元。其简化形式为 SwiGLU(x, W, V) = SiLU(xW) ⊗ (xV)。完整的 FFN-SwiGLU 层形式为 W_out · (SiLU(x·W_1) ⊗ (x·W_3))，其中 ⊗ 表示逐元素乘法。 SwiGLU 相比 ReLU 的优势体现在三个方面。 第一是平滑性和处处可导。SiLU（x·Sigmoid(x)）是一种平滑的激活函数，在负值区域有轻微的下沉然后趋近于零。这与 ReLU 在负半轴直接截断为零不同，SwiGLU 在输入为负时仍有微小梯度，从而避免了 ReLU 中常见的神经元死亡问题，即某些神经元因长期输出零而梯度为零，权重不再更新。第二是门控机制实现动态信息流控制，这是 GLU 的核心优势。SiLU(xW) 的输出作为动态门控信号，逐元素地调节 (xV) 通路的信息强度。如果门控向量某个元素接近 0，对应位置的信息被抑制；接近 1，信息顺利通过。标准 FFN 中的激活函数（ReLU、GELU）作用于整个激活向量，缺乏这种基于输入的逐元素动态调节能力。第三是表达能力更强。这种门控机制允许网络根据输入内容选择性地激活或抑制特定特征组合，使得模型在训练中能够学到更灵活的表示。SwiGLU 在 LLaMA 等大型语言模型中被证明非常有效。 二、训练优化技术 Q5：混合精度训练（AMP）的原理是什么？如何解决 FP16 带来的数值稳定性问题？ 混合精度训练（Automatic Mixed Precision, AMP）的核心思想是在训练过程中同时使用 FP32（单精度浮点）和 FP16（半精度浮点）两种数据类型，以降低计算资源消耗同时保持训练效果。三种浮点数据类型中，FP64 表示范围极广且精度最高但开销最大，FP32 是深度学习训练的标准精度（表示范围约 10⁻³⁸ 到 10³⁸），FP16 计算速度快且显存占用减半（表示范围约 10⁻⁵ 到 10⁵）。 AMP 的具体做法包括三个步骤。 首先，在前向传播中，计算密集型操作（如矩阵乘法、卷积）使用 FP16 执行，利用 Tensor Core 等硬件加速获得更快的计算速度和更低的内存占用。其次，维护一份 FP32 格式的主权重副本（Master Weights），在每次权重更新时先将 FP16 梯度转换为 FP32，再更新主权重，确保模型收敛的稳定性。最后，通过损失缩放（Loss Scaling）技术解决 FP16 梯度下溢问题：将损失值放大一定倍数，使反向传播的梯度值落在 FP16 的可表示范围内，更新权重前再将梯度缩回原始尺度。 数值稳定性问题的解决。 FP16 的表示范围有限，可能导致上溢（值超过 FP16 的表示上限，变为无穷大）和下溢（值小于 FP16 的最小可表示值，被截断为零，导致梯度信息丢失）。解决方案包括使用损失缩放因子动态调整梯度范围，以及在必要时对特定操作强制使用 FP32。目前主流的深度学习框架（如 PyTorch）提供了自动化的 AMP 模块，通过 autocast 上下文和 GradScaler 实现了对前向计算的自动精度管理和梯度缩放，开发者无需手动处理类型转换。 Q6：梯度检查点（Gradient Checkpointing）的原理是什么？它是如何进行时间与空间的权衡的？ 梯度检查点是一种用计算时间换取显存空间的经典优化技术。它通过策略性地丢弃部分中间激活值，在反向传播时按需重新计算，从而支持训练显存需求远超硬件容量的超大规模模型。 在正常的反向传播中，前向传播时产生的大量中间激活值需要被完整保留在显存中，因为反向传播计算梯度时需要用到这些中间结果。激活值的显存占用与模型层数、批次大小和序列长度成正比，对于大模型而言这往往是显存瓶颈。 梯度检查点的工作机制如下：在前向传播时，并非每层都保存完整的激活值，而是仅在特定的检查点处保存激活值；在反向传播时，当需要使用某个未保存的中间激活值时，从最近的检查点开始重新进行一段前向计算，临时恢复所需的激活值；计算出该段对应的梯度后，这些临时恢复的激活值可以被立即释放，无需长期占用显存。 时间与空间的权衡。 梯度检查点以额外的计算量为代价换取显存的显著节省。极端情况下，如果只保留输入和最后一层的激活，可以实现约 O(√n) 的显存占用，但反向传播时需要重新进行几乎所有前向计算，计算量大约增加 33% 到 50%。在工程实践中，通常每隔一层设置一个检查点，在计算开销和显存节省之间取得平衡。这一技术与 Flash Attention 等机制共同构成了大模型训练的显存优化体系。 Q7：Flash Attention 是如何优化标准自注意力计算的？为什么它能同时节省显存并加速计算？ Flash Attention 的核心优化目标是降低对 HBM（高带宽显存）的访问次数。理解其设计需要先了解 GPU 的存储架构：GPU 上的 SRAM（片上共享内存）速度快但容量小（通常几十 MB），而 HBM 速度相对慢很多但容量大。在标准的自注意力计算中，QK^T 矩阵（大小为 n×n）和 Softmax 后的注意力权重矩阵都是中间结果，需要先写入 HBM 再从 HBM 读出进行下一步计算。这种反复的 HBM 读写成为性能瓶颈，尤其在处理长序列时。 Flash Attention 的设计理念是分块计算。 将 Q、K、V 矩阵切分成若干小块，每次只加载一个小块到 SRAM 中；在 SRAM 上完成该块所需的全部计算，包括 QK^T、Softmax 归一化和与 V 的加权求和，整个过程不将中间结果写回 HBM；通过在线 Softmax 算法（Online Softmax）将全局归一化分解为逐块的局部归一化加修正，保证分块计算在数学上等价于全局计算。 Flash Attention 的两大优势。 在节省显存方面，不再存储完整的 n×n 注意力矩阵作为中间激活值用于反向传播。反向传播需要这些值来进行梯度计算时，Flash Attention 选择重新计算 QK^T 和 Softmax 结果，而不是从显存中读取，这种以计算换空间的策略虽然增加了少量重算时间，但大幅降低了显存占用。在加速计算方面，由于大部分计算在高速 SRAM 中完成，HBM 访问次数大幅减少，计算不再受限于显存带宽。传统的注意力计算往往是显存带宽受限（Memory-Bound）而非计算受限（Compute-Bound），Flash Attention 通过减少 HBM 读写将瓶颈转移到计算端，充分发挥 GPU 的计算能力。 三、模型架构设计 Q8：为什么目前主流的 LLM 都采用 Decoder-Only 架构？与 Encoder-Only 和 Encoder-Decoder 架构相比有何优势和区别？ 三种架构的核心区别。 Encoder-Only 的代表是 BERT，采用双向自注意力机制，每个 token 可以同时看到前后所有位置的上下文，擅长对文本进行深度理解，适用于情感分析、命名实体识别、文本分类等任务，预训练通常使用掩码语言建模（MLM），即随机遮盖部分 token 让模型根据上下文进行预测。Encoder-Decoder 的代表是 BART 和 T5，包含完整的编码器和解码器，编码器通过双向注意力提取语义特征，解码器通过带掩码的自注意力（防止看到未来）和交叉注意力（关注编码器输出）进行自回归生成，擅长输出强烈依赖输入的任务，如机器翻译和文本摘要。Decoder-Only 的代表是 GPT 系列，只包含堆叠的 Transformer 解码器层，采用掩码自注意力机制，每个 token 只能关注当前位置及之前的信息，这是一个单向（因果）注意力，训练目标是自回归建模，即根据所有之前的 token 预测序列中下一个词。 Decoder-Only 成为主流的三个核心原因。 第一，零样本和少样本泛化能力更强。大量实验研究表明，用 Next Token Prediction 预训练的 Decoder-Only 模型在各种下游任务上的零样本泛化性能最好，且上下文学习（In-Context Learning）能力更强。第二，训练和推理的一致性。Decoder-Only 模型在训练和推理阶段使用完全相同的计算模式，都是基于已生成的 token 预测下一个 token，这种一致性简化了系统设计，避免了推理时的分布偏移问题。第三，路径依赖和生态继承。OpenAI 的 GPT 系列取得巨大成功后，行业形成了模仿成功案例的路径依赖，LLaMA、Qwen、Mistral 等主流开源模型均采用 Decoder-Only 架构，形成了生态继承性。 简化的经验法则是：Encoder-Only 适合分类和理解任务，Encoder-Decoder 适合输出强烈依赖输入的生成任务（如翻译），Decoder-Only 适合开放式生成任务（如多轮对话、代码生成、内容创作）。 Q9：MoE（混合专家模型）的架构原理是什么？DeepSeek MoE 做了哪些改进？ MoE 是替代 Transformer 中标准 FFN 层的架构设计。它将原本单一的大尺寸 FFN 分解为多个较小的子网络，每个子网络称为一个专家（Expert），并引入一个路由器网络（Router）来决定每个 token 应该由哪些专家处理。具体工作流程如下：对于输入的每个 token，路由器网络输出各专家对应的概率权重，通常选择 Top-K（如 K=2 或 4）个概率最高的专家；将 token 分别送入被选中的专家进行计算；将各专家的输出按照路由器分配的权重进行加权求和，得到最终输出。 MoE 的核心优势体现在两个方面。 在相同参数总量下，MoE 的训练和推理计算开销更小，因为每次只激活部分专家；在相同计算代价下，MoE 的参数量可以做得更大，模型性能更好，体现了稀疏激活的优势。 负载均衡是 MoE 训练中的关键挑战。 如果不加约束，路由器可能倾向于只选择少数几个专家，导致部分专家频繁使用而其他专家很少被激活，造成参数利用率下降。解决方案包括在损失函数中加入负载均衡损失项，惩罚专家使用的不均匀分布；以及在训练时引入随机噪声让路由器进行探索。 DeepSeek MoE 做了两个核心改进。 第一是细粒度专家分割。DeepSeek 认为传统 MoE 的专家数量太少，每个专家可能拥有过于宽泛的知识，知识粒度太粗，因此将专家进一步细分，增加专家总数，使得每个专家专注于更精细的知识领域，同时每次激活的专家数量也相应增加。第二是引入共享专家。设置一些始终激活的通用型专家，负责处理所有 token 都需要的通用知识，而细分专家则专注于特定领域的知识。实验证明这两个改进显著提升了模型性能。Qwen3 MoE 模型也采用了类似思路，使用 128 个专家，每次激活 8 个，并采用了细粒度专家分割。 Q10：KV Cache 的优化方案 MQA、GQA 和 MLA 各自的原理是什么？它们之间如何对比权衡？ KV Cache 问题的背景。 在自回归生成中，每生成一个新 token，都需要与之前所有 token 的 K 和 V 进行注意力计算。为避免重复计算，系统会将已生成 token 的 K 和 V 缓存起来，这就是 KV Cache。KV Cache 的显存占用为 2 × 层数 × 序列长度 × 头数 × 头维度。随着序列长度增加和批量增大，KV Cache 成为显存的主要瓶颈。 MQA （Multi-Query Attention，多查询注意力）让所有注意力头共享同一组 K 和 V 投影，只有 Q 保持多头。这意味着每个 token 只存储一份 K 和一份 V（而非 h 份），KV Cache 压缩为原来的 1/h。代价是注意力多样性下降，模型性能通常低于 MHA。 GQA （Grouped-Query Attention，分组查询注意力）是 MHA 和 MQA 之间的灵活折中方案，将 h 个 Q 头分为 g 组，每组内的头共享同一组 K 和 V 投影，组间不共享。例如 Qwen3-4B 使用 32 个 Q 头、8 个 KV 头（即 4 个 Q 头共享一组 KV）。GQA 在性能和效率之间取得了较好的平衡，被 LLaMA 2/3、Qwen 等模型广泛采用。 MLA （Multi-head Latent Attention，多头潜在注意力）是 DeepSeek 提出的创新方案，采用低秩压缩的思想。通过降维矩阵 W_d 将 K 和 V 投影到一个维度很小的潜在空间，得到压缩后的潜在向量 C_KV；KV Cache 只需存储这个维度较小的 C_KV，而非完整的 K 和 V；在注意力计算时，通过升维矩阵 W_UK 和 W_UV 将 C_KV 恢复为完整的 K 和 V。MLA 的关键优化是 W_UQ 可以在注意力计算时与 W_UK^T 融合（矩阵乘法结合律），因此不需要显式地对 K 进行升维和降维操作，只需存储共享的潜在向量即可。 三者对比总结。 MQA 采用最激进的压缩策略，性能下降最明显。GQA 是性能和效率的折中，在适度压缩 KV Cache 的同时保持了较好的模型质量。MLA 通过低秩压缩在取得最大 KV Cache 节省的同时，DeepSeek 的实验表明其性能甚至优于标准 MHA，成为目前最优的 KV Cache 优化方案，被 DeepSeek-V3 和 R1 等模型采用。 四、微调技术 Q11：LoRA 和 QLoRA 的原理是什么？LoRA 的秩 r 如何影响表达能力与效率的权衡？ LoRA（Low-Rank Adaptation）是一种参数高效微调技术。它的核心洞见是在对大模型进行任务适配时，权重矩阵的更新量通常具有低秩特性。因此可以冻结原始预训练权重 W，仅学习两个低秩矩阵 B 和 A，使得 ΔW = BA。其中 B 的维度为 d_out × r，A 的维度为 r × d_in，r 是秩，通常取 2 到 32。最终的前向传播计算变为 h = Wx + BAx = Wx + (α/r)·BAx，其中 α 是缩放因子用于调节 LoRA 更新的幅度。B 通常全零初始化，A 随机初始化，使得初始行为等价于原模型，保证训练起始稳定。推理时无需改变原有模型结构，LoRA 权重可以直接合并到原始权重中：W_merged = W + (α/r)·BA。 LoRA 可以作用于注意力层的 Q、K、V、O 投影矩阵，也可以扩展到 FFN 层的 gate_proj、up_proj、down_proj。Attention 和 FFN 全覆盖微调能获得更强的表达能力，但参数量也相应增加。 秩 r 的权衡。 r 控制着低秩矩阵的中间维度，是表达能力与效率权衡的关键参数。r 越大，BA 乘积可以逼近的更新矩阵秩越高，理论上的表达能力越强，但可训练参数量也线性增长。在实际应用中，简单任务使用较小的 r（如 4 到 8），复杂任务使用较大的 r（如 16 到 64）。 QLoRA 将量化与 LoRA 结合，实现极致的内存效率。 以 4-bit NF4（NormalFloat 4-bit）格式加载预训练权重，模型体积仅为原本 16-bit 的约四分之一，NF4 是基于信息论优化的数据类型，根据正态分布的分位数来分配量化值，在权重密集区域分配更多量化刻度，比标准 Int4 精度更高。LoRA 适配器使用 BFloat16 精度进行训练。前向传播时实时反量化为 BFloat16 进行计算，计算完成后丢弃临时 BFloat16 权重。反向传播时仅更新 LoRA 参数，基座模型权重冻结。对量化常数进行二次量化，将第一次量化的缩放因子再量化为 FP8。QLoRA 使得在单张消费级 GPU（如 24GB 显存）上微调 65B 参数的大模型成为可能。 Q12：SFT（监督指令微调）的目的是什么？它与预训练的关系是什么？SFT 阶段会遇到哪些典型问题？ SFT 在训练流程中的位置是：预训练（世界知识 + 语言模式）→ 指令微调（指令理解 + 任务泛化）→ 偏好对齐（人类价值观 + 安全合规）→ 实际应用。 SFT 的目的。 在预训练模型的基础上，通过有监督微调（使用指令-回答对），教授模型如何理解并遵循人类指令。预训练的基座模型虽然拥有丰富的世界知识和语言能力，但它只知道如何做「下一个 token 预测」，不知道如何与用户进行有意义的交互。SFT 是连接预训练基座模型能力与人类意图的关键桥梁。 SFT 与预训练的关系。 预训练在大规模无标注语料上进行自监督学习（Next Token Prediction），训练目标是使输出下一个 token 为语料中下一个 token 的概率最大，使用交叉熵损失函数。SFT 同样使用交叉熵损失，但只在问答对数据中的助手回答部分计算损失，通过掩码忽略用户输入部分的损失计算。SFT 数据的核心要素包括：数据格式通常采用 Chat Template，使用特殊 token 标识序列开头结尾和角色（如 <|system|>、<|user|>、<|assistant|>）；核心理念是多样性和高质量，需要清洗拒答、重复、逻辑错误的样本；目前的标准做法是构建多轮对话格式数据，如 ShareGPT 和 Alpaca 格式。 SFT 阶段的典型问题。 第一，复读问题：模型反复输出相同或高度相似的内容。原因包括训练数据中包含大量重复文本，EOS token 没有学好导致模型不知道何时停止，以及推理时 Temperature 过低使生成过于确定性。第二，灾难性遗忘：微调导致模型丧失预训练阶段学到的通用能力。缓解方法包括在微调数据中混合通用数据，使用较小的学习率，以及采用 LoRA 等参数高效微调技术。第三，任务过拟合：如果微调数据 100% 都是同一种任务格式，模型可能学会「无论用户说什么都输出这个格式」的强规律，丧失通用对话能力。解决方案是通过系统提示词区分不同任务模式，或在训练数据中混合多种任务类型。 Q13：RLHF 中 PPO、DPO、GRPO 三种算法的核心原理是什么？它们的优劣势如何对比？ 为什么有 SFT 之后还需要 RLHF。 SFT 的本质是 Next Token Prediction，它在机械地模仿训练数据中的回答模式。仅靠 SFT 难以让模型真正理解什么是「更好」的回答，模型无法突破训练集的回答质量天花板。RLHF 让模型被允许在策略空间中进行探索，当模型生成比训练集质量更高的回答时获得正向激励，使得模型学会「如何生成让人类更满意的答案」而非仅仅是「模仿人类写好的答案」。 PPO （近端策略优化）是 RLHF 的经典算法，训练需要同时加载四个模型。基准模型是 SFT 之后的冻结模型，用于计算 KL 散度约束，防止训练模型偏离太远；训练模型是 PPO 要优化的模型，结构和初始参数与基准模型一致；奖励模型是预先训练好的打分模型，对序列整体输出一个奖励分数，而非词表大小的 logits；状态价值模型（Critic）评估在当前已生成 token 序列的状态下的期望总回报，用于计算优势函数。PPO 的核心机制包括：将每个 token 的生成视为一个动作，使用 GAE（广义优势估计）为每个 token 分配优势值；通过 Clip(ratio) × Advantage 的损失形式进行近端优化，限制每次更新的幅度，防止训练崩溃；引入 KL 散度惩罚项防止训练模型与基准模型的输出分布偏离过大。PPO 的局限在于四个模型同时加载显存成本极高，强化学习天然不稳定导致多模型协同训练困难，且存在 Reward Hacking 问题（策略模型可能发现奖励模型的漏洞，生成能获得高分但实际无用的输出）。 DPO （直接偏好优化）是一种离线算法，不依赖于强化学习，直接用偏好数据优化模型。它不需要预先训练独立的奖励模型和状态价值模型，但仍保留基准模型防止偏离过多。DPO 的损失函数形式为 -log σ(β·log(π_w/π_ref_w) - β·log(π_l/π_ref_l))，其中 π_w 是训练模型对偏好答案的概率，π_l 是对拒绝答案的概率，β 控制偏离基准模型的惩罚力度。核心直觉是最大化偏好答案相对于基准模型的提升与拒绝答案相对于基准模型的降低之间的差距。DPO 的优势在于成本较低，不需要复杂的强化学习探索和额外的奖励模型和 Critic 模型训练，稳定且易于实现。DPO 的局限在于作为离线算法，完全依赖于预先收集的固定偏好数据集进行训练，无法像在线算法那样在训练过程中持续从当前策略采样新数据探索策略空间，且需要大量高质量偏好数据，偏好数据最好由当前模型采样再由人类标注。 GRPO （组相对策略优化）是对 PPO 的改进，核心创新是无须训练独立的 Critic 模型。具体流程如下：对于每个 Prompt，用当前模型生成一组（如 G=4 或 64）个完整回答；用奖励模型为每组内每个回答打分；计算组内均值作为基线，用每个回答的分数减去组内均值再除以组内标准差，得到该回答中每个 token 共享的优势值；使用与 PPO 相同的 Clip 截断和 KL 散度约束进行更新。GRPO 的关键改进在于 PPO 将每个 token 视为独立动作，需要为每个 token 分配奖励，但奖励模型只在序列结束时才给出分数，中间 token 只能用 KL 散度乘负值填充，这与人类偏好无关，而 GRPO 将整个序列视为一个动作，序列级奖励更为合理。GRPO 的局限性包括：零优势现象（当组内样本奖励完全一致时优势值为零，梯度接近零，训练停滞），解决变体包括 SRPO 确保每组有正确和错误样本以及 DAPO 自适应调整更新幅度；计算效率问题（每个 Prompt 需要生成多轮完整序列并计算奖励，推理开销大）；奖励信号粒度问题（GSPO 指出 GRPO 的奖励是序列级而重要性采样是 token 级，存在粒度不匹配）。 五、推理部署 Q14：模型量化的原理是什么？对称量化与非对称量化有何区别？QLoRA 中的 NF4 为什么比标准 Int4 精度更高？ 量化的核心原理是将原本以浮点数（FP32 或 FP16）表示的模型参数和激活值，用低位宽的整数（INT8 或 INT4）近似表示，同时尽可能减少量化引入的精度损失。量化的好处包括减少模型存储空间和显存占用，减少数据传输量从而缓解带宽瓶颈，以及利用 GPU 对整数计算的硬件加速来加快推理速度。 对称量化以 INT8 量化为例，数值被映射到对称区间 [-127, 127]。确定一个缩放因子 scale = max(|浮点最大值|) / 127，任意浮点值量化时除以 scale 后取整，反量化时乘以 scale 即可还原。对称量化实现简单，但如果浮点值的分布不对称（如最小值远大于最大值的负数），会浪费一部分整数表示范围。 非对称量化将数值映射到区间 [0, 255]。缩放因子 scale = (最大值 - 最小值) / 255，零点 zero_point = 最小值 / scale。量化时原值除以 scale 加上 zero_point 取整，反量化时（量化值 - zero_point）× scale。非对称量化计算稍复杂但精度更高，因为它充分利用了整数表示范围。原始矩阵相乘结果可以近似为量化后矩阵相乘后乘以对应的缩放因子。 训练后量化（PTQ）是在模型训练完成后直接对权重进行量化，无需重新训练，代表方法有 AWQ 和 GPTQ。训练感知量化（QAT）则是在训练过程中模拟量化误差，让模型适应量化带来的精度损失，精度通常更高但需要训练资源。 NF4 相比标准 Int4 的优势。 传统的均匀量化（如 Int4）假设权重是均匀分布的，但神经网络的权重通常服从正态分布（钟形曲线）。均匀量化在分布密集的区域精度分配不足，在两端的稀疏区域分配过多精度。NF4（NormalFloat 4-bit）是基于信息论优化的数据类型，根据正态分布的分位数来分配量化值，在权重分布密集的区域（均值附近）分配更多的量化刻度，在稀疏的区域（远离均值的尾部）分配较少。这使得 NF4 在表示神经网络权重时比标准 4-bit 整数的精度显著更高，这也是 QLoRA 能在 4-bit 精度下保持微调效果的关键原因。 Q15：vLLM 的 PageAttention 机制如何解决传统 KV Cache 管理的显存碎片问题？ 传统 KV Cache 管理的痛疾。 在标准的推理系统中，系统需要为每个请求预分配一段能容纳最大生成长度的连续显存空间来存储 KV Cache。这种做法带来两个严重问题：显存碎片化（不同请求的实际生成长度不同，预分配的空间可能大部分未被使用，但已经因为预留而无法被其他请求利用，随着请求的进入和退出，显存中形成大量大小不一且无法合并的碎片），以及显存利用率低（为了应对可能出现的最长序列，系统需要预留超出实际需要的显存，造成严重浪费）。 PageAttention 的核心思想借鉴了操作系统中虚拟内存分页管理的设计哲学。首先，不为每个请求的 KV Cache 预分配连续的最大长度显存，而是将 KV Cache 划分为固定大小的 Block（块，类似于操作系统的内存页）作为基本存储单位。其次，一个请求的多个 KV Cache Block 在逻辑上是连续的序列，但在物理显存上可以分散存储在不同位置，通过一个块映射表（Block Table）来维护逻辑位置到物理位置的映射关系。最后，系统根据实际生成进度动态分配新的 Block，而非预先分配全部空间。 PageAttention 带来的两个核心优势。 在解决显存碎片方面，所有请求共享一个 Block 池，当请求结束时其占用的 Block 被回收并可被重新分配，由于 Block 大小固定，回收后可以被任何新请求直接复用，不会产生大小不一的碎片。在 Shared Block（共享块）机制方面，当一个提示词需要生成多条序列时（如 Beam Search 或并行采样），多条序列可以共享同一份 Prompt 的 KV Cache Block，只在各自生成的部分分配新的 Block，这进一步大幅提升了显存利用率。这种设计将操作系统中经过数十年验证的成熟思想应用到了大模型推理场景，使得 vLLM 在吞吐量和显存利用率上显著优于传统推理方案。 六、多模态与生成 Q16：VLM（视觉语言模型）的主流架构设计模式有哪些？LLaVA 和 Qwen-VL 的架构有何异同？ 视觉语言模型的三种主流架构设计模式。 双编码器架构（Dual-Encoder）的代表是 CLIP，使用独立的图像编码器和文本编码器分别提取特征，通过对比学习损失将图像和文本映射到同一向量空间，优势是检索效率高且支持零样本分类，局限是交互不够充分，图像和文本在编码阶段没有交叉信息融合。融合编码器架构（Fusion-Encoder）的代表是 ViLT，将图像分块后直接投影到文本空间，与文本 token 一起送入 Transformer 进行深度融合，优势是模态间交互充分，局限是推理时计算开销大。编码器-解码器架构（Encoder-Decoder）的代表是 BLIP-2，使用 Q-Former 等可学习查询向量模块桥接视觉编码器和 LLM，实现视觉特征的压缩和语义对齐。 LLaVA 的架构设计采用简洁高效的方式，仅使用一个 MLP 投影层将冻结的视觉编码器（通常是 CLIP 的 ViT 模块）的特征转化为与 LLM 词嵌入维度一致的视觉 token，然后直接拼接到文本 token 序列中送入 LLM 进行处理。训练分为两个阶段：模态对齐阶段使用图文对数据，冻结视觉编码器和 LLM，仅训练 MLP 投影层，建立视觉特征与语言空间的初步对齐；指令微调阶段端到端训练整个系统（或至少训练投影层和 LLM），使用看图问答和推理指令数据让模型学会在对话场景中使用视觉信息。 Qwen-VL 同样采用「视觉编码器 + 适配层 + LLM」的架构。视觉编码器使用 ViT-bigG 架构，基于 OpenCLIP 的开源实现进行预训练，通过对比学习学习视觉与文本表征的对齐关系。Qwen-VL 的后续版本引入了多项创新：动态分辨率使得大图像用更多 token 表示，小图像用更少 token，避免压缩或填充到固定尺寸带来的信息损失；窗口注意力将图像切成不重叠的窗口，窗口内 token 互相计算注意力但不与窗口外的 token 交互，将自注意力的平方复杂度降低为对 token 长度的线性复杂度；DeepStack（Qwen3-VL 新增）不仅使用 ViT 最后一层的输出，还从浅层、中层、深层分别提取特征，每个层的特征都有独立的 MLP Merger 进行投影，然后以残差连接的方式注入到 LLM 的不同层中，这种设计保留了浅层的纹理和边缘细节信息，显著提升了 OCR 和细粒度图像理解能力。 两者的核心异同。 相同点是都遵循「视觉编码器 + 投影适配层 + LLM 骨干」的基本范式，都采用分阶段训练策略。不同点在于 LLaVA 的投影层最简单，直接用单层 MLP，而 Qwen-VL 的后续版本在分辨率处理、注意力效率、多尺度特征融合等方面进行了更多工程优化。 Q17：Stable Diffusion 中的潜在扩散模型（LDM）原理是什么？无分类器引导（CFG）是如何工作的？ 为什么需要潜在扩散模型。 如果直接在像素空间进行扩散和去噪，计算量极其巨大。一张 512×512 的 RGB 图像在像素空间有约 78 万个维度，扩散模型的每一步迭代都需要在这个高维空间中进行计算，即使在高端 GPU 上也极其缓慢。LDM 的核心创新在于将扩散过程从像素空间转移到压缩后的潜空间中进行。 LDM 的三个核心组件。 第一，VAE（变分自编码器）负责图像与潜空间的相互转换。编码器将原始像素空间图像压缩到一个维度极小的潜空间表示 z（例如 512×512 图像对应的潜空间维度仅为 64×64×4，数据量减少约 48 倍），解码器负责将去噪后的潜变量还原为像素空间图像，VAE 的编解码过程几乎不损失视觉质量，但大幅降低了后续扩散模型的计算开销。第二，U-Net 噪声预测网络是扩散模型的核心骨干，在给定当前时间步 t 的带噪声潜变量 z_t 和时间步信息 t 的条件下，预测当前步骤应去除的噪声分量。U-Net 采用编码器-解码器结构配合跳跃连接，由 ResNet 残差块和 Transformer 块交替组成，其中的交叉注意力模块承担了条件控制的关键角色：将文本提示词的特征（通常是 CLIP Text Encoder 的输出）作为 K 和 V，将图像潜变量特征作为 Q，使得去噪过程的每一步都能参考文本约束来调整生成方向。第三，Text Encoder（CLIP 文本编码器）将自然语言提示词编码为文本嵌入向量 τ，作为条件信号注入到 U-Net 的交叉注意力层中。 扩散过程与去噪过程 。训练时，从真实图像出发，按照噪声调度表逐步添加高斯噪声，经过 T 步后变为近似纯噪声，U-Net 学习在给定时间步 t 的条件下预测每一步添加的噪声量，训练损失是预测噪声与真实添加噪声之间的 MSE。推理时，从纯随机噪声出发，U-Net 在每一步预测当前步应去除的噪声，通过迭代去噪逐步还原出清晰的潜变量图像，最后通过 VAE 解码器还原为像素空间图像。 无分类器引导（Classifier-Free Guidance, CFG）的原理。 在训练条件扩散模型时，以一定比例（如 10%）随机将文本条件置空，让模型同时学习有条件和无条件两种生成模式。在推理采样阶段，将条件控制下预测的噪声和无条件预测的噪声进行组合：ε_guided = ε_uncond + w × (ε_cond - ε_uncond)。其中 w 为引导比例（guidance_scale），w 越大条件控制的作用越强。当 w=1 时等价于纯条件生成，w 增大时，模型会更紧密地遵循文本提示词，但图像的自然度可能下降。通过 (ε_cond - ε_uncond) 的差值项，模型在采样过程中从噪声预测中减去（或增强）与文本条件相关的方向，实现对生成方向的精细控制。CFG 是文生图模型中控制生成质量与文本一致性的核心机制。 七、RAG / Agent / 评估 Q18：RAG（检索增强生成）系统的完整流程是什么？在各个环节中有哪些关键优化策略？ RAG 的核心理念 。RAG 是一种增强生成框架，通过检索外部知识库为 LLM 提供生成所需的事实依据，而非依赖模型内部参数化的知识。RAG 解决的核心问题是 LLM 内部知识有限且可能过时，直接参数记忆可能产生幻觉；但将整个知识库塞入上下文窗口既不经济又会导致注意力分散。 RAG 的完整流程分为离线阶段和在线阶段。离线阶段在用户提问前完成：文档分片（Chunking）将原始文档按照一定策略切分为若干片段，分片方式包括按字数、按段落、按章节或按语义边界，分片策略至关重要，过小可能截断关键语义，过大可能稀释核心信息；向量索引（Embedding & Indexing）使用嵌入模型（如 BGE-M3）将每个分片转化为稠密向量，与原文一起存入向量数据库（如 Chroma、Milvus）。 在线阶段在用户提问后依次执行。查询处理是可选的预处理步骤，包括查询改写（Query Rewriting）、查询分解（Query Decomposition）或 HyDE（先生成一个假设答案，用假设答案替代原始 Query 进行检索，以弥合用户 Query 与文档之间的语义差异）。召回（Retrieval）将用户查询的嵌入向量与向量数据库中的文档嵌入进行相似度计算（余弦相似度、欧氏距离或点积），返回 Top-K 个最相关的片段。重排（Reranking）使用更精细但成本更高的 Cross-Encoder 模型（如 bge-reranker-v2-m3）对上一步召回的 K 个候选片段进行精细筛选和重新排序，选出最相关的 k（k < K）个片段。生成（Generation）将重排后的相关片段作为上下文拼接到 Prompt 中，与用户原始问题一起发送给 LLM 生成最终回答。 各环节的关键优化策略。 分片优化方面，父子检索（small-to-big）策略使用较短子片进行高精度检索，但在送入 LLM 时使用子片对应的完整父片，解决上下文缺失和指代不明问题，附加元数据（如来源、说话人、章节标题）提供额外上下文。混合检索方面，同时使用稠密检索（向量语义相似度）和稀疏检索（BM25 关键词匹配），利用 RRF（倒数排名融合）算法进行排名融合，RRF 不依赖绝对分数而是依赖相对排名，公式为 RRF(d) = Σ 1/(k + rank_i(d))，其中 k 取 60，能够公平地将不同尺度、不同含义的检索分数融合起来。重排优化方面，Cross-Encoder 的强项在于将两个文本拼接输入进行联合编码，通过自注意力机制在编码过程中充分进行跨文本信息交换，能够捕获细微的语义差异，远比 Bi-Encoder 的独立编码后向量比较更精确。生成优化方面，考虑 Lost in the Middle 效应（LLM 对上下文开头和结尾的信息更关注，中间部分容易被忽视），将相关性最高的文档排在两端，相关性较低的排在中间，并通过 Prompt 要求模型明确引用来源以减少幻觉。 Q19：ReAct Agent 框架的设计原理是什么？为什么需要「推理 + 行动」的循环模式？Agent 比纯 LLM 多出了什么？ Agent 与纯 LLM 的本质区别。 LLM 是一个强大的大脑，可以思考、推理和生成文本，但它无法直接影响外部世界，像一个知识丰富但没有手脚的学者。Agent 是一个完整的系统架构，构成要素包括 LLM（核心控制器和推理引擎）、记忆（短期上下文 + 长期外挂数据库）、规划（任务分解与策略制定）和工具（感知环境与执行动作的能力）。Agent 能够自主设定目标、拆解任务、调用外部工具 API、读取环境反馈，并循环执行直到完成任务。 ReAct 框架的核心循环是 Thought（思考）→ Action（行动）→ Observation（观察）→ Thought → … → Final Answer。在 Thought 阶段，LLM 生成自然语言推理，分析当前已知信息，判断还需要什么信息，并解释选择下一步行动的原因，当行动失败时 Agent 能分析失败原因并调整策略。在 Action 阶段，调用外部工具如搜索引擎 API、数据库查询、代码执行器和计算器等，工具的调用通过标准化的 JSON 格式指定工具名称和参数。在 Observation 阶段，实时接收行动返回的结果，作为下一步推理和行动的输入依据。推理指导行动的方向，减少无效的工具调用和搜索；行动为推理提供最新的事实依据，使推理建立在可靠信息的基础上。复杂任务被拆解为原子化的推理-行动对进行串行或迭代执行。 为什么需要「推理 + 行动」的循环模式。 如果只有推理没有行动，模型只能依赖内部参数记忆生成内容，无法获取实时外部信息，容易产生幻觉，不知道当前时间、最新新闻和实时股价等超出训练数据的信息。如果只有行动没有推理，模型不知道什么时候该调用什么工具，面对复杂问题无法有效拆解和规划。两者的协同效应使得推理指导行动的方向以减少无效搜索，而行动为推理提供最新的事实依据。 Agent 的核心能力构成。 感知层面，通过工具调用读取 API 返回的 JSON 数据，读取文件系统，浏览网页等。规划层面，LLM 通过推理能力将大问题分解为多个小问题，ReAct 是当前主流的规划框架。记忆层面，短期记忆对应当前的上下文窗口（受限于 Token 长度），长期记忆需要外挂数据库，向量数据库存储非结构化经验，SQL 和图数据库存储结构化事实。 Agent 安全设计的原则。 由于 Agent 具有执行能力（调用工具、写代码、发邮件等），其风险远高于纯对话 LLM。设计应遵循零信任原则：放入沙盒环境（Docker、虚拟机）中运行；每次关键操作之前需要人类确认；权限最小化，不要赋予 Agent 过多权限（如 API Key）；在系统提示词中加入对抗防御指令；设置另一个监控 Agent 观察主 Agent 是否存在敏感行为。 Q20：大模型评估中，一个好的 Benchmark 应该具备哪些标准？目前主流的 Benchmark 分别评测模型的哪些维度？ 好的 Benchmark 的五个标准。 第一是有区分度，不能所有模型都拿高分或满分，必须能够体现强弱模型之间的真正差距。例如经典的 MMLU 和 HumanEval 随着模型能力的快速提升已经越来越缺乏区分度，因此涌现出 MMLU-Pro（十选一，更难）作为补充。第二是可复现且鲁棒，同一模型多次运行得分应稳定，Prompt 的微小变化不应引起剧烈波动，这要求评测流程标准化和自动化。第三是可自动化评估，通过固定答案匹配（如选择题 ABCD、关键词匹配、测试用例通过率）、LLM-as-a-Judge 或评估脚本直接算分，降低人工评估的时间和成本。第四是防数据泄漏，数据集不能出现在模型训练语料中，例如 LM Arena 采用用户实时提问和评判的方式天然防护泄漏，静态数据集则需要通过定期更新或使用带奖金征集的新题目来降低泄漏风险。第五是与人类偏好一致，评测结果应与人类对模型有用性、准确性和无害性的主观判断保持相关。 主流 Benchmark 按评测维度分类。 多学科知识方面，MMLU（四选一，57 个学科，涵盖从高中到专家水平的知识）、MMLU-Pro（十选一版本，需要思维链推理）、MMMLU（多语言版本，防止仅靠记忆英文语料拿分）、HLE（人类最后考试，由各领域博士专家编写，目前顶尖模型也只有 37 分）。推理能力方面，GSM8K（小学数学应用题）、GPQA（研究生水平科学推理）、ARC-AGI-1（抽象推理，看图找规律，与知识储备无关）。代码能力方面，HumanEval（Python 函数补全，考察基本代码逻辑和语法，目前已经接近送分题）、SWE-bench（从真实 GitHub 开源项目中提取用户提交的 Issue，要求模型阅读代码仓库、定位问题文件、写出修复补丁并保证不破坏已有测试，是工程师和做题家的分水岭）。Agent 能力方面，tau2Bench（真实智能客服场景，要求满足客户需求同时不违反业务规定）、MCP-Atlas（涉及 40 多个不同 MCP 服务器和 300 多个工具的复杂工具调用环境，目前最强模型准确率也只有 60% 左右）。多模态能力方面，MMMU（30 多个学科的多模态选择题，包含五线谱、电路图、医学影像等）、CharXiv（从学术论文上理解复杂图表）、Video-MMMU（视频理解加学科知识问答）。人类偏好评估方面，LM Arena（用户实时输入题目，模型实时回答并由用户评判，无法提前背题）、AlpacaEval（指令遵循能力排序）。安全与对齐方面，评估模型在回答危险问题时的拒绝能力、是否存在偏见和歧视、是否会产生幻觉。 评估方式的三种模式。 固定答案匹配最快最低成本，适合选择题和可自动判分的任务。LLM-as-a-Judge 让更强的模型作为裁判评判其他模型的回答质量，判断好坏总比自己生成要好要容易，灵活且低成本，但可能引入裁判模型自身的偏见或幻觉。人类偏好评估通过人类专家评判或收集大量用户真实反馈进行排序，最能反映真实对话质量和用户体验，但成本高且速度慢。 评估的未来趋势将越来越少地依赖选择题，而是更多地依赖 MCP-Atlas、SWE-bench 这类模拟真实工作的实战演习。模型是否能在复杂、嘈杂、多变的环境中完成任务，比是否背下了维基百科更重要。 这 20 个问题覆盖了从架构原理到工程落地的完整链路，希望能帮助你构建系统化的知识体系。整理不易，希望能帮到大家。有什么问题也可以在评论区聊，欢迎关注，会持续分享。",
+      "excerpt": "在大模型领域发表了一些CCFA类或B类论文，前前后后 面试 了十来场，并且有三段实习，包括一段大厂实习。 我感觉 大模型 算法 面试 当中，八股相关的问题是一定可以熟练掌握的",
+      "author": "初长夜",
+      "created_at": 1782458592,
+      "updated_at": 1782458592,
+      "published_date": "2026-06-26",
+      "voteup_count": 98,
+      "comment_count": 8,
+      "url": "https://www.zhihu.com/question/665390929/answer/2053860877275870212",
+      "matched_keywords": [
+        "大模型 岗位 面试"
+      ],
+      "content_type": "大厂面经",
+      "pre_score": 95,
+      "score": 95,
+      "summary_zh": "大模型算法岗面试经验，含Transformer多头注意力等八股题详解与缩放因子原理推导。",
+      "reason": "第一手面试经历，问题具体，机制与推导清晰，有真实研究背景支撑。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "article:1997369840911009008",
+      "content_id": "1997369840911009008",
+      "question_id": "",
+      "platform_type": "article",
+      "title": "多模态 大模型面试 （一）",
+      "content": "这篇文章主要是为了多模态面试准备，如果对多模态感兴趣可以阅读我下面专栏的文章： 多模态文章索引 1. 为什么 ViT 不能简单地像处理文本词元那样，为每个图像块分配一个唯一的、离散的 ID，而是必须采用线性投影生成连续的嵌入向量？ 一、核心结论（一句话版本，面试先说这个） 因为图像 patch 是高维连续数值信号，没有天然的离散词表结构；Transformer 只能处理向量输入，所以必须通过线性投影把连续像素块映射成固定维度的连续嵌入向量，而不能像文本那样直接用离散 ID 查表。 二、为什么文本可以用离散 ID，而图像不可以？ （1）文本的本质是“离散符号系统” 词 / subword 本身是： 离散的有限集合（词表大小 30k / 50k） 每个 token 是一个符号 ID Embedding 层本质是： 👉 ID → 查表 → 向量 比如： \"cat\" → id=1234 → embedding[1234] = 一个向量 （2）图像 patch 是“连续高维数值信号” 一个 patch 本质是： shape = (P, P, 3) 展平后是一个 连续实数向量，比如 16×16×3 = 768 维 每个维度是 0–255 或 0–1 的浮点数 👉 它不是一个“符号”，而是一个连续空间中的点 如果你想给每个 patch 分配一个离散 ID，会出现： patch 取值空间是： [ 256^{(P×P×3)} \\quad（天文数量） ] 根本无法构建“图像词表” 新 patch 几乎永远是“没见过的新 ID” 所以： ❌ 图像 patch 没有天然的、可枚举的离散词表 ❌ 无法像 NLP 一样用 ID + embedding lookup 三、为什么必须用线性投影生成连续嵌入？ （1）Transformer 的输入必须是“向量序列” Self-Attention 需要： Query / Key / Value 都是向量 维度固定（d_model） 所以必须把： patch（高维连续像素） → 映射到 d_model 维向量 这一步就是： 也就是 ViT 里的： Flatten patch Linear projection（等价于一个卷积核 stride=P） （2）线性投影的作用不仅是“降维”，而是“特征学习”** 这个投影层在做： 维度对齐（→ d_model） 通道混合（RGB + 空间） 初级视觉特征抽取 相比“ID 查表”： ID embedding 是静态的 线性投影是可学习的连续映射函数 👉 能学到边缘、颜色组合、纹理等低级视觉模式 四、如果强行把 patch 离散化成 ID，会怎样？ 理论上有两个方向，但都不理想： （1）K-means / VQ 离散化（VQ-VAE 风格） 可以： 先聚类 patch给每个 patch 一个 codebook ID再像 NLP 一样 embedding lookup 但问题是： 信息损失极大（量化误差）codebook 需要极大规模,泛化能力差,训练复杂 👉 这条路后来演化成 Discrete VAE / Tokenizer for images，用于生成模型（DALL·E、VQGAN），但ViT 主要做理解任务，不走这条路 （2）直接把每个像素组合当成 token → 不可行 token 数量爆炸 组合空间无限 完全不可训练 五、面试高分标准回答结构 一个面试级标准答案： 因为文本 token 是天然离散符号，有有限词表，可以通过 ID 查 embedding 表；而图像 patch 是高维连续像素信号，没有可枚举的离散词表，也无法为每个可能的 patch 分配唯一 ID。 Transformer 的自注意力只能处理固定维度的向量序列，因此 ViT 必须先将每个连续的 patch 向量通过线性投影映射到统一维度的连续嵌入空间。这一步既完成了维度对齐，又起到了初级特征抽取的作用。 如果强行离散化 patch，不仅需要极大的 codebook，而且会带来严重的信息损失和泛化问题，因此主流 ViT 采用连续线性投影而非离散 ID embedding。 2. ViT 中 Position Embedding 为什么必须加 这是 ViT / Transformer 面试里 几乎必考的一题 ，而且是区分“会用模型”和“懂模型原理”的关键问题。你问得非常好。 我会从： 结论 → 原因本质 → 数学直觉 → 如果不加会怎样 → ViT 里的具体实现 → 面试标准答案 六个层次，帮你系统梳理。 一、核心结论 因为自注意力机制本身对输入顺序是“完全不敏感的（permutation-invariant）”，如果不加入位置信息，ViT 根本无法知道每个 patch 在图像中的空间位置，模型将丧失空间结构感知能力。 二、本质原因：Self-Attention 天生“不知道顺序 / 位置” Transformer 的注意力计算是： 注意关键点： 输入是一组 token 向量的集合, QK 点积只和向量内容有关 和 token 的“原始顺序 / 空间坐标”完全无关 也就是说：如果你把 patch 序列打乱顺序送进去，不加 position embedding 的 Transformer 输出几乎完全一样。 这在文本里是灾难性的，在图像里更严重：图像的语义高度依赖空间结构 👉 左边 / 右边 / 上下 / 邻近关系 三、为什么图像里位置更重要？ 在 ViT 里：一张图 → 切成 patch → 展平成一个 patch 序列，但这个序列本身是人为规定的顺序（按行扫描）。如果不告诉模型：哪个 patch 在左上角哪个在中间，哪些 patch 彼此相邻，那么：一只猫的脸和尾巴的 patch 顺序被打乱，模型完全不知道它们的空间关系，图像结构直接“塌掉”。👉 没有 position embedding，ViT 退化成“无结构的 patch 集合建模”。 四、如果不加 Position Embedding，会发生什么？ 这是一个非常好的面试追问点。模型会因此变成“置换不变模型（Permutation Invariant）”，即只关心“有哪些 patch 特征”，而不关心“它们在哪里”。其效果相当于把一张图片的所有局部块打乱再让模型理解整体结构，这几乎是不可能完成的任务。 原始 ViT 论文和后续大量实验的结论也证实了这一点：❌ 如果不加位置编码，模型的性能会大幅下降，几乎无法收敛到有意义的视觉结构，尤其在目标检测、图像分割和细粒度识别这类强依赖于空间位置与几何关系的任务中，模型几乎不可用。 五、ViT 里的 Position Embedding 是怎么加的？ （1）基本做法：可学习的一维绝对位置编码 （2）为什么用“一维位置编码”而不是二维？ 这确实道出了ViT设计的核心与演进关键。其经典的设计取舍在于：图像Patch原本是天然的2D网格结构，但Transformer核心架构处理的是1D序列。因此，ViT采用了一种直接而有效的方案——将2D的Patch网格按行扫描，展平为一个1D序列，并通过添加 1D绝对位置编码 来为这个序列标记顺序。 正是这一设计开启了后续各种更优的位置感知方案，例如将位置信息分解为行与列分量的 2D位置编码 ，以及更符合视觉直觉、能灵活建模Patch间相对关系的 相对位置编码 （如Swin Transformer所采用）。这些改进都在不同程度上提升了模型对图像空间结构的理解能力。 整理一段非常标准、偏高阶的回答： 因为 Transformer 的自注意力机制本身对输入顺序是置换不敏感的，只根据 token 内容计算相似度，并不会感知 token 在序列或图像中的原始位置。如果 ViT 不加入 position embedding，模型将无法区分不同 patch 的空间位置，图像的二维结构信息完全丢失。 而视觉任务高度依赖空间关系，例如上下左右、局部邻域和整体结构，因此必须通过位置编码显式注入位置信息。ViT 通常采用可学习的绝对位置编码，将其加到每个 patch embedding 上，使注意力同时建模内容特征和空间位置信息，从而恢复图像的空间结构建模能力。 3. Q-Former 在 BLIP-2 中起什么作用？ 如果对Q-former不太理解，请你看一下我这篇文章： 多模态融合交互基础-从Q-former的演变讲起（白话版本） 如果对BLIP2不理解，可以点击我下面的文章： 多模态大模型论文：从CLIP、BLIP到BLIP2 为什么需要 Q-Former（背景动机） 在多模态大模型中，一个核心难题是如何将高维、密集的视觉特征高效地接入大语言模型。以 ViT 为例，一张图像往往会被编码成上百甚至上千个 patch token，而大语言模型的上下文长度和计算复杂度都非常敏感，如果直接把所有视觉 token 拼接进 LLM，不仅计算成本极高，而且大量低层局部特征会引入噪声，反而不利于语义理解。BLIP-2 的核心创新正是引入 Q-Former 作为中间接口模块，在冻结视觉编码器和语言模型的前提下，实现高效、低成本的视觉-语言对齐。 Q-Former 的核心作用 —— 信息瓶颈 + 语义桥接器 在 BLIP-2 架构中，Q-Former 扮演的是“视觉到语言的桥接器（interface / adapter）”角色，同时也是一个典型的信息瓶颈模块。它通过一组可学习的 Query Token，对冻结的视觉编码器输出进行 cross-attention 查询，从大量 patch 级视觉特征中主动抽取少量高层语义表示，并将其压缩为几十个语言模型可接受的 token。这一过程既显著降低了视觉 token 数量和计算开销，又完成了从“视觉特征空间”到“语言语义空间”的对齐转换，使得 LLM 能够以“语言友好的方式”理解图像信息。 为什么不用池化，而要用 Query 机制（设计优势） 与简单的平均池化或全局特征不同，Q-Former 的 Query Token 是可学习的主动查询机制。每个 Query 可以在 cross-attention 中聚焦于不同区域、目标或属性，从整张图中动态提取最有价值的语义信息。这种方式不仅表达能力更强，而且能够根据下游任务自适应调整关注重点，相当于在视觉特征之上引入了一层“可学习的信息采样器”。这也是 Q-Former 相比直接线性投影或池化方案的重要优势。 训练策略与工程意义 —— 为什么 BLIP-2 成本这么低 BLIP-2 采用了“冻结两端、只训练中间”的两阶段训练策略：在第一阶段，Q-Former 通过图文对比学习、图文匹配等任务学习视觉-语言对齐；在第二阶段，再将 Q-Former 输出接入冻结的 LLM 进行指令微调。整个过程中既不微调大规模视觉编码器，也不微调大语言模型，只需训练一个轻量级接口模块，就能获得强大的多模态能力。这一设计极大降低了训练成本，也为后续 Flamingo、InternVL、Video Q-Former 等接口层架构提供了重要范式。 总结下 Q-former解决了三个核心问题： Q-Former 解决的三个核心问题（这是面试重点） 🔹 问题 1：视觉 token 太多，LLM 吃不下 ViT 输出： 通常 196 / 576 / 上千个 patch token LLM 的上下文窗口有限 直接拼进去： 计算量爆炸 噪声巨大 Q-Former做什么？ 👉 用 少量 Query Token（比如 32 个） 👉 从大量视觉 token 中“查询 + 汇聚”关键信息 这就是： Information Bottleneck（信息瓶颈） 🔹 问题 2：视觉特征和语言空间不对齐 ViT 输出的是： 视觉语义空间 patch 级局部特征 LLM 期望的是： 高层语义 token 类似“词语 / 句子级”的表示 Q-Former 作用： 通过 cross-attention： Query ←→ Visual tokens 抽取： 目标级 语义级 可语言化的信息 👉 把“视觉特征”变成“语言友好的语义 token” 🔹 问题 3：不能微调 LLM，怎么接入视觉？ BLIP-2 的设计哲学是： ❌ 不微调大模型（太贵） ❌ 不改 ViT（破坏视觉能力） ✅ 只训练一个轻量中间模块 Q-Former 正是这个： 既对接 ViT 又对接 LLM 起到： Adapter / Interface / Bridge 的作用 4. BLIP-2 采用了冻结预训练 ViT 和 LLM，仅训练 Q-Former 的策略。这种设计的核心动机和优势是什么？ 这是一个非常经典、而且在面试与论文讨论中经常被问到的点。BLIP-2 的“冻结 ViT + 冻结 LLM，只训练 Q-Former”其实是当前多模态大模型范式的奠基式设计之一。 从 动机 → 机制 → 优势 → 对后续模型的影响 四个层次系统讲清楚。 一、核心动机：解决「视觉模型 ≠ 语言模型」的巨大鸿沟 在 BLIP-2 之前，多模态模型面临三个根本难题： ❓ 问题 1：视觉编码器和大语言模型表征空间完全不一致 ViT 输出的是 高维连续视觉 patch 表征 LLM 期望的是 离散语义 token embedding 两者在： 维度 分布 语义粒度 上都高度不匹配。 如果 直接拼接 / 微调整个模型 ： 训练极不稳定 需要天量图文对数据 会破坏已经训练好的 LLM 语言能力（灾难性遗忘） ❓ 问题 2：端到端训练成本不可承受 ViT + LLM 都是 百亿级参数 ： 全量微调：显存爆炸 收敛极慢 工程难度极高 而现实中高质量图文指令数据远少于纯文本。 ❓ 问题 3：如何最大化“复用现有最强模型”？ BLIP-2 的哲学是： 不重新训练视觉理解能力，也不破坏语言生成能力，只学习“对齐接口” 这就引出了 Q-Former。 二、Q-Former 的作用：一个“视觉 → 语言”的智能翻译器 BLIP-2 架构是： Frozen ViT → Q-Former → Frozen LLM 🔹 Q-Former 做了两件关键事情： （1）从 ViT 中“查询”出少量高价值视觉语义 token Q-Former 里有一组 可学习的 Query Tokens（通常 32 个） 它们通过 cross-attention 去 ViT 的 patch 特征中“提问”： “哪些视觉信息对语言任务最有用？” 这样就实现了： 从几百个 patch token 压缩成几十个 高语义密度的视觉语义 token，这一步是 信息提炼 / 视觉摘要。 （2）把视觉表征“翻译”成 LLM 能理解的语义空间 Q-Former 的输出维度、分布被训练成： 贴近 LLM 的 embedding 分布 可作为“伪 token”输入给 LLM 相当于一个： 🎯 Learned Adapter / Semantic Bridge / 多模态接口层 三、冻结 ViT + 冻结 LLM，只训练 Q-Former 的核心优势 这是设计的精华所在。 ✅ 优势一：最大化复用最强单模态模型能力（零破坏） ViT：保留最强视觉表征能力 LLM：完全保留语言理解 + 推理 + 生成能力 不微调 LLM 的好处极大： 不破坏语言能力 不需要大规模指令微调 避免 hallucination 增加 多模态能力 = 在不牺牲语言智能的前提下叠加视觉能力 这是后来几乎所有模型的共识路线。 ✅ 优势二：训练成本极低，样本效率极高 只训练： Q-Former（约 100M 量级） 带来的效果： 显存需求大幅下降 可以用中等规模图文对训练 收敛非常快 工程极稳定 这使得小团队也能把 GPT / FLAN-T5 等大模型“多模态化”，这是 BLIP-2 爆火的重要原因。 ✅ 优势三：避免“视觉噪声”污染语言模型 如果直接把所有 patch token 输入 LLM： 输入序列极长 噪声极多 干扰语言推理 Q-Former 的 Query 机制起到： 🎯 信息选择 + 语义过滤 + 压缩对齐 LLM 只看到“已经高度语义化的视觉 token”，而不是原始视觉特征。 ✅ 优势四：模块化、可插拔、可扩展 这是工程与研究层面的巨大优势。 可以： 换 ViT（CLIP / EVA / InternViT） 换 LLM（OPT / FLAN-T5 / Vicuna / Qwen） 只重新训练 Q-Former 这奠定了： BLIP-2 → MiniGPT-4 InstructBLIP LLaVA（前期版本） Qwen-VL 的早期路线 四、从理论视角看：这是“最优对齐策略” 从表征学习角度看： ViT 空间：连续视觉 manifold LLM 空间：离散语义 manifold Q-Former 实际在学： 一个 跨模态对齐映射函数 f: V → T 而冻结两端的好处是： 保证两端 manifold 稳定 只学习最小必要映射 避免双边同时漂移导致训练崩溃 这是一个非常典型的： Bottleneck Alignment + Adapter Learning + Information Bottleneck 设计 一句话面试标准答案 BLIP-2 冻结 ViT 和 LLM、只训练 Q-Former 的核心动机 ，是在最大化复用强视觉模型与大语言模型能力的同时，避免高成本端到端训练和破坏语言能力。 Q-Former 作为一个跨模态对齐接口，一方面通过 Query 机制从 ViT 中提取少量高语义密度的视觉 token，另一方面将其映射到 LLM 可理解的语义空间，实现稳定高效的视觉-语言对齐。 这种设计显著降低训练成本、提升样本效率、避免视觉噪声干扰语言推理，并提供高度模块化的可扩展架构，是后续 LLaVA、MiniGPT-4、InstructBLIP 等多模态大模型的基础范式。 5. BLIP-2 是如何连接预训练的图片编码器和预训练 LLM 的？为何不直接将视觉编码器的输出连接到语言模型，而要引入 Q-Former 这一中间层结构？ 原理可以看上个问题的回答，针对于这个问题可以这么回答： BLIP-2 并未直接将视觉编码器输出连接到语言模型，而是通过 Q-Former 作为中间对齐层。 这是因为视觉 patch 特征在 token 数量、分布形态与语义结构上都与语言模型期望的输入严重不匹配，直接拼接会导致计算复杂度爆炸、训练不稳定并破坏原有语言能力。 Q-Former 通过可学习的 Query Tokens 对视觉特征进行语义选择与压缩，并将其映射到 LLM 可接受的表示空间，从而在冻结两端模型的前提下，实现稳定、高效且低成本的跨模态对齐。",
+      "excerpt": "Q-Former（背景动机） 在多模态 大模型 中，一个核心难题是如何将高维、密集的视觉特征高效地接入大语言模型。以 ViT 为例",
+      "author": "Trancy Wang",
+      "created_at": 1768990857,
+      "updated_at": 1782990518,
+      "published_date": "2026-01-21",
+      "voteup_count": 47,
+      "comment_count": 2,
+      "url": "https://zhuanlan.zhihu.com/p/1997369840911009008",
+      "matched_keywords": [
+        "大模型 岗位 面试"
+      ],
+      "content_type": "大厂面经",
+      "pre_score": 89,
+      "score": 89,
+      "summary_zh": "多模态大模型面试解析，深入对比图像patch与文本token差异，阐明线性投影必要性及几何直觉。",
+      "reason": "聚焦具体技术点，机制讲清、推导严谨、对比明确，属高质量知识解读。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "article:2045452942707315286",
+      "content_id": "2045452942707315286",
+      "question_id": "",
+      "platform_type": "article",
+      "title": "一文看懂 AI Agent 的7大核心模块：Skill、RAG、MCP、Harness……",
+      "content": "「AI agent到底在卷什么？」 今年5月，OpenAI 发布了 GPT-5。但与一年前 GPT-4o 发布时的全民狂欢不同，这次行业的反应异常【 平静】 。 不是因为 GPT-5 不够强大。而是大模型本身，已经不再是 AI 竞争的核心壁垒了。 而是：Agent。 很多人以为，Agent 就是\"能联网的 GPT\"，就是\"大模型加几个工具\"。 这是对 Agent 最大的误解。 今天这篇文章，我们将用通俗易懂的语言来聊聊，构建一个强大的 AI Agent，需要的 7 大核心工程模块（全文较长，建议收藏阅读）： Token、Skill、Prompt、RAG、MCP、SDD、Harness 01 Token：AI系统运行的基础信息载体 Token：没错，那个按个数收费的东西。 一个汉字大约等于 1.3 个 Token，一个英文单词大约等于 1 个 Token，一张 1024x1024 的图片大约等于 768 个 Token。 Token中文称作词元，也是大模型可以识别和处理的最小信息单位。 就像我们人类的大脑是用神经元的电信号来思考的，AI 的大脑是用 Token 来思考的。 大模型无法直接读懂文字符号，只能识别数字化编码信息。分词器承担着语言翻译与拆分的作用，会把我们输入的文字、系统预设的指令、检索获取的资料文本，统一切割成一个个细碎的词元，再为每一个独立词元分配专属的数字编号。 模型后续所有的理解、推理、计算和文字生成工作，都依托这些数字编码完成，词元的拆分与读取过程，是AI所有交互行为的前置基础。 所有的环节都在消耗 Token，所有的信息都以 Token 的形式存在。 Token的管控水平，会关联AI agent运行过程中的多项基础指标。 可以将Token理解为AI工作的 “工作量计量单位与资源配额” ，用户每一次提问、每一份上传文件、每一次资料检索、每一段模型输出内容，都会消耗对应数量的Token。 Token 的数量，决定了 AI 的思考深度。 Token的使用规模，直接关联AI运行的资源成本，同时限定模型能够承载的上下文信息长度，对模型的信息留存能力和内容响应速度产生影响。 很多人以为，大模型的思考深度只和它的参数数量有关。其实不然。 大模型的思考深度，同样和它能处理的 Token 数量密切相关。 一个简单的数学题：\"1+1 等于几？\"，只需要几个 Token 就能解决。但一个复杂的商业问题：\"请分析具身智能行业未来三年的战略方向，包括市场趋势、竞争格局等\"，可能需要几万甚至几十万 Token 才能完整地思考清楚。 大模型的思考过程，本质上是一个 Token 一个 Token 地生成下一个最可能的 Token 的过程。它每生成一个 Token，就相当于完成了一步推理。所以，Token 的数量，就是 AI 推理步数的上限。 这就是为什么上下文窗口越大的大模型，能解决越复杂的问题。 不是因为它更聪明，而是因为它能进行更多步的推理。 如果Token消耗管控粗放，冗余文本过多，会占用大量资源，造成响应变慢、对话上下文截断、运行成本增加等情况。 在实际应用场景中，通过 精简无效话术、优化提示文本、筛选有效检索内容 等方式调控Token使用规模，可以让AI agent在固定资源配额内，承载更长的任务链路与更多的有效信息，维持平稳高效的运行状态。 因此，对于规模化落地的AI agent产品而言，Token的精细化管控，是优化产品使用体验、降低运行成本的基础手段。 Token 压缩技术的价值。它不仅能降低成本，更能提高 AI 的思考质量。 02 Skill：是“血液”，也是钱 很多人对Agent有一种不切实际的幻想。觉得它像个神仙，念个咒语“帮我把这个文件转成PDF发给XX邮箱”，它就能凭空完成。 其实，Agent不能凭空做任何事。 它能做的，全依赖Skill。 Skill是经过规整整理的本地操作指令合集 （本质是文本，而不是可执行程序） ，是依托大模型打造的专业化能力整合形式。 简单来说，Skill，就是一个一个已经封装好、能被大模型调用的功能模块 。 查询天气是个Skill，发邮件是个Skill，在CRM系统里创建工单也是个Skill。 基础大模型拥有通用的语言理解与逻辑推理能力，却不熟悉各行各业的具体工作流程，也没有适配专属场景的作业工具与标准。Skill的存在，就是用来补齐这类场景化短板， 把行业工作流程、专业知识、实操工具整套整合起来 ，可供AI agent在对应场景中主动调用或按需调取使用，让通用AI可以快速适配垂直岗位的工作模式。 Skill的内容构成具备较强的完整性与实用性，内部会收纳对应场景的说明文档、标准化工作流程、落地模板案例、实操脚本工具以及各类参考学习资料。 安装对应Skill后的AI agent，相当于掌握了对应岗位的工作技能。 常见的Skill类型包含 代码编写、文档总结、PPT制作、数据检索、内容校对 等多个类别，覆盖办公、研发、运营等诸多领域，能够适配不同岗位的常态化工作需求。 行业内多数AI agent的迭代升级，不在于基础模型的算法精进，而在于Skill能力库的持续扩充与优化。 业内玩笑话评判一个Agent有没有真本事，别看它的聊天界面多华丽，直接问一句话： “你的Skill清单有多少项？” Skill最要命的是本身是个指令文本，包含完整某项任务的一系列指令，必须要有接受指令的执行程序来执行才有效。 否则就是一滩废品。 如果要类比，老计算机用户最接近的类比是shell脚本或者DOS批处理程序，比如.bat .sh文件最类似skill。 值得一提的是，在过去，每个大模型厂商都有自己的 Skill 标准。OpenAI 有 Function Calling，Anthropic 有 Tool Use，谷歌有 Tools。 这导致 Skill 无法在不同的大模型之间通用。 而 2026 年，行业终于形成了统一的 Skill 标准： ——OpenAI 的 Function Calling 格式。现在，几乎所有的大模型和 Agent 框架都支持这个标准。 03 Prompt：最被低估，却最关键 Prompt，也就是提示词，是用户或系统赋予大模型的行为指令内容。 但Prompt不属于简单的问答语句，是一套用来规范AI角色定位、工作规则、执行目标、工具用法、输出格式与约束条件的完整设定内容，相当于给AI编写专属的运行程序。 简单来说，在AI Agent时代，Prompt是 AI 的“编程语言” 。 很多人对 Prompt 的理解，还停留在 \"怎么提问才能让大模型给出更好的答案\" 的层面。 这是对 Prompt 最大的误解。 在传统的计算机时代，我们用 Python、Java、C++ 这些编程语言来告诉计算机要做什么。在 AI 时代，我们用自然语言来告诉大模型要做什么。 这种用自然语言编写的程序，就是 Prompt。 传统的编程语言，是精确的、确定的。你写的每一行代码，计算机都会严格执行。而 Prompt，是模糊的、概率性的。你写的每一句话，大模型都会根据它的理解，生成一个最可能的结果。 这就是为什么很多人觉得 Prompt 很难写。因为你不是在给一个听话的下属下命令，而是在和一个有自己想法的同事沟通。你需要用清晰、准确、无歧义的语言，告诉它你的需求、你的目标、你的约束条件。 一个好的 Prompt，能让一个普通的大模型变成一个强大的 Agent。一个差的 Prompt，能让一个最先进的大模型变成一个傻子。 大模型本身具备基础的理解与生成能力，但没有固定的行为逻辑和工作范式，输出内容的风格、方向、标准完全依托接收的Prompt内容决定。日常使用中， 设 定AI的职业身份、划定任务范围、明确输出版式、限制违规内容、标注工具使用规则等操作， 都属于Prompt搭建的范畴 。 合理的Prompt设定，可以让AI摆脱随机、泛化的输出状态，按照既定规则完成标准化、规范化的任务作业。 在AI agent的整套运行体系中，Prompt是串联各类能力模块的前置基础。 模型的任务拆解逻辑、Skill技能的调用规则、RAG检索的筛选标准、外部工具的使用方式，都可以通过Prompt进行提前定义与约束。 Prompt，也分几种。 任务 Prompt ：是最基础的 Prompt，它告诉大模型要完成什么具体的任务。 比如：\"请帮我写一封邮件\" 任务 Prompt 的核心是清晰、准确、无歧义。你需要明确地告诉大模型，你的输入是什么，输出是什么，格式要求是什么。 角色 Prompt：是告诉大模型，它应该扮演什么角色来完成任务。 比如：\"你是一个经验丰富的医生\" 角色 Prompt 的核心是给大模型一个身份认同。当大模型认同了自己的角色，它就会用这个角色的思维方式、知识体系和语言风格来完成任务。 思维 Prompt ：是最高级的 Prompt，它告诉大模型应该如何思考来完成任务。 比如：\"请先列出所有可能的方案，然后逐一分析它们的优缺点\" 思维 Prompt 的核心是引导大模型的推理过程。很多时候，大模型不是不会解决问题，而是不知道应该如何思考问题。一个好的思维 Prompt，能让大模型的推理能力提升一个数量级。 没有万能的 Prompt。 不同的任务、不同的大模型、不同的场景，需要不同的 Prompt。最好的 Prompt，永远是针对具体问题定制的 Prompt。 04 RAG：让它不一本正经的胡说八道 RAG全称为检索增强生成，是一种辅助大模型完成高质量内容生成的技术方式。 它的全称是检索增强生成（Retrieval-Augmented Generation）。 这个名字很拗口，但道理极其简单。 大模型有一个致命的生理缺陷：它的知识是在训练那一刻被冻死的，而且它有个坏毛病，喜欢不懂装懂。这在行业里叫 “幻觉” 。 怎么解决？让他开卷考试。 可以将这项技术理解为 给AI配备了一套实时查阅的资料书架 ，该技术的运行逻辑，是让大模型在生成作答内容之前，先主动检索、筛选、调取相关参考资料，用真实、专属的外部信息辅助自身完成内容输出，模式类似于学生开卷答题，依托参考资料保障答案的准确性与专业性。 基础大模型的知识储备，全部来源于前期海量通用数据的预训练过程，这类知识存在一定的局限性： 预训练数据多为公开通用内容，不仅难以覆盖企业内部的专属私有资料、私密业务数据，也无法适配小众行业的细分专业内容，同时无法实时跟进更新的行业政策、市场数据与技术规范。 RAG技术可以有效改善这类问题，技术落地过程中，工作人员会把企业私有文档、行业数据库、实时资讯、专属案例、业务规范等各类增量信息，进行结构化处理并统一存储， 搭建专属的私有知识库，为AI提供专属资料来源 。 RAG的底层逻辑，是对大模型“知识边界”的无限拓展。 它让一个只有7秒记忆的金鱼，瞬间拥有了整个图书馆的阅历。 这种运行方式，可以弥补大模型知识覆盖范围有限、更新不及时的不足，减少模型输出内容老旧、脱离业务场景、凭空编造信息的情况，让AI agent在处理专业化、个性化、实时性任务时，输出内容的适配度与可信度得到提升，是AI agent深度落地各行业场景的重要支撑技术。 按照二八原则来说： RAG的效果，80%取决于你知识库的切片质量和检索策略，剩下20%才是模型本身。 都是为了扩展模型的知识，RAG比模型微调更吃香。 原因就好像在知识快速更新的时代，每次去查新知识（RAG）比把新知识牢牢记忆进头脑改变神经元（微调）划算多了。只有最根本、最高价值的知识才值得记入头脑（神经网络），别的不值得。 05 MCP：AI世界的USB-C MCP即模型上下文协议，是为各类AI应用搭建的统一连接标准，作用是协助AI便捷对接各类外部数据资源与实操工具。 很多人问：Agent 和普通大模型到底有什么区别？ 直观答案是： 有没有 MCP 。 没有 MCP，大模型只是一个被动的问答工具。你问它，它才答。你不问，它什么也不会做。它不会主动思 考，不会主动行动 ，不会主动解决问题。 有了 MCP，大模型才能变成一个主动的智能体。 这就是 MCP 的核心价值：它赋予了大模型自主性。 可以将MCP理解为AI世界通用的标准化接口规范，为模型和所有外部设备、数据、工具搭建统一的沟通语言。 MCP的优点是，它是个协议。 在MCP协议未普及的阶段，AI agent的外部对接存在明显短板，每一类外部工具、每一类数据库、每一类文件系统，都需要开发单独的适配接口才能实现连通。不仅开发工作量大、周期长，不同资源之间的通信规则不统一，兼容性较差，会大幅限制AI agent的能力拓展范围。MCP协议统一了AI与所有外部资源的通信规则，所有支持该协议的工具与资源，都可以直接与AI完成对接，无需重复开发适配程序。 MCP的缺点，也是它是个协议。 协议需要双方都遵守才有用，一方不遵守或者不响应（后台设置下就封了）的话，用户得不到任何结果。所以MCP和skill一样，往往被绑定在一个体系（它们原生开发的体系）中，挪到另外一个体系就失效了。这成了一种绑定客户的手段。 06 SDD：整个 Agent 生态系统的基础 SDD也就是规格驱动开发，是一套适配AI agent开发迭代的标准化工作模式。 SDD 的全称是 Skill Definition Document，即技能定义文档。 它是标准化描述 Skill 的格式。 很多人会忽略 SDD 这个概念，觉得它只是一个无关紧要的文档。但实际上，SDD 是整个 Agent 生态系统的基础。 没有标准化的 SDD，不同开发者开发的 Skill 就无法互相调用。就像如果每个国家都有自己的语言，全世界就无法交流一样。 SDD 则让不同的 MCP、不同的 Skill、不同的大模型之间，能够互相理解、互相通信、互相协作。 AI agent的开发工作本身具备较强的灵活性。 容易受到模糊需求、零散规划、临时调整的影响，出现开发进度混乱、功能适配偏差、迭代方向偏移、功能重复冗余等各类问题。 SDD模式可以将模糊笼统的用户需求、开发目标梳理为规整、稳定、可落地的工作依据，为后续全流程开发、迭代、优化工作提供统一的执行标准，让人工开发与AI自主开发都有固定依据可循。 传统的 SDD 只能描述文本输入输出的 Skill。 而最新的多模态 SDD，能够描述支持图像、音频、视频输入输出的 Skill。 07 Harness：企业级 Agent 的必备组件 Harness工程也叫作驾驭工程，是一套专门为AI Agent搭建适配运行环境的实用性工程思路，是保障AI agent从功能落地到稳定商用的重要工程体系。 谁驾驭谁？ 用户驾驭AI，驾驭工程就像人驾驭马的缰绳，你叫它缰绳工程也没错。 可以将Harness理解为AI agent的专属运维管控中心，负责统筹、调度、监管AI的所有运行行为，让零散的技术模块、工具能力、对话流程形成一套稳定运转的整体系统。 很多个人开发者做的 Agent，都没有 Harness。他们直接把大模型和 Skill 连起来，就开始运行了。 但如果要把 Agent 放到生产环境中运行，特别是在企业环境中运行，Harness 是必不可少的。 Harness工程的内容覆盖范围较为全面： 包含对话上下文统筹、工具调用管理、独立运行沙箱、使用权限划分、内容测试核验、运行日志记录、内容审核标准以及问题调整机制等多项内容。整套工程体系的搭建目的，是让AI Agent可以平稳融入各类实际工作系统，让整体运行状态更加稳定可控，支撑AI agent完成各类周期较长、流程复杂、步骤繁琐的持续性工作任务。 上下文统筹： 可以规整AI agent的对话与任务信息，及时梳理冗余无效内容、长期留存有效关键信息，规避信息堆叠混乱、内容污染带来的遗忘、逻辑错乱等运行问题。 工具调用管理： 可以规范各类外部工具的调用顺序、调用频次与调用权限，统筹多工具协同作业的节奏，减少调用冲突、调用异常、重复调用等情况。 独立运行沙箱： 可以为AI agent的测试、实操工作提供隔离环境，将测试操作与正式业务系统分隔开，规避异常操作对整体系统造成的影响。权限划分、内容审核与日志记录等机制，能够规范AI agent的运行行为，完整留存运行数据，为后续问题排查、功能优化、风险管控、迭代升级提供有效依据。 当前行业发展过程中，基础大模型的基础能力趋于同质化，AI产品的比拼重心逐步脱离基础模型规模的对比，慢慢转向Harness工程搭建质量、上下文管理能力、工具系统稳定性、任务工作流成熟度等工程化维度的比拼。 完善的Harness驾驭工程，是AI agent摆脱实验性Demo属性、实现规模化、常态化、稳定化落地应用的关键支撑。 一个典型的驾驭工程场景就是生成代码，用户事先设置好测试用例套、代码标准（比如圈复杂度，代码层次，变量命名标准等等），然后让编程类LLM不停生成，不断产生反馈来优化下一轮生成，直到代码质量和代码功能（能通过所有测试用例）都达标为止。 为什么你个人的驾驭工程效果不好？ 因为你的大模型太弱，算力太差，不管迭代多少次都不能达标。 08 AI Agent的多维协同体系 一个强大的AI Agent，其核心竞争力在于一个协同工作的多层技术栈，而非单一的LLM。这七个关键模块构成了它的骨架： 资源层 (Token)：精细化管理AI运行的“燃料”与“内存”。 能力层 (Skill, Prompt, RAG, MCP)：赋予AI场景技能、行为指令、外部知识和连接世界的手脚。 工程层 (SDD, Harness)：确保其开发过程规范、运行状态稳定可控。 随着大模型基础能力趋于同质化，AI行业的竞争焦点已从模型本身，转移到如何将这些模块高效整合的系统工程能力上。 正是这种全链路的工程优化，推动着AI Agent从简单的聊天工具，进化为能够承担复杂任务的“数字员工”。 写到这里，这篇数千字长文也已接近尾声了。 很多人在想：\"AI Agent 这么强大，会不会取代我的工作？\" 答案或许是：\"AI Agent 不会取代你，但会用 AI Agent 的人会取代你\"。 而行业竞争的下半场，已经不再是“谁的模型更强”的军备竞赛。 而是“谁能把这组「七巧板」拼得更快、更稳、成本更低”的效率之争。 谁先搭建起这套体系，谁就能把AI从“一个有趣的新奇玩意儿”，变成“一台持续稳定输出价值的商业机器”。",
+      "excerpt": "Harness工程也叫作驾驭工程，是一套专门为 AI Agent 搭建适配运行环境的实用性工程思路，是保障 AI agent 从功能落地到稳定商用的重要工程体系",
+      "author": "深蓝学院",
+      "created_at": 1780489464,
+      "updated_at": 1780489464,
+      "published_date": "2026-06-03",
+      "voteup_count": 38,
+      "comment_count": 2,
+      "url": "https://zhuanlan.zhihu.com/p/2045452942707315286",
+      "matched_keywords": [
+        "AI Agent 知识 解读"
+      ],
+      "content_type": "知识解读",
+      "pre_score": 88,
+      "score": 88,
+      "summary_zh": "AI Agent核心模块解读，以Token为切入点讲清其作为信息载体与资源计量单位的双重机制。",
+      "reason": "机制阐释清晰，结合实例与类比，指出常见误区（如Token仅是计费单位），深度足。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "zhihu_candidate_count": 32,
+  "zhihu_qualified_count": 16,
+  "zhihu_status": "fetched",
+  "x": [
+    {
+      "id": "2080333504446108104",
+      "text": "Announcing OpenWorker! An open-source agent that doesn't just chat with you, but delivers finished work -- like hand you a polished document, send a slack message, or update a calendar entry. Ask it to prepare a customer brief, untangle your calendar, draft a report, or triage a Slack alert. It works across your files and everyday tools, produces the deliverable, and checks in before doing anything consequential. OpenWorker runs on your Mac, with Windows support coming soon. It does not lock you into any one model. Bring your own API key and run it with GPT 5.6 Sol, Claude Fable, Gemini 3.6, an open weight model (like Kimi, GLM, DeepSeek, Inkling), or Ollama to keep your data local. Your data does not leave your machine except through an LLM provider and integrations that you choose. @rohitcprasad and I are building OpenWorker because AI coworkers are an important way to get work done, and we want there to be an open, privacy-preserving, model-independent option. Check it out and let us know what you think! Try it out: https://t.co/P0mGnI1o31 (requires your own API key) Source code: https://t.co/NYCiTD6hSq",
+      "author_name": "Andrew Ng",
+      "author_handle": "AndrewYNg",
+      "author_verified": true,
+      "author_followers": 1719544,
+      "source_tier": "领域专家",
+      "created_at": 1784825132,
+      "published_date": "2026-07-23",
+      "like_count": 6376,
+      "retweet_count": 876,
+      "reply_count": 283,
+      "quote_count": 119,
+      "bookmark_count": 6701,
+      "view_count": 453757,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "http://openworker.com",
+        "https://github.com/andrewyng/openworker"
+      ],
+      "url": "https://x.com/AndrewYNg/status/2080333504446108104",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "开源项目",
+      "pre_score": 88,
+      "score": 88,
+      "title": "OpenWorker开源AI协作者：本地运行、模型无关、隐私优先",
+      "summary_zh": "Andrew Ng联合发布的OpenWorker是可在Mac本地运行的开源AI协作者，支持多模型接入（GPT/Claude/Gemini/开源模型），数据不出设备，强调隐私与模型选择自由。",
+      "reason": "官方主导的高可信开源项目，具明确技术架构、隐私设计与跨平台路线图，信息增量显著。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2079990597973057691",
+      "text": "The Claude Security plugin for Claude Code is now available in beta. Scan your changes for vulnerabilities before you commit, or run a full scan across your codebase, all from your terminal on the Claude inference you already run. https://t.co/tEM7Tz7f1o",
+      "author_name": "Claude",
+      "author_handle": "claudeai",
+      "author_verified": true,
+      "author_followers": 1673065,
+      "source_tier": "官方账号",
+      "created_at": 1784743377,
+      "published_date": "2026-07-22",
+      "like_count": 16559,
+      "retweet_count": 1483,
+      "reply_count": 569,
+      "quote_count": 393,
+      "bookmark_count": 11125,
+      "view_count": 2226869,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/claudeai/status/2079990597973057691",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 82,
+      "score": 82,
+      "title": "Claude安全插件上线Beta版：终端内代码漏洞扫描",
+      "summary_zh": "Claude官方推出Security插件Beta版，支持在终端中对代码变更或全量代码库进行漏洞扫描，集成于现有Claude推理环境，无需额外部署。",
+      "reason": "官方发布具明确功能边界与集成方式的安全工具，属AI工程化关键基础设施更新。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2080378182469857576",
+      "text": "ChatGPT Voice is now in the desktop app. Control your computer and direct multiple agents running in ChatGPT Work or Codex, using just your voice. It's powered by GPT-Live, so it can speak, listen, and coordinate work in the app at the same time. Rolling out globally today on macOS and Windows to Plus, Pro, Business, Edu, and Enterprise plans.",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5053459,
+      "source_tier": "官方账号",
+      "created_at": 1784835784,
+      "published_date": "2026-07-23",
+      "like_count": 10336,
+      "retweet_count": 1103,
+      "reply_count": 869,
+      "quote_count": 927,
+      "bookmark_count": 2629,
+      "view_count": 2281908,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/OpenAI/status/2080378182469857576",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 82,
+      "score": 82,
+      "title": "ChatGPT桌面端上线语音控制：支持多Agent协同调度",
+      "summary_zh": "OpenAI将ChatGPT Voice扩展至桌面端，支持语音操控计算机及协调ChatGPT Work/Codex中的多个Agent，由GPT-Live模型驱动，实现同步听、说、执行。",
+      "reason": "官方产品重大能力升级，首次实现语音驱动多Agent协同，具明确技术栈（GPT-Live）与落地场景。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2080540128452223375",
+      "text": "14 ARXIV PAPERS THAT FINALLY EXPLAIN AI AGENTS 1. AI Agent Systems — the survey that maps the whole modern agent stack in one place. https://t.co/bSn3mqvNrf 2. Agentic Reasoning — reframes LLMs as agents that plan, act, and learn through interaction. https://t.co/Vz0DtsGEFn 3. SimpleMem — lifelong memory that stays efficient without exploding the context window. https://t.co/5OPCLe8lPa 4. Terminal-Bench — the hard CLI benchmark that still shows frontier agents under 65%. https://t.co/a0rYwS9hnu 5. Multi-Agent AI Systems Study — first large-scale look at what actually breaks in real MAS codebases. https://t.co/rjsXiWYvby 6. Agent-as-a-Judge — agents that plan, tool-use, and collaborate to judge other agents. https://t.co/V795OiED1T 7. Agent Skills — the new composable skill layer that replaced raw tool calling. https://t.co/jJ4wZYVUkx 8. Computer Use Agents Reliability — why desktop agents still flake even when they succeed once. https://t.co/zSGTWvbEBd 9. How to Interpret Agent Behavior — the taxonomy for reading what agents are actually doing. https://t.co/l4Zbng5iYp 10. Agentic Trading — closed-loop LLM agents in real financial markets and their bottlenecks. https://t.co/cOSw1Y8sJj 11. Self-Compacting Agents — the agent decides when and how to clean its own growing traces. https://t.co/kpngxmLG9k 12. Agents’ Last Exam — long-horizon, real-world tasks with verifiable economic outcomes. https://t.co/77DMS472Du 13. Agentic Code Review — how AI agent reviewers change speed and quality on real GitHub PRs. https://t.co/7mM6PjstT7 14. Self-GC — agents that govern their own context like garbage collection, not just dump tokens. https://t.co/GCrcIpprD0 start with #1. everything after it makes more sense once you've read that one first.",
+      "author_name": "Muhammad Ayan",
+      "author_handle": "socialwithaayan",
+      "author_verified": true,
+      "author_followers": 69174,
+      "source_tier": "认证来源",
+      "created_at": 1784874395,
+      "published_date": "2026-07-24",
+      "like_count": 24,
+      "retweet_count": 11,
+      "reply_count": 6,
+      "quote_count": 0,
+      "bookmark_count": 12,
+      "view_count": 2809,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": true,
+      "external_urls": [
+        "https://arxiv.org/abs/2601.01743",
+        "https://arxiv.org/abs/2601.02553",
+        "https://arxiv.org/abs/2601.05111",
+        "https://arxiv.org/abs/2601.07136",
+        "https://arxiv.org/abs/2601.11868",
+        "https://arxiv.org/abs/2601.12538",
+        "https://arxiv.org/abs/2602.12430",
+        "https://arxiv.org/abs/2604.17849",
+        "https://arxiv.org/abs/2605.13625",
+        "https://arxiv.org/abs/2605.19337",
+        "https://arxiv.org/abs/2606.05405",
+        "https://arxiv.org/abs/2606.23525",
+        "https://arxiv.org/abs/2607.00692",
+        "https://arxiv.org/abs/2607.13196"
+      ],
+      "url": "https://x.com/socialwithaayan/status/2080540128452223375",
+      "matched_queries": [
+        "topic-1"
+      ],
+      "content_type": "论文发现",
+      "pre_score": 78,
+      "score": 78,
+      "title": "14篇arXiv论文系统梳理AI Agent研究前沿",
+      "summary_zh": "认证研究者整理14篇最新arXiv论文，覆盖Agent系统综述、记忆机制、CLI基准测试、多Agent失效分析、技能抽象层等核心方向。",
+      "reason": "高质量论文聚合，覆盖Agent领域关键子问题，每篇均有明确技术贡献点与链接，信息密度高。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 37,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "1bbffdda5b9e116ea475b0866f9766f240fc665827bb5a28534af41741e322bf"
+}
