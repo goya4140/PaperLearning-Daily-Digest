@@ -1,0 +1,579 @@
+{
+  "version": 2,
+  "date": "2026-07-30",
+  "arxiv_query_date": "2026-07-29",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-07-30T07:31:26.310723+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607290000+TO+202607292359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202607290000+TO+202607292359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-07-29T00:00:00Z",
+    "2026-07-29T23:59:59Z"
+  ],
+  "raw_candidate_count": 273,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2607.27080",
+      "title": "MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair",
+      "authors": [
+        "Xuanze Chen",
+        "Xukang Xie",
+        "Wentao Fu",
+        "Jiajun Zhou",
+        "Shanqing Yu",
+        "Qi Xuan"
+      ],
+      "abstract": "Memory systems allow agents to retain and reuse information from past interactions, but they can also let malicious content persist. A malicious instruction crafted by an attacker may be stored in long-term memory, recalled much later, and quietly shape a real action. Recent benchmarks increasingly examine agent memory security, yet few trace the same malicious semantics across persistence, downstream consequences, and selective repair under diverse memory-backend comparisons. To address this gap, we introduce MemSecBench, a task-grounded benchmark for the lifecycle security of agent memory systems. It contains 310 cases drawn from 48 realistic contexts across code and science, daily life, and office work. Each case follows a controlled Write--Execute--Forget protocol in an isolated runtime under an exact agent configuration, defined by an agent harness, a memory backend, and an LLM backend. Evidence-based adjudication combines a deterministic write check, checkpoint-specific judge-model evaluations, and programmatic gates across seven lifecycle checkpoints. The experimental design spans a 24-configuration matrix of two agent harnesses, four memory backends, and three LLM backends. Across all 24 configurations, malicious memory persists in 84.2% of all cases, and the full Write--Execute chain succeeds in 50.3%. Among successfully poisoned cases, 59.6% complete the full Execute chain, while 56.1% achieve selective repair.Compared with matched Native configurations, the largest absolute differences are 16.1 percentage points for end-to-end attack success and 41.3 percentage points for selective repair. These descriptive contrasts indicate that the evaluated memory system stacks differ in lifecycle security, both in the propagation of malicious memory and in selective repair after successful memory poisoning.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-07-29T16:06:54Z",
+      "updated": "2026-07-29T16:06:54Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.27080v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.27080v1",
+      "rank": 42,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 11.9855,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "聚焦智能体记忆安全全生命周期评估",
+      "one_liner": "MemSecBench首次系统追踪恶意记忆从持久化、后果到修复的完整生命周期，覆盖310个真实场景",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.26784",
+      "title": "SkillRise: Agentic Reinforcement Learning for Cross-Task Skill Evolution",
+      "authors": [
+        "Zhiyuan Yao",
+        "Yuxin Chen",
+        "Zhengxi Lu",
+        "Zishan Xu",
+        "Yueqing Sun",
+        "Yifu Guo",
+        "Yuquan Lu",
+        "Zhengzhou Cai",
+        "Kangning Zhang",
+        "Zhuowen Han",
+        "Zi-Han Wang",
+        "Ziang Ye",
+        "Qi Gu",
+        "Xunliang Cai",
+        "Weiwen Liu",
+        "Yongliang Shen"
+      ],
+      "abstract": "Large language model agents often encounter related yet distinct tasks that share reusable solution patterns. Yet standard agentic reinforcement learning treats tasks as independent episodes, while existing approaches to skill learning either focus on repeated attempts of one task or use pipelines with multiple stages that entangle extraction, retrieval, and execution. We introduce SkillRise, a unified reinforcement learning framework for learning skills across tasks. SkillRise organizes related instances into progressively challenging sequences and uses a single policy to alternate between task solving and curating an evolving skill document passed directly to the next task. Decoupled credit assignment across tasks supervises solving with the current task outcome and curation with discounted downstream outcomes. Experiments on ALFWorld, WebShop, and ScienceWorld show that SkillRise achieves the strongest Pass@1 performance among the compared methods, with gains over the strongest baseline ranging from 2.3 to 8.5 percentage points. Although trained across distinct tasks, its learned curation policy remains effective for repeated attempts on the same task. Further analysis reveals scaling at test time across tasks: performance improves with longer sequences of related tasks even when each task is attempted only once. This trend suggests that SkillRise reuses transferable skills across tasks rather than benefiting from repeated sampling of the same task. SkillRise further retains strong performance while substantially reducing the runtime overhead of skill learning pipelines with multiple stages. Together, these results provide a simple and efficient training paradigm for LLM agents to extract, refine, and reuse transferable skills across tasks.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-29T11:26:33Z",
+      "updated": "2026-07-29T11:26:33Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.26784v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26784v1",
+      "rank": 127,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 11.1607,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "提出跨任务技能演化的统一强化学习框架",
+      "one_liner": "SkillRise通过任务序列化与技能文档演化，在ALFWorld等环境显著提升Pass@1，实现技能跨任务复用",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.26922",
+      "title": "Two Calls Beat Five Agents: Evaluating Multi-Agent Pipelines Against Self-Refinement for Local Language Models",
+      "authors": [
+        "Ashish Prajapati",
+        "Om Mohite"
+      ],
+      "abstract": "Multi-agent LLM pipeline systems break down the task among multiple roles for better reasoning, but are benchmarked mainly with large-scale commercial models. In this study, we investigate Parishad, a structured multi-agent system involving five roles, by deploying it on Qwen2.5-7B-Instruct, a local model, on two datasets: GSM8K (500 questions) and HumanEval (164 questions), compared with prompting directly and two-call self-refinement. The multi-agent system drops GSM8K accuracy from 75.0\\% to 45.0\\% with JSON data format due to the error accumulation problem. With plaintext format, the accuracy is restored to 82.0\\%. A two-call self-refinement strategy (V1) can achieve 86.2\\% accuracy on GSM8K, with 7.4$\\times$ lower token usage. However, the same V1 implementation on HumanEval---where direct accuracy is already 96.3\\%---actively destroys performance (66.5\\%). A task-aware gated redesign (V2) applied to HumanEval preserves accuracy at 95.1\\%. Our results demonstrate that communication format and implementation details determine outcomes more than architectural complexity, and that simpler approaches match or outperform multi-agent pipelines for local 7B model deployment. All code and data are released.",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-29T13:53:02Z",
+      "updated": "2026-07-29T13:53:02Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.26922v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26922v1",
+      "rank": 84,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 8.3737,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Multi-agent LLM pipeline systems break down the task among multiple roles for better reasoning, but are benchmarked mainly with large-scale commercial models. In this study, we investigate Parishad, a structured multi-ag…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.26724",
+      "title": "UrbanDS: A Graph-Guided LLM Multi-Agent System for Data-Intensive Urban Tasks",
+      "authors": [
+        "Zhilun Zhou",
+        "Jianghao Yu",
+        "Yuming Lin",
+        "yongjun yang",
+        "Sun Yongquan",
+        "Depeng Jin",
+        "Yong Li"
+      ],
+      "abstract": "Large language model (LLM) agents have been widely applied in automating data science tasks. However, existing methods typically rely on a limited set of provided datasets, and they face challenges in data-intensive scenarios that require discovering and leveraging relevant information from large-scale and heterogeneous data repositories. Urban tasks are representative examples of such scenarios, as urban data are not only large-scale and multi-sourced, but also exhibit complex spatial, temporal, and semantic relationships. To address these challenges, we propose UrbanDS, a graph-guided LLM multi-agent system for data-intensive urban tasks. We first construct a unified dataset graph to organize reusable dataset skills and the relationships among datasets. Specifically, we develop a Data Profiling Agent that constructs a skill for each dataset. Moreover, a Relation Agent identifies relationships among datasets and integrates these relationships into the dataset graph. At runtime, a Planner Agent retrieves task-relevant datasets from the graph and generates execution plans. Multiple Execution Agents then perform data processing and analysis, while their execution progress and intermediate results are shared through a common memory. Finally, a Report Agent synthesizes the experimental logs into a report, which can be further refined based on user feedback. To systematically evaluate the capability of agents in handling data-intensive urban scenarios, we further construct UrbanDS-Bench, an urban data science benchmark covering representative data analysis and modeling tasks. Experiments on both general and urban benchmarks demonstrate that UrbanDS consistently outperforms existing data science agents on data-intensive tasks. Furthermore, UrbanDS has been deployed on the urban operations platform of Dongxihu District, Wuhan, demonstrating its effectiveness in real-world urban applications.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-29T10:14:02Z",
+      "updated": "2026-07-29T10:14:02Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.26724v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26724v1",
+      "rank": 148,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.1754,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Large language model (LLM) agents have been widely applied in automating data science tasks. However, existing methods typically rely on a limited set of provided datasets, and they face challenges in data-intensive scen…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2607.27177",
+      "title": "Partner Capability Estimation for Task-Agnostic Adaptation in Ad-Hoc Teamwork",
+      "authors": [
+        "Peter Tisnikar",
+        "Maja Swieczkowska",
+        "Benteng Ma",
+        "Gerard Canal",
+        "Matteo Leonetti"
+      ],
+      "abstract": "Effective collaboration with novel and diverse partners is a crucial skill for autonomous agents. Most current ad-hoc teamwork (AHT) approaches assume that agents will collaborate on a single, fixed task and that the partner's capabilities, their ability to successfully execute the desired action, are already known. In reality, a partner's true capabilities are often hidden, and human collaborators may act sub-optimally on tasks with multiple valid strategies. To address these limitations, we extend ad-hoc teamwork into a multi-task setting by re-framing it as a problem of joint planning with decentralised execution under hidden partner capabilities. We introduce CE-CM (Capability Estimation via Contextual Models), an approximate Bayesian method that infers task-invariant capability vectors. By using simulation-based sampling, the agent estimates capabilities and induces a contextual Multi-agent Markov Decision Processes for planning. This approach requires no population pre-training and refines its beliefs online from just a few tasks. To account for human unpredictability, we propose CE-CM-Div, an extension that evaluates capability hypotheses against diverse planner rollouts rather than a single optimal trajectory. Simulated experiments demonstrate that CE-CM rapidly recovers hidden capabilities, reduces infeasible action assignments, and adapts to changes over time. Furthermore, in an offline human study of 225 trajectories from 15 participants, CE-CM-Div substantially improved capability estimates over the baseline CE-CM method. Our results suggest capability-based modelling is a promising interpretable, task-agnostic representation in the studied settings, demonstrating that accounting for behavioural diversity is essential for robust human-AI teaming.",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-29T17:50:39Z",
+      "updated": "2026-07-29T17:50:39Z",
+      "comment": "44 pages, 18 figures, submitted",
+      "url": "https://arxiv.org/abs/2607.27177v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.27177v1",
+      "rank": 13,
+      "metadata_source": "arxiv-api",
+      "focus_score": 4.9,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.885,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "首创任务无关的伙伴能力贝叶斯估计方法",
+      "one_liner": "CE-CM首次在多任务Ad-hoc协作中在线推断隐藏伙伴能力向量，支持人类-AI鲁棒组队",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.26773",
+      "title": "Do Latent Channels Actually Communicate? A Causal Audit of Latent Multi-Agent LLM",
+      "authors": [
+        "Huixiang Zhang",
+        "Mahzabeen Emu"
+      ],
+      "abstract": "Latent communication in large language model (LLM)-based multi-agent systems (MAS) transmits continuous internal representations instead of text, but greater representational capacity does not establish that the receiver uses task-relevant information. End-task performance alone also cannot reveal whether an observed effect depends on message presence, content generated for the evaluated example, or information supplied by a separate agent. We introduce a causal audit that applies controlled message replacements at the boundary where the sender-produced representation enters the receiver. Four message settings support five measurements of encoded sender information, receiver sensitivity to message presence and identity, the task value of example-specific content, and the additional value supplied by a separate agent. We apply the audit to latent relay with Qwen3-4B and Qwen3-8B on GSM8K, ARC-C, and MATH-500. On GSM8K, the Qwen3-4B overall performance effect of -1.00 percentage point decomposes into a -6.17-point effect retained by an other-example message and a +5.17-point effect attributable to example-specific content; both component directions reverse at 8B. On MATH-500, the Qwen3-4B gain of 15.00 points comprises 8.33 points retained by an other-example message and 6.67 points attributable to example-specific content, while the 8B gain is dominated by the former component. Self-substitution comparisons further show that example-specific content and other-agent value are distinct. These results show that aggregate accuracy does not identify how a latent message affects the receiver and motivate controlled message comparisons as a standard evaluation for latent communication.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-29T11:14:27Z",
+      "updated": "2026-07-29T11:14:27Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2607.26773v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26773v1",
+      "rank": 130,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.0137,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "提出首个因果审计框架检验潜通信有效性",
+      "one_liner": "对潜通信进行边界级消息替换实验，揭示Qwen模型中示例特异性内容与跨样本信息的反向贡献",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2607.27189",
+      "title": "APEX-Accounting",
+      "authors": [
+        "Julien Benchek",
+        "Austin Bennett",
+        "Jasmin Kern",
+        "Ryan Stevens",
+        "Rene Sultan",
+        "Charis Ching",
+        "Hayley Popiel",
+        "Vaibhav Mittal",
+        "Felix Mercier",
+        "Brendan Foody",
+        "Bertie Vidgen"
+      ],
+      "abstract": "We introduce APEX-Accounting, a benchmark built by Mercor in partnership with Ramp, to assess whether frontier models can do the real work of accountants. Tasks include reconciling accounts, accruing expenses, posting transactions, and producing reports. The private eval set comprises 160 tasks, split across 10 worlds. Each world contains an accounting system, as well as spreadsheets, PDFs, and other files. Every task was authored and solved by experts in accounting and bookkeeping, who also wrote grading rubrics. Across nine frontier models, Claude-Fable-5 (Max) leads with 56.4% Mean Criteria@3, ahead of Muse-Spark-1.1 (xHigh) at 52.6%. No model scores more than 2.6% Pass^8 (GPT-5.6-Sol (Max+Pro)) and the highest Pass@8 is 21.5% (Muse-Spark-1.1 (xHigh)). We experiment with increasing the token budget from $1 to $50 and observe an instance of Simpson's paradox: scores increase as the token budget increases but within a given budget-constrained harness, scores are lower on tasks where the model spends more tokens. As APEX-Accounting is a closed benchmark, leaderboard evals can be run for any frontier model on request.",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-29T17:56:49Z",
+      "updated": "2026-07-29T17:56:49Z",
+      "comment": "Public dev set: https://huggingface.co/datasets/mercor/apex-accounting",
+      "url": "https://arxiv.org/abs/2607.27189v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.27189v1",
+      "rank": 7,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 15.146,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "We introduce APEX-Accounting, a benchmark built by Mercor in partnership with Ramp, to assess whether frontier models can do the real work of accountants. Tasks include reconciling accounts, accruing expenses, posting tr…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2607.26751",
+      "title": "Phoneme- vs. Character-Level Targets and Selective State-Space Models for Intracortical Brain-to-Text",
+      "authors": [
+        "Lucas Zamora Vera",
+        "Jose A. Gonzalez-Lopez"
+      ],
+      "abstract": "State-of-the-art intracortical brain-to-text systems pair a neural-sequence phone decoder with an external language model. Two design axes remain underexplored: whether selective state-space models (Mamba) improve on recurrent decoders, and how the output target (phonetic vs.\\ character) interacts with that choice. On the public Brain-to-Text '25 benchmark, we study a controlled 2x2 grid (GRU vs.\\ hybrid Mamba decoder; phonetic vs.\\ character targets) trained with a CTC objective under one reproducible protocol. The recurrent baseline remains strongest: the best phonetic GRU reaches 12.62\\% PER and 21.19\\% WER, while the best textual GRU after LM rescoring reaches 13.39\\% CER and 26.28\\% WER. The Mamba hybrid is competitive but does not surpass it. Ablations isolate architectural contributions, and error analysis shows representation-dependent failures: articulatory-like phoneme confusions vs.\\ lexical and word-boundary errors.",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "eess.SP"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-29T10:46:08Z",
+      "updated": "2026-07-29T10:46:08Z",
+      "comment": "6 pages, 1 figure, 6 tables, submitted to IberSPEECH 2026",
+      "url": "https://arxiv.org/abs/2607.26751v1",
+      "pdf_url": "https://arxiv.org/pdf/2607.26751v1",
+      "rank": 139,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 13.9321,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "State-of-the-art intracortical brain-to-text systems pair a neural-sequence phone decoder with an external language model. Two design axes remain underexplored: whether selective state-space models (Mamba) improve on rec…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [
+    {
+      "id": "answer:2060786664692266784",
+      "content_id": "2060786664692266784",
+      "question_id": "519431659",
+      "platform_type": "answer",
+      "title": "算法工程师如何应对做算法策略的不确定性；比如没效果，这时绩效怎么保证？",
+      "content": "首先得从根本上改变你的工作方式和向上汇报的逻辑。 很多人做算法有个执念，觉得我的产出就是模型AUC提升了多少，或者现在的流行词，我的大模型在某个评测榜单上得分提高了多少。这就是典型的学生思维。你在学校里打Kaggle比赛，或者发顶会论文，你当然要追求指标的绝对提升。但在商业公司里，没有任何一个老板是真的关心你的Loss降了多少的。他们关心的是业务价值。 策略没效果，也就是核心业务指标没涨，比如转化率没变，留存没变，但这绝对不代表你没有产出。你要学会把没有结果的结果，转化成团队的过程资产。 具体怎么干？你要证明你排除了一个巨大的雷区，或者你探索出了一条明确的死胡同。 现在大家都在搞大模型落地，很多公司高层脑子一热就想用大模型做智能客服或者做深度个性化推荐。你接到需求后，吭哧吭哧搞了一个月，发现用目前开源社区里最先进的模型微调出来，在线推理延迟高得离谱，而且模型幻觉严重，不仅没解决用户问题，甚至引发了几起严重的客诉。这时候你周报怎么写？ 如果你老老实实写模型微调失败，上线效果不及预期，那你就是个纯纯的废物，年底拿C是跑不掉的。 你应该换一种思路写。经过详实的数据对比和线上小流量严谨验证，目前业界主流的开源大模型在强交互、低延迟场景下存在明显的工程瓶颈。我们团队沉淀了一套完整的评估基准测试方案，这套方案成功帮业务线避免了盲目扩大流量带来的大规模客诉风险。同时，基于这次探索，我们明确了下一阶段的技术路线，即需要放弃庞大的生成式模型，转向轻量级模型结合知识图谱的保守路线。 看到没有？没效果也是一种非常有价值的结论。你帮公司省了钱，省了算力，给出了明确的技术边界。这在团队里就是巨大的贡献。老板不仅不会怪你，反而会觉得你这个人做事稳妥，有风险意识。 策略没效果之所以会导致绩效差，根本原因往往不在于代码写得不好，而在于你在立项的时候把话说得太满了。预期管理是每一个资深算法工程师必须掌握的保命神技。 我见过太多年轻的算法工程师，产品经理跑来提个需求，说要在首页加个什么新奇的个性化推荐模块，或者想用大模型做一个花哨的总结功能。算法小哥看了一眼最近某篇很火的顶会论文，一拍大胸脯说，没问题，我看别人用了这个方法效果特别好，给我两周，我保底把转化率提两点。 两周后线上一跑，转化率不仅没涨，反而跌了三个点。这时候你就是千古罪人，产品经理会把业务完不成目标的锅全扣你头上，因为当初是你承诺的。 老司机是怎么干的？永远要在事前拉齐预期，甚至要刻意压低预期。 当产品提需求时，你必须拉着产品和业务线负责人一起开会。你要明确且坚定地告诉他们，目前我们的数据基建情况很差，用户行为反馈样本缺失严重，大模型本身的不可控因素又很多。我们要上这个新策略，本质上是一次高风险的业务探索，而不是一次确定性的功能迭代。 你可以这样跟他们对齐。我们第一期先跑个最基础的版本，大概率是没效果或者有微小跌幅的，这一步的目的是跑通全链路，收集真实用户的负反馈数据。第二期我们再根据这些真实的负反馈去做复杂的特征工程或者调整提示词策略。 你必须把这个看似非常保守甚至有点消极的计划写到项目文档里，让产品经理和业务老板都在上面确认。这样一旦第一期没效果，这就不是你算法工程师的失败，而是计划内的一部分，是获取稀缺数据的必要手段。你不仅没有做错，你还在按部就班地推进项目。 另外，千万不要自己一个人背锅。一个策略是否有效果，算法本身的功劳可能只占三分之一，剩下的三分之二是产品形态和数据质量决定的。你要学会向业务方反向提需求。 比如你要做个推荐策略，你要告诉产品经理，现在的点赞按钮隐藏得太深了，导致我的正样本严重不足，你产品必须改版，把交互按钮放出来，否则我没法优化。你要做大模型问答，你要告诉运营团队，你们目前提供的内部知识库文档格式太混乱，里面全是错别字和废话，必须由你们人工清洗一遍我才能用。 把业务端和产品端拉下水，大家变成一根绳上的蚂蚱。没效果大家一起复盘找原因，有效果大家一起分钱抢功劳。千万别一个人在那默默调参，最后死都不知道怎么死的。 关于如何向上管理和对齐预期，推荐大家读一下项目管理知识体系指南里关于干系人管理的部分。这玩意虽然枯燥，但一旦你领悟了其中的精髓，你在职场上遇到任何刁钻的产品经理都能游刃有余。 靠改几个超参数就能拿好绩效的时代早就结束了。大模型时代的算法工程师，必须往工程化和数据流方向靠拢。当你在做大模型应用或者复杂的推荐系统时，不可避免地要处理海量的数据。这些数据处理的流水线，就是你绩效的保底底裤。 当你做一个复杂的算法策略时，你必然要搭建各种数据清洗流水线，设计特征工程，甚至开发一些辅助的评测脚本。这些东西，在策略没效果的时候，就是你最有力的产出证明。 去年我们部门要做一个基于内部文档的智能问答智能体，给前线的销售团队用，帮他们快速查询复杂的产品报价和长篇大论的竞品分析。我手底下一个高职级员工带了两个新人搞了一个多月。最初的策略非常激进，直接拿市面上最猛的几款大模型做底座，套了个检索增强生成框架，想搞个大新闻。 结果灰度上线后，销售天天在群里骂娘。为什么？因为销售在现场问的问题口语化严重，且带有大量的公司内部黑话和方言，检索模块根本召回不了正确的文档片段，大模型再聪明也是在胡说八道，甚至把A客户的报价发给了B客户。从业务指标上看，这个项目简直是一场灾难，日活跌到个位数，销售根本不愿意用。 这时候怎么搞绩效？如果硬扛说还在优化，那绝对是卷铺盖走人的节奏。 我让那个带头的员工立刻转变季末汇报思路。策略没效果是既定事实，但在这个痛苦的折腾过程中，他们把公司过去三年散落在各个网盘、内部维基、飞书文档里的非结构化数据全部盘点并清洗了一遍。他们发现数据里有大量的无用标签残留，有各种奇怪的特殊字符，甚至有前员工离职前乱敲的无效内容。 他们花了整整两周写了一套非常复杂的正则和规则过滤机制，开发了一套内部专有名词词典，并且搭建了一个可以自动化评测文档切分质量的数据管道。 在季度的总结会上，我们绝口不提那个失败的智能体日活，而是大书特书我们完成了部门有史以来最彻底的一次数据资产盘点和清洗，并且建立了一套企业级数据高质量入库的标准作业流程。 这套基建不仅可以给当前的智能体用，以后做传统的搜索优化，给BI部门做商业分析，甚至未来训练公司自己的垂直大模型都可以直接复用。我们把一次产品上的失败，转化成了底层基建上的巨大成功。老板听了连连点头，最后给这个小团队全体打了个中上。 这就是过程资产的威力。只要你在这个失败的策略中留下了可以复用的代码、高质量的数据集或者一套完整的自动化测试工具，你就有资本去和老板谈你的产出。 在这里，强烈建议大家去研究一下目前主流的大模型评测框架，比如TruLens或者Ragas。重点不是让你去背他们的接口怎么调用，而是去学习他们是如何把模糊的算法生成效果拆解成可量化的工程指标的。学会这种将玄学拆解成工程问题的能力，你写出来的汇报PPT就比别人有深度，老板也能看懂你的工作量。 算法工作从来不是孤立的。一个完整的业务链路，需要前端埋点采集、后端工程部署、算法模型计算、产品UI呈现等多个环节配合。很多时候，策略没效果，真不一定是你的模型写烂了。 在现代化的互联网公司里，跨部门的横向协同往往暗藏玄机。如果你不懂这里的门道，你就会成为全链路最容易被欺负的那个背锅侠。 比如你做了一个新的推荐重排策略，离线看AUC涨了五个千分点，上线一跑，点击率完全没变化，甚至页面加载时间变长了导致转化率下降。这时候如果你慌慌张张地去改模型结构，那你就是个纯新手。 老手第一反应是去查全链路的漏斗。 先去找前端对接，看看新版本的埋点是不是打错了。很多时候前端发版漏了几个埋点或者曝光逻辑写错了，会导致传回来的正负样本比例彻底失调，你的模型线上表现当然差。 再去找后端工程兄弟对接。你的模型变复杂了，推理耗时从五十毫秒变成了两百毫秒。这多出来的一百多毫秒可能导致大量的网络超时，用户根本没看到你的推荐结果就滑走了。这叫工程损耗吃掉了算法红利。 接着看产品UI。你把相关的推荐结果算得很准，但是产品经理为了所谓的美观，把推荐卡片做得很小，字都看不清，用户怎么点？ 当你把这些问题排查清楚后，你的汇报内容就丰满起来了。你可以理直气壮地说，我们这次的算法核心逻辑是经得起推敲的，离线指标也证明了这一点。但由于线上工程链路的延迟瓶颈以及前端渲染机制的缺陷，导致算法红利未能完全释放。接下来我们的核心工作不是继续死磕算法，而是要联合工程团队推进推理引擎的重构。 通过严密的归因分析，你证明了自己尽力了且方向没错。这不仅保住了你的绩效，还反向推动了其他团队的基建升级。这体现的是你个人的大局观和排查复杂系统问题的能力。 当然，排查这些问题需要你掌握一些基础的数据分析工具。推荐大家多去了解一些因果推断的基础知识。日常工作中，不仅要把注意力放在机器学习模型上，还要懂得如何用因果推断的方法去排除环境噪音，证明你的策略和最终结果之间的真实关联。当你能用一套严密的数学逻辑证明不是你的错时，谁也无法把低绩效强加给你。 我最后想说一点，也是最核心的一点。算法工程师为什么总是陷入效果焦虑？为什么总觉得没有安全感？因为你们离真正的业务太远了。 很多写代码的人有一种骨子里的清高，觉得我只负责把评测指标跑上去，至于业务怎么赚钱，利润率是多少，那是运营和商业化团队的事。在移动互联网红利期，这种心态勉强能混下去，因为大盘都在涨，你随便搞点简单的协同过滤或者深度学习模型，就能带来可观的流水提升。 在今天这个环境，不懂业务的纯技术派算法工程师，就是随时可以被裁掉的高薪外包。 现在很多人都在焦虑，觉得大模型越来越强，自己连训练模型和调参的活都没了。这种焦虑完全是找错方向了。大模型虽然火爆，但它现在的能力边界其实非常清晰。它能生成很好的文本，能写一些通用代码，但在垂直商业领域里，它极其依赖高质量的上下文和精确的业务流转逻辑。 如果你不了解你们公司业务的具体痛点，不了解一线销售在客户现场面临什么尴尬，不了解用户的真实抱怨，你写出来的系统提示词或者搞出来的微调训练数据，一定是一堆毫无价值的垃圾。 怎么应对算法策略长期的不确定性？唯一的解药就是让你自己成为全团队最懂业务的人。 当你知道当前业务最大的痛点是新用户冷启动留存太差，而不是老用户活跃度不够时，你就不要去花一个月时间优化老用户的多目标重排序模型，哪怕那个技术在学术界看起来更高级。你应该把精力全部投入到如何快速识别新用户意图上。哪怕你最后是用最简单粗暴的规则组合，结合一点点人口统计学属性的浅层模型，只要能把新用户次日留存提高零点几个百分点，你的绩效就稳了。因为你解决了老板眼下最头疼的生存问题。 很多时候策略没效果，根本不是算法选错了，而是问题定义错了。你跑去优化了一个在业务全局里根本不重要，或者天花板非常有限的细枝末节指标。你花了一百分的力气，只撬动了一分的业务价值。 未来的核心竞争力根本不在于你掌握了多少种最新的Transformer变体结构，也不在于你会不会手写底层CUDA算子，而在于你能不能快速敏锐地识别出冗长的业务链路中，哪个具体环节可以用AI技术降本提效，并且用最快的工程手段把它缝合起来验证。 哪怕你最后是用简单的规则引擎，加上几次便宜的外部API调用解决了问题，只要业务逻辑闭环了，真实的成本降下来了或者收入提上去了，你就是团队里的大牛。反而那种死磕某种神秘的大模型微调技巧，搞了半年都没能在线上跑出一点响动的技术极客，在现在的职场环境里往往死得最快。 这里我想推荐大家去深入了解一下吴恩达这两年一直提倡的数据中心型AI相关的理念。重点不是让你去学怎么标注数据，而是你要学会这套思维方式。把注意力从模型本身转移到数据和业务逻辑上。学会用这套强有力的逻辑去怼那些天天逼你优化模型但却不给你提供好数据环境的老板和产品经理。 写了这么多实操层面的套路，最后我想聊聊心态。 做算法本来就是一件充满挫败感的事情。看着自己辛辛苦苦跑了几个星期的模型，上线后数据绿油油一片跌得惨不忍睹，那种自我怀疑和失落感，每一个在一线干过的人都懂。尤其是在绩效考核季，那种无形的压力足以让人崩溃。 但你要明白，公司花钱雇你来，本质上是来买你处理不确定性的能力的。如果所有的策略只要照着论文写就一定能涨指标，那公司为什么不直接去花几百块钱找个在校大学生来写代码呢？为什么要给你发这么高的工资？ 策略没效果，是客观规律，不是你的个人能力缺陷。你不需要为此感到羞愧或者自责。 打工而已，千万别把公司的项目成败和个人的荣辱完全绑定在一起。你的终极目标不是让公司的某一个按钮点击率永远涨下去，而是通过在公司处理这些棘手问题的过程，提升你自己的综合素养。 当你经历了一次又一次的失败，你学会了如何做严谨的AB实验设计，你学会了如何与难缠的业务方讨价还价拉齐预期，你掌握了在大数据环境下构建稳健数据流水的工程能力，你培养了透过现象看本质的业务洞察力。 这些沉淀下来的硬技能和软技能，才是你真正带得走的个人财富。哪怕有一天公司不行了，或者这个业务线被砍了，你带着这身本事去市场上找下一份工作，依然可以游刃有余。 总结一下，面对算法策略没效果这种常态化的不确定性，我们要做的就是三件事。事前压低预期，把探索的风险分摊给全团队，不要一个人扛雷；事中扎实做基建，把失败的教训转化为高质量的数据资产和可复用的工具链；事后拔高汇报立意，用懂业务的全局视角去解释你这次探索的真正价值。 多花点时间和你们的销售或者客服一线人员喝喝咖啡，了解一下真实的商业世界在发生什么。这比你在深夜里漫无目的地盲目改学习率调参要有用得多。",
+      "excerpt": "预期管理是每一个资深 算法工程师 必须掌握的保命神技。 我见过太多年轻的 算法工程师 ，产品经理跑来提个需求",
+      "author": "BugBuster喵",
+      "created_at": 1784109828,
+      "updated_at": 1784109828,
+      "published_date": "2026-07-15",
+      "voteup_count": 396,
+      "comment_count": 15,
+      "url": "https://www.zhihu.com/question/519431659/answer/2060786664692266784",
+      "matched_keywords": [
+        "算法工程师 面经 复盘"
+      ],
+      "content_type": "知识解读",
+      "pre_score": 96,
+      "score": 96,
+      "summary_zh": "详解算法工程师如何通过预期管理与过程资产转化应对策略失效，含真实大模型落地失败复盘与周报话术。",
+      "reason": "第一手商业场景复盘，机制清晰，论据扎实，无情绪化表达。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "answer:2053860877275870212",
+      "content_id": "2053860877275870212",
+      "question_id": "665390929",
+      "platform_type": "answer",
+      "title": "大模型算法岗常见的面试题有什么？",
+      "content": "985计算机本硕，在大模型领域发表了一些CCFA类或B类论文，前前后后面试了十来场，并且有三段实习，包括一段大厂实习。 我感觉大模型算法面试当中，八股相关的问题是一定可以熟练掌握的，也是向面试官证明自己基础的很好的机会。从一开始磕磕巴巴，到后面我在很多面试中遇到八股问题都直接开始吟唱了。 现在我给大家分享一下我之前准备的一些基础知识题目，以问答形式出现；我给的答案不一定完全对，只是参考哈；希望对大家有用。 一、Transformer 核心架构 Q1：自注意力机制的工作原理是什么？为什么需要在计算中进行缩放（除以根号 d_k）？ 自注意力机制的核心思想是让序列中的每一个词都能够直接关注序列中的所有其他词，从而捕获全局的上下文依赖关系。具体计算流程如下：首先，对于输入序列的每个 token，通过三个独立的线性变换矩阵 W_Q、W_K、W_V 分别生成查询向量 Q、键向量 K 和值向量 V；其次，计算 Q 与 K 的点积，得到注意力分数矩阵，表示序列中每对 token 之间的相关程度；接着，将注意力分数除以缩放因子 √d_k，然后通过 Softmax 函数归一化为概率分布，即注意力权重；最后，将注意力权重与 V 相乘，得到加权求和后的输出向量。 为什么需要除以 √d_k。 核心原因在于防止 Softmax 饱和导致的梯度消失。当 d_k 较大时，Q 与 K 的点积值会随之增大，点积的标准差约等于 √d_k。如果直接将较大的值送入 Softmax，输出会趋近于独热分布，即某个位置的注意力权重接近 1 而其余位置接近 0。在反向传播时，Softmax 在接近 0 或 1 的位置梯度趋近于零，导致参数无法有效更新。除以 √d_k 后，缩放后的点积标准差约为 1，使 Softmax 的输入保持在合理的数值范围内，输出分布更加平滑，梯度能够正常回传，训练更加稳定。 自注意力机制的时间复杂度为 O(n²d)，其中 n 为序列长度，d 为表示维度。这是因为序列中每个 token 都需要与所有其他 token 计算一次点积。 Q2：多头注意力机制的设计原理是什么？为什么多头比单头更好？头数是否越多越好？ 多头注意力机制的本质是将原始的输入序列并行地进行多组独立的子空间自注意力处理，然后将各组的输出拼接起来进行线性变换，得到最终输出。具体来说，先将输入的 Q、K、V 分别通过 h 组线性变换映射到 h 个不同的低维子空间，每个头的维度 d_k = d_model / h；然后每个头独立执行缩放点积注意力计算；最后将所有头的输出在特征维度上拼接，通过一个输出线性变换矩阵 W_O 融合信息。 多头优于单头的原因在于表示能力的增强。每个注意力头拥有独立训练的权重矩阵，不同的头会关注输入的不同特征维度，处于完全不同的向量子空间中。例如在处理「苹果很好吃」这句话时，一个头可能关注「苹果」与「好吃」的语义关系，另一个头可能关注语法结构信息。这种并行子空间机制使得模型能够从多个角度同时提取特征，最后拼接起来保存所有维度的信息。 头数并非越多越好。头数过多可能导致过拟合风险增加，尤其在小数据集上；以及不同头可能学习到相似的注意力模式，造成计算冗余。头数的选择需要根据任务复杂度来权衡：简单任务使用较少的头即可满足需求，复杂任务则需要更多的头来捕获更丰富的语义关系。在代码实现中，通常通过 view 将总特征维度拆分为「头数 × 单头维度」，然后通过 transpose 交换序列长度和头数的维度，使得所有头可以并行计算，相当于一次性计算 Batch × Heads 张独立的小注意力图。 Q3：RoPE 旋转位置编码的原理是什么？它如何实现相对位置编码？外推问题有哪些解决方案？ 为什么需要位置编码。 自注意力机制的运算是排列无关的，即交换序列中两个 token 的位置不会影响它们各自的注意力计算方式。因此需要显式地向模型注入位置信息。理想的位置编码需要满足三个条件：能够表示绝对位置（唯一性）、不同长度序列中相对距离保持一致、能够泛化到训练时未见过的序列长度（外推性）。 RoPE 是目前最主流的位置编码方式，被 LLaMA、Qwen、Mistral、ChatGLM 等开源模型广泛采用。其核心流程如下：对于每个 token 的 Query 和 Key 向量，按照两两一组的方式将特征维度划分为 d/2 对子空间；为每对子空间分配一个预定义的旋转频率，频率从大到小递减，高频对应局部位置敏感，低频对应全局位置感知；对每对子空间，根据 token 的位置 m 施加一个旋转角度 mθ，其中 θ 由频率决定；分别对 Q 和 K 的每对子空间施加旋转变换后，再计算它们之间的内积。 RoPE 如何实现相对位置编码。 经过 RoPE 变换后，位置 m 的 Q 向量与位置 n 的 K 向量的内积结果天然地包含了相对距离 (m - n) 的信息。这意味着模型在训练时就能直接学习 token 间的相对位置关系，而这恰恰是语言建模中最关键的。RoPE 不需要学习任何额外参数，旋转矩阵完全基于预定义的频率和位置索引计算。增大旋转基频 Base（通常是 10000），角度变化会更慢，周期更长，更不容易出现不同位置具有相同旋转角度的情况，因此长上下文场景中 Base 可取一百万。此外，RoPE 可以与线性注意力机制兼容，无需额外计算或参数即可实现相对位置编码。 RoPE 的外推问题与解决方案。 当推理时的序列长度超过预训练最大长度时，RoPE 会遇到外推困难，因为预训练时从未见过超出范围的位置对应的旋转角度。主要解决方案有四种。位置插值（PI）将长文本的位置索引统一除以一个缩放因子，将所有位置索引压缩回预训练窗口内，简单但容易损失高频信息。NTK-Aware 插值对低频维度进行较大幅度的插值，对高频维度保持直接外推，保留更多高频细节信息。NTK-by-parts 根据每个维度的波长区分高、中、低频，对高频不插值，对低频进行插值，对中间频率采用混合策略。YaRN 在 NTK-by-parts 基础上引入注意力温度因子 t 来调整注意力分布，解决线性插值导致 Softmax 过于锐化的问题，且几乎无需微调即可解决外推问题。 Q4：Transformer 中 FFN 前馈神经网络的作用是什么？SwiGLU 相比传统 ReLU 有哪些优势？ FFN 在 Transformer 中的角色。 一个标准的 Transformer 块包含多头自注意力（MSA）和 FFN 前馈神经网络两部分。FFN 的基本结构自 Transformer 提出以来保持相对稳定，即「线性升维 → 非线性激活 → 线性降维」。FFN 是 Transformer 参数和计算量的主要来源，约占总量的三分之二；同时 FFN 也是 MoE（混合专家模型）的主要改进对象，通过将 FFN 分解为多个子专家网络来提升模型容量。 FFN 的核心作用有两方面。 第一，通过线性变换（矩阵乘法）先将特征维度升高（通常升到 4 倍），在更高维的空间中提取特征，再降维回原始维度。第二，非线性激活函数为模型引入非线性表示能力，使得模型能够学习复杂的特征组合和深层语义。 SwiGLU 的原理。 SwiGLU 使用 SiLU（即 Swish，定义为 x·σ(x)）作为门控信号的门控线性单元。其简化形式为 SwiGLU(x, W, V) = SiLU(xW) ⊗ (xV)。完整的 FFN-SwiGLU 层形式为 W_out · (SiLU(x·W_1) ⊗ (x·W_3))，其中 ⊗ 表示逐元素乘法。 SwiGLU 相比 ReLU 的优势体现在三个方面。 第一是平滑性和处处可导。SiLU（x·Sigmoid(x)）是一种平滑的激活函数，在负值区域有轻微的下沉然后趋近于零。这与 ReLU 在负半轴直接截断为零不同，SwiGLU 在输入为负时仍有微小梯度，从而避免了 ReLU 中常见的神经元死亡问题，即某些神经元因长期输出零而梯度为零，权重不再更新。第二是门控机制实现动态信息流控制，这是 GLU 的核心优势。SiLU(xW) 的输出作为动态门控信号，逐元素地调节 (xV) 通路的信息强度。如果门控向量某个元素接近 0，对应位置的信息被抑制；接近 1，信息顺利通过。标准 FFN 中的激活函数（ReLU、GELU）作用于整个激活向量，缺乏这种基于输入的逐元素动态调节能力。第三是表达能力更强。这种门控机制允许网络根据输入内容选择性地激活或抑制特定特征组合，使得模型在训练中能够学到更灵活的表示。SwiGLU 在 LLaMA 等大型语言模型中被证明非常有效。 二、训练优化技术 Q5：混合精度训练（AMP）的原理是什么？如何解决 FP16 带来的数值稳定性问题？ 混合精度训练（Automatic Mixed Precision, AMP）的核心思想是在训练过程中同时使用 FP32（单精度浮点）和 FP16（半精度浮点）两种数据类型，以降低计算资源消耗同时保持训练效果。三种浮点数据类型中，FP64 表示范围极广且精度最高但开销最大，FP32 是深度学习训练的标准精度（表示范围约 10⁻³⁸ 到 10³⁸），FP16 计算速度快且显存占用减半（表示范围约 10⁻⁵ 到 10⁵）。 AMP 的具体做法包括三个步骤。 首先，在前向传播中，计算密集型操作（如矩阵乘法、卷积）使用 FP16 执行，利用 Tensor Core 等硬件加速获得更快的计算速度和更低的内存占用。其次，维护一份 FP32 格式的主权重副本（Master Weights），在每次权重更新时先将 FP16 梯度转换为 FP32，再更新主权重，确保模型收敛的稳定性。最后，通过损失缩放（Loss Scaling）技术解决 FP16 梯度下溢问题：将损失值放大一定倍数，使反向传播的梯度值落在 FP16 的可表示范围内，更新权重前再将梯度缩回原始尺度。 数值稳定性问题的解决。 FP16 的表示范围有限，可能导致上溢（值超过 FP16 的表示上限，变为无穷大）和下溢（值小于 FP16 的最小可表示值，被截断为零，导致梯度信息丢失）。解决方案包括使用损失缩放因子动态调整梯度范围，以及在必要时对特定操作强制使用 FP32。目前主流的深度学习框架（如 PyTorch）提供了自动化的 AMP 模块，通过 autocast 上下文和 GradScaler 实现了对前向计算的自动精度管理和梯度缩放，开发者无需手动处理类型转换。 Q6：梯度检查点（Gradient Checkpointing）的原理是什么？它是如何进行时间与空间的权衡的？ 梯度检查点是一种用计算时间换取显存空间的经典优化技术。它通过策略性地丢弃部分中间激活值，在反向传播时按需重新计算，从而支持训练显存需求远超硬件容量的超大规模模型。 在正常的反向传播中，前向传播时产生的大量中间激活值需要被完整保留在显存中，因为反向传播计算梯度时需要用到这些中间结果。激活值的显存占用与模型层数、批次大小和序列长度成正比，对于大模型而言这往往是显存瓶颈。 梯度检查点的工作机制如下：在前向传播时，并非每层都保存完整的激活值，而是仅在特定的检查点处保存激活值；在反向传播时，当需要使用某个未保存的中间激活值时，从最近的检查点开始重新进行一段前向计算，临时恢复所需的激活值；计算出该段对应的梯度后，这些临时恢复的激活值可以被立即释放，无需长期占用显存。 时间与空间的权衡。 梯度检查点以额外的计算量为代价换取显存的显著节省。极端情况下，如果只保留输入和最后一层的激活，可以实现约 O(√n) 的显存占用，但反向传播时需要重新进行几乎所有前向计算，计算量大约增加 33% 到 50%。在工程实践中，通常每隔一层设置一个检查点，在计算开销和显存节省之间取得平衡。这一技术与 Flash Attention 等机制共同构成了大模型训练的显存优化体系。 Q7：Flash Attention 是如何优化标准自注意力计算的？为什么它能同时节省显存并加速计算？ Flash Attention 的核心优化目标是降低对 HBM（高带宽显存）的访问次数。理解其设计需要先了解 GPU 的存储架构：GPU 上的 SRAM（片上共享内存）速度快但容量小（通常几十 MB），而 HBM 速度相对慢很多但容量大。在标准的自注意力计算中，QK^T 矩阵（大小为 n×n）和 Softmax 后的注意力权重矩阵都是中间结果，需要先写入 HBM 再从 HBM 读出进行下一步计算。这种反复的 HBM 读写成为性能瓶颈，尤其在处理长序列时。 Flash Attention 的设计理念是分块计算。 将 Q、K、V 矩阵切分成若干小块，每次只加载一个小块到 SRAM 中；在 SRAM 上完成该块所需的全部计算，包括 QK^T、Softmax 归一化和与 V 的加权求和，整个过程不将中间结果写回 HBM；通过在线 Softmax 算法（Online Softmax）将全局归一化分解为逐块的局部归一化加修正，保证分块计算在数学上等价于全局计算。 Flash Attention 的两大优势。 在节省显存方面，不再存储完整的 n×n 注意力矩阵作为中间激活值用于反向传播。反向传播需要这些值来进行梯度计算时，Flash Attention 选择重新计算 QK^T 和 Softmax 结果，而不是从显存中读取，这种以计算换空间的策略虽然增加了少量重算时间，但大幅降低了显存占用。在加速计算方面，由于大部分计算在高速 SRAM 中完成，HBM 访问次数大幅减少，计算不再受限于显存带宽。传统的注意力计算往往是显存带宽受限（Memory-Bound）而非计算受限（Compute-Bound），Flash Attention 通过减少 HBM 读写将瓶颈转移到计算端，充分发挥 GPU 的计算能力。 三、模型架构设计 Q8：为什么目前主流的 LLM 都采用 Decoder-Only 架构？与 Encoder-Only 和 Encoder-Decoder 架构相比有何优势和区别？ 三种架构的核心区别。 Encoder-Only 的代表是 BERT，采用双向自注意力机制，每个 token 可以同时看到前后所有位置的上下文，擅长对文本进行深度理解，适用于情感分析、命名实体识别、文本分类等任务，预训练通常使用掩码语言建模（MLM），即随机遮盖部分 token 让模型根据上下文进行预测。Encoder-Decoder 的代表是 BART 和 T5，包含完整的编码器和解码器，编码器通过双向注意力提取语义特征，解码器通过带掩码的自注意力（防止看到未来）和交叉注意力（关注编码器输出）进行自回归生成，擅长输出强烈依赖输入的任务，如机器翻译和文本摘要。Decoder-Only 的代表是 GPT 系列，只包含堆叠的 Transformer 解码器层，采用掩码自注意力机制，每个 token 只能关注当前位置及之前的信息，这是一个单向（因果）注意力，训练目标是自回归建模，即根据所有之前的 token 预测序列中下一个词。 Decoder-Only 成为主流的三个核心原因。 第一，零样本和少样本泛化能力更强。大量实验研究表明，用 Next Token Prediction 预训练的 Decoder-Only 模型在各种下游任务上的零样本泛化性能最好，且上下文学习（In-Context Learning）能力更强。第二，训练和推理的一致性。Decoder-Only 模型在训练和推理阶段使用完全相同的计算模式，都是基于已生成的 token 预测下一个 token，这种一致性简化了系统设计，避免了推理时的分布偏移问题。第三，路径依赖和生态继承。OpenAI 的 GPT 系列取得巨大成功后，行业形成了模仿成功案例的路径依赖，LLaMA、Qwen、Mistral 等主流开源模型均采用 Decoder-Only 架构，形成了生态继承性。 简化的经验法则是：Encoder-Only 适合分类和理解任务，Encoder-Decoder 适合输出强烈依赖输入的生成任务（如翻译），Decoder-Only 适合开放式生成任务（如多轮对话、代码生成、内容创作）。 Q9：MoE（混合专家模型）的架构原理是什么？DeepSeek MoE 做了哪些改进？ MoE 是替代 Transformer 中标准 FFN 层的架构设计。它将原本单一的大尺寸 FFN 分解为多个较小的子网络，每个子网络称为一个专家（Expert），并引入一个路由器网络（Router）来决定每个 token 应该由哪些专家处理。具体工作流程如下：对于输入的每个 token，路由器网络输出各专家对应的概率权重，通常选择 Top-K（如 K=2 或 4）个概率最高的专家；将 token 分别送入被选中的专家进行计算；将各专家的输出按照路由器分配的权重进行加权求和，得到最终输出。 MoE 的核心优势体现在两个方面。 在相同参数总量下，MoE 的训练和推理计算开销更小，因为每次只激活部分专家；在相同计算代价下，MoE 的参数量可以做得更大，模型性能更好，体现了稀疏激活的优势。 负载均衡是 MoE 训练中的关键挑战。 如果不加约束，路由器可能倾向于只选择少数几个专家，导致部分专家频繁使用而其他专家很少被激活，造成参数利用率下降。解决方案包括在损失函数中加入负载均衡损失项，惩罚专家使用的不均匀分布；以及在训练时引入随机噪声让路由器进行探索。 DeepSeek MoE 做了两个核心改进。 第一是细粒度专家分割。DeepSeek 认为传统 MoE 的专家数量太少，每个专家可能拥有过于宽泛的知识，知识粒度太粗，因此将专家进一步细分，增加专家总数，使得每个专家专注于更精细的知识领域，同时每次激活的专家数量也相应增加。第二是引入共享专家。设置一些始终激活的通用型专家，负责处理所有 token 都需要的通用知识，而细分专家则专注于特定领域的知识。实验证明这两个改进显著提升了模型性能。Qwen3 MoE 模型也采用了类似思路，使用 128 个专家，每次激活 8 个，并采用了细粒度专家分割。 Q10：KV Cache 的优化方案 MQA、GQA 和 MLA 各自的原理是什么？它们之间如何对比权衡？ KV Cache 问题的背景。 在自回归生成中，每生成一个新 token，都需要与之前所有 token 的 K 和 V 进行注意力计算。为避免重复计算，系统会将已生成 token 的 K 和 V 缓存起来，这就是 KV Cache。KV Cache 的显存占用为 2 × 层数 × 序列长度 × 头数 × 头维度。随着序列长度增加和批量增大，KV Cache 成为显存的主要瓶颈。 MQA （Multi-Query Attention，多查询注意力）让所有注意力头共享同一组 K 和 V 投影，只有 Q 保持多头。这意味着每个 token 只存储一份 K 和一份 V（而非 h 份），KV Cache 压缩为原来的 1/h。代价是注意力多样性下降，模型性能通常低于 MHA。 GQA （Grouped-Query Attention，分组查询注意力）是 MHA 和 MQA 之间的灵活折中方案，将 h 个 Q 头分为 g 组，每组内的头共享同一组 K 和 V 投影，组间不共享。例如 Qwen3-4B 使用 32 个 Q 头、8 个 KV 头（即 4 个 Q 头共享一组 KV）。GQA 在性能和效率之间取得了较好的平衡，被 LLaMA 2/3、Qwen 等模型广泛采用。 MLA （Multi-head Latent Attention，多头潜在注意力）是 DeepSeek 提出的创新方案，采用低秩压缩的思想。通过降维矩阵 W_d 将 K 和 V 投影到一个维度很小的潜在空间，得到压缩后的潜在向量 C_KV；KV Cache 只需存储这个维度较小的 C_KV，而非完整的 K 和 V；在注意力计算时，通过升维矩阵 W_UK 和 W_UV 将 C_KV 恢复为完整的 K 和 V。MLA 的关键优化是 W_UQ 可以在注意力计算时与 W_UK^T 融合（矩阵乘法结合律），因此不需要显式地对 K 进行升维和降维操作，只需存储共享的潜在向量即可。 三者对比总结。 MQA 采用最激进的压缩策略，性能下降最明显。GQA 是性能和效率的折中，在适度压缩 KV Cache 的同时保持了较好的模型质量。MLA 通过低秩压缩在取得最大 KV Cache 节省的同时，DeepSeek 的实验表明其性能甚至优于标准 MHA，成为目前最优的 KV Cache 优化方案，被 DeepSeek-V3 和 R1 等模型采用。 四、微调技术 Q11：LoRA 和 QLoRA 的原理是什么？LoRA 的秩 r 如何影响表达能力与效率的权衡？ LoRA（Low-Rank Adaptation）是一种参数高效微调技术。它的核心洞见是在对大模型进行任务适配时，权重矩阵的更新量通常具有低秩特性。因此可以冻结原始预训练权重 W，仅学习两个低秩矩阵 B 和 A，使得 ΔW = BA。其中 B 的维度为 d_out × r，A 的维度为 r × d_in，r 是秩，通常取 2 到 32。最终的前向传播计算变为 h = Wx + BAx = Wx + (α/r)·BAx，其中 α 是缩放因子用于调节 LoRA 更新的幅度。B 通常全零初始化，A 随机初始化，使得初始行为等价于原模型，保证训练起始稳定。推理时无需改变原有模型结构，LoRA 权重可以直接合并到原始权重中：W_merged = W + (α/r)·BA。 LoRA 可以作用于注意力层的 Q、K、V、O 投影矩阵，也可以扩展到 FFN 层的 gate_proj、up_proj、down_proj。Attention 和 FFN 全覆盖微调能获得更强的表达能力，但参数量也相应增加。 秩 r 的权衡。 r 控制着低秩矩阵的中间维度，是表达能力与效率权衡的关键参数。r 越大，BA 乘积可以逼近的更新矩阵秩越高，理论上的表达能力越强，但可训练参数量也线性增长。在实际应用中，简单任务使用较小的 r（如 4 到 8），复杂任务使用较大的 r（如 16 到 64）。 QLoRA 将量化与 LoRA 结合，实现极致的内存效率。 以 4-bit NF4（NormalFloat 4-bit）格式加载预训练权重，模型体积仅为原本 16-bit 的约四分之一，NF4 是基于信息论优化的数据类型，根据正态分布的分位数来分配量化值，在权重密集区域分配更多量化刻度，比标准 Int4 精度更高。LoRA 适配器使用 BFloat16 精度进行训练。前向传播时实时反量化为 BFloat16 进行计算，计算完成后丢弃临时 BFloat16 权重。反向传播时仅更新 LoRA 参数，基座模型权重冻结。对量化常数进行二次量化，将第一次量化的缩放因子再量化为 FP8。QLoRA 使得在单张消费级 GPU（如 24GB 显存）上微调 65B 参数的大模型成为可能。 Q12：SFT（监督指令微调）的目的是什么？它与预训练的关系是什么？SFT 阶段会遇到哪些典型问题？ SFT 在训练流程中的位置是：预训练（世界知识 + 语言模式）→ 指令微调（指令理解 + 任务泛化）→ 偏好对齐（人类价值观 + 安全合规）→ 实际应用。 SFT 的目的。 在预训练模型的基础上，通过有监督微调（使用指令-回答对），教授模型如何理解并遵循人类指令。预训练的基座模型虽然拥有丰富的世界知识和语言能力，但它只知道如何做「下一个 token 预测」，不知道如何与用户进行有意义的交互。SFT 是连接预训练基座模型能力与人类意图的关键桥梁。 SFT 与预训练的关系。 预训练在大规模无标注语料上进行自监督学习（Next Token Prediction），训练目标是使输出下一个 token 为语料中下一个 token 的概率最大，使用交叉熵损失函数。SFT 同样使用交叉熵损失，但只在问答对数据中的助手回答部分计算损失，通过掩码忽略用户输入部分的损失计算。SFT 数据的核心要素包括：数据格式通常采用 Chat Template，使用特殊 token 标识序列开头结尾和角色（如 <|system|>、<|user|>、<|assistant|>）；核心理念是多样性和高质量，需要清洗拒答、重复、逻辑错误的样本；目前的标准做法是构建多轮对话格式数据，如 ShareGPT 和 Alpaca 格式。 SFT 阶段的典型问题。 第一，复读问题：模型反复输出相同或高度相似的内容。原因包括训练数据中包含大量重复文本，EOS token 没有学好导致模型不知道何时停止，以及推理时 Temperature 过低使生成过于确定性。第二，灾难性遗忘：微调导致模型丧失预训练阶段学到的通用能力。缓解方法包括在微调数据中混合通用数据，使用较小的学习率，以及采用 LoRA 等参数高效微调技术。第三，任务过拟合：如果微调数据 100% 都是同一种任务格式，模型可能学会「无论用户说什么都输出这个格式」的强规律，丧失通用对话能力。解决方案是通过系统提示词区分不同任务模式，或在训练数据中混合多种任务类型。 Q13：RLHF 中 PPO、DPO、GRPO 三种算法的核心原理是什么？它们的优劣势如何对比？ 为什么有 SFT 之后还需要 RLHF。 SFT 的本质是 Next Token Prediction，它在机械地模仿训练数据中的回答模式。仅靠 SFT 难以让模型真正理解什么是「更好」的回答，模型无法突破训练集的回答质量天花板。RLHF 让模型被允许在策略空间中进行探索，当模型生成比训练集质量更高的回答时获得正向激励，使得模型学会「如何生成让人类更满意的答案」而非仅仅是「模仿人类写好的答案」。 PPO （近端策略优化）是 RLHF 的经典算法，训练需要同时加载四个模型。基准模型是 SFT 之后的冻结模型，用于计算 KL 散度约束，防止训练模型偏离太远；训练模型是 PPO 要优化的模型，结构和初始参数与基准模型一致；奖励模型是预先训练好的打分模型，对序列整体输出一个奖励分数，而非词表大小的 logits；状态价值模型（Critic）评估在当前已生成 token 序列的状态下的期望总回报，用于计算优势函数。PPO 的核心机制包括：将每个 token 的生成视为一个动作，使用 GAE（广义优势估计）为每个 token 分配优势值；通过 Clip(ratio) × Advantage 的损失形式进行近端优化，限制每次更新的幅度，防止训练崩溃；引入 KL 散度惩罚项防止训练模型与基准模型的输出分布偏离过大。PPO 的局限在于四个模型同时加载显存成本极高，强化学习天然不稳定导致多模型协同训练困难，且存在 Reward Hacking 问题（策略模型可能发现奖励模型的漏洞，生成能获得高分但实际无用的输出）。 DPO （直接偏好优化）是一种离线算法，不依赖于强化学习，直接用偏好数据优化模型。它不需要预先训练独立的奖励模型和状态价值模型，但仍保留基准模型防止偏离过多。DPO 的损失函数形式为 -log σ(β·log(π_w/π_ref_w) - β·log(π_l/π_ref_l))，其中 π_w 是训练模型对偏好答案的概率，π_l 是对拒绝答案的概率，β 控制偏离基准模型的惩罚力度。核心直觉是最大化偏好答案相对于基准模型的提升与拒绝答案相对于基准模型的降低之间的差距。DPO 的优势在于成本较低，不需要复杂的强化学习探索和额外的奖励模型和 Critic 模型训练，稳定且易于实现。DPO 的局限在于作为离线算法，完全依赖于预先收集的固定偏好数据集进行训练，无法像在线算法那样在训练过程中持续从当前策略采样新数据探索策略空间，且需要大量高质量偏好数据，偏好数据最好由当前模型采样再由人类标注。 GRPO （组相对策略优化）是对 PPO 的改进，核心创新是无须训练独立的 Critic 模型。具体流程如下：对于每个 Prompt，用当前模型生成一组（如 G=4 或 64）个完整回答；用奖励模型为每组内每个回答打分；计算组内均值作为基线，用每个回答的分数减去组内均值再除以组内标准差，得到该回答中每个 token 共享的优势值；使用与 PPO 相同的 Clip 截断和 KL 散度约束进行更新。GRPO 的关键改进在于 PPO 将每个 token 视为独立动作，需要为每个 token 分配奖励，但奖励模型只在序列结束时才给出分数，中间 token 只能用 KL 散度乘负值填充，这与人类偏好无关，而 GRPO 将整个序列视为一个动作，序列级奖励更为合理。GRPO 的局限性包括：零优势现象（当组内样本奖励完全一致时优势值为零，梯度接近零，训练停滞），解决变体包括 SRPO 确保每组有正确和错误样本以及 DAPO 自适应调整更新幅度；计算效率问题（每个 Prompt 需要生成多轮完整序列并计算奖励，推理开销大）；奖励信号粒度问题（GSPO 指出 GRPO 的奖励是序列级而重要性采样是 token 级，存在粒度不匹配）。 五、推理部署 Q14：模型量化的原理是什么？对称量化与非对称量化有何区别？QLoRA 中的 NF4 为什么比标准 Int4 精度更高？ 量化的核心原理是将原本以浮点数（FP32 或 FP16）表示的模型参数和激活值，用低位宽的整数（INT8 或 INT4）近似表示，同时尽可能减少量化引入的精度损失。量化的好处包括减少模型存储空间和显存占用，减少数据传输量从而缓解带宽瓶颈，以及利用 GPU 对整数计算的硬件加速来加快推理速度。 对称量化以 INT8 量化为例，数值被映射到对称区间 [-127, 127]。确定一个缩放因子 scale = max(|浮点最大值|) / 127，任意浮点值量化时除以 scale 后取整，反量化时乘以 scale 即可还原。对称量化实现简单，但如果浮点值的分布不对称（如最小值远大于最大值的负数），会浪费一部分整数表示范围。 非对称量化将数值映射到区间 [0, 255]。缩放因子 scale = (最大值 - 最小值) / 255，零点 zero_point = 最小值 / scale。量化时原值除以 scale 加上 zero_point 取整，反量化时（量化值 - zero_point）× scale。非对称量化计算稍复杂但精度更高，因为它充分利用了整数表示范围。原始矩阵相乘结果可以近似为量化后矩阵相乘后乘以对应的缩放因子。 训练后量化（PTQ）是在模型训练完成后直接对权重进行量化，无需重新训练，代表方法有 AWQ 和 GPTQ。训练感知量化（QAT）则是在训练过程中模拟量化误差，让模型适应量化带来的精度损失，精度通常更高但需要训练资源。 NF4 相比标准 Int4 的优势。 传统的均匀量化（如 Int4）假设权重是均匀分布的，但神经网络的权重通常服从正态分布（钟形曲线）。均匀量化在分布密集的区域精度分配不足，在两端的稀疏区域分配过多精度。NF4（NormalFloat 4-bit）是基于信息论优化的数据类型，根据正态分布的分位数来分配量化值，在权重分布密集的区域（均值附近）分配更多的量化刻度，在稀疏的区域（远离均值的尾部）分配较少。这使得 NF4 在表示神经网络权重时比标准 4-bit 整数的精度显著更高，这也是 QLoRA 能在 4-bit 精度下保持微调效果的关键原因。 Q15：vLLM 的 PageAttention 机制如何解决传统 KV Cache 管理的显存碎片问题？ 传统 KV Cache 管理的痛疾。 在标准的推理系统中，系统需要为每个请求预分配一段能容纳最大生成长度的连续显存空间来存储 KV Cache。这种做法带来两个严重问题：显存碎片化（不同请求的实际生成长度不同，预分配的空间可能大部分未被使用，但已经因为预留而无法被其他请求利用，随着请求的进入和退出，显存中形成大量大小不一且无法合并的碎片），以及显存利用率低（为了应对可能出现的最长序列，系统需要预留超出实际需要的显存，造成严重浪费）。 PageAttention 的核心思想借鉴了操作系统中虚拟内存分页管理的设计哲学。首先，不为每个请求的 KV Cache 预分配连续的最大长度显存，而是将 KV Cache 划分为固定大小的 Block（块，类似于操作系统的内存页）作为基本存储单位。其次，一个请求的多个 KV Cache Block 在逻辑上是连续的序列，但在物理显存上可以分散存储在不同位置，通过一个块映射表（Block Table）来维护逻辑位置到物理位置的映射关系。最后，系统根据实际生成进度动态分配新的 Block，而非预先分配全部空间。 PageAttention 带来的两个核心优势。 在解决显存碎片方面，所有请求共享一个 Block 池，当请求结束时其占用的 Block 被回收并可被重新分配，由于 Block 大小固定，回收后可以被任何新请求直接复用，不会产生大小不一的碎片。在 Shared Block（共享块）机制方面，当一个提示词需要生成多条序列时（如 Beam Search 或并行采样），多条序列可以共享同一份 Prompt 的 KV Cache Block，只在各自生成的部分分配新的 Block，这进一步大幅提升了显存利用率。这种设计将操作系统中经过数十年验证的成熟思想应用到了大模型推理场景，使得 vLLM 在吞吐量和显存利用率上显著优于传统推理方案。 六、多模态与生成 Q16：VLM（视觉语言模型）的主流架构设计模式有哪些？LLaVA 和 Qwen-VL 的架构有何异同？ 视觉语言模型的三种主流架构设计模式。 双编码器架构（Dual-Encoder）的代表是 CLIP，使用独立的图像编码器和文本编码器分别提取特征，通过对比学习损失将图像和文本映射到同一向量空间，优势是检索效率高且支持零样本分类，局限是交互不够充分，图像和文本在编码阶段没有交叉信息融合。融合编码器架构（Fusion-Encoder）的代表是 ViLT，将图像分块后直接投影到文本空间，与文本 token 一起送入 Transformer 进行深度融合，优势是模态间交互充分，局限是推理时计算开销大。编码器-解码器架构（Encoder-Decoder）的代表是 BLIP-2，使用 Q-Former 等可学习查询向量模块桥接视觉编码器和 LLM，实现视觉特征的压缩和语义对齐。 LLaVA 的架构设计采用简洁高效的方式，仅使用一个 MLP 投影层将冻结的视觉编码器（通常是 CLIP 的 ViT 模块）的特征转化为与 LLM 词嵌入维度一致的视觉 token，然后直接拼接到文本 token 序列中送入 LLM 进行处理。训练分为两个阶段：模态对齐阶段使用图文对数据，冻结视觉编码器和 LLM，仅训练 MLP 投影层，建立视觉特征与语言空间的初步对齐；指令微调阶段端到端训练整个系统（或至少训练投影层和 LLM），使用看图问答和推理指令数据让模型学会在对话场景中使用视觉信息。 Qwen-VL 同样采用「视觉编码器 + 适配层 + LLM」的架构。视觉编码器使用 ViT-bigG 架构，基于 OpenCLIP 的开源实现进行预训练，通过对比学习学习视觉与文本表征的对齐关系。Qwen-VL 的后续版本引入了多项创新：动态分辨率使得大图像用更多 token 表示，小图像用更少 token，避免压缩或填充到固定尺寸带来的信息损失；窗口注意力将图像切成不重叠的窗口，窗口内 token 互相计算注意力但不与窗口外的 token 交互，将自注意力的平方复杂度降低为对 token 长度的线性复杂度；DeepStack（Qwen3-VL 新增）不仅使用 ViT 最后一层的输出，还从浅层、中层、深层分别提取特征，每个层的特征都有独立的 MLP Merger 进行投影，然后以残差连接的方式注入到 LLM 的不同层中，这种设计保留了浅层的纹理和边缘细节信息，显著提升了 OCR 和细粒度图像理解能力。 两者的核心异同。 相同点是都遵循「视觉编码器 + 投影适配层 + LLM 骨干」的基本范式，都采用分阶段训练策略。不同点在于 LLaVA 的投影层最简单，直接用单层 MLP，而 Qwen-VL 的后续版本在分辨率处理、注意力效率、多尺度特征融合等方面进行了更多工程优化。 Q17：Stable Diffusion 中的潜在扩散模型（LDM）原理是什么？无分类器引导（CFG）是如何工作的？ 为什么需要潜在扩散模型。 如果直接在像素空间进行扩散和去噪，计算量极其巨大。一张 512×512 的 RGB 图像在像素空间有约 78 万个维度，扩散模型的每一步迭代都需要在这个高维空间中进行计算，即使在高端 GPU 上也极其缓慢。LDM 的核心创新在于将扩散过程从像素空间转移到压缩后的潜空间中进行。 LDM 的三个核心组件。 第一，VAE（变分自编码器）负责图像与潜空间的相互转换。编码器将原始像素空间图像压缩到一个维度极小的潜空间表示 z（例如 512×512 图像对应的潜空间维度仅为 64×64×4，数据量减少约 48 倍），解码器负责将去噪后的潜变量还原为像素空间图像，VAE 的编解码过程几乎不损失视觉质量，但大幅降低了后续扩散模型的计算开销。第二，U-Net 噪声预测网络是扩散模型的核心骨干，在给定当前时间步 t 的带噪声潜变量 z_t 和时间步信息 t 的条件下，预测当前步骤应去除的噪声分量。U-Net 采用编码器-解码器结构配合跳跃连接，由 ResNet 残差块和 Transformer 块交替组成，其中的交叉注意力模块承担了条件控制的关键角色：将文本提示词的特征（通常是 CLIP Text Encoder 的输出）作为 K 和 V，将图像潜变量特征作为 Q，使得去噪过程的每一步都能参考文本约束来调整生成方向。第三，Text Encoder（CLIP 文本编码器）将自然语言提示词编码为文本嵌入向量 τ，作为条件信号注入到 U-Net 的交叉注意力层中。 扩散过程与去噪过程 。训练时，从真实图像出发，按照噪声调度表逐步添加高斯噪声，经过 T 步后变为近似纯噪声，U-Net 学习在给定时间步 t 的条件下预测每一步添加的噪声量，训练损失是预测噪声与真实添加噪声之间的 MSE。推理时，从纯随机噪声出发，U-Net 在每一步预测当前步应去除的噪声，通过迭代去噪逐步还原出清晰的潜变量图像，最后通过 VAE 解码器还原为像素空间图像。 无分类器引导（Classifier-Free Guidance, CFG）的原理。 在训练条件扩散模型时，以一定比例（如 10%）随机将文本条件置空，让模型同时学习有条件和无条件两种生成模式。在推理采样阶段，将条件控制下预测的噪声和无条件预测的噪声进行组合：ε_guided = ε_uncond + w × (ε_cond - ε_uncond)。其中 w 为引导比例（guidance_scale），w 越大条件控制的作用越强。当 w=1 时等价于纯条件生成，w 增大时，模型会更紧密地遵循文本提示词，但图像的自然度可能下降。通过 (ε_cond - ε_uncond) 的差值项，模型在采样过程中从噪声预测中减去（或增强）与文本条件相关的方向，实现对生成方向的精细控制。CFG 是文生图模型中控制生成质量与文本一致性的核心机制。 七、RAG / Agent / 评估 Q18：RAG（检索增强生成）系统的完整流程是什么？在各个环节中有哪些关键优化策略？ RAG 的核心理念 。RAG 是一种增强生成框架，通过检索外部知识库为 LLM 提供生成所需的事实依据，而非依赖模型内部参数化的知识。RAG 解决的核心问题是 LLM 内部知识有限且可能过时，直接参数记忆可能产生幻觉；但将整个知识库塞入上下文窗口既不经济又会导致注意力分散。 RAG 的完整流程分为离线阶段和在线阶段。离线阶段在用户提问前完成：文档分片（Chunking）将原始文档按照一定策略切分为若干片段，分片方式包括按字数、按段落、按章节或按语义边界，分片策略至关重要，过小可能截断关键语义，过大可能稀释核心信息；向量索引（Embedding & Indexing）使用嵌入模型（如 BGE-M3）将每个分片转化为稠密向量，与原文一起存入向量数据库（如 Chroma、Milvus）。 在线阶段在用户提问后依次执行。查询处理是可选的预处理步骤，包括查询改写（Query Rewriting）、查询分解（Query Decomposition）或 HyDE（先生成一个假设答案，用假设答案替代原始 Query 进行检索，以弥合用户 Query 与文档之间的语义差异）。召回（Retrieval）将用户查询的嵌入向量与向量数据库中的文档嵌入进行相似度计算（余弦相似度、欧氏距离或点积），返回 Top-K 个最相关的片段。重排（Reranking）使用更精细但成本更高的 Cross-Encoder 模型（如 bge-reranker-v2-m3）对上一步召回的 K 个候选片段进行精细筛选和重新排序，选出最相关的 k（k < K）个片段。生成（Generation）将重排后的相关片段作为上下文拼接到 Prompt 中，与用户原始问题一起发送给 LLM 生成最终回答。 各环节的关键优化策略。 分片优化方面，父子检索（small-to-big）策略使用较短子片进行高精度检索，但在送入 LLM 时使用子片对应的完整父片，解决上下文缺失和指代不明问题，附加元数据（如来源、说话人、章节标题）提供额外上下文。混合检索方面，同时使用稠密检索（向量语义相似度）和稀疏检索（BM25 关键词匹配），利用 RRF（倒数排名融合）算法进行排名融合，RRF 不依赖绝对分数而是依赖相对排名，公式为 RRF(d) = Σ 1/(k + rank_i(d))，其中 k 取 60，能够公平地将不同尺度、不同含义的检索分数融合起来。重排优化方面，Cross-Encoder 的强项在于将两个文本拼接输入进行联合编码，通过自注意力机制在编码过程中充分进行跨文本信息交换，能够捕获细微的语义差异，远比 Bi-Encoder 的独立编码后向量比较更精确。生成优化方面，考虑 Lost in the Middle 效应（LLM 对上下文开头和结尾的信息更关注，中间部分容易被忽视），将相关性最高的文档排在两端，相关性较低的排在中间，并通过 Prompt 要求模型明确引用来源以减少幻觉。 Q19：ReAct Agent 框架的设计原理是什么？为什么需要「推理 + 行动」的循环模式？Agent 比纯 LLM 多出了什么？ Agent 与纯 LLM 的本质区别。 LLM 是一个强大的大脑，可以思考、推理和生成文本，但它无法直接影响外部世界，像一个知识丰富但没有手脚的学者。Agent 是一个完整的系统架构，构成要素包括 LLM（核心控制器和推理引擎）、记忆（短期上下文 + 长期外挂数据库）、规划（任务分解与策略制定）和工具（感知环境与执行动作的能力）。Agent 能够自主设定目标、拆解任务、调用外部工具 API、读取环境反馈，并循环执行直到完成任务。 ReAct 框架的核心循环是 Thought（思考）→ Action（行动）→ Observation（观察）→ Thought → … → Final Answer。在 Thought 阶段，LLM 生成自然语言推理，分析当前已知信息，判断还需要什么信息，并解释选择下一步行动的原因，当行动失败时 Agent 能分析失败原因并调整策略。在 Action 阶段，调用外部工具如搜索引擎 API、数据库查询、代码执行器和计算器等，工具的调用通过标准化的 JSON 格式指定工具名称和参数。在 Observation 阶段，实时接收行动返回的结果，作为下一步推理和行动的输入依据。推理指导行动的方向，减少无效的工具调用和搜索；行动为推理提供最新的事实依据，使推理建立在可靠信息的基础上。复杂任务被拆解为原子化的推理-行动对进行串行或迭代执行。 为什么需要「推理 + 行动」的循环模式。 如果只有推理没有行动，模型只能依赖内部参数记忆生成内容，无法获取实时外部信息，容易产生幻觉，不知道当前时间、最新新闻和实时股价等超出训练数据的信息。如果只有行动没有推理，模型不知道什么时候该调用什么工具，面对复杂问题无法有效拆解和规划。两者的协同效应使得推理指导行动的方向以减少无效搜索，而行动为推理提供最新的事实依据。 Agent 的核心能力构成。 感知层面，通过工具调用读取 API 返回的 JSON 数据，读取文件系统，浏览网页等。规划层面，LLM 通过推理能力将大问题分解为多个小问题，ReAct 是当前主流的规划框架。记忆层面，短期记忆对应当前的上下文窗口（受限于 Token 长度），长期记忆需要外挂数据库，向量数据库存储非结构化经验，SQL 和图数据库存储结构化事实。 Agent 安全设计的原则。 由于 Agent 具有执行能力（调用工具、写代码、发邮件等），其风险远高于纯对话 LLM。设计应遵循零信任原则：放入沙盒环境（Docker、虚拟机）中运行；每次关键操作之前需要人类确认；权限最小化，不要赋予 Agent 过多权限（如 API Key）；在系统提示词中加入对抗防御指令；设置另一个监控 Agent 观察主 Agent 是否存在敏感行为。 Q20：大模型评估中，一个好的 Benchmark 应该具备哪些标准？目前主流的 Benchmark 分别评测模型的哪些维度？ 好的 Benchmark 的五个标准。 第一是有区分度，不能所有模型都拿高分或满分，必须能够体现强弱模型之间的真正差距。例如经典的 MMLU 和 HumanEval 随着模型能力的快速提升已经越来越缺乏区分度，因此涌现出 MMLU-Pro（十选一，更难）作为补充。第二是可复现且鲁棒，同一模型多次运行得分应稳定，Prompt 的微小变化不应引起剧烈波动，这要求评测流程标准化和自动化。第三是可自动化评估，通过固定答案匹配（如选择题 ABCD、关键词匹配、测试用例通过率）、LLM-as-a-Judge 或评估脚本直接算分，降低人工评估的时间和成本。第四是防数据泄漏，数据集不能出现在模型训练语料中，例如 LM Arena 采用用户实时提问和评判的方式天然防护泄漏，静态数据集则需要通过定期更新或使用带奖金征集的新题目来降低泄漏风险。第五是与人类偏好一致，评测结果应与人类对模型有用性、准确性和无害性的主观判断保持相关。 主流 Benchmark 按评测维度分类。 多学科知识方面，MMLU（四选一，57 个学科，涵盖从高中到专家水平的知识）、MMLU-Pro（十选一版本，需要思维链推理）、MMMLU（多语言版本，防止仅靠记忆英文语料拿分）、HLE（人类最后考试，由各领域博士专家编写，目前顶尖模型也只有 37 分）。推理能力方面，GSM8K（小学数学应用题）、GPQA（研究生水平科学推理）、ARC-AGI-1（抽象推理，看图找规律，与知识储备无关）。代码能力方面，HumanEval（Python 函数补全，考察基本代码逻辑和语法，目前已经接近送分题）、SWE-bench（从真实 GitHub 开源项目中提取用户提交的 Issue，要求模型阅读代码仓库、定位问题文件、写出修复补丁并保证不破坏已有测试，是工程师和做题家的分水岭）。Agent 能力方面，tau2Bench（真实智能客服场景，要求满足客户需求同时不违反业务规定）、MCP-Atlas（涉及 40 多个不同 MCP 服务器和 300 多个工具的复杂工具调用环境，目前最强模型准确率也只有 60% 左右）。多模态能力方面，MMMU（30 多个学科的多模态选择题，包含五线谱、电路图、医学影像等）、CharXiv（从学术论文上理解复杂图表）、Video-MMMU（视频理解加学科知识问答）。人类偏好评估方面，LM Arena（用户实时输入题目，模型实时回答并由用户评判，无法提前背题）、AlpacaEval（指令遵循能力排序）。安全与对齐方面，评估模型在回答危险问题时的拒绝能力、是否存在偏见和歧视、是否会产生幻觉。 评估方式的三种模式。 固定答案匹配最快最低成本，适合选择题和可自动判分的任务。LLM-as-a-Judge 让更强的模型作为裁判评判其他模型的回答质量，判断好坏总比自己生成要好要容易，灵活且低成本，但可能引入裁判模型自身的偏见或幻觉。人类偏好评估通过人类专家评判或收集大量用户真实反馈进行排序，最能反映真实对话质量和用户体验，但成本高且速度慢。 评估的未来趋势将越来越少地依赖选择题，而是更多地依赖 MCP-Atlas、SWE-bench 这类模拟真实工作的实战演习。模型是否能在复杂、嘈杂、多变的环境中完成任务，比是否背下了维基百科更重要。 这 20 个问题覆盖了从架构原理到工程落地的完整链路，希望能帮助你构建系统化的知识体系。整理不易，希望能帮到大家。有什么问题也可以在评论区聊，欢迎关注，会持续分享。",
+      "excerpt": "在大模型领域发表了一些CCFA类或B类论文，前前后后 面试 了十来场，并且有三段实习，包括一段大厂实习。 我感觉 大模型 算法 面试 当中，八股相关的问题是一定可以熟练掌握的",
+      "author": "初长夜",
+      "created_at": 1782458592,
+      "updated_at": 1782458592,
+      "published_date": "2026-06-26",
+      "voteup_count": 112,
+      "comment_count": 8,
+      "url": "https://www.zhihu.com/question/665390929/answer/2053860877275870212",
+      "matched_keywords": [
+        "大模型 岗位 面试"
+      ],
+      "content_type": "大厂面经",
+      "pre_score": 95,
+      "score": 95,
+      "summary_zh": "基于十场大厂面试经验，系统梳理Transformer核心八股题，含自注意力缩放原理、多头机制推导与常见误区。",
+      "reason": "一手面试问题与深度解析，机制讲清、推导完整、对比明确，非拼贴转载。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "answer:2017965718516290608",
+      "content_id": "2017965718516290608",
+      "question_id": "11013588902",
+      "platform_type": "answer",
+      "title": "如果你是大模型算法的面试官，你会问哪些问题?",
+      "content": "update 0323 面试板块——讲项目环节基本写完了，需要的同学可以划一下目录。 后面还有 面试其他板块的描述（也包含一部分双向选择的内容），敬请期待…… 之前在福报厂做TL，一个校招季能面大几十人。因为最近刷到很多同学找实习的帖子，所以“好为人师”一下（我本身有点讨厌给人当爹……），希望达到两个目的： 一个是帮朋友们摆平心态； 一个是帮朋友们功课做在事前。 关于心态 有时候觉得自己面得不好，也不一定都是你的原因↓ 自我提升，并不能降低面试的时候遇到SB的几率 ↑这话是我说的。即便是一两年前，我自己跳槽的时候，仍然能遇到很大比例的SB，而且是高级SB——就是这人他 不是技术上不通，他是不打算跟你沟通，表面上在问问题，实际上在做服从性测试。 现在想起来血压都高 ‍♀️，反正遇到这种SB，我是连他们背后的机构一起拉黑了。 找工作是挺随缘的 ，一方面，确实要基于市场需求调整自己的能力要求（自我提升）和价值定位（管理预期），另一方面也要认识到↓： 招聘市场的匹配机制真的赶不上王者峡谷，…… 板块1：岗位是什么，爱用什么人 先说清楚，我负责招聘的岗位，和我的用人要求 1.1 岗位 岗位：应用算法岗 主要职责： 分拣、简化、抽象业务中的实际问题，利用、研发、改进现有可实现的算法模型，解决业务问题； 不断提升对同一现实问题的抽象水平，让自己负责的算法模型做到数据闭环，自动更新，架构可演化升级，可解决问题不断泛化，或算法模型的运行成本不断降低。 应用算法岗，大部分也就是这点事。 在参加工作的第一年，做到分拣/抽象业务问题，实现算法解决问题就很好了。后面需要不断精进的，是其他描述Cover的内容。 Besides 过去很长一段时间内，算法岗的薪水 是押在 「 建模 」和「 算法 」这两项基本功之中的 「算法」 上的。因为后者容易度量，且门槛很高。 但这两年的现实是，算法应用岗的实际门槛在降低： 其一、训练框架逐渐平台化、甚至命令行化。 以前我们要自己写训练框架，代码还要随着 TensorFlow 和 PyTorch 的版本优化去不断改写——更早的时候我们甚至还搞过 Caffe。现在，虽然真要搞模型或训练方案优化，还是得把 LLaMA-Factory/Verl 或 vLLM/Megatron 打开改，有些方向还要死磕并行和量化， 但在“基础实现”这个层面上，条件已经大大改善了 。 其二、模型骨架逐渐向 Transformer 收敛。 之前很多实现起来很麻烦的网络结构，现在基本都收敛到了 Transformers 这个库能吃下的范围之内（有些也被淘汰了）。虽然变种依然很多，但至少不用大家再苦哈哈地自己去写前向和验后向了。 其三、Benchmark 和数据集极大丰富。 HuggingFace 生态的繁荣，规范了大量数据工程上的工作。现在做很多常见任务，都有现成的资源可以直接拿来用。 换个角度，我们仔细审视一下算法岗的日常工作：到底有哪些是后端开发同学真的不能干、干不好、或者摸不透基本原理的？ 你会发现，壁垒多数已经不在“工程实现”上了，而是在统计、抽样、建模、训练监控、效果追踪等等——这些由 认知和经验 构成的模块中。 但市场的残酷逻辑在于： 越不好度量的东西，越不会被度量 。 所以，工程实现门槛的降低，必然伴随着趋向——算法岗的薪资水平要面临「 价值回归 」。 反观现在，我们高校中， 一部分硕士专业的设置其实是很水的 。这就导致一部分毕业生，乍看之下好像“啥也不会，啥也没做过”，真到了找工作的时候非常容易吃瘪。 我其实会问另外一个问题， 非得找“算法岗”吗 ？有没有可能 是49年入国军 呢？ 有的选的时候，先别急着冲，停下来想想该怎么选。 我自己也在看我需要学什么领域的技术来接住行业的转型。我最早毕业的时候学得是金融数学，做经济数据的建模预测，后来转向了时序的行为识别，也做过视觉识别，再后来转向行为表征化场景，NLP场景（序列技术同源 ），大模型场景…… 做技术，持续转向几乎是必然的，当然，我现在对下一步我学什么，转什么（尤其是年纪大了，有没有机会转……）也没想好，持续探索中，欢迎交流想法，给中登指点迷津(*^▽^*) 1.2 用人要求 一般带队的TL大体都会同意我这个描述：候选人只要 以下二者有其一 ，就可以了。 能做事，脑子灵活——这点面向的是 「建模」： 遇到问题，能直切问题的核心； 或者给出的解决方案往往最接近实际工作中的“最短路径” 或者能针对一个问题想到多条解决路径； 或者同时在模型抽象和实际解法上有思路——有不少问题是不一定要算法去「死磕」的。 算法基础好，有创新思维——这点面向的是「算法」，这个我不展开也好理解哈，(*^▽^*) 只要有一个方向的能力很突出，就能上B+。 应届生找工作，看的是你的长板有多长，短板只要能保持在平均水平左右就行。 Besides 其实这么多年演化下来，有些算法团队的TL自己也是只占 第一项，活的也很好（裁员潮之前）。因为在实际工作中，这类 TL 能敏锐地找到最有价值的业务切入点，并用成本最低/效果最好的方法带着团队拿结果。 这本来很好，但是——又回到了之前那个致命问题： 「算法」好估价，「建模」不好估价 。这类TL是裁员潮里，最先被动的一类人。（虽然，私以为，企业内最应该裁的是 「建模」上看不透问题 ， 「算法」上天天扯虎皮拉大旗 ，自己却哪头都拿不起来的PPT选手。但是这类选手能在「算法」这边给自己披上一层【战术伪装】，迷惑性很强……） 就我而言，最理想的状态反而是， 「建模」更强的大老板 ，带着 「算法」更强的二老板 ，这种梯队更好。奈何…… 板块2、面试流程 我一般的顺序是这样的（可能跟大部分同学见到的不太一样）： 1- 团队和岗位介绍（要求候选人有不清楚的直接问） 2- 闲聊候选人个人经历 3- 请候选人讲项目，并逐步深挖技术问题 4- 扩展聊技术视野 5- 要求反问 这种逻辑里，技术问题都包含在讲项目的过程中，考察得也会非常深入，但对面试官本人的技术储备和反应能力要求比较高。 体感层面：候选人虽然有可能体感更轻松，真实感强（这也是面试官的追求，你不紧张时表现的水平才是我能放心评价的），但 坑多 ，而且 很难 ，而且面试官在这个体系下，都会在 明确摸到你的极限 的时候才会停，所以压力会在过程中不断地积累。 结果上：如果，同一个维度，你被问的问题越多，越深，即便你自己觉得答得拉，整体评价都会不错。但如果你被问的问题少，甚至没体会到面试官对你的雷点在哪儿，那么反而有可能要完。多说一句，体感轻松的面试最好问一下面评——“您建议我在哪个方向重点提升？”这时候，有可能你会听到面试官的“ 但是…… ”部分。 下面这种可能是同学更常碰到的 1- 要求自我介绍 2- 拷问八股文 / 手撕 Code / 智力题 3- 请候选人讲项目，并逐步深挖技术问题 4- 要求反问 这种设置下， 2 这个环节就是代替笔试的考卷部分，面试官对正确答案是什么是有预期的（他也看过八股，十之有九是他自己背过的……），没有答出八股的通用答案，通常会被降分（私以为没什么道理，但是这种面试工厂化程度高，也不能算是不好吧，只要事前设计好……） 下面先捡重要的环节介绍—— 讲项目 2.1 关键板块、请候选人讲项目并逐步提问技术问题 这是个经典环节。但应届生在准备时，通常会丢掉一些面试官真正关注的重点。 可以使用 这个框架自查一下： 像准备论文一样准备项目介绍 这个环节是完全可以在事前充分打磨的。 而且，打磨的不是“写演讲稿”，而是“ 如何从事应用算法开发工作 ”。 功夫做在事前 当然，我说功夫做在事前，是指在平时做项目时就多想深一层。如果想不到应该关注的问题，除了应用“准备论文”这样的大纲以外，还可以想象自己明天要开 “组会” ： 面试官/同事A/师兄问：“你这里是不是存在XX问题？” 你：“对，这个点我当时考虑过了，我也觉得有这个问题，所以我后来做了XX改进……” 面试官/同事B/同学问：“那你当时如果用XX方法做，是不是会更好？” 你：“对，这个方案我也考虑过。但我具体在业务场景里试了一下，发现它有如下几个缺陷，所以我最终选择了现在的方案……” 举的是我们组前两天开组会的实际例子。通常在做事的阶段，同事会说我overthinking。但是吧，做这行第一天（那时候还是CNN时代）到现在，我每天都在担心一个问题，“ 乱拳打死老师傅 ”——为了防止被打死，每个项目也都会看看能不能真出乱拳解决问题 （换言之，多想想有什么问题） 如果你现在回想起来，发现之前实习或做项目时有些实验没做、有些对比没跑， 现在做依然来得及 （比如在类似的场景或开源数据集上，自己重新跑一下、验证一下）， 想做就永远都来的及 。 回到讲项目这个环节。 这部分非常重要，面试官实际并不是要求候选人【快速讲解自己的一篇论文】，而是让候选人在面试官面前 完整的展现一下自己怎么做事 。 候选人可以按照这个东西对比着看。 应用算法岗的工作 论文呈现 面试问题 业务需求拆解 算法问题定义 Intro·背景痛点+问题定义+核心价值 一句背景痛点，一句问题抽象，一句解决后的价值 行业方案调研与Baseline搭建 Related Works·主流方案梳理+局限性分析+选型依据 一两句话点评业内方案及【核心局限】 算法方案定制化设计与核心优化 Method·问题建模+方案设计+优化策略 沿着【核心局限】展开【设计逻辑】 方案核心优化点 离线实验调优与线上A/B测试 Experiment·Metric定义+对比实验+结果分析 效果验证 全链路诊断 线上效果追踪 项目上线，自动化更新，迭代规划 Conclusion·成果总结+局限性分析+未来规划 设计反思 迭代方案设计 下面展开提一下每个环节需要注意的点 2.1.1. Intro问题是什么？Setup是什么？ 核心考察：业务理解力、问题抽象与建模能力 这里面试官观察的重点有几个： 其一、候选人能不能用最精炼的语言， 把一个复杂的现实问题翻译成算法问题 。 其二、候选人是基于什么价值判断，选择解决这个问题的（是实习的mentor要求做的没关系，候选人 要理解这里面的价值，以及判断逻辑 ） 其三、候选人是否关注产出的影响（做事不是重点， 做有价值的事，做出事情的价值 是重点） 这跟实际工作有什么关联？ 实际工作中，并不是所有的业务需求都要接。优秀的算法工程师，往往是看到了问题中 可抽象、可泛化 或者 业务价值极高 的地方，才会投入精力去解。 更重要的是，只有 能精准 Define问题 的算法工程师，才能在解决方案中，快速找到那条迁移和改造成本最小、距离最近的路径。 难点/坑点 Intro这部分对应届生的要求不太高，只有一类是常见的卡点： 如果你做的这个项目是为了优化某个线上指标，或者你谈到了某个指标被优化了。 面试官在这里可能会问你：这个指标 核心逻辑是测什么 ？和另外一个 常用指标有什么不同 （搜推广最常见这类问题）？为什么你这个 场景 应该看 这个指标 ？ 2.1.2. Related Works 要点1：简要提一两句：业界已有的方法有哪些？把它们直接用在你的场景里，会有什么问题？（不说的话，面试官通常也会问，他要是不问，要不然是他自己做事习惯不好，要不然就是他对你……） 要点2：类似“这个领域大概有这样几条路……”这样的表述，能很好的展现自己的技术视野。 这跟实际工作有什么关联？ 遇到一个问题，应用算法工程师通常会在大致的抽象之后做调研，即便是一个已经抽象很好的场景，也还是要再看看最近几个月有什么新进展，有没有更好的路径。 ‍♂️ 反面案例 有个候选人说：我改造了Transformer。 我：Transformer的改造在19年以后，曾经涌现了很多方法。你面向的XX问题，有几个经典的改造呢？ 候选人：没有，（然后候选人讲了方法） 我：亲，你之前看过 Informer 吗？logformer 呢？ 候选人：没有。 我：你确实应该看看，你看了就不会说你自己这个是创新了……那你看 deepseek 的 NSA 了吗？ 候选人：也没有。 我：啊……希望你能站在巨人的肩膀上。 评价：有创新的思维非常好！但是需要建立在科学的方法论上。 那个场景，就是面试官给你机会时候的逻辑，一般是 领域里很火的方法 先问（informer）， 和候选人思路很近的工作 后问（logformer）， 时下比较热点的方法 （NSA）最后问。 一些跟八股相关的技术问题 你调研的这个某某方法（通常是领域里的经典方法），用一句话总结一下他的核心思路？ 这个方法的某某组件，为什么要这么设计？（这个方法一定是比较经典，且有拆解意义的，不然不会问，大概率八股里的也有） 某某方法的效率怎么样？（提问 频率较高的问题 ）优化或者卡点在他的哪个设计上呢？（出现频率较低，但如果你有两篇工作/两个项目在相同的领域内，这个就很可能被问了） 2.1.3. Method 要点1 ： 一句话说清楚方法的 核心思路 ：这点反过来对工作和学习也有好处，可以看看我其他帖子里面的一句话总结。 要点2 ： 实现时候的核心难点， 举一个具象的例子 说明：这点是需要让面试官 共情和共识 的。 要点3 ：大部分火力要集中 怎么解决 难题这点上：而不是 解决难题 ，这其中的差距在于“你的动作”比结果更重要。（当然，如果你有10篇A会，你不会在这儿看我的帖子，对不对 ） 一些需要准备的问题 ： 怎么想到这个解法的 ？ 这一定是个好故事，但不是所有人都有。有的话，可以用 从现象发现，现象分析，因果诊断，到提出解法 这一套，在讲方法之前说一下。 你认为 实现当中的重点 是什么？ 这是很好的展现自己的判断力的地方。判断的第一要素当然是业务效果，也要想想 速度、成本、泛用性、扩展性 等等问题。 当时没想？没关系， 现在想起来觉得可以再改改 ，这个也可以。但是最好伴有一些相应的验证行为。有动作比没动作强，补救永远不晚。 你实际动手做了什么，是面试官判断的标准 为什么这个方法在设计上是合理的？ 更优的 ？ 这个问题不一定会被问到，因为在前面阐述场景问题（Intro）和阐述相关工作（Related Works)的时候，都可能提到。 你实现的时候 做了什么Trad-off ？因为这个trade off做了什么 其他的适配或者补丁吗 ？ trade-off 在现实层面是必然会发生的，尤其是考虑运行效率（前台场景，比如搜推广，客服 都非常注重响应时间和并发）和自动更新的场景（安全场景注重自动更新和快速迭代和泛化） 关于八股 这种渐进式的面试，八股问题通常会出现在Method部分，面试官会直接根据你的技术选型往下问： 比如：你说选了某个方法，面试官接着就问你，loss选的什么？这个loss和 领域里经典的某个loss 什么区别?…… 比如：你说选了某个基座模型，面试官马上问，它和 同类模型的关键区别 是什么？（多模态的基模更常问结构） 具体结构是怎么设计的 ？优势在哪？（文本模型常问热门组件，比如，注意力，编码，MOE） 比如：你说你用了RL来训练，面试官会插进来问，选的方法是啥啊（最经典GRPO/DAPO绕不过去的）？这个方法容易出什么问题啊？最近流行的版本是怎么解决问题的？具体是加了个什么设计？这个设计什么好处？你当时怎么没用啊？…… BottomLine 就是 准备八股是必要的，围绕着你的项目所有选型和设计推就行了。 2.1.4. 实验分析（Experiment & Discussion） 要点1 ：说结果好，不能只说指标好，至少要有 Case Study 或 Ablation 中的一种。 指标Gap ：分清在线和离线指标，有Gap正常，说清楚为什么有即可。 应用岗更重Case分析 ：优化需求几乎每周都有，怎么优化很大程度基于对Case背后的分析。除了Metric，可以抽一类 改善明显 的样本，拿出来说为什么好；如果说得清楚，还可以抽一类改善不明显的样本，说 为什么没提升 ，并延伸 后续怎么提升 （如果这类不改善也不影响业务价值，可以不用提）。 Case study要有穿透性 ：现象举一例说清Case什么样即可，不用展开，但Case到设计的穿透要尽所能地深入。 反面案例：“数据上有这类问题……可能原因是训练数据有毛病吧。”（等于没说） 正确思路：什么样的样本引发了这情况？影响了模型的什么表达？为什么该多加/少加？数据要怎么调整？ Ablation 的重点：不在于证明“我的哪些配置合理”，而是回答 “为什么这么做，而不是那么做”。更深一步，最好先告诉面试官，你对这里面的什么最为好奇 （设计方法时猜想什么东西会work，你的猜测有没有得到印证）。 测评的可靠性 ：近两年的测评（LLM-as-Judge、人打win rate不稳定、生成式任务回归不稳定等）缺乏线上验证，要追加 交叉印证和线上追踪 。介绍这类新验证方法时，请一定引用至少一篇相关paper的结果 > 结果不solid没关系，但没做相关动作去尽量保证solid，不行。 要点2 ：方案的工程考量 要讲出自己的工程考虑 ：复杂度、成本、效率、泛用性、扩展性，至少要提一个。 扩展性说清楚很难 ：得把“未来可扩展场景”和“可扩展的内在逻辑”说清楚。应届生可以不挑战（大厂看潜力，小厂看能不能干活，都不要求面面俱到）。 关于复杂度 ：应用场域不prefer“复杂度高但Margin一般”的优化。但不等于不能说，自己主动把复杂度高说出来，堵上面试官的嘴（既然准备堵嘴了，怎么简化方案这点也请一并堵上吧 ）。 要点3 ：训练过程的反复与诊断：训练过程有反复，是好故事。重点说明：问题是怎么发现的？Bug是如何诊断出来的（在数据上？训练监护上？还是算子上？） ？ 要点4 ：区分“ 我的 工作/Idea”和“我们的工作/Idea”。 介绍实验和结果的时候，更容易牵扯到其他人的工作。项目有其他人指导或参与很正常，但 你在其中扮演什么角色 ，这很重要。千万别夸大哈，被问出来就完蛋了。信用分比能力分还重要。 一些常见的场景及应对 没覆盖到的欢迎评论区告诉我，我力所能及之内，Cover上 。 被问 调参过程 ：没故事可以不主动讲，但面试官一般会问，必须准备哈。最好是在做事的时候就参考下面的逻辑： ※ 先参考同行的经验配置，再铆钉关键维度，再细化调参。 ※ 关键维度什么什么？跟任务，方法都有很大关系。 ※ 调了半天还是同行的经验配置更好？这不要紧，「 调过 」展现的是你的探究热情，没调过，你很难解释 为嘛不干 啊 _(:з」∠)_ 如果实习只做了提示工程（Prompt） 虽然现在很多实习场景（包括正式岗）都在疯狂的开发提示工程，Agent相关开发都不太重。但是啊， 但是！ 算法岗依然看重“ 炼丹 ”能力，如果只做了Prompt/数据/业务流程，必须准备好应对以下连环问： — 调试的数据集你怎么准备的？ — 通过模型反应你有什么猜测？（哪些猜测有同行论文支撑？） — 你怎么保障回归效果？ — 你怎么保障提示工程的扩展性？（涉及Agent/Skill设计） — 怎么管理业务问题Agent化/Skill化过程中的Experience？ 应对不同类型的面试官 经验丰富的面试官：更看重你的判断逻辑和实际行为（为什么这么选）。 经验浅的面试官：更看重具体方法，有时候甚至会热衷于讨论具体方案，倒不一定是在套你反感，而是技术人的一种难以自持的倾向 。 初面遇到经验浅的面试官的可能性比较高，所以方法的 细节务必准备全面 。可以 参考rebutall o(*￣︶￣*)o…… 2.1.5. Conclusion & Future 即便是学校里交小作文，干这里都要力竭了，但讲项目和应用算法的工作中，这反而是一个比较重要的环节。 为什么面试官看重这个环节？ 应用算法岗比较累的时候，基本上是下面两个场景之一（之二的话，你就累屁了……）： 疯狂拓荒 ：大量新业务需要上模型，开发压力极大。 持续填坑 ：老业务维护更新中，现有方法一直在掉点（安全类算法有可能是十分钟级的掉）。 为了不被累死，一个算法工程师在模型上线时，必须↓ 看耐用- 鲁棒性 ：线上有点风吹草动，你就要打补丁？——那得累死…… 看横宽- 泛用性 ：现在的方法能不能直接推广到其他待开发的场景，省点人力？ 看纵深- 扩展性 ：有没有包容性更好的框架，以后再加新策略/模型/临时补丁，能不能快速插入，无痛升级？ 看沉淀- 资产积累 ：做完这个项目，留下了什么东西（数据、工具、经验）是可以给未来继续用的？ （应届生基本不考全生命周期管理，前两点能考虑一个就不错）。 面试官在这个环节的提问，基本上都是围绕着这个工作逻辑。 下面列几个常见问题： “ 如果把现在的你放到当初那个环境中，你会有什么做的不一样。 ”： 可以说当初自己觉得 可做但没做的东西 ，可以说自己当时 trade-off时候被迫舍弃的东西有了新解法 ，可以说最近观测到的新方法能把什么东西做得更好——就要围绕着泛用、可扩展、可积累、效率高这几个点。 “ 现在上线之后出现了大量预估不准的反馈，你会 先看哪个模块？ ”： 要知道自己设计的东西哪块比较脆，一般要设个监控来盯着。 现在面经里通常会包含很多结果指标，但在实际工作中， 监测指标也非常重要 ——毕竟，结果指标总是有片面性的，而且监测指标也方便诊断问题，快速修复。 “如果让你去掉这个项目里的一个设计， 你会去掉哪个？ ”： 这个通常指向的就是泛用性或者扩展性不强的模块。实际工作也是支持用使用「 对策卡 」的（比如“ 对小广告特攻宝具 ”，但是你卡包里都是「 对策卡 」，关键对策抽不出来怎么办 技术设计以外，在Conclusion和Future这里，也要注重“ 看自己 ”这个点，简单说，就是善于从工作中学习，自己推着自己进步。这里注意 关键 ↓ 希望每一次都做不同的事情，是指 下一次面对这个问题，你有更好的解法 ，而不是指望工作能自己升级——或者你想轮岗？ 这样面试的最大板块——讲项目，算大致说完了，下面说说其他环节。其他环节的描述里，我也不只是想说怎么准备的事情，也会简单提一些双向选择的线索。 ================ 不行，码不动了，诸位过两天再来看吧",
+      "excerpt": "板块1： 岗位 是什么，爱用什么人 先说清楚，我负责招聘的 岗位 ，和我的用人要求 1.1 岗位 岗位 ：应用算法岗",
+      "author": "一脑袋浆糊",
+      "created_at": 1773900519,
+      "updated_at": 1774233009,
+      "published_date": "2026-03-19",
+      "voteup_count": 107,
+      "comment_count": 9,
+      "url": "https://www.zhihu.com/question/11013588902/answer/2017965718516290608",
+      "matched_keywords": [
+        "大模型 岗位 面试"
+      ],
+      "content_type": "大厂面经",
+      "pre_score": 93,
+      "score": 93,
+      "summary_zh": "前大厂TL亲述应用算法岗用人标准与面试逻辑，涵盖岗位职责、技术门槛变迁及双向选择实操建议。",
+      "reason": "第一手招聘视角，流程具体、策略务实，含真实技术演进观察与避坑提示。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "zhihu_candidate_count": 32,
+  "zhihu_qualified_count": 16,
+  "zhihu_status": "fetched",
+  "x": [
+    {
+      "id": "2082516370949062989",
+      "text": "We’re giving scientists, mathematicians, and engineers free access to our frontier models—starting with 10,000 researchers and expanding to 100,000 through 2027. ChatGPT for Academic Researchers is built to accelerate discovery across disciplines. https://t.co/nrHn1no0wQ",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5068480,
+      "source_tier": "官方账号",
+      "created_at": 1785345568,
+      "published_date": "2026-07-29",
+      "like_count": 7535,
+      "retweet_count": 870,
+      "reply_count": 481,
+      "quote_count": 392,
+      "bookmark_count": 2047,
+      "view_count": 1654080,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/OpenAI/status/2082516370949062989",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 83,
+      "score": 83,
+      "title": "OpenAI向10万科研人员免费开放前沿模型",
+      "summary_zh": "OpenAI启动分阶段计划，首期向1万名科研人员免费提供前沿模型访问权限，目标2027年前扩展至10万人，聚焦加速跨学科科学发现。",
+      "reason": "官方首次公布规模性学术接入计划，含明确时间表与覆盖范围，信息增量高且具可行动性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2082228994653696371",
+      "text": "We support this petition, signed by our CEO, several co-founders, and senior staff. Our own research on recursive self-improvement, published last month, points to the need for tools to deliberately pace the frontier of AI development so society can prepare. We’re glad to see broad agreement across the field. https://t.co/DqwuQfa9xH",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1562329,
+      "source_tier": "官方账号",
+      "created_at": 1785277052,
+      "published_date": "2026-07-28",
+      "like_count": 4602,
+      "retweet_count": 528,
+      "reply_count": 1312,
+      "quote_count": 744,
+      "bookmark_count": 1888,
+      "view_count": 3676750,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.pacingthefrontier.com/"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2082228994653696371",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 82,
+      "score": 82,
+      "title": "Anthropic联合签署“放慢前沿”倡议",
+      "summary_zh": "Anthropic CEO及核心成员签署公开请愿，援引其上月发表的递归自改进研究，主张主动调控AI发展节奏以匹配社会准备度。",
+      "reason": "官方表态关联自身新研究成果，提出明确治理主张，非泛泛而谈，具备政策与技术双重信息增量。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2082616636989952217",
+      "text": "GPT-5.6 Sol has been used to solve open problems in mathematics. So why was it struggling with ARC-AGI-3, a benchmark of 2D puzzle games? We investigated. The harness was not letting it remember what it had learned. We found that enabling two API settings tripled our scores with 6x fewer output tokens.",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5068480,
+      "source_tier": "官方账号",
+      "created_at": 1785369474,
+      "published_date": "2026-07-29",
+      "like_count": 5886,
+      "retweet_count": 369,
+      "reply_count": 240,
+      "quote_count": 127,
+      "bookmark_count": 1039,
+      "view_count": 464270,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/OpenAI/status/2082616636989952217",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 82,
+      "score": 82,
+      "title": "GPT-5.6 Sol在ARC-AGI-3基准表现跃升三倍",
+      "summary_zh": "OpenAI揭示GPT-5.6 Sol因API记忆设置缺陷致ARC-AGI-3得分偏低；启用两项配置后得分达38.3%，提升三倍且用更少token。",
+      "reason": "披露具体技术瓶颈与可复现优化路径，属高质量实测分析，对开发者具直接指导价值。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2082718824500199884",
+      "text": "🚨BREAKING: Meta just proved that every major AI model fails at something any toddler can do. Navigate a room. Find an object. Pick it up. Nine frontier models tested. GPT-5. Gemini 3 Pro. Claude Opus 4.6. Every major VLM available today. The best success rate: 16.8%. Not 16.8% on a hard research task. 16.8% on find-navigate-interact episodes in indoor scenes. Walk to the sofa. Pick up the cup. Go through the door. Tasks a two-year-old performs without thinking. Here's what Meta actually built and tested. HumanCLAW. An evaluation framework that gives AI models a physical body — a full humanoid with real physics, real gravity, real collision detection — and measures whether they can act through it intelligently. The clever part of the design: they separated the AI's decision-making from motor execution entirely. The VLM issues commands. A separate motor controller executes them perfectly. If the task fails, it's not because the body stumbled. It's because the AI made a bad decision. What remains measurable is pure action intelligence. The model's moment-to-moment choice of what the body should do next. No motor excuses. No balance failures. Just: did the AI decide correctly? 1,218 episodes. 41 indoor scenes. 9 state-of-the-art models. All tested on the same benchmark. None solved it. Here's what the models were actually failing at — and why it's more alarming than the number suggests. Recognizing the target was not the bottleneck. Every model could look at a scene and identify the sofa, the cup, the door. Visual understanding is largely solved. What failed was embodied self-awareness. The models consistently lost track of their own body. After issuing a sequence of movement commands, they couldn't tell where they were. They'd issue a command to \"walk forward to the sofa\" — the body executed it perfectly — and then the model would issue the exact same command again, unaware that it had just completed it. They failed to register whether they'd reached a goal. They failed to notice they'd hit an obstacle. They issued commands that contradicted what their own body had just done. The paper's description: \"they lose track of their own body, failing to tell where it is, whether it has reached the goal, or whether it has hit an obstacle.\" A model may know where the sofa is. It doesn't know where it is relative to the sofa after moving. That gap — knowing the world but not knowing yourself in the world — is what the paper calls embodied self-awareness. And no current AI has it. Here's why this matters beyond robotics. Every AI agent system you've ever used has a version of this problem. An agent that executes tool calls but loses track of what state it's in. An agent that issues a command, receives confirmation, and then issues the same command again because it didn't integrate the confirmation into its world model. HumanCLAW makes this failure mode visible and measurable in the most concrete possible way: a physical body in a room, trying to complete a simple task. The benchmark exposes the gap between \"knowing things\" and \"knowing yourself in a situation.\" Current AI has plenty of the first. Almost none of the second. A toddler has both. From Meta Research. Project page at https://t.co/lJoqrDMsky. Code on GitHub. #3 paper on Hugging Face today — July 30, 2026.",
+      "author_name": "Rituraj",
+      "author_handle": "RituWithAI",
+      "author_verified": true,
+      "author_followers": 63146,
+      "source_tier": "认证来源",
+      "created_at": 1785393837,
+      "published_date": "2026-07-30",
+      "like_count": 8,
+      "retweet_count": 5,
+      "reply_count": 2,
+      "quote_count": 0,
+      "bookmark_count": 6,
+      "view_count": 219,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "http://human-claw.github.io"
+      ],
+      "url": "https://x.com/RituWithAI/status/2082718824500199884",
+      "matched_queries": [
+        "topic-1"
+      ],
+      "content_type": "论文发现",
+      "pre_score": 79,
+      "score": 79,
+      "title": "Meta HumanCLAW框架揭示VLM物理交互能力严重不足",
+      "summary_zh": "Meta新评估框架HumanCLAW测试9个主流VLM在真实物理仿真中执行找物-导航-抓取任务，最高成功率仅16.8%。",
+      "reason": "原创评测方法（分离决策与执行）、强对比基线（幼儿能力）、明确失败归因，论文级信息增量显著。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 37,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "7e44766b801fc2f629b019a05639c924ab055db4315337b884b80141f0eb2904"
+}
