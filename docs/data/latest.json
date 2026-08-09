@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "digest_date": "2026-08-08",
-  "data_path": "data/2026/08/2026-08-08.json",
-  "preview_path": "daily/2026/08/2026-08-08.html",
-  "content_sha256": "944fb78179795c408271a50636de97b4eba06d61c863387fee6598336702aae8",
-  "generated_at": "2026-08-08T05:38:09.396918+00:00"
+  "digest_date": "2026-08-09",
+  "data_path": "data/2026/08/2026-08-09.json",
+  "preview_path": "daily/2026/08/2026-08-09.html",
+  "content_sha256": "d64144bd668546740f6214543afdb2d8e55decb03cc1e02ed7e4240d518947b6",
+  "generated_at": "2026-08-09T05:43:48.140794+00:00"
 }
