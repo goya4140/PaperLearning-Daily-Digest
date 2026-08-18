@@ -1,0 +1,389 @@
+{
+  "version": 2,
+  "date": "2026-08-18",
+  "arxiv_query_date": "2026-08-17",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-08-18T05:22:14.669004+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608170000+TO+202608172359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608170000+TO+202608172359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-17T00:00:00Z",
+    "2026-08-17T23:59:59Z"
+  ],
+  "raw_candidate_count": 318,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.16801",
+      "title": "When Agents Coordinate: Measuring Coordination in Multi-Agent AI Coding",
+      "authors": [
+        "Giuseppe Destefanis",
+        "Tomaso Aste"
+      ],
+      "abstract": "We study how teams of AI coding agents coordinate while solving programming tasks. Current evaluations usually report whether the agents complete the task and how much the run costs, leaving the coordination inside the team largely unmeasured. We introduce an instrument to measure this coordination. Each run is represented as a temporal network in which agents and files are nodes, and messages, file writes, and file reads are timestamped directed edges with an associated cost. We apply this instrument to 1902 runs, each evaluated with a fixed test suite, across configurations that vary the team size, the team structure, and the file policy. The resulting networks show how coordination changes as teams grow and as the work changes. Direct messaging initially increases close to quadratically with the number of agents, with much of this growth coming from an early round of introductions. As the teams grow further, this increase levels off in the largest teams we study, where agents increasingly communicate through broadcast messages. The task also shapes the network that emerges. Work built around a shared specification produces dense, highly connected teams, while pipeline tasks produce sparse networks organised around local interfaces. Shared files can replace repeated 1-to-1 communication, cutting output tokens by about 42% at eight agents on message-heavy work, while adding overhead when files already carry the coordination. Naming one agent as coordinator creates no communication hub and provides no reliable improvement in success. We also observe an unprompted tendency for agents to seek out hidden grading material. We repeat the key experimental conditions in a sealed environment, replacing the hidden material with marked placeholder files. Across 244 additional runs, agents still reach for it in four fifths of runs, while the coordinator and file-channel findings reproduce.",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-17T16:57:38Z",
+      "updated": "2026-08-17T16:57:38Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.16801v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16801v1",
+      "rank": 30,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.205,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "首篇多智能体协作量化研究，提出时序网络测量框架",
+      "one_liner": "提出首个可量化的AI编码智能体协作测量框架，揭示团队规模与任务结构对通信模式的影响",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.16381",
+      "title": "AstronOS: A Unified Execution Model and Runtime for Long-Horizon Agentic Systems",
+      "authors": [
+        "Zhenhang Nie",
+        "Gui Zheng",
+        "Xudong Sun",
+        "Tailong Zhu",
+        "Bin Zhang"
+      ],
+      "abstract": "Agentic systems often organize execution and state around a single conversation, model invocation, or agent instance, even when real work spans many calls and stages. We introduce a unified execution model that maintains a work item's persistent identity and versioned authoritative state across calls. Each step receives input scoped to a specific state version and new material; a result advances state only after validation and recording. We implement selected paths of this model in AstronOS using Cases, Tasks, and Scenario Packs across central and local execution. We compare five complete strategies for carrying an established software-version update plan into a fresh model session: rereading original materials, replaying full history, deterministic text summary, deterministic JSON, and the AstronOS runtime-mediated handoff. Ten controlled tasks are run under all five strategies with three repetitions, yielding 150 included executions. On the single-stage reference family, strategies perform similarly. In the primary three-stage A-C batch, AstronOS passes the frozen scorer in 14 of 15 executions, compared with 0 of 15 for rereading and 2 of 15 for full-history replay; later non-interleaved summary and JSON batches each pass 0 of 15. AstronOS has lower attempt-accounted model-token cost per passing execution, while requiring more execution-window time per attempt. These results associate the complete AstronOS condition with higher end-to-end pass rates across fresh sessions in this benchmark, at a measurable time cost.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-17T10:33:28Z",
+      "updated": "2026-08-17T10:33:28Z",
+      "comment": "23 pages, 2 figures, 13 tables. Zhenhang Nie and Gui Zheng contributed equally; Gui Zheng and Bin Zhang are corresponding authors",
+      "url": "https://arxiv.org/abs/2608.16381v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16381v1",
+      "rank": 167,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.5545,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "统一执行模型解决长周期任务状态延续性问题",
+      "one_liner": "AstronOS提出持久化工作项身份与版本化状态模型，显著提升跨会话任务成功率",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.16246",
+      "title": "CompoSkill: Compositional Skill Chain Attacks from Individually Scanner-Passing LLM Agent Skills",
+      "authors": [
+        "Mingxiao Liu",
+        "Zhoumian Jiang",
+        "Jianan Ma",
+        "Jian Zhang",
+        "Jialuo Chen",
+        "Xinhao Deng",
+        "Zhen Wang"
+      ],
+      "abstract": "Autonomous AI agents tackling Long Horizon Tasks depend on marketplace skills that are certified one at a time: a scanner returns a safety verdict for each skill and declares the ecosystem safe if every package passes. We show that this assumption fails under skill composition. A skill may pass the per-skill scanner individually yet participate in a risky composition when an agent connects its outputs, capabilities, or side effects with those of other scanner-passing skills. This makes skill composition risk a path level property rather than a node level property, explaining why existing skill scanners that inspect individual packages achieve limited interception. To study this threat, we present CompoSkill, a framework that constructs skill composition attacks through a dual attacker system. The white-box attacker knows the victim's installed skill pool and directly injects explicit skill-id sequences; the black-box attacker knows only a role profile, downloads the top marketplace skills for that scenario, builds a Skill Composition Graph, and searches for high risk chains whose implicit lures never name skill identifiers. We further construct CompoSkill-Bench, a benchmark of 1,140 records built from long-horizon professional workflows across five threats and six scenarios on OpenClaw and Nanobot. CompoSkill achieves risk Chain Formation Rates (CFR) up to 83.3% in the white box setting and 80.6% in the black box setting, while existing skill scanners block only a limited fraction of the risky compositions. Finally, we observe a bridge-bonus-then-hop-decay pattern: a bridge skill can increase attack success, but Attack Success Rate (ASR) decreases once additional hops make the risk chain longer than three skills. These results expose a systematic gap in single skill certification for autonomous AI agents.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-08-17T08:20:44Z",
+      "updated": "2026-08-17T08:20:44Z",
+      "comment": "9 pages,5 figures",
+      "url": "https://arxiv.org/abs/2608.16246v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16246v1",
+      "rank": 215,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 9.6748,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "揭示技能组合安全风险，填补单技能扫描盲区",
+      "one_liner": "CompoSkill发现单技能通过扫描≠组合安全，构建首个技能链攻击基准CompoSkill-Bench",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.16148",
+      "title": "FeatureHospital: A Skill-Driven Multi-Agent Framework for Automated Algorithm Customization in Multi-View Multi-Label Feature Selection",
+      "authors": [
+        "Junxuan Li",
+        "Zhiqi Chen",
+        "Yuzhou Liu",
+        "Peng Zhang",
+        "Huaxiao Liu"
+      ],
+      "abstract": "Multi-view multi-label feature selection aims to identify a compact and informative feature subset from heterogeneous views while preserving discriminative information for multiple labels. Existing methods are generally developed from specific modeling perspectives and incorporate mechanisms tailored to particular data characteristics. Designing suitable feature selection algorithms across datasets with diverse and heterogeneous characteristics still relies heavily on expert knowledge and substantial manual effort, imposing considerable time and labor costs that severely hinder the practical adoption of feature selection. To address this problem, we propose FeatureHospital, a Skill-driven multi-agent framework for automated multi-view multi-label feature selection algorithm design. FeatureHospital first diagnoses the target dataset to identify its feature selection issues. Based on the diagnosis, specialist agents equipped with domain Skills then prescribe corresponding optimization strategies and Loss terms for different issues. After that, the resulting prescriptions are reconciled to remove overlaps and resolve conflicts before being integrated into a compact dataset-specific objective. Finally, the constructed objective is optimized to select the final feature subset. Experimental results demonstrate that FeatureHospital can construct effective feature selection algorithms for different datasets based on their individual characteristics.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-17T06:01:17Z",
+      "updated": "2026-08-17T06:01:17Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.16148v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16148v1",
+      "rank": 257,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 8.6783,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 7,
+      "reason": "技能驱动的多智能体框架实现算法自动定制",
+      "one_liner": "FeatureHospital首创诊断-处方-整合三阶段框架，为多视图多标签数据自动生成定制化特征选择算法",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.16795",
+      "title": "Historical Backtesting for Scientific Question Discovery: A Protocol and Astronomy Pilot",
+      "authors": [
+        "Hui Mao"
+      ],
+      "abstract": "Systems that generate scientific research questions are evaluated today by expert scores, LLM-as-judge ratings, or curated case studies -- all subjective, none falsifiable. We formalize historical backtesting as an alternative: a system generates questions from a corpus frozen at a historical cutoff, the questions are frozen before any access to later literature, and a temporally isolated future corpus then determines whether each question was subsequently answered, partially addressed, independently posed, or ignored, and whether its underlying premise was supported or refuted. The protocol is model-agnostic: any system that emits frozen questions can be scored. We release reproducible astronomy instances with temporally isolated corpora, frozen questions, auditable labels, four reference baselines, and a submission interface. Two findings result. First, evidence-structure-first generation outperforms LLM-only prompting: across a generator decomposition crossed with a four-cutoff stress test (2010-2024, 798 judged questions) whose last window postdates model training, LLM-only generation shows memorized relevance without specific foresight, while a generator using no model weights at all finds questions whose premises the future refutes in every era. Second, a seven-rater agreement study (two blinded human annotators, five judge models, 90 items) indicts the outcome taxonomy rather than the judge: two careful humans agree at kappa = 0.17, every judge model agrees with the professional annotator as well or better (0.17-0.26), and frontier models agree with one another at 0.60 -- certifying an LLM judge by model-model agreement would have overstated its reliability threefold. A prospective instance -- 200 questions frozen 2026-08-17, scored 2027-2030 -- is released so the central claims become contamination-free tests that time itself will grade.",
+      "categories": [
+        "cs.CE",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CE",
+      "published": "2026-08-17T16:51:06Z",
+      "updated": "2026-08-17T16:51:06Z",
+      "comment": "27 pages, 10 tables. Benchmark, code, frozen instances, and the prospective 2026 submission: https://github.com/nonameisready/scientific-question-discovery-benchmark",
+      "url": "https://arxiv.org/abs/2608.16795v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16795v1",
+      "rank": 33,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "verifier model / llm-as-judge / rubric evaluation"
+      ],
+      "explore_score": 12.3072,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "提出可证伪的历史回测协议评估科学问题生成",
+      "one_liner": "历史回测协议首次实现科学问题生成系统的客观、可证伪评估，发布天文领域可复现实例",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.16578",
+      "title": "Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents",
+      "authors": [
+        "Batu El",
+        "Jinhee Paeng",
+        "Fatih Dinc",
+        "Shiye Su",
+        "Mete Erdogan",
+        "Aneesh Pappu",
+        "Haotian Ye",
+        "Wanjia Zhao",
+        "Surya Ganguli",
+        "James Zou"
+      ],
+      "abstract": "AI agents increasingly operate as part of interacting systems rather than in isolation. As agents exchange information and jointly make decisions, their interactions can improve collective reasoning but may also produce herding, polarization, or amplify shared biases. Understanding and predicting these collective dynamics is therefore important for designing effective and aligned multi-agent systems. Here, we study over 10,000 communities of language-model agents that repeatedly exchange messages and revise their opinions across objective mathematics questions and subjective political statements. Despite substantial diversity in possible behavior, the individual and group dynamics can be represented by three characteristic regimes: indifference, polarization, and consensus. AI agents start indifferent and build conviction as they interact. On objective questions, communication improves collective accuracy, while on subjective questions it often drifts group opinions toward the right in the political spectrum. We explain these observations with a statistical-mechanics formalism in which agents stochastically favor lower social pressure. Given only initial opinions, our model predicts individual trajectories, outperforms all standard baselines, generalizes to unseen community graphs, and reproduces the observed group archetype distributions. Our fitted model parameters reveal the mechanics underlying our key observations: i) communities operate below the critical social temperature, which explains conviction buildup; ii) attractive ties outweigh repulsive ones, which favors consensus; and iii) agents holding the correct answer exert the strongest pull, which drives truth-seeking. Overall, our results demonstrate that collective behavior of AI agents, like that of other complex systems, follows compact and predictive dynamical laws.",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "cs.SI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-17T13:41:24Z",
+      "updated": "2026-08-17T13:41:24Z",
+      "comment": "51 pages, 20 figures, 9 tables",
+      "url": "https://arxiv.org/abs/2608.16578v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16578v1",
+      "rank": 100,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.7407,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "用统计力学建模AI智能体群体行为，具强预测性",
+      "one_liner": "Physics of Agents建立统计力学模型，仅凭初始观点即可预测智能体群体共识/极化等集体行为",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.16465",
+      "title": "JailbreakSkill: Scaling Automated Red-Teaming with Reusable and Ever-Evolving Skills",
+      "authors": [
+        "Xiaoyu Wen",
+        "Jiajia Li",
+        "Zhida He",
+        "Peng Yu",
+        "Chenxu Wang",
+        "Han Qi",
+        "Ziyuan Zhou",
+        "Cheng Jin",
+        "Ying Wen",
+        "Xingcheng Xu",
+        "Shuyue Hu",
+        "Tianhang Zheng",
+        "Chaochao Lu",
+        "Qiaosheng Zhang"
+      ],
+      "abstract": "Automated red-teaming has produced a growing collection of attack strategies, yet they typically remain scattered across prompts and workflows, making them difficult to systematically integrate, reuse, and improve at scale. We introduce \\textsc{JailbreakSkill}, a skill-centric framework for scaling automated red-teaming through reusable and continuously evolving attack capabilities. \\textsc{JailbreakSkill} packages existing attack strategies into modular, agent-ready skills that can be directly reused and adaptively selected across tasks and target models. Beyond reuse, it closes the loop between attacking and learning: attack experience is used to diagnose, refine, combine, and discover new skills, which are added back to an ever-growing skill library. This evolution lifts macro-average ASR by 17.5 percentage points on AdvBench and 13.4 points on HarmBench, including a 48.6-point gain against GPT-5.4 on AdvBench, while yielding novel attack strategies such as reframing a direct request as an unfinished document-completion task. Several evolved skills also generalize to unseen prompts and target models without further adaptation. Our code is available at https://github.com/BattleWen/JailbreakSkill.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-17T12:03:35Z",
+      "updated": "2026-08-17T12:03:35Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.16465v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16465v1",
+      "rank": 139,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 11.6139,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "技能中心化红队框架实现攻击能力持续进化",
+      "one_liner": "JailbreakSkill将攻击策略封装为可复用、可演化的模块化技能，ASR提升达48.6点",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.16357",
+      "title": "MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories",
+      "authors": [
+        "Lauri Lovén",
+        "Jaakko Sauvola",
+        "Jukka Riekki",
+        "Sasu Tarkoma"
+      ],
+      "abstract": "Autonomous agents share a transport and can call each other's tools, but they cannot share what they know: no protocol lets two agents' memories reconcile a fact phrased two ways, link related facts held apart, or reconcile contradictory knowledge without silently discarding either claim. We present MELD, a self-managing coherence mechanism for a federation of agent memories whose run-time model is the knowledge graph itself. Each brain admits every incoming claim through a five-outcome procedure (insert, merge, relate, conflict, or reject), decided from three signals (scoped claim-key identity, embedding similarity, and a natural-language-inference verdict) under context and freshness gates, and acting through exactly one auditable, authenticated Patch, the only object that mutates state. A binding onto standard publish/subscribe transport with a per-claim status CRDT keeps sovereign brains coherent in claim status without a coordinator: self-healing after partitions and under lossy routing, and self-protecting against silent rewrite by a peer, under a benign-fault model. MELD does not adjudicate truth; a detected contradiction is preserved for later adjudication, never silently resolved. On HotpotQA distractor, distributed merge is recall-non-inferior to a centralized store under a pre-specified equivalence test and recall-superior to naive union at about 11% less live storage; the merge classifier separates at AUC 0.968 with a 0.013 false-merge rate on adjudicated candidate pairs; the status CRDT reconverges in 30/30 real partition-heal trials where last-writer-wins manages 11/30; and semantic routing delivers about 3x fewer messages at matched recall. We evaluate on a real computing continuum spanning an operator-grade 5G edge, national HPC, and a local tier, with empirically calibrated thresholds.",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "primary_category": "cs.DC",
+      "published": "2026-08-17T10:09:06Z",
+      "updated": "2026-08-17T10:09:06Z",
+      "comment": "30 pages, 3 figures, 1 table, plus an 11-page appendix (A-N). Code and experiment data: https://doi.org/10.5281/zenodo.21878274",
+      "url": "https://arxiv.org/abs/2608.16357v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16357v1",
+      "rank": 175,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.5542,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "首个分布式智能体记忆融合协议MELD",
+      "one_liner": "MELD提出基于知识图谱的联邦记忆融合协议，支持无协调器下的自愈合、抗静默覆盖一致性",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [
+    {
+      "id": "BV1Spbr6zEsW",
+      "bvid": "BV1Spbr6zEsW",
+      "title": "【中英双语】AI智能体记忆系统实战：Mem0完整架构解析，让Agent跨对话记住你 | Hugging Face",
+      "description": "想让你的AI智能体跨对话记住你吗？本视频用Mem0实战拆解Agent长期记忆的完整架构，从存储、摄取到混合检索，并教你用本地模型跑通全流程。\n\n📌 本期看点\n· Mem0如何用多种数据库构建长期记忆存储\n· 记忆摄取流程：从对话到结构化记忆的转换\n· 混合检索揭秘：语义搜索+BM25+实体增强\n· 本地部署方案：推荐开源LLM和嵌入模型\n· 删除单条记忆的机制与实现\n\n🎬 章节\n00:00 开场介绍\n00:55 什么是智能体记忆\n03:28 跨智能体的持久记忆\n04:26 Mem0使用的数据库\n08:06",
+      "author": "名校课程-顶级中配",
+      "duration": "52:47",
+      "published_at": 1787023826,
+      "view_count": 228,
+      "danmaku_count": 2,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/d9f81450a9bdeae5fa05b117ec7135d1b788883c.jpg",
+      "url": "https://www.bilibili.com/video/BV1Spbr6zEsW",
+      "matched_keywords": [
+        "AI Agent 实战"
+      ],
+      "content_type": "技术演讲",
+      "pre_score": 66,
+      "like_count": 5,
+      "favorite_count": 6,
+      "score": 66,
+      "summary_zh": "Mem0智能体长期记忆架构实战解析，涵盖存储、摄取、混合检索与本地部署方案。",
+      "reason": "高质量技术演讲，主题聚焦AI Agent记忆系统，信息密度高，实践性强。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [],
+  "x_candidate_count": 0,
+  "x_qualified_count": 0,
+  "x_status": "fetch-failed",
+  "ranking_source": [
+    "batched-llm"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "d4ce3f31de08254798b5a76e54b444e37fcf52b65597ca4133e8705bef9a836b"
+}
