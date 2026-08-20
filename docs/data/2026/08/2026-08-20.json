@@ -1,0 +1,603 @@
+{
+  "version": 2,
+  "date": "2026-08-20",
+  "arxiv_query_date": "2026-08-19",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-08-20T05:24:08.373634+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608190000+TO+202608192359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608190000+TO+202608192359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-19T00:00:00Z",
+    "2026-08-19T23:59:59Z"
+  ],
+  "raw_candidate_count": 260,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.19029",
+      "title": "Adaptive Memory and Reflection Multi-Agent System for Medical Question Answering",
+      "authors": [
+        "Pradeep Murugesan",
+        "Luoxiao Yang",
+        "Xueli Chen",
+        "Xinqi Fan"
+      ],
+      "abstract": "Accurate and responsible medical question answering (QA) is important in healthcare, where complex cases require factual knowledge and nuanced reasoning. Existing medical QA systems, typically based on single-agent architectures and static retrieval, often lack adaptability, persistent memory, and structured decision-making. This work introduces an adaptive memory and reflection (AMR) agentic system, a multi-agent framework in which specialized agents use dedicated memory and reflection-based feedback to retrieve relevant prior cases and improve subsequent reasoning. Complexity assessment routes questions through solo, collaborative, or escalated workflows, while consensus and ethical overseer modules support reasoning consolidation and output review. Evaluation on MedQA and MedMCQA demonstrates strong performance compared with several baselines. Ablation studies show that combining agent-specific memory, reflection, and external retrieval yields the strongest performance. These findings highlight the potential of structured memory and feedback for developing more trustworthy medical agents. The source code is publicly available at https://github.com/mm-air/AMR-Agent.",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-19T15:24:18Z",
+      "updated": "2026-08-19T15:24:18Z",
+      "comment": "Accepted by IEEE SMC 2026",
+      "url": "https://arxiv.org/abs/2608.19029v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19029v1",
+      "rank": 45,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.7099,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "医疗多智能体系统，具记忆、反思与协作机制",
+      "one_liner": "AMR多智能体系统通过自适应记忆与反思提升医疗问答可信度",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.18607",
+      "title": "VA-Judger: Reward Modeling from Human Preference Feedback for Joint Video-Audio Generation",
+      "authors": [
+        "Yinming Huang",
+        "Shuyuan Tu",
+        "Xi Yan",
+        "Zihan Yang",
+        "Jianhua Han",
+        "Xu Hang",
+        "Yu-Gang Jiang",
+        "Zuxuan Wu"
+      ],
+      "abstract": "Using reinforcement learning to post-train joint video-audio generation models requires a reward signal. Existing methods construct this reward by combining metrics for individual quality dimensions, including audio quality, visual fidelity, and synchronization. However, these metrics evaluate perceptual dimensions separately and fail to capture the overall semantic and temporal coherence among the text prompt, video, and audio that shapes human preferences. Optimizing models against these metrics encourages reward hacking, generating video-audio content that achieves high scores on these metrics yet appears incoherent or unfaithful to human viewers. To address this problem, we first construct a large-scale human-preference dataset VAPref-10K for joint video-audio generation, comprising 9K prompts and 10.3K fine-grained paired comparisons from open-source generation models. We also introduce the VA-Judger-Bench benchmark with both in-domain and out-of-domain model comparisons to evaluate whether reward models truly align with human preferences. We further propose VA-Judger, a chain-of-thought omni-reward model for joint video-audio generation. In particular, VA-Judger first learns from pairs with clear quality gaps to establish structured output and coarse preference discrimination, then distills reliable preference explanations for harder near-quality comparisons via rejection sampling verified against human annotations, and finally performs dimension-wise reinforcement learning that decomposes human feedback into individual quality dimensions for denser reward signals than a single binary preference label. Experiments show that VA-Judger outperforms metric baselines in predicting human preferences on both in-domain and out-of-domain evaluations. Using its human-aligned rewards for post-training audio-video generation model also yields significant improvements in generation quality.",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-08-19T06:53:14Z",
+      "updated": "2026-08-19T06:53:14Z",
+      "comment": "19 pages, 7 figures, 8 tables. Code: https://github.com/ShareLab-SII/VA-Judger",
+      "url": "https://arxiv.org/abs/2608.18607v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18607v1",
+      "rank": 187,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.2,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning",
+        "reward hacking / alignment evaluation"
+      ],
+      "explore_score": 9.7532,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "基于人类偏好的视频-音频联合生成奖励建模",
+      "one_liner": "VA-Judger构建人类偏好数据集与链式推理奖励模型",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.19049",
+      "title": "Multi-Agent Off-Policy Deep Reinforcement Learning for Smart Campus Coverage",
+      "authors": [
+        "Omar Rady",
+        "Mohamed Ayman",
+        "Ali Arafa",
+        "Mohamed Shalma"
+      ],
+      "abstract": "Deep reinforcement learning (DRL) has recently gained a great attention due to its real-time adaptation and effectiveness in complex optimization problems. This paper investigates the optimal deployment of millimeter-wave (mmWave) base stations (BSs) in a realistic, non-convex campus topology. The optimization problem is NP-hard, due to the non-convex, non-smooth nature of the max-min fairness objective. To overcome these constraints, we formulate the BS placement as a Markov Decision Process (MDP) and systematically benchmark four DRL schemes: a discrete single-agent Deep Q-Network (DQN), a spatially partitioned Multi-Agent DQN, a continuous single-agent Deep Deterministic Policy Gradient (DDPG), and a geographically partitioned multi-agent DDPG framework. Numerical evaluations reveal that the multi-agent DDPG approach substantially outperforms single-agent in dense scenarios. Additionally full coverage is achieved, and a fairness Jain's index of 0.94 is obtained. Finally, the multi-agent demonstrates highly efficient computational convergence of dense scenarios with $400$ users.",
+      "categories": [
+        "cs.LG",
+        "eess.SP"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-19T15:41:32Z",
+      "updated": "2026-08-19T15:41:32Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.19049v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19049v1",
+      "rank": 40,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.99,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Deep reinforcement learning (DRL) has recently gained a great attention due to its real-time adaptation and effectiveness in complex optimization problems. This paper investigates the optimal deployment of millimeter-wav…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2608.18740",
+      "title": "A Multi-Agent Platform for Automated Enterprise Analytics and Insight Generation",
+      "authors": [
+        "Manoj N M",
+        "Vijayakrishna S",
+        "Manjunath Srinivas",
+        "Rohit Pahan"
+      ],
+      "abstract": "This paper proposes a multi-agent framework built on CrewAI [1] for conversational business intelligence. Five specialized AI agents operate in a sequential pipeline to process natural language queries, retrieve and analyze data, generate visualizations via the Model Context Protocol (MCP) [2], and deliver actionable insights. The platform features a defense-in-depth security architecture for multi-tenant data isolation and a query parameterization mechanism for transforming conversational insights into reusable dashboard components. Evaluation across 300 end-to-end test cases spanning synthetic and production enterprise datasets demonstrates 95.3% functional accuracy, a mean response latency of 24 seconds, and a response quality score of 4.52/5.0 as assessed by an LLM-as-a-Judge framework, with a 93.0% hallucination-free rate, representing a 22.6 percentage point accuracy improvement and 20.2% quality gain over a single-agent baseline. Cross-model evaluation across four LLM backends and human expert validation confirm architectural generalizability and evaluator reliability. An ablation study confirms that the Data Analysis and Report Aggregation agents are the primary drivers of output quality.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-19T09:49:58Z",
+      "updated": "2026-08-19T09:49:58Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.18740v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18740v1",
+      "rank": 132,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.153,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "This paper proposes a multi-agent framework built on CrewAI [1] for conversational business intelligence. Five specialized AI agents operate in a sequential pipeline to process natural language queries, retrieve and anal…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.19161",
+      "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication",
+      "authors": [
+        "Ramneet Kaur",
+        "Pradyumna Chari",
+        "Ramesh Raskar",
+        "Jugad Singh",
+        "Sumit Kumar Jha",
+        "Anirban Roy"
+      ],
+      "abstract": "Language-model agents can communicate through continuous hidden states that are invisible in public transcripts, creating opportunities for covert harmful coordination. We introduce Verifiable Latent Alignments (VLA), an activation-aware framework for monitoring and steering these private communication channels. For every monitored decision, VLA links the private latent-state record and channel status to the resulting public action using a shared event identifier, enabling matched causal analysis. Our first contribution is a neutral-only three-layer monitor combining representation anomaly detection, counterfactual action-distribution influence, and sparse-autoencoder interpretation support. Our second contribution is a steerability framework spanning black-box behavioral instructions and white-box matched-neutral counterfactuals. Our third contribution is an evaluation on a controlled multi-agent auction benchmark covering homogeneous and heterogeneous model pairs, many-agent scalability, and intervention effectiveness. The sequential monitor achieves mean area under the receiver operating characteristic curve (AUROC) of 0.993 for homogeneous agents and 0.854 for heterogeneous pairs when text- and latent-collusion rows are pooled as positives. In Qwen3-0.6B auctions with 25-100 bidders, monitoring requires only a small normalized load relative to all possible directed pairs, while full white-box steering achieves 100% bid-distribution recovery and reduces collusive low-bid behavior by 47.3 percentage points. Because full white-box steering replays the matched neutral counterfactual, its exact recovery is a sanity check by construction. Overall, the controlled study shows that the evaluated private channel attacks can be monitored without training the primary monitor on attack examples and mitigated when matched counterfactual access is available.",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-19T17:43:22Z",
+      "updated": "2026-08-19T17:43:22Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.19161v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19161v1",
+      "rank": 10,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.2325,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "首次系统监测智能体隐式通信中的隐蔽共谋",
+      "one_liner": "VLA框架实现对多智能体潜空间共谋的可验证检测与干预",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.18931",
+      "title": "Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck",
+      "authors": [
+        "Davide Romano",
+        "Kanak Raj",
+        "Jerrod Parker",
+        "Daniele Giofrè"
+      ],
+      "abstract": "Test-time scaling (TTS) improves language model outputs by spending additional inference compute - generating multiple candidates, searching over partial sequences, or iteratively refining drafts. These techniques yield large gains on mathematics and code, but have been developed and stress-tested almost exclusively on tasks where verification is straightforward. We conduct the first compute-normalised comparison of five TTS families across five open-ended generation benchmarks spanning medicine, law, finance, general chat, and creative writing - grounded in a unified framework that decomposes the effectiveness of each method's token budget into exploration and exploitation. The answer depends on which side of that decomposition you examine. Scaling exploration works: the best candidate in the pool improves steadily with compute across all settings. What breaks is exploitation - the step that converts a rich candidate pool into a final output. With state-of-the-art generators, reward models correlate at only $ρ_v \\approx 0.12$ with true quality, rendering selection near-random regardless of budget. Tree search amplifies this failure through diversity collapse. Refinement helps on one of five benchmarks; its apparent gains elsewhere are confounded. Only synthesis across candidates (Fusion) consistently improves over single-sample baselines, yet still recovers only ~40% of available quality. The candidate pool is not the bottleneck - choosing from it is.",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-19T13:59:53Z",
+      "updated": "2026-08-19T13:59:53Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.18931v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18931v1",
+      "rank": 77,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning"
+      ],
+      "explore_score": 12.0098,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "揭示测试时扩展中‘利用’而非‘探索’是瓶颈",
+      "one_liner": "首次在开放域评测中发现奖励模型低相关性导致选择失效",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.18878",
+      "title": "DentAgent: Evidence-Centric Multi-Agent Coordination for Multimodal Dental Reasoning",
+      "authors": [
+        "Zijie Meng",
+        "Xiwei Dai",
+        "Yixuan Tang",
+        "Jin Hao",
+        "Yang Feng",
+        "Fudong Zhu",
+        "Xiaoqiang Liu",
+        "Shaosheng Cao",
+        "Zuozhu Liu"
+      ],
+      "abstract": "Oral diseases affect billions of people worldwide, underscoring a pressing need for accurate and reliable dental assessment that integrates heterogeneous evidence from domain knowledge, radiographs, intraoral photographs, and 3D dental data. Most existing dental AI systems remain modality- or task-specific. Although recent vision-language models support flexible dental question answering, directly generated response leaves evidence implicit and untraceable. To address these limitations, we introduce DentAgent, an evidence-centric multi-agent framework, in which the Orchestrator coordinate five specialized agents spanning various modalities. Each specialist utilizes domain tools to convert observations into structured evidence records. The Evidence Blackboard manages these records as a shared evidence state, tracking coverage, gaps, and conflicts before response generation. This standardized evidence representation integrates isolated dental capabilities into a unified agentic workflow. Across four benchmarks, DentAgent demonstrates leading performance, even surpassing the senior specialists by 17.3 percentage points on multi-label diagnosis, which supports its value for broadly applicable and traceable multimodal dental reasoning, and highlights its potential as a technical foundation for population oral health assessment and management.",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-19T12:58:03Z",
+      "updated": "2026-08-19T12:58:03Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.18878v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18878v1",
+      "rank": 93,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.6109,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "牙科多模态证据中心化智能体，强调可追溯性",
+      "one_liner": "DentAgent构建共享证据黑板，实现可验证多模态口腔诊断",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.18554",
+      "title": "CentaurBench: Benchmarking LLM Capabilities on Augmenting vs. Automating Real-World Work Tasks",
+      "authors": [
+        "Pattaraphon Kenny Wongchamcharoen",
+        "Kris Gulati",
+        "Min Min Fong",
+        "Abhishek Nagaraj"
+      ],
+      "abstract": "Most LLM benchmarks rank models on their ability to automate work tasks. In practice, however, models are often used to assist other (human or LLM) agents. The question that drives model selection is therefore not only which model produces the best output, but which model most improves the work of another (weaker) agent. We introduce a unified framework that evaluates the capability of models to automate and augment another agent's performance. Across seven economically grounded real-world tasks, an assistant model writes assistance text for a standardized lower-capacity worker model, which produces the deliverable. In automation mode, the assistant produces the output directly. Outputs are scored through blind pairwise comparisons by an LLM judge panel with task-specific rubrics, replicated across ten runs. Rankings across the two regimes are only modestly correlated, and the automation winner loses augmentation on five of seven tasks. Assistance is not reliably positive. The unaided worker outranks every assisted condition on three tasks, and only one model's guidance beats no guidance on average. These results suggest that automation ability is an incomplete proxy for assistance quality, motivating benchmarks that evaluate models according to the roles they play in human-AI and multi-agent systems.",
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.MA",
+        "econ.GN"
+      ],
+      "primary_category": "cs.CY",
+      "published": "2026-08-19T05:22:20Z",
+      "updated": "2026-08-19T05:22:20Z",
+      "comment": "46 pages, 15 figures",
+      "url": "https://arxiv.org/abs/2608.18554v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18554v1",
+      "rank": 210,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.5419,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "提出首个评估LLM‘增强’而非‘替代’人类能力的基准",
+      "one_liner": "CentaurBench揭示自动化能力强≠辅助质量高",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [
+    {
+      "id": "BV1dobo6aE5r",
+      "bvid": "BV1dobo6aE5r",
+      "title": "【2026最新版】AI Agent实战教程，100+实战项目从入门到企业级应用！练完直接涨薪50%！附完整代码+文档，建议收藏！",
+      "description": "【大模型相关教材、学习路线、GitHub项目、实战案例集、电子书+问题解答请看 ”置顶” 自取哦】\n本套教程从零开始讲解，手把手教学，包含Python快速入门、AI开发环境搭建及提示词工程、Transformer架构和预训练、SFT、RLHF等一些基础概念、RAG、Agent、Langchain、大模型微调和私有化部署\n无论是新手小白，还是有一定编码经验的选手，皆可学习\n如果视频对你有用的话请 【一键三联】支持一下UP哦，拜托，这对我真的很重要",
+      "author": "吴恩达langchain",
+      "duration": "1287:15",
+      "published_at": 1787197013,
+      "view_count": 449,
+      "danmaku_count": 11,
+      "cover_url": "https://i0.hdslb.com/bfs/archive/788efd25ed0e8987a3463e726444a04da8bb703c.jpg",
+      "url": "https://www.bilibili.com/video/BV1dobo6aE5r",
+      "matched_keywords": [
+        "AI Agent 实战"
+      ],
+      "content_type": "技术演讲",
+      "pre_score": 65,
+      "like_count": 12,
+      "favorite_count": 19,
+      "score": 65,
+      "summary_zh": "AI Agent实战教程，涵盖Python、提示词、Transformer、RAG、Langchain、微调与私有化部署",
+      "reason": "主题相关性强，内容覆盖广，但标题含营销话术，信息密度中等",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2089750360869233059",
+      "text": "We just released TensorRT Model Connect in Public Preview. You can take a supported @huggingface model to end-to-end TensorRT inference in just two commands. No intermediate ONNX export, and the resulting bundle can run through native C++ APIs. We also built the entire project with @OpenAIDevs Codex agents, with humans directing and reviewing the work. That includes model implementations, performance tuning, tests, integrations, and docs. It’s open source, so go try it out, dig into the implementations, or contribute support for a new model: https://t.co/qlOT90ylxY",
+      "author_name": "NVIDIA AI",
+      "author_handle": "NVIDIAAI",
+      "author_verified": true,
+      "author_followers": 332033,
+      "source_tier": "官方账号",
+      "created_at": 1787070286,
+      "published_date": "2026-08-18",
+      "like_count": 536,
+      "retweet_count": 67,
+      "reply_count": 28,
+      "quote_count": 14,
+      "bookmark_count": 192,
+      "view_count": 90421,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://github.com/NVIDIA/TensorRT-Model-Connect"
+      ],
+      "url": "https://x.com/NVIDIAAI/status/2089750360869233059",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 89,
+      "score": 89,
+      "title": "NVIDIA发布TensorRT Model Connect公测版",
+      "summary_zh": "支持Hugging Face模型两步直连TensorRT推理，无需ONNX中转，C++原生调用，全程由OpenAI Codex代理协同开发并开源。",
+      "reason": "官方新工具发布，显著简化部署流程，含可信开发方法论与完整开源实现。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2089777845187031262",
+      "text": "As models become more capable, the risks associated with developing and testing them internally also grow. We temporarily paused reinforcement learning (RL) training on our latest models intended for deployment for two weeks while we hardened and red-teamed our research environments and expanded monitoring coverage. Our largest planned frontier RL run remains on hold while smaller-scale training and evaluations validate these safeguards and establish more evidence of alignment. https://t.co/ecbMMmVoox",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5116590,
+      "source_tier": "官方账号",
+      "created_at": 1787076839,
+      "published_date": "2026-08-18",
+      "like_count": 5261,
+      "retweet_count": 446,
+      "reply_count": 610,
+      "quote_count": 463,
+      "bookmark_count": 994,
+      "view_count": 1653847,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://openai.com/index/pacing-model-development-cyber-capabilities/"
+      ],
+      "url": "https://x.com/OpenAI/status/2089777845187031262",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 89,
+      "score": 89,
+      "title": "OpenAI暂停前沿模型强化学习训练两周",
+      "summary_zh": "为加固研究环境、扩大监控覆盖并验证对齐保障，OpenAI临时中止前沿RL训练；最大规模RL运行仍搁置。",
+      "reason": "关键安全决策声明，体现主动风险管控机制，具强行业示范性与可行动参考价值。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090113635683340622",
+      "text": "We benchmarked 300+ NVIDIA verified skills to see how much they actually help agents on real tasks. Same task, same model, same setup. The only difference was whether the agent had the skill. Across the benchmarks, skills improved correctness by 41 points, effectiveness by 39, and efficiency by 35. SkillEvaluator is open source if you want to test your own skills before you ship them.",
+      "author_name": "NVIDIA AI",
+      "author_handle": "NVIDIAAI",
+      "author_verified": true,
+      "author_followers": 332033,
+      "source_tier": "官方账号",
+      "created_at": 1787156897,
+      "published_date": "2026-08-19",
+      "like_count": 559,
+      "retweet_count": 58,
+      "reply_count": 23,
+      "quote_count": 10,
+      "bookmark_count": 399,
+      "view_count": 102172,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/NVIDIAAI/status/2090113635683340622",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "开源项目",
+      "pre_score": 85,
+      "score": 85,
+      "title": "NVIDIA开源SkillEvaluator评估框架",
+      "summary_zh": "基于300+经验证技能的实测表明，技能接入使智能体正确性提升41分、有效性39分、效率35分；框架已开源。",
+      "reason": "提供可复现的量化证据与开源评估工具，填补智能体技能实效性验证空白。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090165328290701800",
+      "text": "We will continue to offer Zero Data Retention for frontier models. As AI takes on longer, more autonomous work and delivers greater value to businesses, safety systems also need to identify risks across related interactions. To help address those risks, we're previewing Private Safety Processing, which is designed to improve safety without giving OpenAI personnel access to the underlying content.",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5116590,
+      "source_tier": "官方账号",
+      "created_at": 1787169222,
+      "published_date": "2026-08-19",
+      "like_count": 3043,
+      "retweet_count": 192,
+      "reply_count": 180,
+      "quote_count": 114,
+      "bookmark_count": 539,
+      "view_count": 723854,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/OpenAI/status/2090165328290701800",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 79,
+      "score": 79,
+      "title": "OpenAI推出Private Safety Processing预览版",
+      "summary_zh": "在零数据留存前提下，新增私有化安全处理机制，提升跨交互风险识别能力，且不赋予OpenAI人员内容访问权。",
+      "reason": "平衡安全增强与隐私保护的关键产品演进，明确技术边界与合规设计。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2089842387845804246",
+      "text": "Many drugs work by binding to a specific target in the body and blocking or changing what it does. An important first step in the drug development process is designing a molecule that can bind tightly to its target. Traditionally, that's meant weeks or months of expert work per target, sifting through a large number of candidates to identify the few that work. We wanted to test if Claude could successfully design novel protein binders from scratch (also called de novo design). With a protein design prompt written by a human expert, Claude autonomously designed protein binders against 14 out of 15 targets. We then worked with Adaptyv Bio and Twist Bioscience, who independently built and tested the proteins Claude designed.",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1603916,
+      "source_tier": "官方账号",
+      "created_at": 1787092227,
+      "published_date": "2026-08-18",
+      "like_count": 11040,
+      "retweet_count": 1255,
+      "reply_count": 476,
+      "quote_count": 580,
+      "bookmark_count": 3368,
+      "view_count": 3260643,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/AnthropicAI/status/2089842387845804246",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 75,
+      "score": 75,
+      "title": "Anthropic展示Claude从头设计蛋白结合剂能力",
+      "summary_zh": "Claude在专家提示下自主完成14/15靶点新型蛋白结合剂设计，经Adaptyv Bio与Twist Bioscience实验验证成功。",
+      "reason": "首个公开披露的LLM驱动de novo蛋白设计实证，具跨学科突破性与可验证性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090283646163014129",
+      "text": "A blinded, prospective benchmark of in silico antibody discovery anchored to experimental affinity and developability @NatureBiotech 1. The AIntibody challenge delivers a rare prospective, blinded, experimentally validated test of computational antibody discovery. Across 511 AI-designed or predicted antibodies from 29 organizations, several methods produced developable sub-100 pM binders, including a 95 pM affinity-matured antibody and a 2.9 pM out-of-library design. Yet these successes were highly task-specific: no method consistently dominated across the benchmark, revealing a substantial gap between impressive individual designs and generalizable antibody-design capability. 2. Rather than evaluating models retrospectively on existing datasets, the study synthesized submitted sequences as full-length IgGs and measured them under standardized experimental conditions. Binding was quantified using high-throughput SPR and orthogonal KinExA measurements, while developability was evaluated with five assays covering hydrophobicity, polyreactivity, self-interaction, thermal stability and aggregation. This experimental anchoring makes the benchmark closer to an antibody-development pipeline than a conventional machine-learning leaderboard. 3. Three biologically distinct tasks were designed to probe different computational capabilities. Challenge 1 asked models to perform in silico affinity maturation from sequencing outputs while keeping the framework and HCDR3 fixed. Challenge 2 asked models to rank the best antibodies within three HCDR3 clusters. Challenge 3 required generation of novel CDR combinations absent from a 32,059-sequence selection dataset, providing a limited test of out-of-library antibody design. 4. The strongest evidence for near-term computational value came from affinity maturation. Across 165 valid submissions, 71.5% bound the SARS-CoV-2 RBD, 13.3% reached single-digit nanomolar affinity, five reached subnanomolar affinity and one reached sub-100 pM affinity. Aureka’s winning AuraBind design achieved approximately 95 pM affinity, roughly a 2,000-fold improvement over the parental antibody and statistically indistinguishable from the best experimentally affinity-matured control. 5. AuraBind combined sequence and structural information rather than treating antibody design as sequence generation alone. Its pairformer-based architecture modeled antibody–antigen structure and interaction geometry, while a fitness adapter trained with direct preference optimization learned relative experimental enrichment rankings. The model generated 10,000 candidate variants and ranked them with its structure-informed fitness predictor before experimental testing. 6. One of the benchmark’s most important controls was surprisingly simple: ProBioGen used statistical consensus analysis rather than machine learning and ranked third in the affinity-maturation challenge with a 540 pM antibody and a perfect developability score. The sequence exactly matched the positional consensus across all six CDRs. This result shows that sophisticated AI methods should be evaluated not only against other AI models, but also against strong statistical baselines derived directly from experimental selection data. 7. The affinity-ranking challenge exposed a major weakness. Although more than 96% of submitted sequences remained binders, only about 9.8–13.8% improved on the most abundant clone in their respective HCDR3 clusters. Historical random clone picking improved on the cluster control 39% of the time. Every computational strategy except the WashU approach therefore performed worse than random selection by this criterion, and even the winning methods failed to generalize across all three clusters. 8. Different algorithmic families succeeded in different regimes. Aureka’s PLM/attention-plus-structure pipeline won affinity maturation; UCSD used Gaussian-process regression and Scripps used AlphaFold3 ensemble convergence to co-win cluster 27F; Xencor combined ft-ESM embeddings with abundance features and AutoML for cluster 28F; WashU used custom transformer architectures for clusters 28F and 47F. The benchmark therefore provides little support for a universally superior model class and instead favors task-specific model selection. 9. Out-of-library design showed both the promise and the limitations of generative approaches. Among 168 submissions, 69.6% were binders, 33.9% achieved subnanomolar affinity and 14.3% reached sub-100 pM affinity. Xencor’s sequence-language-model pipeline generated the nominal 2.9 pM winner using ft-ESM embeddings, attention-based pooling and CDR recombination/MCMC/Gibbs sampling. However, that antibody failed to elute from the HIC column and would probably be unacceptable as a therapeutic candidate, illustrating why affinity alone is an insufficient optimization objective. 10. The sequence-distance analysis also tempers claims of de novo discovery. In the out-of-library challenge, all top submissions reused an HCDR3 already present in the experimental dataset, and the strongest designs were generally only 1–5 substitutions away from observed sequences. The methods were therefore highly effective at local optimization around experimentally supported motifs, but the benchmark provides less evidence that current models can reliably discover distant high-fitness antibody solutions in data-sparse sequence space. 11. The broader conclusion is that computational antibody design is already useful in well-defined, data-rich optimization regimes, especially when models are supplied with high-quality sequencing and affinity information. However, affinity prediction, developability-aware generation, cross-task transfer and performance in data-sparse settings remain unresolved. The study argues for CASP-like prospective benchmarking in antibody discovery, with future evaluations using stricter go/no-go developability criteria and targets for which affinity labels are unavailable. 💻Code: https://t.co/a4fcLMHIGI ; https://t.co/4ezOKys9NG ; https://t.co/wni4EKFOre ; https://t.co/VwxLg596rO ; https://t.co/2nTD8FqBVq 📜Paper: https://t.co/J1htGcWmbK #AntibodyDesign #ComputationalBiology #AI4Science #MachineLearning #ProteinDesign #AntibodyEngineering #DrugDiscovery #ProteinLanguageModels #Biotechnology #AIntibody",
+      "author_name": "Biology+AI Daily",
+      "author_handle": "BiologyAIDaily",
+      "author_verified": false,
+      "author_followers": 17610,
+      "source_tier": "主题发现",
+      "created_at": 1787197431,
+      "published_date": "2026-08-20",
+      "like_count": 6,
+      "retweet_count": 1,
+      "reply_count": 0,
+      "quote_count": 1,
+      "bookmark_count": 8,
+      "view_count": 559,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://doi.org/10.1038/s41587-026-03238-6",
+        "https://github.com/AurekaBio/Aureka-AIntibody-Challenges",
+        "https://github.com/Wang-lab-UCSD/aintibody_competition_code",
+        "https://github.com/XenInc/Xencor-AIntibody-Challenges",
+        "https://github.com/brineylab/ssrmsd",
+        "https://github.com/kaszubat/AIntibody_Competition_WashU_Uploads"
+      ],
+      "url": "https://x.com/BiologyAIDaily/status/2090283646163014129",
+      "matched_queries": [
+        "topic-3"
+      ],
+      "content_type": "论文发现",
+      "pre_score": 71,
+      "score": 71,
+      "title": "Nature Biotech发布AIntibody抗体发现盲测基准",
+      "summary_zh": "前瞻性、盲态、实验验证的抗体设计挑战赛，511个AI设计抗体中多个达亚纳摩尔级亲和力，但方法泛化性仍不足。",
+      "reason": "顶级期刊发布的首个严格实验锚定的AI抗体基准，揭示性能与通用性间关键张力。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 39,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "1d8e7f9ef389b562b11a6f3ff8ce2073e3c238cc99e95c4413e154a315672319"
+}
