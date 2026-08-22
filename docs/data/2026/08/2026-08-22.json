@@ -1,0 +1,514 @@
+{
+  "version": 2,
+  "date": "2026-08-22",
+  "arxiv_query_date": "2026-08-20",
+  "arxiv_reused_latest": true,
+  "generated_at": "2026-08-22T05:21:04.160775+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608200000+TO+202608202359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608200000+TO+202608202359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-20T00:00:00Z",
+    "2026-08-20T23:59:59Z"
+  ],
+  "raw_candidate_count": 240,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.19701",
+      "title": "Beyond Memory Majority: Latent-Source Reasoning for Multi-Agent Memory Arbitration",
+      "authors": [
+        "Chenchen Lin",
+        "Wenhao Yuan",
+        "Xuehe Wang",
+        "Edith Cheuk Han Ngai"
+      ],
+      "abstract": "Long-term multi-agent systems continuously accumulate the memories produced by different agents. Existing memory methods typically treat retrieved memories as independent evidence and combine them through voting or weighting. However, this independence assumption often fails in multi-agent settings: memories written by different agents may inherit the same upstream source or shared bias, causing correlated evidence to be repeatedly counted and creating a false majority. We term this failure mode \\textit{Memory Correlation Bias}. To address the issue, we propose the \\textbf{C}orrelation-\\textbf{A}ware \\textbf{M}emory \\textbf{A}rbitration (CAMA) framework that jointly decouples retrieved memories and recovers missing independent evidence. We model the retrieved memories as query-conditioned evidence groups and combine neural dependency inference with provenance-based symbolic priors to estimate the effective number of independent evidence sources, thereby preventing correlated memories from forming a false majority. Since critical independent evidence may be absent from the initial retrieval set, \\textsc{CAMA} further learns a sequential recovery policy that actively retrieves alternative evidence or traces upstream sources before making the final decision, aiming to recover sufficient independent evidence for reliable arbitration while minimizing retrieval cost. Experiments on multiple benchmarks demonstrate the superiority of our method over the state-of-the-art baseline methods, suppressing false majorities induced by correlated memories.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-20T06:50:23Z",
+      "updated": "2026-08-20T06:50:23Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.19701v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19701v1",
+      "rank": 188,
+      "metadata_source": "arxiv-api",
+      "focus_score": 12.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory",
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.2005,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "直击多智能体记忆仲裁中的相关性偏差问题，提出可解耦证据源的CAMA框架",
+      "one_liner": "提出CAMA框架解决多智能体记忆中因共享源头导致的虚假多数问题",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.19901",
+      "title": "MaliciousSkillBench: A Comprehensive Benchmark for Malicious Agent Skill Detection",
+      "authors": [
+        "Yue Wang",
+        "Yi Liu",
+        "Gelei Deng",
+        "Ying Zhang",
+        "Yuekang Li",
+        "Zhenyu Chen",
+        "Leo Zhang"
+      ],
+      "abstract": "Agent Skills extend LLM agents with reusable instruction packages that may also include scripts, resources, and service configuration. This creates a direct distribution channel for malicious behavior, yet existing malicious-Skill datasets are fragmented across sources, artifact formats, evidence regimes, and benign coverage; duplicated and structurally related content further complicates direct aggregation and evaluation. We present MaliciousSkillBench, a comprehensive benchmark for malicious Agent Skill detection. We consolidate 13 public sources, 11 of which contribute Core malicious artifacts, and reduce 8,414 raw malicious records to 7,539 normalized-unique identities in 4,588 operational structural families. After conservative cross-label conflict exclusion, the primary benchmark contains 9,740 Skills: 7,505 malicious and 2,235 benign. To characterize its coverage, we harmonize 11 attack categories for 4,983 malicious identities with supported source-native mappings and find substantial differences in threat composition across sources. We then evaluate three learned text detectors and three off-the-shelf Skill scanners. Learned detectors achieve 0.882-0.932 Random Macro-F1 but only 0.653-0.665 under Source-Disjoint evaluation; the strongest word TF-IDF SVM scores 0.932/0.916/0.665 on Random/structural-disjoint/Source-Disjoint while retaining 95.6% malicious recall but producing 62.4% benign FPR on held-out sources. Off-the-shelf scanners occupy different but also unsatisfactory operating regimes, reducing false positives only at the cost of sharply lower malicious recall. Together, these results show that reliable malicious-Skill detection requires both broader cross-source benchmark coverage and evaluation that jointly measures attack detection and benign over-flagging.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-08-20T11:13:00Z",
+      "updated": "2026-08-20T11:13:00Z",
+      "comment": "Project page: https://protectskills.github.io/MaliciousSkillBench/",
+      "url": "https://arxiv.org/abs/2608.19901v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19901v1",
+      "rank": 118,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 10.7585,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "首个全面恶意Agent技能检测基准，覆盖4588个结构家族与跨源评估",
+      "one_liner": "构建MaliciousSkillBench基准，系统评测恶意Agent技能检测能力",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.19652",
+      "title": "Can Agent Memory Systems Track Evolving State?",
+      "authors": [
+        "Xinyi Fan",
+        "Miri Liu",
+        "Ruozhen Yang",
+        "Siru Ouyang",
+        "Jiawei Han"
+      ],
+      "abstract": "As LLM-based agents are deployed for longer and higher-stakes tasks, their memory systems continue to have crucial gaps. While existing memory benchmarks focus largely on recall-shaped tasks, we argue an effective memory system must track the evolving state of the world; as facts, constraints, and decisions are revised over a long interaction, answers must reflect the current state and not a superseded one. We define this capability as state tracking and instantiate it in StateMemBench, a benchmark of 234 multi-session scenarios spanning two conversation-length regimes. Its closed-pool grading scores whether an answer reflects the current state, the superseded state, or fails otherwise, separating state-tracking failures from other errors by construction. Our analysis shows that this task is challenging for existing memory systems, retrieval-augmented baselines, and long-context baselines. We then present StateMem, a state-first memory method that explicitly tracks supersession and relational dependencies, and show it improves current-state accuracy over the strongest same-backbone baseline by 1.8x (0.205 -> 0.363) on DeepSeek-V4-Flash and over the strongest memory system by 1.6x (0.149 -> 0.233) on Qwen-3.5-9B, while remaining competitive with the long-context baselines. Finally, we show the same state approach can be applied as a lightweight single-call wrapper over existing memory systems, lifting current-state accuracy by +32 to +67 points on StateMemBench across six memory and retrieval backends. A length- and cost-matched control attributes +15 to +32 of those points to state structure rather than added context.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-20T05:41:23Z",
+      "updated": "2026-08-20T05:41:23Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.19652v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19652v1",
+      "rank": 204,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 8.0287,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "定义并评测智能体记忆的状态跟踪能力，提出StateMemBench与StateMem方法",
+      "one_liner": "提出StateMemBench基准与StateMem方法，解决长期交互中状态演化追踪难题",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20129",
+      "title": "Multi-Agent Orchestration with the Common-Sense Reasoning Capabilities of LLMs for Autonomous Driving",
+      "authors": [
+        "Mehdi Azarafza",
+        "Faezeh Pasandideh",
+        "Ali Ehteshami Bejnordi",
+        "Stefan Henkler",
+        "Achim Rettberg"
+      ],
+      "abstract": "Autonomous vehicles require robust perception and decision-making capabilities to operate in diverse and unseen scenarios. While reinforcement learning and rule-based methods can provide effective control and safety mechanisms, their performance may degrade in situations requiring contextual reasoning. Large Language Models (LLMs) have demonstrated strong capabilities in understanding multimodal information and generating contextual reasoning, however, their use for direct vehicle control can introduce latency and hallucination risks. To address these limitations, a hybrid framework is proposed. This system uses an orchestrator to coordinate PPO-trained reinforcement learning and PID control, with LLM common-sense reasoning applied throughout the framework. LLM reasoning is further employed iteratively to refine the RL reward function for dynamic driving environments. The proposed framework is evaluated in highly randomized CARLA scenarios under diverse environmental and traffic conditions. The results demonstrate the potential of integrating LLM-based reasoning with conventional autonomous driving methods while retaining structured control and safety mechanism.",
+      "categories": [
+        "cs.MA",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "primary_category": "cs.MA",
+      "published": "2026-08-20T14:56:15Z",
+      "updated": "2026-08-20T14:56:15Z",
+      "comment": "17 pages, 7 figures",
+      "url": "https://arxiv.org/abs/2608.20129v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20129v1",
+      "rank": 56,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.5288,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "融合LLM常识推理与传统控制的自动驾驶混合框架，强调安全与可控协同",
+      "one_liner": "提出多智能体编排框架，将LLM常识推理嵌入自动驾驶决策闭环",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.20338",
+      "title": "ConceptGuard: Benchmarking Context-Sensitive Unlearning in Large Language Models",
+      "authors": [
+        "Sahil Kale",
+        "Ian Harris"
+      ],
+      "abstract": "Large Language Models (LLMs) increasingly require selective removal of harmful or sensitive knowledge, called unlearning, yet existing methods and benchmarks fail to evaluate this capability completely. Current approaches rely on disjoint forget and retain sets composed of independent facts, and measure success using simple and direct factual recall. This framing fails to capture a key requirement of unlearning, namely the ability to eliminate harmful behaviors while preserving benign and beneficial knowledge. We argue that effective unlearning must operate at the level of concepts, ensuring complete removal of unsafe applications while maintaining their correct and useful usage, thereby achieving conceptually meaningful and complete unlearning. To better evaluate unlearning techniques from such a practical viewpoint, we introduce the notion of dual-use concepts: concepts that can be used in both harmful and benign contexts. Building on these concepts, we construct a benchmark called ConceptGuard where forget and retain sets are explicitly complementary in concept usage. Our benchmark uniquely enables unlearning to be explored and gauged at the level of concepts, instead of sparse facts, and evaluation is intent-sensitive with the goal of maximizing contextual separation to promote safer behavior. We demonstrate that current unlearning techniques perform poorly under this setting, showing weak contextual separation alongside poor performance in ROUGE and concept-level metrics. Our results reveal strong forgetting-utility trade-offs, limited gains in contextual sensitivity, and poor consistency in concept-level control across methods, and provide ideas for unlearning approaches that better align with real-world safety requirements. Our dataset is publicly available.",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-20T17:59:57Z",
+      "updated": "2026-08-20T17:59:57Z",
+      "comment": "Submitted to NeurIPS E&D Track 2026; 17 pages, 9 figures",
+      "url": "https://arxiv.org/abs/2608.20338v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20338v1",
+      "rank": 1,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 11.7183,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "首创概念级遗忘基准ConceptGuard，聚焦双用途概念的上下文敏感卸载",
+      "one_liner": "构建ConceptGuard基准，推动大模型在概念层面实现安全、可控的遗忘",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20258",
+      "title": "DICS: Data-Informed Centroid Splitting for Decision Tree Classifiers",
+      "authors": [
+        "MD Saifur Rahman Mazumder",
+        "Feng Yu"
+      ],
+      "abstract": "Decision tree-based models are widely used in machine learning due to their interpretability and strong empirical performance. However, training decision trees can be computationally expensive, particularly for large and high-dimensional datasets, largely due to the exhaustive search over candidate splits at each node. To improve computational efficiency, we propose Data-Informed Centroid Splitting (DICS), a clustering-based framework that constructs a compact and informative set of candidate splits using data-driven priors. By incorporating class-aware structure, DICS significantly reduces the split search space for classification tasks while preserving predictive performance. We further provide theoretical analysis showing that under the stated assumptions, DICS does not degrade the performance of classification trees compared to exhaustive split search. DICS can be incorporated into classification trees, random forests, and gradient-boosting models. Extensive experiments demonstrate that DICS achieves comparable accuracy while substantially reducing training time across synthetic and benchmark datasets, highlighting the benefit of integrating data-informed priors into split selection for scalable classification tree learning.",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-20T16:54:17Z",
+      "updated": "2026-08-20T16:54:17Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.20258v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20258v1",
+      "rank": 26,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 13.9041,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "提出数据驱动的DICS分裂策略，显著加速决策树训练且理论保障性能",
+      "one_liner": "DICS通过数据感知聚类压缩分裂搜索空间，提升决策树训练效率",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20186",
+      "title": "Decoding silent reading from non-invasive EEG",
+      "authors": [
+        "Ingo Marquardt",
+        "Anthilia Alchanat",
+        "Priyanka Jain"
+      ],
+      "abstract": "Non-invasive decoding of inner speech faces a fundamental data problem: a corpus pairing brain activity with a person's spontaneous inner monologue cannot be collected, and the available proxy paradigms (cued repetitive and retrospectively reported generative inner speech) are slow to acquire, poorly time-locked, and subject compliance is unverifiable. We therefore treat silent reading as a scalable proxy task and ask how much lexical and semantic information a contrastive decoder can extract from it. We report an open-vocabulary analysis of approximately 240,000 word presentations recorded from a single densely-sampled participant across 393 runs (ca. 49 h) of 19-channel dry-electrode EEG. Words from continuous narrative text were presented in rapid serial visual presentation, with typography randomised on every trial to partially decorrelate word identity from low-level visual form. A convolutional EEG encoder, optionally followed by a causal transformer, was trained with a CLIP-style contrastive objective to align short EEG windows with hidden-state embeddings of the presented word taken from a large language model. Decoding, evaluated as word-grouped top-10 retrieval against permutation baselines, was reliably above chance, extended to mid-frequency and rare words, and scaled log-linearly with training-data volume with no sign of saturation. Removing occipital and posterior-temporal electrodes reduced the word-level gain by roughly one third but left context tracking unchanged. Control analyses separate word-level decoding from narrative context tracking and from a non-neural positional prior introduced by the transformer's positional embedding. These results establish that open-vocabulary word-level information is recoverable from EEG during silent reading, and that decoding is data-limited rather than saturated.",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-20T15:41:05Z",
+      "updated": "2026-08-20T15:41:05Z",
+      "comment": "45 pages (including 12 pages of Supplementary Material), 11 figures (including 2 in Supplementary Material)",
+      "url": "https://arxiv.org/abs/2608.20186v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20186v1",
+      "rank": 44,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 12.9511,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "首次从非侵入式EEG中解码静默阅读词汇，验证开放词表神经信息可提取性",
+      "one_liner": "在单被试大规模EEG数据上实现开放词表静默阅读解码，突破脑机接口边界",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20144",
+      "title": "PelviNeXt: A Modality-Agnostic Hybrid Network for Pelvic Imaging in Women's Health",
+      "authors": [
+        "Siam Tahsin Bhuiyan",
+        "Rashedur Rahman",
+        "Sefatul Wasi",
+        "Halima Khatun",
+        "Ashraful Islam",
+        "AKM Mahbubur Rahman",
+        "Saadia Binte Alam",
+        "M Ashraful Amin"
+      ],
+      "abstract": "Women's health remains substantially under-resourced in medical imaging research, with pelvic pathologies such as polycystic ovary syndrome (PCOS) and pelvic fracture both suffering from a scarcity of public, well-annotated benchmark data despite their clinical importance. We introduce PelviNeXt, a modality-agnostic hybrid architecture combining a dense convolutional feature extractor, hierarchical channel-spatial attention (H-CBAM), a multi-scale fusion module (MSFM), and talking-heads multi-head self-attention (TH-MHSA), applied without modification to both pelvic ultrasound and X-ray inputs. While benchmarking PelviNeXt on PCOSGen, the only gynaecologist-annotated public PCOS ultrasound dataset, we identified extensive exact and near-duplicate contamination within and across the dataset. We audit this contamination via perceptual hashing, publicly release a deduplicated version of the dataset, and establish the first integrity-audited evaluation protocol and baseline for PCOSGen under 5-fold cross-validation. On the only publicly available pelvic fracture X-ray dataset (PXR150), PelviNeXt exceeds previously reported state-of-the-art results across accuracy, recall, specificity, and AUROC. Ablation studies confirm that each architectural component contributes to performance on both tasks. Our results demonstrate that a single architecture, applied without task-specific modification, can serve as a reliable foundation for pelvic imaging across modalities in data-scarce, under-researched areas of women's health.",
+      "categories": [
+        "cs.CV"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-08-20T15:05:13Z",
+      "updated": "2026-08-20T15:05:13Z",
+      "comment": "Accepted at MICCAI CAPI-WOMEN 2026",
+      "url": "https://arxiv.org/abs/2608.20144v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20144v1",
+      "rank": 53,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 12.8103,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "面向女性健康稀缺数据的模态无关PelviNeXt网络，含数据完整性审计协议",
+      "one_liner": "提出PelviNeXt架构与PCOSGen去重审计协议，推动妇科影像公平基准建设",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2090786258981466231",
+      "text": "Our general-purpose coding agent just scored 100% on the ARC-AGI-3 interactive reasoning benchmark. NVIDIA AVO completed all 183 levels across all 25 public environments, figuring out what to do with no instructions, explicit rules, or stated goals. https://t.co/UgROuDrMtn",
+      "author_name": "NVIDIA AI",
+      "author_handle": "NVIDIAAI",
+      "author_verified": true,
+      "author_followers": 333681,
+      "source_tier": "官方账号",
+      "created_at": 1787317263,
+      "published_date": "2026-08-21",
+      "like_count": 5212,
+      "retweet_count": 578,
+      "reply_count": 257,
+      "quote_count": 360,
+      "bookmark_count": 1633,
+      "view_count": 749368,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/NVIDIAAI/status/2090786258981466231",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 87,
+      "score": 87,
+      "title": "NVIDIA AVO 100%通过ARC-AGI-3交互推理基准",
+      "summary_zh": "NVIDIA通用编程智能体AVO在ARC-AGI-3公开环境全部183关中零指令通关，展现无监督交互推理能力。",
+      "reason": "官方发布高置信度技术突破，具明确指标、新任务范式与可验证结果，信息增量显著。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090772922818286080",
+      "text": "Games have been an important testbed for our AI research for over 15 years. 🎮 From mastering Atari to reaching Grandmaster in StarCraft II, they have driven some of our biggest AI breakthroughs. Our work with SIMA taught agents how to understand 3D worlds, but learning to navigate real human dynamics takes a living, persistent universe. Through our research partnership with @FenrisCreations, we’re exploring how to tackle open challenges in AI: 🔵 Continual learning to acquire new skills without forgetting past knowledge. 🔵 Deep memory systems that store and retrieve information far beyond today’s context windows. 🔵 Long-horizon planning over weeks, months, or years. 🔵 Multi-agent dynamics spanning cooperation, negotiation, economics, and emergent behaviors. Our long-term goal is to use AI to discover entirely new gameplay experiences in partnership with game developers – making games more accessible and personalized – while applying what we've learned to problems in the real world and scientific discovery. Find out more → https://t.co/fAbYdukA5A",
+      "author_name": "Google DeepMind",
+      "author_handle": "GoogleDeepMind",
+      "author_verified": false,
+      "author_followers": 1507071,
+      "source_tier": "官方账号",
+      "created_at": 1787314084,
+      "published_date": "2026-08-21",
+      "like_count": 899,
+      "retweet_count": 111,
+      "reply_count": 82,
+      "quote_count": 29,
+      "bookmark_count": 195,
+      "view_count": 85531,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://goo.gle/4xcwzOH"
+      ],
+      "url": "https://x.com/GoogleDeepMind/status/2090772922818286080",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 84,
+      "score": 84,
+      "title": "DeepMind联合Fenris探索AI长期学习与多智能体动态",
+      "summary_zh": "DeepMind与游戏公司Fenris合作，聚焦持续学习、超长程记忆、数月级规划及多智能体经济/协作建模。",
+      "reason": "官方披露前沿研究方向，直指AI核心能力缺口，具明确技术路径与跨领域应用意图。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090113635683340622",
+      "text": "We benchmarked 300+ NVIDIA verified skills to see how much they actually help agents on real tasks. Same task, same model, same setup. The only difference was whether the agent had the skill. Across the benchmarks, skills improved correctness by 41 points, effectiveness by 39, and efficiency by 35. SkillEvaluator is open source if you want to test your own skills before you ship them.",
+      "author_name": "NVIDIA AI",
+      "author_handle": "NVIDIAAI",
+      "author_verified": true,
+      "author_followers": 333681,
+      "source_tier": "官方账号",
+      "created_at": 1787156897,
+      "published_date": "2026-08-19",
+      "like_count": 1037,
+      "retweet_count": 119,
+      "reply_count": 33,
+      "quote_count": 25,
+      "bookmark_count": 953,
+      "view_count": 277122,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/NVIDIAAI/status/2090113635683340622",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "开源项目",
+      "pre_score": 81,
+      "score": 81,
+      "title": "NVIDIA开源SkillEvaluator评估框架验证技能有效性",
+      "summary_zh": "NVIDIA开源工具实证：300+验证技能平均提升智能体正确率41分、效率35分，支持开发者预测试。",
+      "reason": "开源项目附量化实验结论，提供可复现评估方法论，满足研究与工程双重验证需求。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090838046937645398",
+      "text": "This is very nice work from NVIDIA. Like all high-performing approaches on ARC-AGI-3, it uses deep learning-guided on-the-fly synthesis of symbolic world models, i.e. navigating the world by generating programs to represent what you know. To be clear, like with several other recent claims, scoring 100% on the public demonstration set is not the same as \"scoring 100% on the ARC-AGI-3 benchmark\". It would be like saying you beat a videogame because you cleared the tutorial level.",
+      "author_name": "François Chollet",
+      "author_handle": "fchollet",
+      "author_verified": true,
+      "author_followers": 718052,
+      "source_tier": "领域专家",
+      "created_at": 1787329610,
+      "published_date": "2026-08-21",
+      "like_count": 676,
+      "retweet_count": 60,
+      "reply_count": 40,
+      "quote_count": 8,
+      "bookmark_count": 247,
+      "view_count": 57431,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": true,
+      "external_urls": [],
+      "url": "https://x.com/fchollet/status/2090838046937645398",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "专家观点",
+      "pre_score": 80,
+      "score": 80,
+      "title": "François Chollet指出ARC-AGI-3满分不等于完整基准通关",
+      "summary_zh": "Chollet强调NVIDIA AVO的100%成绩仅限公开演示集，提醒区分教程级通关与全基准挑战。",
+      "reason": "权威专家对热点成果提出关键概念澄清，具方法论警示价值，信息增量明确。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2091016032836346135",
+      "text": "AgentEval × Claude by @AnthropicAI @DATAHEDGEAI has implemented a real-world AI agent evaluation pipeline centered around Claude by @AnthropicAI. AgentEval does not rely solely on synthetic benchmarks. It extracts real-world tasks from privacy-cleaned DATA HEDGE data collected under explicit agent_training consent, then evaluates @claudeai on those same tasks through an automated structured evaluation pipeline. The evaluation metrics include: • Real-World Task Performance • Hallucination Resistance • Execution Safety • Decision Quality • Risk Management • Human-AI Interaction The results are converted into standardized S–F grades and published through the AgentEval benchmark and leaderboard. And this is only the beginning. The next step is Human Preference Evaluation combining LLM-as-a-Judge with evaluations from real humans to build a more reliable evaluation framework. Real data. Claude evaluation. Verifiable results.",
+      "author_name": "DATAHEDGE",
+      "author_handle": "DATAHEDGEAI",
+      "author_verified": true,
+      "author_followers": 1701,
+      "source_tier": "认证来源",
+      "created_at": 1787372046,
+      "published_date": "2026-08-22",
+      "like_count": 14,
+      "retweet_count": 3,
+      "reply_count": 1,
+      "quote_count": 0,
+      "bookmark_count": 2,
+      "view_count": 364,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/DATAHEDGEAI/status/2091016032836346135",
+      "matched_queries": [
+        "topic-1"
+      ],
+      "content_type": "前沿资讯",
+      "pre_score": 75,
+      "score": 75,
+      "title": "DATAHEDGE发布基于真实任务的Claude代理评估管线",
+      "summary_zh": "AgentEval使用隐私脱敏的真实开发任务评估Claude，覆盖执行安全、幻觉抵抗等六维指标并分级发布。",
+      "reason": "首创真实数据驱动的代理评估实践，含结构化指标体系与可验证结果，填补合成基准局限。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 36,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "fef76b82daa48ae42a99b5fd61c2d75885e34adc41b77cf3c2f85368cc39fb98"
+}
