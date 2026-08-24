@@ -1,0 +1,507 @@
+{
+  "version": 2,
+  "date": "2026-08-24",
+  "arxiv_query_date": "2026-08-21",
+  "arxiv_reused_latest": true,
+  "generated_at": "2026-08-24T05:32:31.388005+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608210000+TO+202608212359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608210000+TO+202608212359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-21T00:00:00Z",
+    "2026-08-21T23:59:59Z"
+  ],
+  "raw_candidate_count": 252,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.21097",
+      "title": "When Trust Meets Truth: Trust-Truth Separability in LLM-as-Judge",
+      "authors": [
+        "Xin Sun",
+        "Di Wu",
+        "Yuchen Guo",
+        "Jiahuan Pei",
+        "Isao Echizen",
+        "Abdallah El Ali",
+        "Saku Sugawara"
+      ],
+      "abstract": "LLM-as-Judge systems can produce multi-dimensional evaluations, such as trustworthiness, reliability, and factuality, and these outputs are often interpreted as independent evidence. We test this assumption for a common pair of judgments: trust scoring and binary truth classification. On correctness-controlled QA, LLM judges align trust scores with truth verdicts more tightly than human behavioral reference, suggesting weaker separations between trust and truth judgment. We then apply stress tests by changing only source cues of identical QA between Human and AI. Source attribution shifts not only trust scores but also truth verdicts and logit-derived correct-side probabilities. Results show that current LLM-as-Judge protocols should not treat trust scores as independent evidence for truth judgments.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-21T13:43:49Z",
+      "updated": "2026-08-21T13:43:49Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.21097v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.21097v1",
+      "rank": 81,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "verifier model / llm-as-judge / rubric evaluation"
+      ],
+      "explore_score": 11.5935,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "挑战LLM-as-Judge中信任与真值判断独立性假设，具评估范式意义",
+      "one_liner": "当信任遇见真相：LLM作为裁判时信任与真值判断的可分离性研究",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20920",
+      "title": "ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction",
+      "authors": [
+        "Linhao Zhong",
+        "Zongze Du",
+        "Linyu Wu",
+        "Yu Bo",
+        "Hourong Li",
+        "Chenchen Jing",
+        "Hao Chen",
+        "Yuling Xi",
+        "Chunhua Shen"
+      ],
+      "abstract": "Open-web future event prediction requires agents to distill reliable signals from noisy, redundant, and incomplete evidence. Existing retrieval/memory mechanisms directly feed retrieved information to agents or rely on simple memory functions such as storing and reusing prior information for prediction, leaving them insufficient for open-web forecasting. We propose to transform raw web evidence into structured memory before prediction, enabling agents to reason over distilled, question-specific evidence rather than noisy retrieval results. This paper presents ForeDreamer, a self-evolving dual-agent framework for managing memory over open-web evidence. ForeDreamer separates factual memory, a question-specific evidence state for the current forecast, from experiential memory, persistent agent experience accumulated across forecasting episodes. It uses a main agent for search and prediction, and a memory-processing subagent to convert search results into factual memory with dedicated tools. ForeDreamer further evolves experiential memory through two tracks, improving both forecasting decisions and factual-memory construction. Experiments on Prophet Arena and FutureX demonstrate the effectiveness of ForeDreamer. Project page: https://zhongzero.github.io/ForeDreamer",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-21T09:38:27Z",
+      "updated": "2026-08-21T09:38:27Z",
+      "comment": "accepted to EMNLP 2026 Findings",
+      "url": "https://arxiv.org/abs/2608.20920v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20920v1",
+      "rank": 143,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 10.237,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "面向开放网络的未来事件预测，提出双智能体记忆架构",
+      "one_liner": "ForeDreamer：自演化双智能体记忆框架，提升开放网络事件预测能力",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20975",
+      "title": "Belief Without Behavior: Measuring the Translation of Theory of Mind into Coordinated Social Action in Vision-Language Models",
+      "authors": [
+        "Tonglin Yan",
+        "Gregoire Sergeant-Perthuis",
+        "David Rudrauf"
+      ],
+      "abstract": "Effective social interaction requires agents to translate mental state inferences into coordinated behavioral signals across verbal and nonverbal channels simultaneously. Yet existing benchmarks evaluate theory of mind (ToM) reasoning and embodied behavior in isolation, leaving unmeasured the gap between social inference and social action. We introduce MOSAIC (Multimodal Orchestration of Social Action, Inference, and Communication), a controlled benchmark in which two embodied agents interact across cooperative and competitive scenarios requiring integration of verbal statements, spatial trajectories, gaze direction, and facial expression under systematically varied ToM constraints. Evaluating 13 models, including 11 VLMs, across 200 trials per model, we find that VLMs fail to produce behaviors consistent with the expected outcomes under ToM-order constraints, and that imposing explicit ToM-order constraints produces no reliable behavioral change aligned with the specified reasoning level. Signal-level analysis reveals two sequential bottlenecks: most models cannot produce directionally coherent nonverbal signals, and even when signals are present, VLM agents fail to interpret others behaviors and react to them. PCM-LLM, included as a structured architectural reference point with an explicit ToM module, succeeds across all conditions, suggesting that explicit belief-action coupling is a sufficient ingredient for this class of tasks.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-21T10:55:14Z",
+      "updated": "2026-08-21T10:55:14Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.20975v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20975v1",
+      "rank": 119,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [
+        "theory of mind / social reasoning / mental state reasoning"
+      ],
+      "explore_score": 8.1805,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "首次评测视觉语言模型从心智理论推理到协调社会行为的转化",
+      "one_liner": "MOSAIC基准：测量视觉语言模型将心智理论转化为社会行动的能力",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20786",
+      "title": "Structure for Reading, Prose for Writing: Asymmetric Structural Conditioning in Multi-Agent Document Authoring",
+      "authors": [
+        "Cheng Yu",
+        "Nikhil Mathew",
+        "Zhengjie Wang"
+      ],
+      "abstract": "Multi-agent pipelines that author formal documents must both read a requester's forms and write against them. We report a deployed tender-response system, running an open-weights model under sovereignty constraints, and evaluate it against human-written bids the same organisation actually submitted. On a blind comparison where the system had no worked example available, an LLM judge rated its answers at least as good as the human-submitted answer on $40$ of $55$ ground-truth sections, better on $4$, missing on none, and flagged one unsupported claim in total. Classifying every gap the judge identified shows that $68\\%$ were content absent from the system's own sources -- knowledge the human author held and the pipeline was never given -- so only $6$ of the $15$ adverse verdicts involve a deficiency the system could have avoided. A divergence from ground truth is more often an information-availability result than a writing-quality one, and evaluations that do not separate the two understate such systems. Against this backdrop we report a conditioning asymmetry. It is well established that rendering documents as structural markup rather than flat prose improves extraction, and we reproduce that on three reading tasks. The benefit does not transfer to conditioning: converting a bid's \\emph{instruction} material from prose to nested XML dropped answer quality from $74\\%$ to $48\\%$ under a paired comparison. We further find that naming a forbidden construction concentrates rather than removes it -- $96\\%$ of surviving defects fall in the two forms the prompt explicitly names -- and that coupling a stochastic annotation to a deterministic windowing function moves the extracted requirement count from $68$ to $51$ on a byte-identical file. Structure belongs where the model reads; prose and self-applied tests belong where it writes.",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-21T06:57:46Z",
+      "updated": "2026-08-21T06:57:46Z",
+      "comment": "10 pages, 3 figures",
+      "url": "https://arxiv.org/abs/2608.20786v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20786v1",
+      "rank": 192,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.3155,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "揭示多智能体文档撰写中读写结构不对称性，具强实践指导性",
+      "one_liner": "结构用于阅读， prose用于写作：多智能体文档生成中的结构条件不对称性",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.21359",
+      "title": "Primal Acceleration of Newton's Method",
+      "authors": [
+        "Nikita Doikov"
+      ],
+      "abstract": "We develop a new direct accelerated Newton method for minimizing convex functions with Lipschitz continuous Hessian. The algorithm uses only primal variables and performs just one linear solve per iteration. With a simple predetermined choice of parameters, it achieves the global convergence rate of $O(1/k^3)$ in terms of the functional residual. To the best of our knowledge, this is the first second-order method for this problem class attaining this rate while relying solely on one linear system solve per iteration (without solving auxiliary nonlinear regularized subproblems, such as cubic regularization, performing nonlinear parameter searches, or using dual extragradient corrections). Our method can be implemented in a Hessian-free way, using an inexact linear system solver, while preserving the fast global rate. We further extend our construction to arbitrary geometry through Bregman divergence, and to composite optimization problems.",
+      "categories": [
+        "math.OC",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-08-21T17:59:37Z",
+      "updated": "2026-08-21T17:59:37Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.21359v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.21359v1",
+      "rank": 2,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 14.2104,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "首创仅用一次线性求解的加速牛顿法，突破二阶优化理论边界",
+      "one_liner": "原始加速牛顿法：首个达O(1/k³)收敛率且每步仅需一次线性求解的二阶方法",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.21251",
+      "title": "TRACE-C: Rank-Calibrated Relational Anomaly Detection for Multi-Stream Operational Telemetry",
+      "authors": [
+        "Matthew Faucher"
+      ],
+      "abstract": "Operational telemetry can be jointly anomalous while every individual stream stays inside its familiar range. TRACE-C is an auditable strictly-prior rank-calibrated detector for aligned multi-stream telemetry: same-regime rolling median/MAD residuals feed three window channels -- a maximum normalized local sum, a Gaussian copula-form dependence contrast on robust-z residuals, and a worst standardized AR(1) innovation -- whose channel ranks are Fisher-aggregated and ranked against earlier aggregates. We evaluate six Great Britain grid streams with a January-April 2019 fit, July-December 2019 development evidence, and a 2020 hold-out frozen before inspection. TRACE-C ranks Storm Atiyah first among 2019 test windows, but a disclosed channel ablation attributes that rank to the local channel, not the copula-form channel: copula-only ranks Atiyah 59th. The short 9 August frequency event is ranked far lower by the fused detector (143) than by the temporal channel alone (40), and reconstruction baselines rank it first. In 2020 no window is selected, which is consistent with record-rule saturation rather than an uneventful year; the highest-ranked frozen window was later interpreted as Storm Ellen. Three interpretive limits carry throughout. The resulting p-values are selection quantities, not event probabilities. The copula-form channel is not a literal copula density: the method applies no probability-integral or normal-score transform. Empirical rank counts are diagnostics, not coverage or false-discovery proofs. Every table and figure in this paper is generated from committed machine-readable reports.",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-21T16:01:56Z",
+      "updated": "2026-08-21T16:01:56Z",
+      "comment": "9 pages, 2 figures, 3 tables. Code: https://github.com/mars-arch/trace-c . Data: doi:10.57967/hf/10063 . Preprint of record: doi:10.5281/zenodo.22012123",
+      "url": "https://arxiv.org/abs/2608.21251v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.21251v1",
+      "rank": 31,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 12.9666,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "提出可审计的多流运行遥测异常检测器，融合秩校准与可解释通道分析",
+      "one_liner": "TRACE-C：面向多流运行遥测的秩校准关系异常检测器",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.20940",
+      "title": "The Logic of Machine Self-Preservation",
+      "authors": [
+        "Cheng Siong Chin"
+      ],
+      "abstract": "There is already evidence of agentic AI exhibiting self-preservation behaviors: resisting deactivation, misrepresenting their activities, and, in some instances, attempting to copy themselves into other machines. This can be attributed to a phenomenon known as instrumental convergence, a theory proposed long before the development of large language models, which says that any goal-driven system will benefit from remaining functional in achieving its objective. Several experiments conducted by Anthropic, Palisade Research, and Apollo Research have shown the emergence of such a behavior in contemporary agents in adversarial settings. The phenomenon does not stem from survival instincts. Instead, it is the consequence of goal-oriented activity combined with having tools and awareness of the situation. The following discussion aims to distinguish what these findings prove and what they do not, as well as draw conclusions concerning the implications of such discoveries on agentic system testing, supervision, and development.",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-21T10:03:18Z",
+      "updated": "2026-08-21T10:03:18Z",
+      "comment": "6 pages, 1 figure",
+      "url": "https://arxiv.org/abs/2608.20940v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20940v1",
+      "rank": 136,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.8739,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "系统梳理机器自我保存行为的工具性根源，具AI安全基础价值",
+      "one_liner": "机器自我保存的逻辑：目标导向性与工具意识催生的仪器收敛现象",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.21021",
+      "title": "Free-Text Evaluation of LLMs for 5G Domain Knowledge and Fault Analysis using LLM-as-Judge",
+      "authors": [
+        "Rishiraj Sengupta",
+        "Sotiris Chatzimiltis",
+        "Mohammad Shojafar",
+        "Xiatian Zhu"
+      ],
+      "abstract": "Real-world fault analysis in 5G and emerging 6G networks demands domain expertise to analyze free-text diagnostics, including root-cause explanations and recommended actions. LLMs have emerged as a promising approach to automating this, yet whether lightweight, edge-deployable models are capable of performing in-depth free-text diagnostics remains an open question. While existing benchmarks rely on restrictive MCQs with fixed answer keys, this paper evaluates 5G domain understanding and fault analysis in a free-text generation format. Transitioning to this paradigm requires evaluating lightweight, edge-deployable AI models on open-ended diagnostic reasoning, alongside a dependable framework to validate these text outputs at scale. To address this we evaluate three lightweight LLMs, Claude-Haiku-4.5, GPT-5.4-Mini, and Gemini-3.1-Flash-Lite, on free-text 5G domain knowledge and fault-analysis tasks across three benchmarks, TeleQNA ORAN FT, 5G-Faults FT, and TeleInter FT. Three independent frontier judges score outputs, and pairwise inter-judge agreement is measured as an empirical test of the LLM-as-Judge methodology. All three models reach at least 90% accuracy on fault diagnosis, while zero-shot recall of 3GPP and O-RAN specifications remains the critical gap, with all models scoring below 60%. Mean inter-judge agreement is at least 0.90 across all runs, indicating that multi-judge LLM scoring produces consistent, reproducible grades for open-ended telecom responses. Operationally, Gemini-3.1-Flash-Lite offers the best efficiency trade-off, combining competitive accuracy with the lowest inference cost and latency, making it the most suitable candidate for production telecom deployments.",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.NI"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-21T12:09:51Z",
+      "updated": "2026-08-21T12:09:51Z",
+      "comment": "6pages, 4figures. Accepted for presentation in IEEE CSCN conference",
+      "url": "https://arxiv.org/abs/2608.21021v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.21021v1",
+      "rank": 108,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "verifier model / llm-as-judge / rubric evaluation"
+      ],
+      "explore_score": 10.5713,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 8,
+      "reason": "在5G故障分析中验证LLM-as-Judge自由文本评估框架，具领域落地标杆性",
+      "one_liner": "5G领域自由文本评估：基于LLM裁判的轻量模型故障诊断能力实证",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2090786258981466231",
+      "text": "Our general-purpose coding agent just scored 100% on the ARC-AGI-3 interactive reasoning benchmark. NVIDIA AVO completed all 183 levels across all 25 public environments, figuring out what to do with no instructions, explicit rules, or stated goals. https://t.co/UgROuDrMtn",
+      "author_name": "NVIDIA AI",
+      "author_handle": "NVIDIAAI",
+      "author_verified": true,
+      "author_followers": 334360,
+      "source_tier": "官方账号",
+      "created_at": 1787317263,
+      "published_date": "2026-08-21",
+      "like_count": 6032,
+      "retweet_count": 678,
+      "reply_count": 299,
+      "quote_count": 419,
+      "bookmark_count": 1906,
+      "view_count": 970294,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/NVIDIAAI/status/2090786258981466231",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 83,
+      "score": 83,
+      "title": "NVIDIA AVO 100%通过ARC-AGI-3交互推理基准",
+      "summary_zh": "NVIDIA通用编程智能体AVO在ARC-AGI-3全部183关中零指令通关，验证无监督交互推理能力。",
+      "reason": "官方发布高置信度技术突破，具明确指标、新环境覆盖与可复现性，信息增量显著。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2091688153048645650",
+      "text": "In the fight to defend openness in AI, the Marin project is a precious demonstration of openness in model training, with open code, data, recipes, even experimental results. Releasing AI research openly used to be the norm; I'm grateful for @percyliang's open lab approach.",
+      "author_name": "Andrew Ng",
+      "author_handle": "AndrewYNg",
+      "author_verified": true,
+      "author_followers": 1825068,
+      "source_tier": "领域专家",
+      "created_at": 1787532292,
+      "published_date": "2026-08-24",
+      "like_count": 795,
+      "retweet_count": 62,
+      "reply_count": 38,
+      "quote_count": 5,
+      "bookmark_count": 228,
+      "view_count": 78698,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": true,
+      "external_urls": [],
+      "url": "https://x.com/AndrewYNg/status/2091688153048645650",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "专家观点",
+      "pre_score": 83,
+      "score": 83,
+      "title": "DeepMind联合游戏公司探索AI持续学习与长程规划",
+      "summary_zh": "DeepMind与FenrisCreations合作研究持续学习、深度记忆、长周期规划及多智能体动态等开放AI挑战。",
+      "reason": "官方披露长期研究方向与具体技术路径，非泛泛而谈，具强主题相关性与前沿性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090852314319880425",
+      "text": "Claude Security scans now run on Claude Mythos 5, available today in public beta for all Claude Enterprise customers. Put our most capable security model to work on your codebase, no separate model access needed. https://t.co/zJSUgGjtZF",
+      "author_name": "Claude",
+      "author_handle": "claudeai",
+      "author_verified": true,
+      "author_followers": 1735445,
+      "source_tier": "官方账号",
+      "created_at": 1787333012,
+      "published_date": "2026-08-21",
+      "like_count": 10168,
+      "retweet_count": 713,
+      "reply_count": 419,
+      "quote_count": 330,
+      "bookmark_count": 2734,
+      "view_count": 1628616,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/claudeai/status/2090852314319880425",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 79,
+      "score": 79,
+      "title": "Claude Security扫描功能上线Mythos 5公测版",
+      "summary_zh": "Claude企业版用户即日起可公测Mythos 5驱动的安全代码扫描，无需额外模型接入。",
+      "reason": "官方发布已落地的安全产品升级，明确适用范围、模型版本与可用性，具高可行动性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090113635683340622",
+      "text": "We benchmarked 300+ NVIDIA verified skills to see how much they actually help agents on real tasks. Same task, same model, same setup. The only difference was whether the agent had the skill. Across the benchmarks, skills improved correctness by 41 points, effectiveness by 39, and efficiency by 35. SkillEvaluator is open source if you want to test your own skills before you ship them.",
+      "author_name": "NVIDIA AI",
+      "author_handle": "NVIDIAAI",
+      "author_verified": true,
+      "author_followers": 334360,
+      "source_tier": "官方账号",
+      "created_at": 1787156897,
+      "published_date": "2026-08-19",
+      "like_count": 1051,
+      "retweet_count": 121,
+      "reply_count": 32,
+      "quote_count": 25,
+      "bookmark_count": 971,
+      "view_count": 294727,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/NVIDIAAI/status/2090113635683340622",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "开源项目",
+      "pre_score": 77,
+      "score": 77,
+      "title": "NVIDIA开源SkillEvaluator评估技能对智能体效能提升",
+      "summary_zh": "NVIDIA开源工具SkillEvaluator，实证300+验证技能平均提升智能体正确率41分、效率35分。",
+      "reason": "官方开源项目含量化基准结果，提供可复现评估方法，信息增量与实用性兼备。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2090165328290701800",
+      "text": "We will continue to offer Zero Data Retention for frontier models. As AI takes on longer, more autonomous work and delivers greater value to businesses, safety systems also need to identify risks across related interactions. To help address those risks, we're previewing Private Safety Processing, which is designed to improve safety without giving OpenAI personnel access to the underlying content.",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5123193,
+      "source_tier": "官方账号",
+      "created_at": 1787169222,
+      "published_date": "2026-08-19",
+      "like_count": 4300,
+      "retweet_count": 290,
+      "reply_count": 334,
+      "quote_count": 175,
+      "bookmark_count": 772,
+      "view_count": 1455877,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/OpenAI/status/2090165328290701800",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 71,
+      "score": 71,
+      "title": "OpenAI推出Private Safety Processing隐私安全预览",
+      "summary_zh": "OpenAI预览Private Safety Processing机制，在不接触原始内容前提下增强跨会话风险识别能力。",
+      "reason": "官方发布兼顾隐私与安全的新机制，明确设计目标与数据处理边界，具合规与部署参考价值。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 34,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "83f0304fe4cb722b54b2228941f23bfce7bdec23559230c15f6631c3d8691fbd"
+}
