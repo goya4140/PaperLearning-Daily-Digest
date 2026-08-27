@@ -1,0 +1,369 @@
+{
+  "version": 2,
+  "date": "2026-08-27",
+  "arxiv_query_date": "2026-08-26",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-08-27T16:01:38.907908+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608260000+TO+202608262359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608260000+TO+202608262359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-26T00:00:00Z",
+    "2026-08-26T23:59:59Z"
+  ],
+  "raw_candidate_count": 291,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.25559",
+      "title": "AdaVDR: Adaptive Tool Use and Reflection for Video Deep Research",
+      "authors": [
+        "Xintong Zhang",
+        "Xiaomeng Fan",
+        "Shilin Yan",
+        "Ekko He",
+        "Zicheng Liu",
+        "Zijian Zou",
+        "Guannan Zhang",
+        "Yuwei Wu",
+        "Zhi Gao",
+        "Hongwei Xue"
+      ],
+      "abstract": "Video deep research answers complex questions by jointly understanding video content and retrieving external knowledge from the open Web. However, diverse questions and videos require different tool-use strategies, and inappropriate tool calls can produce incorrect results. Uncertain grounding and retrieval also make unnecessary interactions costly and error-prone, increasing latency and reasoning errors. To address these challenges, we propose AdaVDR, an adaptive video deep research agent with adaptive tool invocation and reflection. AdaVDR selects tools according to the task and its capabilities, and backtracks only when unreliable intermediate results require correction. To enable these capabilities, we develop a video deep research data construction pipeline. We first discover retrieval-relevant events and entities in diverse videos and acquire detailed information through grounding and external retrieval to construct high-quality QA pairs. For each QA, task-specific prompts organize the information acquisition process into a tool-use trajectory, allowing different question and video types to follow different grounding and retrieval strategies. We further introduce model-conditioned tool necessity filtering, which evaluates tool calls against the target model's video understanding and internal knowledge, removing tools or tool chains the model can bypass. This yields trajectories tailored to the target model's video understanding capability and knowledge. Using this pipeline, we construct training data and VDR-EE, a benchmark covering entity-centric and event-centric questions. We perform supervised fine-tuning followed by reinforcement learning with a redundancy-aware reward to strengthen adaptive tool invocation and reflection. Experiments show that our method performs best among the evaluated open-source models on VDR-EE and substantially improves over its base models on VideoDR.",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-08-26T09:07:51Z",
+      "updated": "2026-08-26T09:07:51Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.25559v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25559v1",
+      "rank": 180,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 10.4746,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "视频深度研究代理，自适应工具调用与反思机制",
+      "one_liner": "AdaVDR提出自适应工具调用与反思机制，解决视频理解中工具误用与冗余交互问题",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.25500",
+      "title": "CaSKG: Counterfactual-Causal Skill Graphs for Scalable Agent Skill Retrieval",
+      "authors": [
+        "Zhiyuan Li",
+        "Linyuan Gao",
+        "Xuechun Ding",
+        "Hongwei Chen",
+        "Yuan Wu",
+        "Yi Chang"
+      ],
+      "abstract": "Reusable skill libraries allow large language model (LLM) agents to reuse procedural knowledge across tasks, but they also turn memory access into a challenging retrieval problem. Full-library prompting preserves coverage at high context cost, vector retrieval returns compact neighborhoods but treats skills as independent text, and graph-based retrieval can recover workflow context only when the edges that carry relevance are reliable. We propose CaSKG, a counterfactual-causal skill graph framework that calibrates procedural relations before retrieval. CaSKG first builds a high-recall directed candidate graph from semantic, lexical, input/output, and structural evidence, with repair evidence and an optional LLM judge further refining candidate scores. It then applies direction-conditioned textual counterfactual probes that remove, substitute, and reorder skill pairs, aggregates the evidence with Bayesian smoothing, and publishes a state-filtered weighted graph for task-conditioned expansion. The graph is constructed offline and used without changing the downstream agent policy or task interface. Across six LLM backbones on ALFWorld ID-140 and ScienceWorld U211, CaSKG achieves the highest task score in all twelve combinations of model and benchmark. Relative to Graph-of-Skills (GoS), it improves the six-model macro-average ScienceWorld score from 72.62 to 80.50 and ALFWorld success from 80.01\\% to 86.79\\%, while reducing mean environment steps on both benchmarks. Qualitative and ablation analyses further show that calibrated edges help retrieval preserve prerequisites, state-changing actions, verification routines, and final completion steps. These results position edge-confidence calibration as an effective route to compact and executable skill retrieval at scale\\footnote{Code is available at: https://github.com/ZhiyuanLi218/Caskg }.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-26T08:12:41Z",
+      "updated": "2026-08-26T08:12:41Z",
+      "comment": "11 pages",
+      "url": "https://arxiv.org/abs/2608.25500v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25500v1",
+      "rank": 201,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 11.168,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "因果反事实技能图，提升大模型代理技能检索精度",
+      "one_liner": "CaSKG通过反事实探针校准技能图边权重，显著提升多任务成功率与执行效率",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26086",
+      "title": "TraceML: An Empirical Analysis of Human-Agent Planning in Machine Learning Development",
+      "authors": [
+        "Jiarui Yan",
+        "Weiwei Sun",
+        "Sijie Li",
+        "Wenhan Li",
+        "Yiming Yang"
+      ],
+      "abstract": "Large language models write correct code for isolated problems but remain far weaker at autonomous machine-learning development, where an agent must revise data pipelines, models, and validation over hours of feedback, and on most competitions still finishes below strong human competitors. Outcome-based benchmarks record this gap but not its cause, because they grade the final submission and discard the development process behind it. We introduce TraceML, which pairs human and agent work on the same competitions under one version-level schema: 4,465 human Kaggle trajectories across 134 competitions, seven of which are also worked by two agent scaffolds, giving 430 paired human and 207 agent trajectories. Every code version carries its score, its timestamp, and labels for the action taken, its intent, the edit size, and the score effect. Read this way, the gap becomes concrete. Experts alternate data work, validation, model changes, and ensembling, and return to approaches they had set aside. Each agent scaffold instead collapses into a narrow loop: Codex spends its steps re-weighting ensembles and tuning submissions, MLEvolve mutates its model in place, and neither pivots at the human rate nor reopens abandoned work. A short planning prompt distilled from human practice moves the behaviors it names toward the human profile and lifts scores, but the effort profile stays agent-shaped: instruction closes only the part of the gap that reduces to instructions. We release the corpus, the schema, the labelers, and the extraction pipeline at https://huggingface.co/datasets/jerryyan/TraceML.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-26T17:50:13Z",
+      "updated": "2026-08-26T17:50:13Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26086v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26086v1",
+      "rank": 10,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 12.4843,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Large language models write correct code for isolated problems but remain far weaker at autonomous machine-learning development, where an agent must revise data pipelines, models, and validation over hours of feedback, a…",
+      "reason": "tool learning / tool use / agent memory",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2608.26008",
+      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+      "authors": [
+        "Tongyan Hu",
+        "Bryan Hooi"
+      ],
+      "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-08-26T16:52:06Z",
+      "updated": "2026-08-26T16:52:06Z",
+      "comment": "8 pages (main), with appendix",
+      "url": "https://arxiv.org/abs/2608.26008v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26008v1",
+      "rank": 28,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.3208,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strat…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.26093",
+      "title": "Agentic Autoresearch for Cell-Edge Power Control: Radically Redefining the Researcher's Role",
+      "authors": [
+        "Ahmad Khan",
+        "Akram Bin Sediq",
+        "Sara Azadegi Naeini",
+        "Raviraj S. Adve"
+      ],
+      "abstract": "Designing machine learning algorithms for wireless resource management is labour-intensive: the architecture, the loss function and the training recipe are all specified by hand. We demonstrate that this design layer can be surrendered to an autonomous agent in its entirety. We adopt the autoresearch protocol, in which an AI coding agent edits a training script, runs a fixed-budget experiment, and retains or discards the change according to a single immutable metric. We grant the agent authority over the architecture family, the input representation, the output parameterization, the loss function and the task-sampling law, and set it a target chosen for its difficulty: sum-least-percentile-rate power control across a multicell network. The formulation targets cell-edge throughput and is non-convex, non-smooth and strongly NP-hard away from its max-min vertex. Safeguards render the results trustworthy: a hash-pinned evaluator, an enforced inference contract and a pre-registered falsifier per experiment. In eighty-one unattended experiments over twenty-six hours, the agent reached $99.5\\%$ of a converged minorization-maximization reference in one fixed-cost inference pass, at roughly $600\\times$ lower inference cost, closing $94\\%$ of the gap from its first working architecture, with one parameter set serving every network size and percentile target. It recovered provable structure rather than tuned constants: the output parameterization it discovered reproduces the exact max-min-optimal allocation at the minimum percentile, for every value of the trained weights.",
+      "categories": [
+        "cs.LG",
+        "cs.IT",
+        "eess.SY"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-26T17:56:00Z",
+      "updated": "2026-08-26T17:56:00Z",
+      "comment": "Submitted to IEEE Globecom Workshops",
+      "url": "https://arxiv.org/abs/2608.26093v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26093v1",
+      "rank": 6,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.6482,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "自主科研代理重构无线资源管理范式，具强可验证性",
+      "one_liner": "Agentic Autoresearch首次实现端到端全自动ML算法设计，达成超低推理成本与结构可解释性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.25920",
+      "title": "Repair or Resample? Rethinking Failure Debugging in LLM Multi-Agent Systems",
+      "authors": [
+        "Zhongwen Luan",
+        "Xiaoyu Zhang",
+        "Ming Hu",
+        "Yue Yang",
+        "Jiongchi Yu",
+        "Xiaohong Chen"
+      ],
+      "abstract": "As large language model (LLM)-based multi-agent systems (MASs) are increasingly applied to long-horizon complex tasks, their reliability has emerged as the core bottleneck hindering their real-world deployment. Existing MAS debugging and repair methods typically rely on rerunning and resampling the entire execution trajectory. However, a fundamental question remains to be answered: do these methods causally repair MAS failures or merely stochastically repair by leveraging the randomness of LLM sampling? To evaluate the effectiveness of MAS repair methods, we introduce SymTrace, a controlled evaluation framework that records the MAS execution trajectory and establishes intervention anchors. During replay, it effectively reconstructs the execution before the anchor using recorded logs and only regenerates the downstream trajectory, thereby enabling the reliable reproduction of MAS failures. We further construct the dataset SymFail, comprising 536 human-annotated failure trajectories with graph-linked locations, categories, and trace evidence. Based on these foundations, we conduct a large-scale empirical study across three mainstream MAS frameworks. Our findings reveal that existing unguided rerun methods are highly unreliable, exhibiting low failure reproduction and repair rates (only 67.97% and 6.90%, respectively). Building upon these findings, we further explore the effectiveness of a symptom-driven intervention method, which successfully repairs 20.15% of the failed cases (a 191.89% improvement to state-of-the-art repair methods). This study aims to provide actionable insights for MAS debugging and repair research, paving the way for the robust deployment of multi-agent systems.",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-26T15:33:47Z",
+      "updated": "2026-08-26T15:33:47Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.25920v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25920v1",
+      "rank": 61,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.0675,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "构建可控失败调试框架SymTrace，揭示MAS修复本质",
+      "one_liner": "Repair or Resample? 提出首个可复现MAS故障锚点干预框架，推动可靠多智能体系统落地",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26094",
+      "title": "MyoMechanix: Biomechanically-Grounded Compositional Skilled Activity Understanding and Coaching",
+      "authors": [
+        "Hao Yin",
+        "Paritosh Parmar",
+        "Lijun Gu",
+        "Lin Xu",
+        "Tianxiao Guo",
+        "Xiujin Liu",
+        "Tianyou Zheng",
+        "Yang Zhang",
+        "Weiwei Fu"
+      ],
+      "abstract": "Existing action quality assessment (AQA) datasets and methods rely primarily on visual inputs such as RGB and pose, overlooking physiological dynamics such as muscle mechanics and often modeling actions as monolithic patterns. These limitations hinder fine-grained, biomechanically grounded feedback. We introduce MyoMechanix, a multimodal ecosystem for weight-loaded actions that aligns motion with muscle activity. Expert-annotated, it contains 7,500+ samples of 20 actions from 38 subjects, with synchronized multiview RGB video, 3D pose, sEMG, and additional physiological signals, forming the largest multimodal AQA benchmark to date. We further construct the Fitness Knowledge Graph (FKG), which organizes expert annotations into structured relationships among actions, phases, key steps, errors, and corrective feedback, enabling compositional scoring and interpretable assessment. Building on these representations, we develop CUBIST (Compositional Ontological Reasoning Engine), which performs decomposition-analysis-recomposition for fine-grained error attribution and feedback generation. We also establish MyoMechanix-AQA, MyoMechanix-VideoQA, and a novel MyoMechanix-Video2EMG task. Experiments show that multimodal sensing and structured representations improve performance, interpretability, and error attribution, with CUBIST achieving state-of-the-art results; VideoQA enhances language-grounded action understanding; and Video2EMG suggests video-based alternatives to costly EMG sensing. MyoMechanix advances skilled activity understanding toward biomechanically grounded, multimodal, and compositional reasoning for Physical AI applications in fitness, rehabilitation, healthcare, and machine learning. Project page: https://haoyin116.github.io/MyoMechanix/",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.ET",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-08-26T17:56:33Z",
+      "updated": "2026-08-26T17:56:33Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26094v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26094v1",
+      "rank": 5,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 14.9739,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Existing action quality assessment (AQA) datasets and methods rely primarily on visual inputs such as RGB and pose, overlooking physiological dynamics such as muscle mechanics and often modeling actions as monolithic pat…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2608.25727",
+      "title": "Are LLM-Enhanced GNNs Privacy-Safe?",
+      "authors": [
+        "Longzhu He",
+        "Zelang Wen",
+        "Chaozhuo Li",
+        "Sen Su"
+      ],
+      "abstract": "Large language models (LLMs) have recently advanced graph neural networks (GNNs) by enriching node representations with semantic information, giving rise to LLM-enhanced GNNs that achieve substantial performance gains. However, their vulnerability to privacy attacks, in which adversaries infer sensitive information from model outputs, remains largely underexplored. To bridge this gap, we present a systematic evaluation of privacy risks in LLM-enhanced GNNs through a unified framework consisting of five stages: (1) dataset preparation, (2) victim model training, (3) privacy attack, (4) risk assessment, and (5) defense analysis. Specifically, we conduct experiments on six real-world text-attributed graph datasets covering diverse domains. We consider six representative privacy attack methods targeting three fundamental threats, namely link, label, and membership inference, and construct 42 victim model configurations by combining multiple LLM-based feature enhancers with representative GNN backbones. Extensive experiments show that, despite their utility improvements, LLM-enhanced GNNs consistently exhibit increased vulnerability to privacy attacks compared to shallow text representation baselines. Further analysis reveals that semantic enrichment amplifies link-, label-, and membership-related signals in the embedding space, making them more exploitable by inference attacks. Finally, we evaluate differential privacy as a defense strategy and show that, while it can partially mitigate privacy risks, it introduces significant utility degradation, highlighting a fundamental privacy-utility trade-off in LLM-enhanced graph learning. Overall, this work provides a comprehensive understanding of privacy risks in LLM-enhanced GNNs and offers practical insights for developing more secure and trustworthy graph learning systems.",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-26T12:42:21Z",
+      "updated": "2026-08-26T12:42:21Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.25727v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25727v1",
+      "rank": 122,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 13.882,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Large language models (LLMs) have recently advanced graph neural networks (GNNs) by enriching node representations with semantic information, giving rise to LLM-enhanced GNNs that achieve substantial performance gains. H…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "historical-date-skipped",
+  "bilibili": [],
+  "bilibili_candidate_count": 0,
+  "bilibili_qualified_count": 0,
+  "bilibili_status": "historical-date-skipped",
+  "bilibili_stats_status": "historical-date-skipped",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "historical-date-skipped",
+  "x": [],
+  "x_candidate_count": 0,
+  "x_qualified_count": 0,
+  "x_status": "historical-date-skipped",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "a9d8a3069b2cb3b361386472606926e380714db491eee6ebb9f02325b111b6a1"
+}
