@@ -1,0 +1,546 @@
+{
+  "version": 2,
+  "date": "2026-08-29",
+  "arxiv_query_date": "2026-08-27",
+  "arxiv_reused_latest": true,
+  "generated_at": "2026-08-29T11:27:43.586738+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608270000+TO+202608272359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608270000+TO+202608272359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-27T00:00:00Z",
+    "2026-08-27T23:59:59Z"
+  ],
+  "raw_candidate_count": 322,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.27454",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "authors": [
+        "Liyan Tang",
+        "Cyrus Rashtchian",
+        "Chun-Sung Ferng",
+        "Andrew Tomkins",
+        "Da-Cheng Juan",
+        "Tu Vu"
+      ],
+      "abstract": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that guide skill development typically remain scattered across optimization histories, limiting their systematic reuse across iterations. We introduce WikiSkill, a framework that co-evolves agent skills with a persistent knowledge base (wiki). At a high level, WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, while continuously consolidating experience into the wiki, which subsequent skill updates can build on. Across diverse benchmarks and models, WikiSkill consistently outperforms state-of-the-art skill-evolution methods and improves over no-skill baselines in most model-benchmark settings. We find that skill evolution complements model scaling: larger models generally benefit more from evolved skills, while smaller models with skills can outperform substantially larger models without them. We also find that evolved skills transfer effectively across models and model families, and skills evolved by other models can outperform self-evolved skills. Finally, our ablation studies confirm that persistent knowledge accumulation in the wiki is critical for effective skill evolution. These results demonstrate the benefits of systematically accumulating and refining agent experience for developing reusable and transferable skills.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T17:59:11Z",
+      "updated": "2026-08-27T17:59:11Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.27454v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27454v1",
+      "rank": 3,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 11.9531,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "WikiSkill构建持久知识库驱动技能演化，直击Agent能力复用核心",
+      "one_liner": "提出WikiSkill框架，通过持久化知识库实现AI agent技能的持续积累与跨模型迁移",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.27439",
+      "title": "RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution",
+      "authors": [
+        "Junjie Zhang",
+        "Hui Liu",
+        "Kecheng Chen",
+        "Xianbo Mo",
+        "Changsheng Chen",
+        "Haoliang Li"
+      ],
+      "abstract": "LLM-based agents are increasingly deployed in product-level execution harnesses, where jailbreaks can trigger harmful tool use and persistent state changes, creating greater risks than unsafe text generation alone. Existing automatic red-teaming methods often rely on fixed attacks, while recent agentic attackers coordinate multiple jailbreak tools and show stronger potential through trajectory-based retrieval. However, such retrieval can reuse misleading experiences due to retrieval bias and unclear tool credit, and full trajectories add context overhead while reducing interpretability. We propose RedEvoAgent, a black-box red-teaming agent that distills cross-case attack trajectories into a concise, human-readable attack skill. The attack skill adaptively evolves through tool-effectiveness profiling and Deciding-Tool Attribution for skill updates, and a validation ratchet that retains only updates improving validation performance. Experiments on multiple benchmarks, target models, and target execution harnesses show that RedEvoAgent outperforms fixed and agentic baselines, improves tool efficiency, and transfers across attacker models and target execution harnesses.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-08-27T17:55:33Z",
+      "updated": "2026-08-27T17:55:33Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.27439v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27439v1",
+      "rank": 7,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery",
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 13.0618,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "RedEvoAgent实现红队攻击技能的可解释演化，强化agent安全能力",
+      "one_liner": "设计RedEvoAgent，将黑盒红队攻击轨迹蒸馏为可演化的攻击技能，提升工具效率与跨平台泛化性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26780",
+      "title": "AI Control Scientist: LLM-driven Agentic System for Automated Control Design",
+      "authors": [
+        "Haiteng Wang",
+        "Weihao Li",
+        "Jing Zhang",
+        "Lei Ren"
+      ],
+      "abstract": "Control system design is critical for modern industry, such as chemical process temperature regulation and aero-engine control. However,traditional control design workflows rely heavily on expert knowledge and extensive manual parameter tuning, resulting in limited efficiency and scalability. To this end, this paper proposes AI Control Scientist (AICS), the first large language model (LLM)-driven agent capable of automatically generating optimized controller from language design requirements. Specifically, a Task Modeling Agent interprets user requirements to engineering constraints; a Controller Design Agent generate candidate controller structures and executable code; and a Parameter Tuning Agent refine controller parameters under closed-loop performance criteria. Experiments demonstrate that the proposed agentic system can automatically generate multiple representative control systems, outperforms existing automated baselines in both design success rate and optimization efficiency. This work has the potential to transform control system design from human-driven to agent-driven, paving the way for model predictive control and other advanced control systems design.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T08:11:13Z",
+      "updated": "2026-08-27T08:11:13Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26780v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26780v1",
+      "rank": 214,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.3038,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "AICS首次实现LLM驱动的全自动控制设计，拓展agent工业应用边界",
+      "one_liner": "提出AI Control Scientist，首个能从自然语言需求自动生成优化控制器的LLM代理系统",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26546",
+      "title": "DuMateBench: Evaluating Autonomous Agents in Complex Real-World Workflows",
+      "authors": [
+        "Zechun Niu",
+        "Yukun Zhao",
+        "Jiaxin Zhang",
+        "Xu Shen",
+        "Jinhua Si",
+        "Han Tian",
+        "Can Xu",
+        "Yunfan Song",
+        "Jiaxin Mao",
+        "Yansong Gao",
+        "Yuchen Li",
+        "Jianmin Wu",
+        "Lingyong Yan",
+        "Shuaiqiang Wang",
+        "Dawei Yin"
+      ],
+      "abstract": "Autonomous agents are increasingly adopted to complete complex, multi-tool workflows in real-world settings. However, existing benchmarks typically separate tasks by application or capability and evaluate agents in environments that are cleaner and more stable than those encountered in practice. We introduce DuMateBench, a real-session benchmark reconstructed from anonymized and privacy-screened user sessions collected from a large-scale production agent platform. Each task preserves the relevant pre-solution interaction history, persistent configurations, and workspace state, and is then validated through human verification. The resulting benchmark comprises 200 tasks spanning 8 broad scenarios and 17 fine-grained capability categories, with most tasks requiring multiple capability coordination. We execute these tasks in isolated Docker containers injected with three forms of real-world environmental complexity: Insufficient, Unstable, and Noisy, and assess performance using a hybrid deterministic and LLM-as-Judge evaluation protocol. Experiments across five representative autonomous-agent frameworks paired with four state-of-the-art LLMs reveal substantial gaps in strict task completion. Complementary robustness, efficiency, and diagnostic analyses further show that performance under environmental perturbations is jointly shaped by the capabilities of the LLM and the surrounding agent framework. The code and data are publicly available at https://dumatebench.com/.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T02:36:23Z",
+      "updated": "2026-08-27T02:36:23Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26546v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26546v1",
+      "rank": 300,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.4695,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "DuMateBench基于真实会话构建复杂工作流基准，推动agent评估落地",
+      "one_liner": "发布DuMateBench真实会话基准，覆盖8类场景与环境扰动，揭示当前agent在复杂工作流中的显著短板",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.27021",
+      "title": "FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets",
+      "authors": [
+        "Kuan-Hao Tseng",
+        "Niruth Bogahawatta",
+        "Yasod Ginige",
+        "Kunjan Patel",
+        "Kosta Dakic",
+        "Suranga Seneviratne"
+      ],
+      "abstract": "LLM-based agents are increasingly proposed for network fault diagnosis, but existing benchmarks evaluate them only on accurate tickets and always assume a fault is present, conditions rarely met in practice. We present FaulT-Bench, a benchmark of 200 troubleshooting scenarios across eight network topologies, five reimplemented from public practitioner labs, spanning genuine faults, false fault reports, incorrect device attribution, and incorrect root-cause claims. To isolate how ticket wording affects diagnosis, we further rewrite 72 false-premise tickets into five reporter personas that vary reporter confidence and verifiable detail one factor at a time, holding the network state fixed. Our automated harness deploys each scenario in Kathará, lets agents interact through the NIKA tool interface, and scores free-text diagnoses with an LLM judge across outcome, fix, and reasoning quality. Evaluating SADE, ReAct, and Claude Code, we find all three are near-saturated on accurate tickets and robust to misdirection, yet degrade sharply when the network is healthy and the ticket is wrong, probing until a benign condition can be promoted to a root cause rather than concluding nothing is wrong. Persona rewrites show that how a ticket is written matters more than what it claims: a confidently wrong report is handled about as well as an accurate one, while a vague, underspecified report degrades performance sharply. The three agents also fail differently, from constant over-diagnosis to unanswered runs, at very different cost. These results position FaulT-Bench as a benchmark for developing agentic systems that can reason reliably over the noisy, unreliable tickets of real-world network troubleshooting.",
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "primary_category": "cs.NI",
+      "published": "2026-08-27T12:07:10Z",
+      "updated": "2026-08-27T12:07:10Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.27021v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27021v1",
+      "rank": 139,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.6522,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "FaulT-Bench首创不可靠用户工单基准，挑战agent现实诊断鲁棒性",
+      "one_liner": "构建FaulT-Bench网络排障基准，暴露LLM agent在错误工单下过度诊断等现实失效模式",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26983",
+      "title": "GraphMemix: Query-Aware Evidence Forests for Long-Term Multimodal Agent Memory",
+      "authors": [
+        "Geng Li",
+        "Yuhao Wang",
+        "Dong Li",
+        "Jianye Hao",
+        "Yuxin Peng"
+      ],
+      "abstract": "Organizing long-term memory for multimodal agents remains challenging because existing methods either suffer from expensive question-agnostic offline summaries or naive embedding similarity matching that introduces incomplete and redundant context. To address these issues, we propose GraphMemix, a combinatorial-optimization graph memory framework that models memory organization as query-aware evidence-forest construction. Specifically, our method consists of three key components:(1) candidate graph construction, which expands multi-view seed memories through schema and semantic relations to acquire query-aware original context; (2) evidence utility and activation costs, which decouples direct memory support from anchor-conditioned relation verification to suppress redundant or conflicting information; and (3) forest optimization, which jointly selects a forest-format memory context under a maximum evidence budget and its reliable relational structure. By organizing memory into a query-relevant subgraph, the method avoids substantial lifecycle cost and recovers low-similarity complementary evidence. Experimental results across four long-term multimodal memory benchmarks demonstrate significant improvements with different foundation models and establish a new Pareto frontier between accuracy and lifecycle cost.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T11:28:49Z",
+      "updated": "2026-08-27T11:28:49Z",
+      "comment": "Project page with code: https://github.com/ligeng0197/graphmemix",
+      "url": "https://arxiv.org/abs/2608.26983v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26983v1",
+      "rank": 150,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 10.4683,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "GraphMemix提出查询感知证据森林，革新多模态长时记忆组织范式",
+      "one_liner": "提出GraphMemix图记忆框架，将长时记忆建模为查询驱动的证据森林，兼顾精度与生命周期成本",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26849",
+      "title": "LiveSim: Simulating Environment-Shaped Users in Multi-Agent Live-Stream Ecosystems",
+      "authors": [
+        "Jiaqi Xu",
+        "Yiran Qiao",
+        "Jing Chen",
+        "Qiwei Zhong",
+        "Xiang Ao",
+        "Xueqi Cheng"
+      ],
+      "abstract": "User behavior simulation with large language models~(LLMs) is increasingly used to support multi-agent ecosystem simulation. Existing simulators typically rely on static user profiles inferred from historical observations, which become inadequate in socially intensive environments such as live streaming where interaction dynamics continuously reshape user behavior. We propose \\textbf{LiveSim}, an LLM-based framework for live-stream ecosystem simulation. It represents users as editable behavioral hypotheses and progressively refines them through trajectory-grounded interactions, where discrepancies between simulated and observed trajectories reveal missing environmental shaping effects. These signals are further extracted as transferable environment-behavior patterns and accumulated in a collective behavioral memory to improve user-level behavioral fidelity and support ecosystem-level simulation. Experiments on real-world live-stream risk-control data validate the effectiveness of LiveSim in improving user-level behavioral fidelity and enabling ecosystem-level analysis of risk evolution and platform intervention effects.",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T09:16:29Z",
+      "updated": "2026-08-27T09:16:29Z",
+      "comment": "20 pages, 8 figures, 7 tables",
+      "url": "https://arxiv.org/abs/2608.26849v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26849v1",
+      "rank": 196,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.7359,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "LiveSim建模环境塑造的用户行为演化，突破静态仿真局限",
+      "one_liner": "提出LiveSim框架，通过轨迹校准与集体行为记忆，实现直播生态中用户行为的动态高保真仿真",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26683",
+      "title": "SIGMA: Structured Noise-Effect-Aware Grouped Multi-Agent Aggregation",
+      "authors": [
+        "Li Mingqian"
+      ],
+      "abstract": "Cooperative multi-agent reinforcement learning (MARL) faces significant challenges in maintaining robust coordination under noisy observations. Although observation disturbances are often introduced independently across agents, their downstream effects on cooperative decision-making can become structured through underlying cooperation structures. We characterize this phenomenon as structured noise effects, where noise-induced decision effects exhibit local correlation among agents with stronger task-related dependencies while remaining globally heterogeneous across different agents and local structures. Existing robust MARL methods, however, rarely explicitly characterize or exploit such structure-dependent noise effects. To address this limitation, we propose SIGMA, a hierarchical collaboration framework that exploits cooperation structures to learn robust representations under noisy observations. SIGMA first organizes agents into adaptive local structures through density-based grouping and performs intra-group consensus aggregation to preserve shared task-relevant information while smoothing agent-specific representation deviations. Inter-group attention then adaptively integrates information across different groups to preserve global coordination while accommodating their heterogeneous contributions. Experiments on noisy-observation tasks in StarCraft II empirically validate the structured noise effects and demonstrate that SIGMA consistently improves robustness under observation noise while maintaining competitive performance in noise-free environments.",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T06:40:42Z",
+      "updated": "2026-08-27T06:40:42Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26683v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26683v1",
+      "rank": 255,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.4624,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 8,
+      "reason": "SIGMA首次刻画结构化噪声效应，提升多智能体协作鲁棒性",
+      "one_liner": "提出SIGMA框架，利用合作结构学习抗噪表征，在StarCraft II中显著提升多智能体在噪声下的协调鲁棒性",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2093386528668172373",
+      "text": "New Fellows Research: Can Claude autonomously align other AIs? We gave Claude 48 hours and 1 GPU to improve the alignment of small models. It researched and proposed methods, then trained and tested the models on its own. It worked surprisingly well. https://t.co/nhlCMgQl46",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1616724,
+      "source_tier": "官方账号",
+      "created_at": 1787937216,
+      "published_date": "2026-08-28",
+      "like_count": 2917,
+      "retweet_count": 274,
+      "reply_count": 264,
+      "quote_count": 130,
+      "bookmark_count": 1038,
+      "view_count": 386713,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2093386528668172373",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 88,
+      "score": 88,
+      "title": "Claude 自主对齐小模型实验成功",
+      "summary_zh": "Anthropic 发布新研究：Claude 在 48 小时内自主研究、训练并验证了提升小模型对齐性的方法，效果显著。",
+      "reason": "官方首发原创研究，具明确技术路径与实证结果，信息增量高且主题高度相关。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093038426140651791",
+      "text": "Today, we're kicking off the first phase of the research preview for Model Hardware Standard (MHS): a new standard for AI agents to safely operate physical equipment in scientific research and advanced manufacturing. Read more: https://t.co/XQ2y9EW7Af https://t.co/kgyCvZ6iYc",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1616724,
+      "source_tier": "官方账号",
+      "created_at": 1787854222,
+      "published_date": "2026-08-27",
+      "like_count": 10340,
+      "retweet_count": 1318,
+      "reply_count": 450,
+      "quote_count": 734,
+      "bookmark_count": 3951,
+      "view_count": 2792207,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2093038426140651791",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 87,
+      "score": 87,
+      "title": "Anthropic 推出物理设备安全操作新标准 MHS",
+      "summary_zh": "Anthropic 启动 Model Hardware Standard（MHS）研究预览，旨在规范 AI 代理安全操控科研与制造设备。",
+      "reason": "官方发布全新跨领域基础设施标准，具强可行动性与安全治理意义，非泛化产品公告。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093515564786540695",
+      "text": "We’re ending our partnership with Cursor following its acquisition by SpaceX. Under our proposal, Cursor’s direct access to our models would end on November 12. We know that the people most affected by this decision are the developers who rely on OpenAI models in Cursor. We care about their experience in this transition and we’re ready to go above and beyond to support them. https://t.co/OzuCTzUjfX",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5135148,
+      "source_tier": "官方账号",
+      "created_at": 1787967980,
+      "published_date": "2026-08-29",
+      "like_count": 16974,
+      "retweet_count": 1766,
+      "reply_count": 2236,
+      "quote_count": 2717,
+      "bookmark_count": 3418,
+      "view_count": 7672992,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+      ],
+      "url": "https://x.com/OpenAI/status/2093515564786540695",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 84,
+      "score": 84,
+      "title": "OpenAI 终止与被 SpaceX 收购的 Cursor 合作",
+      "summary_zh": "OpenAI 宣布因 Cursor 被 SpaceX 收购，将于 11 月 12 日终止其直接模型访问权限，并提供过渡支持。",
+      "reason": "重大商业与安全策略调整，含明确时间表、法理依据及开发者关怀措施，具高可信度与行业影响。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2092315079576555806",
+      "text": "OpenWorker -- an open source agent that doesn't just chat but completes tasks on your laptop -- just released a new version with many features for security workflows. After our initial release, many users found it especially useful for cybersecurity. Attackers are already using AI; OpenWorker is committed to giving defenders the same leverage. Running an agent requires both (i) A model and (ii) A harness (the software around the model). Because the OpenWorker harness is fully open source, security teams can audit it to make sure we haven't built any backdoors that exfiltrate your code and data to some company or even a foreign adversary. OpenWorker now comes with built-in cybersecurity agents for (i) Scanning your code for vulnerabilities. (ii) Scanning dependencies for supply chain injections. (iii) Checking your cloud security configuration for attack surfaces. This enables developers to do much more security work before deployment (part of what's called the \"shift left\" movement). You choose the model: you can run open weight models fully locally so sensitive code never leaves your machine. This helps with legitimate security work (like reproducing a known exploit to defend against it) that can trigger refusals in leading closed models. Or use your ChatGPT subscription, or stealth preview models like Ox Alpha, or any model via API key. Thanks also to all the open source contributors! Join work with @rohitcprasad so please follow him too to get more frequent updates. Try it out: https://t.co/QPZLudn7ug Code: https://t.co/NYCiTD6hSq",
+      "author_name": "Andrew Ng",
+      "author_handle": "AndrewYNg",
+      "author_verified": true,
+      "author_followers": 1839009,
+      "source_tier": "领域专家",
+      "created_at": 1787681762,
+      "published_date": "2026-08-25",
+      "like_count": 3496,
+      "retweet_count": 431,
+      "reply_count": 152,
+      "quote_count": 41,
+      "bookmark_count": 3122,
+      "view_count": 250750,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://github.com/andrewyng/openworker",
+        "https://openworker.com/"
+      ],
+      "url": "https://x.com/AndrewYNg/status/2092315079576555806",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 83,
+      "score": 83,
+      "title": "Andrew Ng 发布开源安全智能体 OpenWorker 新版",
+      "summary_zh": "OpenWorker 新版增强网络安全能力，支持代码漏洞扫描、供应链检测与云配置审计，全栈开源可审计。",
+      "reason": "领域权威发布有明确安全价值的开源工具，强调可验证性与“左移”实践，信息增量与可信度兼备。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093656138189246814",
+      "text": "#Technology #Innovations New kind of AI uses a fresh approach to reasoning — researchers say it costs up to 11 times less to run than a leading OpenAI model https://t.co/NMdsZJoVG1 A new artificial intelligence (AI) model used a novel approach to AI cognition to dramatically reduce the cost of requests, suggesting that nonverbal reasoning may be the next step toward machines developing human-like intelligence. In a new research paper published Aug. 10 on the preprint server arXiv, scientists at AI company Pathway detailed the technical foundations of its new BDH-CQ model. This follows a precursor model known as \"Dragon Hatchling\" that the scientists created in 2025, which was designed to accurately simulate how the neurons in the brain connected and strengthened during the learning experience. In the new study, the scientists described how they evaluated BDH-CQ's performance against a foundational 2019 benchmark that helped set the current standard for measuring progress toward artificial general intelligence (AGI) — the point at which AI has matched or surpassed human capabilities in all domains. The 2019 benchmark, known as ARC-AGI, uses nonverbal reasoning puzzles — such as rotating a series of shapes to complete a sequence — to measure the cognitive ability of AI systems. Whereas humans are highly skilled at inferring the rules of these types of puzzles through trial and error, early AI systems were historically much less skilled. BDH-CQ scored almost 30% on the ARC-AGI-1 benchmark, successfully solving the equivalent of three out of 10 puzzles in two or fewer attempts. Although numerous models have achieved significantly better scores on this test, the underlying reasoning approach that BDH-CQ is based on makes its size and usage costs dramatically smaller than models built atop the traditional transformer-based architecture. For example, while OpenAI's entry-level lightweight reasoning model GPT 5.6 Luna (Low) achieved a slightly higher score, the study stated that this \"modest accuracy gain\" cost roughly 11 times as much as BDH-CQ in terms of relative token costs — the metering system that AI companies use to measure the cost of running AI systems. This type of AI model architecture, if adopted widely, could have a dramatic impact on the overall cost and scale of AI deployments, the scientists believe. More than meets the eye BDH-CQ was trained on just 150 million parameters, while parameters for the most advanced, \"frontier\" AI models such as Meta’s open-source Llama 3 70B or Llama 3.1 405B typically number tens of billions to hundreds of billions. In the world of AI development, fewer parameters means that models are faster to train and cheaper to run. The researchers, however, said these results also imply that the model's cognition capabilities could scale significantly when expanded to larger parameter sizes. The reason for this performance jump is that Pathway's model uses what the company's scientists describe as a \"post-transformer\" architecture. Most mainstream AI models, such as those powering Claude and ChatGPT, are based on \"transformer models,\" so called because they transform user inputs into interconnected mathematical reference points. These systems look at every word within an input simultaneously, which allows them to infer context from position, such as deciding based on nearby words whether the word \"bark\" refers to dogs or trees. Leading AI models have been criticized for being expensive to run. (Image credit: Jaque Silva/NurPhoto via Getty Images) A transformer model forms its responses to user queries by looking at the full prompt simultaneously and then predicting what the next word in the sequence of its reply should be. It does this word by word, using natural language to effectively verbalize a linear train of thought in the background. Transformers' reasoning also functions sequentially, meaning they have to work through each stage of a problem in a strict linear order. These models have significant advantages over earlier architectures, which would often forget the start of an input by the time they reached the end. However, transformer architectures can struggle with longer or more complex prompts, as the computational complexity of evaluating the prompt increases quadratically — meaning that doubling the length of an input uses four times as much processing power. AI model usage is measured on a per-token basis, with a token representing any data fragment (equivalent to roughly four characters of text) that the AI has to ingest or output. Because more complex prompts require longer trains of thought with multiple steps, processing and responding to these queries can burn through significant amounts of tokens. AI's next generation? Conventional transformer-based token generation is prone to causing memory bottlenecks, as AI re-reads every previous word in the conversation with every new word generated. Eventually, this will clog up the memory in the graphics processing units (GPUs) used for AI operations. Because of this, scaling AI reasoning has become an expensive computational challenge. Pathway's post-transformer approach changes how the AI’s memories of a conversation and the relationship between pieces of information are stored and processed. It replaces text logs with new tools, including an improved short-term memory and a mechanism that allows it to work through problems without consuming tokens. Transformer-based models retain prompts and interaction histories as a long string of numerical values representing the text of requests. That string then expands as new tokens are added through processing the request. BDH-CQ uses numerical arrays to represent the underlying rules and contextual patterns of a task, using numbers to track relationships between chunks of information rather than defining them in text. These arrays represent vectors — directional information that points to another point on a theoretical map stored inside the GPU’s memory as part of the training data, implanted during the model's creation. The scientists said in the study that this allows the model to process complex abstract reasoning without increasing its memory footprint or computational cost. To execute tasks, BDH-CQ implements a \"latent reasoning engine\" as its internal workspace. Using numbers to represent the different elements of a prompt or problem, it carries out a series of iterative recurrent loops to determine the best answer to return based on the prompt. The model takes the output of the last loop, assesses how the result could be improved based on its training data, and feeds back the previous output as the starting point for the next iteration. It repeats this for a pre-set number of loops, with each iteration theoretically closer to the desired outcome. To tackle more complex problems requiring more thinking time, BDH-CQ can execute more loops. This increases the time taken, but the amount of memory and computational power consumed does not scale with more attempts — in theory, the model would consume a consistent proportionality of memory and power running 200 loops as it would running 20 loops. Standard transformer models, by contrast, achieve extra thinking time by generating long chains of written text tokens, which exponentially consumes GPU memory and computing power across an AI cluster. Related stories AI found a weakness in one of the world's most studied encryption systems — is your data under threat? AI may accelerate scientific progress — but here's why it can't replace human scientists AI could soon think in ways we don't even understand, increasing the risk of misalignment — scientists at Google, Meta and OpenAI warn The model's ARC-AGI-1 benchmark results have been independently verified and reproduced by prominent researchers in the AI field, including NYU researcher Richard Zhong, and Łukasz Kaiser, a co-author of the seminal 2017 paper \"Attention Is All You Need,\" which introduced the concept of transformers within large language models. \"I've followed Pathway closely and replicated their ARC-AGI-1 results myself,\" Kaiser said in a statement. \"Pathway shows that model architecture, not just scale, can drive the next leap in AI reasoning.\" Pathway plans to scale the BDH architecture up to 600 billion parameters and apply its vector-based reasoning to more challenging benchmarks, such as ARC-AGI-2 and ARC-AGI-3, as well as develop a fully-fledged large language model (LLM) based on the technology, which would provide a basis for building text-based chatbots. The company hopes the technology can be applied to complex reasoning problems in sectors such as cybersecurity incident response and industrial operations. Adam Shepherd",
+      "author_name": "Παππάς Α. Σπυρίδων",
+      "author_handle": "spappasa",
+      "author_verified": true,
+      "author_followers": 5778,
+      "source_tier": "认证来源",
+      "created_at": 1788001496,
+      "published_date": "2026-08-29",
+      "like_count": 1,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "quote_count": 0,
+      "bookmark_count": 0,
+      "view_count": 306,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://ift.tt/v5MzpOg"
+      ],
+      "url": "https://x.com/spappasa/status/2093656138189246814",
+      "matched_queries": [
+        "topic-2"
+      ],
+      "content_type": "论文发现",
+      "pre_score": 77,
+      "score": 77,
+      "title": "Pathway 发布 BDH-CQ 模型：非语言推理降本 11 倍",
+      "summary_zh": "Pathway 在 arXiv 发布 BDH-CQ 模型，采用新型认知架构，推理成本较主流 OpenAI 模型低至 1/11。",
+      "reason": "arXiv 论文驱动的技术突破，含具体性能对比与神经模拟基础，属高质量前沿研究发现。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 36,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "216653e2f3275ce87f2d88e4636d9adc72de26e56a1c93c3d034abcc67610535"
+}
