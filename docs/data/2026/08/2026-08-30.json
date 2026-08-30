@@ -1,0 +1,571 @@
+{
+  "version": 2,
+  "date": "2026-08-30",
+  "arxiv_query_date": "2026-08-27",
+  "arxiv_reused_latest": true,
+  "generated_at": "2026-08-30T10:14:09.297984+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608270000+TO+202608272359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608270000+TO+202608272359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-27T00:00:00Z",
+    "2026-08-27T23:59:59Z"
+  ],
+  "raw_candidate_count": 322,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.27454",
+      "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+      "authors": [
+        "Liyan Tang",
+        "Cyrus Rashtchian",
+        "Chun-Sung Ferng",
+        "Andrew Tomkins",
+        "Da-Cheng Juan",
+        "Tu Vu"
+      ],
+      "abstract": "Agent skills package specialized knowledge and workflows into reusable resources that extend AI agent capabilities. Recent work automatically discovers such skills from agent experience, which enables agents to progressively adapt through interaction. However, the insights that guide skill development typically remain scattered across optimization histories, limiting their systematic reuse across iterations. We introduce WikiSkill, a framework that co-evolves agent skills with a persistent knowledge base (wiki). At a high level, WikiSkill separates raw execution experience, accumulated knowledge, and executable skills, while continuously consolidating experience into the wiki, which subsequent skill updates can build on. Across diverse benchmarks and models, WikiSkill consistently outperforms state-of-the-art skill-evolution methods and improves over no-skill baselines in most model-benchmark settings. We find that skill evolution complements model scaling: larger models generally benefit more from evolved skills, while smaller models with skills can outperform substantially larger models without them. We also find that evolved skills transfer effectively across models and model families, and skills evolved by other models can outperform self-evolved skills. Finally, our ablation studies confirm that persistent knowledge accumulation in the wiki is critical for effective skill evolution. These results demonstrate the benefits of systematically accumulating and refining agent experience for developing reusable and transferable skills.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T17:59:11Z",
+      "updated": "2026-08-27T17:59:11Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.27454v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27454v1",
+      "rank": 3,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 11.9531,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "WikiSkill构建持久知识库驱动技能演化，直击Agent能力复用核心",
+      "one_liner": "提出WikiSkill框架，通过持久化知识库实现Agent技能的持续积累与跨模型迁移",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.27439",
+      "title": "RedEvoAgent: Automatic Red-Teaming Agent with Experience-Driven Skill Evolution",
+      "authors": [
+        "Junjie Zhang",
+        "Hui Liu",
+        "Kecheng Chen",
+        "Xianbo Mo",
+        "Changsheng Chen",
+        "Haoliang Li"
+      ],
+      "abstract": "LLM-based agents are increasingly deployed in product-level execution harnesses, where jailbreaks can trigger harmful tool use and persistent state changes, creating greater risks than unsafe text generation alone. Existing automatic red-teaming methods often rely on fixed attacks, while recent agentic attackers coordinate multiple jailbreak tools and show stronger potential through trajectory-based retrieval. However, such retrieval can reuse misleading experiences due to retrieval bias and unclear tool credit, and full trajectories add context overhead while reducing interpretability. We propose RedEvoAgent, a black-box red-teaming agent that distills cross-case attack trajectories into a concise, human-readable attack skill. The attack skill adaptively evolves through tool-effectiveness profiling and Deciding-Tool Attribution for skill updates, and a validation ratchet that retains only updates improving validation performance. Experiments on multiple benchmarks, target models, and target execution harnesses show that RedEvoAgent outperforms fixed and agentic baselines, improves tool efficiency, and transfers across attacker models and target execution harnesses.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-08-27T17:55:33Z",
+      "updated": "2026-08-27T17:55:33Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.27439v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27439v1",
+      "rank": 7,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery",
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 13.0618,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "RedEvoAgent实现红队攻击技能的可解释演化，强化Agent安全能力",
+      "one_liner": "设计RedEvoAgent，将黑盒攻击轨迹蒸馏为可读、可演化的攻击技能",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26780",
+      "title": "AI Control Scientist: LLM-driven Agentic System for Automated Control Design",
+      "authors": [
+        "Haiteng Wang",
+        "Weihao Li",
+        "Jing Zhang",
+        "Lei Ren"
+      ],
+      "abstract": "Control system design is critical for modern industry, such as chemical process temperature regulation and aero-engine control. However,traditional control design workflows rely heavily on expert knowledge and extensive manual parameter tuning, resulting in limited efficiency and scalability. To this end, this paper proposes AI Control Scientist (AICS), the first large language model (LLM)-driven agent capable of automatically generating optimized controller from language design requirements. Specifically, a Task Modeling Agent interprets user requirements to engineering constraints; a Controller Design Agent generate candidate controller structures and executable code; and a Parameter Tuning Agent refine controller parameters under closed-loop performance criteria. Experiments demonstrate that the proposed agentic system can automatically generate multiple representative control systems, outperforms existing automated baselines in both design success rate and optimization efficiency. This work has the potential to transform control system design from human-driven to agent-driven, paving the way for model predictive control and other advanced control systems design.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T08:11:13Z",
+      "updated": "2026-08-27T08:11:13Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26780v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26780v1",
+      "rank": 214,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.3038,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "AICS首次实现LLM驱动的全自动控制设计，拓展Agent工业应用边界",
+      "one_liner": "提出AI Control Scientist，首个端到端自动生成优化控制器的LLM代理系统",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26546",
+      "title": "DuMateBench: Evaluating Autonomous Agents in Complex Real-World Workflows",
+      "authors": [
+        "Zechun Niu",
+        "Yukun Zhao",
+        "Jiaxin Zhang",
+        "Xu Shen",
+        "Jinhua Si",
+        "Han Tian",
+        "Can Xu",
+        "Yunfan Song",
+        "Jiaxin Mao",
+        "Yansong Gao",
+        "Yuchen Li",
+        "Jianmin Wu",
+        "Lingyong Yan",
+        "Shuaiqiang Wang",
+        "Dawei Yin"
+      ],
+      "abstract": "Autonomous agents are increasingly adopted to complete complex, multi-tool workflows in real-world settings. However, existing benchmarks typically separate tasks by application or capability and evaluate agents in environments that are cleaner and more stable than those encountered in practice. We introduce DuMateBench, a real-session benchmark reconstructed from anonymized and privacy-screened user sessions collected from a large-scale production agent platform. Each task preserves the relevant pre-solution interaction history, persistent configurations, and workspace state, and is then validated through human verification. The resulting benchmark comprises 200 tasks spanning 8 broad scenarios and 17 fine-grained capability categories, with most tasks requiring multiple capability coordination. We execute these tasks in isolated Docker containers injected with three forms of real-world environmental complexity: Insufficient, Unstable, and Noisy, and assess performance using a hybrid deterministic and LLM-as-Judge evaluation protocol. Experiments across five representative autonomous-agent frameworks paired with four state-of-the-art LLMs reveal substantial gaps in strict task completion. Complementary robustness, efficiency, and diagnostic analyses further show that performance under environmental perturbations is jointly shaped by the capabilities of the LLM and the surrounding agent framework. The code and data are publicly available at https://dumatebench.com/.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T02:36:23Z",
+      "updated": "2026-08-27T02:36:23Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26546v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26546v1",
+      "rank": 300,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.4695,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 8,
+      "reason": "DuMateBench基于真实会话构建复杂工作流基准，推动Agent评估落地",
+      "one_liner": "发布DuMateBench，首个源自生产环境的真实会话式多工具Agent评测基准",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.26849",
+      "title": "LiveSim: Simulating Environment-Shaped Users in Multi-Agent Live-Stream Ecosystems",
+      "authors": [
+        "Jiaqi Xu",
+        "Yiran Qiao",
+        "Jing Chen",
+        "Qiwei Zhong",
+        "Xiang Ao",
+        "Xueqi Cheng"
+      ],
+      "abstract": "User behavior simulation with large language models~(LLMs) is increasingly used to support multi-agent ecosystem simulation. Existing simulators typically rely on static user profiles inferred from historical observations, which become inadequate in socially intensive environments such as live streaming where interaction dynamics continuously reshape user behavior. We propose \\textbf{LiveSim}, an LLM-based framework for live-stream ecosystem simulation. It represents users as editable behavioral hypotheses and progressively refines them through trajectory-grounded interactions, where discrepancies between simulated and observed trajectories reveal missing environmental shaping effects. These signals are further extracted as transferable environment-behavior patterns and accumulated in a collective behavioral memory to improve user-level behavioral fidelity and support ecosystem-level simulation. Experiments on real-world live-stream risk-control data validate the effectiveness of LiveSim in improving user-level behavioral fidelity and enabling ecosystem-level analysis of risk evolution and platform intervention effects.",
+      "categories": [
+        "cs.AI",
+        "cs.CY",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T09:16:29Z",
+      "updated": "2026-08-27T09:16:29Z",
+      "comment": "20 pages, 8 figures, 7 tables",
+      "url": "https://arxiv.org/abs/2608.26849v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26849v1",
+      "rank": 196,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.7359,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "LiveSim建模用户行为动态演化，突破静态仿真局限",
+      "one_liner": "提出LiveSim框架，通过轨迹反馈持续修正用户行为假设，支持直播生态仿真",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26683",
+      "title": "SIGMA: Structured Noise-Effect-Aware Grouped Multi-Agent Aggregation",
+      "authors": [
+        "Li Mingqian"
+      ],
+      "abstract": "Cooperative multi-agent reinforcement learning (MARL) faces significant challenges in maintaining robust coordination under noisy observations. Although observation disturbances are often introduced independently across agents, their downstream effects on cooperative decision-making can become structured through underlying cooperation structures. We characterize this phenomenon as structured noise effects, where noise-induced decision effects exhibit local correlation among agents with stronger task-related dependencies while remaining globally heterogeneous across different agents and local structures. Existing robust MARL methods, however, rarely explicitly characterize or exploit such structure-dependent noise effects. To address this limitation, we propose SIGMA, a hierarchical collaboration framework that exploits cooperation structures to learn robust representations under noisy observations. SIGMA first organizes agents into adaptive local structures through density-based grouping and performs intra-group consensus aggregation to preserve shared task-relevant information while smoothing agent-specific representation deviations. Inter-group attention then adaptively integrates information across different groups to preserve global coordination while accommodating their heterogeneous contributions. Experiments on noisy-observation tasks in StarCraft II empirically validate the structured noise effects and demonstrate that SIGMA consistently improves robustness under observation noise while maintaining competitive performance in noise-free environments.",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T06:40:42Z",
+      "updated": "2026-08-27T06:40:42Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.26683v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26683v1",
+      "rank": 255,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.4624,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "SIGMA揭示噪声效应结构化特征，为多智能体鲁棒协作提供新范式",
+      "one_liner": "提出SIGMA框架，利用合作结构学习抗噪表征，解决多智能体观测噪声难题",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.27021",
+      "title": "FaulT-Bench: Towards Benchmarking Network Troubleshooting LLM Agents under Unreliable User Tickets",
+      "authors": [
+        "Kuan-Hao Tseng",
+        "Niruth Bogahawatta",
+        "Yasod Ginige",
+        "Kunjan Patel",
+        "Kosta Dakic",
+        "Suranga Seneviratne"
+      ],
+      "abstract": "LLM-based agents are increasingly proposed for network fault diagnosis, but existing benchmarks evaluate them only on accurate tickets and always assume a fault is present, conditions rarely met in practice. We present FaulT-Bench, a benchmark of 200 troubleshooting scenarios across eight network topologies, five reimplemented from public practitioner labs, spanning genuine faults, false fault reports, incorrect device attribution, and incorrect root-cause claims. To isolate how ticket wording affects diagnosis, we further rewrite 72 false-premise tickets into five reporter personas that vary reporter confidence and verifiable detail one factor at a time, holding the network state fixed. Our automated harness deploys each scenario in Kathará, lets agents interact through the NIKA tool interface, and scores free-text diagnoses with an LLM judge across outcome, fix, and reasoning quality. Evaluating SADE, ReAct, and Claude Code, we find all three are near-saturated on accurate tickets and robust to misdirection, yet degrade sharply when the network is healthy and the ticket is wrong, probing until a benign condition can be promoted to a root cause rather than concluding nothing is wrong. Persona rewrites show that how a ticket is written matters more than what it claims: a confidently wrong report is handled about as well as an accurate one, while a vague, underspecified report degrades performance sharply. The three agents also fail differently, from constant over-diagnosis to unanswered runs, at very different cost. These results position FaulT-Bench as a benchmark for developing agentic systems that can reason reliably over the noisy, unreliable tickets of real-world network troubleshooting.",
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "primary_category": "cs.NI",
+      "published": "2026-08-27T12:07:10Z",
+      "updated": "2026-08-27T12:07:10Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.27021v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27021v1",
+      "rank": 139,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.6522,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 8,
+      "reason": "FaulT-Bench聚焦真实故障单不可靠性，填补网络排障Agent评测空白",
+      "one_liner": "构建FaulT-Bench基准，首次系统评测LLM代理在错误/模糊故障单下的诊断鲁棒性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.26983",
+      "title": "GraphMemix: Query-Aware Evidence Forests for Long-Term Multimodal Agent Memory",
+      "authors": [
+        "Geng Li",
+        "Yuhao Wang",
+        "Dong Li",
+        "Jianye Hao",
+        "Yuxin Peng"
+      ],
+      "abstract": "Organizing long-term memory for multimodal agents remains challenging because existing methods either suffer from expensive question-agnostic offline summaries or naive embedding similarity matching that introduces incomplete and redundant context. To address these issues, we propose GraphMemix, a combinatorial-optimization graph memory framework that models memory organization as query-aware evidence-forest construction. Specifically, our method consists of three key components:(1) candidate graph construction, which expands multi-view seed memories through schema and semantic relations to acquire query-aware original context; (2) evidence utility and activation costs, which decouples direct memory support from anchor-conditioned relation verification to suppress redundant or conflicting information; and (3) forest optimization, which jointly selects a forest-format memory context under a maximum evidence budget and its reliable relational structure. By organizing memory into a query-relevant subgraph, the method avoids substantial lifecycle cost and recovers low-similarity complementary evidence. Experimental results across four long-term multimodal memory benchmarks demonstrate significant improvements with different foundation models and establish a new Pareto frontier between accuracy and lifecycle cost.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-27T11:28:49Z",
+      "updated": "2026-08-27T11:28:49Z",
+      "comment": "Project page with code: https://github.com/ligeng0197/graphmemix",
+      "url": "https://arxiv.org/abs/2608.26983v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26983v1",
+      "rank": 150,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 10.4683,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 8,
+      "reason": "GraphMemix提出查询感知证据森林，革新长时多模态记忆组织",
+      "one_liner": "设计GraphMemix，将长期记忆建模为查询驱动的证据子图，提升多模态上下文相关性",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [
+    {
+      "id": "BV1Go4Q6gEBF",
+      "bvid": "BV1Go4Q6gEBF",
+      "title": "从会用AI到会开发Agent：Agent Skills入门到实战完整教程，结合Claude Code与Codex打造可复用、可扩展的智能体技能体系",
+      "description": "Agent 工程化学习资料已备好，包含 Skills 架构图、技能拆分方法、工具调用配置、上下文管理案例、项目源码和面试重点，评论 666 领取。\nAI Agent 想要真正用于企业项目，不能只依靠模型自由发挥，还需要通过 Skills 对任务流程、工具使用方式和输出结果进行约束。\n这套教程将围绕 Agent Skills 的工程化实践展开，重点讲解如何把代码生成、文件处理、数据分析、知识检索和接口调用等能力封装成可复用 Skill，并让 Agent 根据任务自动选择合适的能力。你将逐步建立从单个 Ski",
+      "author": "巴卜大模型",
+      "duration": "54:23",
+      "published_at": 1788083765,
+      "view_count": 2,
+      "danmaku_count": 0,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/4b8bf11b1ebb28ce2ca557fa21dd3805f715b5c7.jpg",
+      "url": "https://www.bilibili.com/video/BV1Go4Q6gEBF",
+      "matched_keywords": [
+        "AI Agent 实战"
+      ],
+      "content_type": "技术演讲",
+      "pre_score": 65,
+      "like_count": 0,
+      "favorite_count": 0,
+      "score": 65,
+      "summary_zh": "Agent Skills工程化实战教程，涵盖技能封装、调度、上下文管理与企业落地案例",
+      "reason": "主题聚焦AI Agent实战，内容结构清晰，含架构图/源码/面试重点，预评达阈值",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2093386528668172373",
+      "text": "New Fellows Research: Can Claude autonomously align other AIs? We gave Claude 48 hours and 1 GPU to improve the alignment of small models. It researched and proposed methods, then trained and tested the models on its own. It worked surprisingly well. https://t.co/nhlCMgQl46",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1618293,
+      "source_tier": "官方账号",
+      "created_at": 1787937216,
+      "published_date": "2026-08-28",
+      "like_count": 3470,
+      "retweet_count": 314,
+      "reply_count": 312,
+      "quote_count": 160,
+      "bookmark_count": 1224,
+      "view_count": 529069,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2093386528668172373",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 86,
+      "score": 86,
+      "title": "Claude 自主研究并提升小模型对齐效果",
+      "summary_zh": "Anthropic 发布新研究：Claude 在 48 小时内自主完成对齐方法设计、训练与测试，显著改善小模型对齐表现。",
+      "reason": "官方首发实证研究，具明确技术路径与结果，信息增量高且主题高度相关。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093038426140651791",
+      "text": "Today, we're kicking off the first phase of the research preview for Model Hardware Standard (MHS): a new standard for AI agents to safely operate physical equipment in scientific research and advanced manufacturing. Read more: https://t.co/XQ2y9EW7Af https://t.co/kgyCvZ6iYc",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1618293,
+      "source_tier": "官方账号",
+      "created_at": 1787854222,
+      "published_date": "2026-08-27",
+      "like_count": 10868,
+      "retweet_count": 1396,
+      "reply_count": 478,
+      "quote_count": 783,
+      "bookmark_count": 4183,
+      "view_count": 3001429,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2093038426140651791",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 85,
+      "score": 85,
+      "title": "Anthropic 推出 Model Hardware 标准研究预览",
+      "summary_zh": "Anthropic 启动 Model Hardware Standard（MHS）研究预览，为 AI 代理安全操作物理设备建立新标准。",
+      "reason": "官方发布全新跨领域基础设施标准，聚焦科研与制造场景，具备强可行动性与前沿性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093515564786540695",
+      "text": "We’re ending our partnership with Cursor following its acquisition by SpaceX. Under our proposal, Cursor’s direct access to our models would end on November 12. We know that the people most affected by this decision are the developers who rely on OpenAI models in Cursor. We care about their experience in this transition and we’re ready to go above and beyond to support them. https://t.co/OzuCTzUjfX",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5137986,
+      "source_tier": "官方账号",
+      "created_at": 1787967980,
+      "published_date": "2026-08-29",
+      "like_count": 21528,
+      "retweet_count": 2228,
+      "reply_count": 3104,
+      "quote_count": 3430,
+      "bookmark_count": 4294,
+      "view_count": 13899851,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+      ],
+      "url": "https://x.com/OpenAI/status/2093515564786540695",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 82,
+      "score": 82,
+      "title": "OpenAI 终止与 Cursor 的合作因 SpaceX 收购",
+      "summary_zh": "OpenAI 宣布终止与被 SpaceX 收购的 Cursor 的合作，11 月 12 日起停止其直接访问模型权限，并承诺支持开发者过渡。",
+      "reason": "重大商业与安全策略调整，涉及模型分发治理与地缘技术风险响应，具明确官方声明与影响。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2092315079576555806",
+      "text": "OpenWorker -- an open source agent that doesn't just chat but completes tasks on your laptop -- just released a new version with many features for security workflows. After our initial release, many users found it especially useful for cybersecurity. Attackers are already using AI; OpenWorker is committed to giving defenders the same leverage. Running an agent requires both (i) A model and (ii) A harness (the software around the model). Because the OpenWorker harness is fully open source, security teams can audit it to make sure we haven't built any backdoors that exfiltrate your code and data to some company or even a foreign adversary. OpenWorker now comes with built-in cybersecurity agents for (i) Scanning your code for vulnerabilities. (ii) Scanning dependencies for supply chain injections. (iii) Checking your cloud security configuration for attack surfaces. This enables developers to do much more security work before deployment (part of what's called the \"shift left\" movement). You choose the model: you can run open weight models fully locally so sensitive code never leaves your machine. This helps with legitimate security work (like reproducing a known exploit to defend against it) that can trigger refusals in leading closed models. Or use your ChatGPT subscription, or stealth preview models like Ox Alpha, or any model via API key. Thanks also to all the open source contributors! Join work with @rohitcprasad so please follow him too to get more frequent updates. Try it out: https://t.co/QPZLudn7ug Code: https://t.co/NYCiTD6hSq",
+      "author_name": "Andrew Ng",
+      "author_handle": "AndrewYNg",
+      "author_verified": true,
+      "author_followers": 1842123,
+      "source_tier": "领域专家",
+      "created_at": 1787681762,
+      "published_date": "2026-08-25",
+      "like_count": 3500,
+      "retweet_count": 433,
+      "reply_count": 153,
+      "quote_count": 41,
+      "bookmark_count": 3121,
+      "view_count": 253748,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://github.com/andrewyng/openworker",
+        "https://openworker.com/"
+      ],
+      "url": "https://x.com/AndrewYNg/status/2092315079576555806",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 81,
+      "score": 81,
+      "title": "Andrew Ng 发布开源安全代理 OpenWorker 新版",
+      "summary_zh": "OpenWorker 新版集成代码漏洞扫描、依赖注入检测与云配置审计三大安全能力，强调开源可审计性以支撑‘左移’实践。",
+      "reason": "专家主导的高质量开源项目发布，直击安全工程痛点，提供可验证、可部署的技术方案。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094004681508860398",
+      "text": "📊 LLM judges fail on realistic human dialogue. New benchmark: hundreds of complete human-to-human dialogues by professional scriptwriters, 36,000+ per-turn human annotations across 30,000+ expert turns. Finding: both classical auto metrics and LLM-as-a-judge approaches are unreliable vs expert assessment at this scale. Mixture-of-Judges (combining multiple evaluative signals) recovers ~30% better correlation with human judgment. Evaluation frameworks built for summarization don't transfer to realistic conversation. https://t.co/zbMdzTfaxr",
+      "author_name": "shipfrontier",
+      "author_handle": "shipfrontierai",
+      "author_verified": true,
+      "author_followers": 491,
+      "source_tier": "认证来源",
+      "created_at": 1788084595,
+      "published_date": "2026-08-30",
+      "like_count": 1,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "quote_count": 0,
+      "bookmark_count": 0,
+      "view_count": 3,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://arxiv.org/abs/2608.26131"
+      ],
+      "url": "https://x.com/shipfrontierai/status/2094004681508860398",
+      "matched_queries": [
+        "topic-2"
+      ],
+      "content_type": "前沿资讯",
+      "pre_score": 72,
+      "score": 72,
+      "title": "新对话评估基准揭示 LLM 判官不可靠性",
+      "summary_zh": "基于专业编剧撰写的真实对话与 36,000+ 人工标注的新基准发现：现有 LLM 评判方法严重偏离人类判断，混合判官可提升约 30% 相关性。",
+      "reason": "高质量论文驱动的评测进展，挑战主流评估范式，具明确数据规模、方法对比与结论。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 36,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "cef07868f85a254abc578222ed8b875cd590b3d8c4c607488eb4614361e22885"
+}
