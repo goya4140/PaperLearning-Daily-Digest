@@ -1,0 +1,503 @@
+{
+  "version": 2,
+  "date": "2026-08-31",
+  "arxiv_query_date": "2026-08-28",
+  "arxiv_reused_latest": true,
+  "generated_at": "2026-08-31T11:17:08.568304+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608280000+TO+202608282359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608280000+TO+202608282359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-28T00:00:00Z",
+    "2026-08-28T23:59:59Z"
+  ],
+  "raw_candidate_count": 271,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.28378",
+      "title": "PersonaForge: Realistic Multi-Turn User Simulation for Agentic Systems",
+      "authors": [
+        "Hanglong Lv",
+        "Dawei Zhu",
+        "Lei Li",
+        "Bowen Ye",
+        "Huaqiu Liu",
+        "Yifan Song",
+        "Bofei Gao",
+        "Weimin Xiong",
+        "Jinhao Dong",
+        "Chenhong He",
+        "Lingpeng Kong",
+        "Qi Liu",
+        "Tong Yang",
+        "Fuli Luo"
+      ],
+      "abstract": "Large language models are increasingly used as agentic workflow executors, yet existing training data and benchmarks largely assume informationally complete, single-turn queries. Our analysis of 16K real-world sessions shows that 75.9% of interactions are multi-turn, revealing a substantial gap between how users interact with agents and how such systems are trained and evaluated. We introduce \\textbf{PersonaForge}, a user simulation framework for synthesizing realistic multi-turn user--agent interactions. PersonaForge combines a four-dimensional persona space, SOUL-driven behavioral control calibrated to real-user statistics, and Reverse Deep Construction grounded in authentic seed queries. Using PersonaForge, we construct a 6.3K-record training dataset and \\textbf{PersonaForge-Bench}, a manually annotated 138-task benchmark spanning over 20 professional domains with four-dimensional scoring. Experiments on Qwen3.5-27B show that PersonaForge training improves the composite score by +4.1%, with gains across all four dimensions and the largest improvements in Task Completion (+6.0%) and Response Quality (+6.8%). Further analyses show that PersonaForge-trained agents use fewer turns and tool calls, suggesting improved interaction efficiency, while ablations confirm the contribution of SOUL components and adaptive simulation. Together, PersonaForge and PersonaForge-Bench establish a foundation for training and evaluating agents under realistic multi-turn user interaction.",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-28T14:33:19Z",
+      "updated": "2026-08-28T14:33:19Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.28378v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28378v1",
+      "rank": 65,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.2331,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "面向真实多轮交互建模用户行为，构建可验证的代理训练与评测基准",
+      "one_liner": "PersonaForge框架合成多维人格驱动的多轮交互数据，提升任务完成率与响应质量",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.27924",
+      "title": "What Makes Agent Memory Useful for Reliable Unanswerable Question Handling?",
+      "authors": [
+        "Chuanyuan Tan",
+        "Junjie Yu",
+        "Yuxin Wang",
+        "Yining Zheng",
+        "Xipeng Qiu",
+        "Wenliang Chen"
+      ],
+      "abstract": "Reliable handling of unanswerable questions (UAQs) is critical for trustworthy LLM-based agents. Although memory is widely used in agent systems, its role in reliable UAQ handling remains unclear. We present a systematic study of agent memory for UAQ handling under a unified agentic RAG framework, evaluating four representative memory methods across three UAQ-related datasets and two base models. We find that memory can improve UAQ performance in some settings, but such gains are selective rather than universal and remain fragile under dataset shift. Interestingly, cross-model memory reuse is often more feasible than cross-dataset transfer, suggesting that shifts in answerability patterns pose a greater challenge to memory reuse than changes in the base model itself. We further find that UAQ gains are more strongly preserved through decision guidance than through trajectory shaping, and that memory effectiveness depends strongly on representation. In particular, procedural and rule-based memories often provide the most reliable support for UAQ handling, while memory composition is most effective when procedural guidance is combined with complementary behavioral signals. Overall, our findings suggest that reliable UAQ memory depends less on storing larger amounts of experience and more on preserving transferable behavioral guidance.",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-28T05:00:28Z",
+      "updated": "2026-08-28T05:00:28Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.27924v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27924v1",
+      "rank": 219,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 8.4979,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "构建全生命周期对齐的多智能体植物表型分析平台，强调不确定性校准与FAIR可追溯性",
+      "one_liner": "PhenoIntel九智能体协同实现浏览器端表型分析，每结果附带校准不确定性与可验证溯源",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.28508",
+      "title": "Phoneme- and Word-Level Metrics Using Self-Supervised Speech Representations for Forced Alignment Evaluation",
+      "authors": [
+        "V. S. D. S. Mahesh Akavarapu",
+        "Michael Daniel",
+        "Gerhard Jäger"
+      ],
+      "abstract": "Forced alignment evaluation typically requires manually annotated timestamps, limiting large-scale and multilingual analysis. We introduce two corpus-level metrics based on self-supervised (SSL) speech representations for reference-free forced alignment evaluation: Phoneme-Cluster Mutual Information (PCMI) and Word Acoustic Consistency Score (WACS). PCMI measures agreement between aligned phoneme labels and clusters induced from SSL-speech representations, while WACS measures consistency of repeated word realizations using dynamic time warping similarity between word representation sequences. Using both random and systematic perturbations, we show that PCMI and WACS degrade consistently under alignment perturbations. We further analyze the metrics across multiple alignment systems on 85 languages from FLEURS, validate them against manually annotated alignments from 45 languages in DoReCo, and evaluate them on two phonologically complex low-resource languages. The metrics effectively separate high- and low-quality alignments and correlate strongly with timestamp-based alignment quality measures. Our results demonstrate that SSL-speech representations enable scalable, reference-free forced alignment evaluation. The metrics are available as an open-source Python package at https://github.com/mahesh-ak/forced-aligner-metrics.",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-28T16:39:22Z",
+      "updated": "2026-08-28T16:39:22Z",
+      "comment": "Accepted at EMNLP-2026 (Findings)",
+      "url": "https://arxiv.org/abs/2608.28508v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28508v1",
+      "rank": 21,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward hacking / alignment evaluation"
+      ],
+      "explore_score": 10.976,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Forced alignment evaluation typically requires manually annotated timestamps, limiting large-scale and multilingual analysis. We introduce two corpus-level metrics based on self-supervised (SSL) speech representations fo…",
+      "reason": "reward hacking / alignment evaluation",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2608.28264",
+      "title": "Finding Where the Buck Stops: An Automated Failure Attribution-Based Reflection Framework for Multi-Agent Collaboration",
+      "authors": [
+        "Xiaoqing Wang",
+        "Keman Huang",
+        "Bin Liang",
+        "Hongyu Li",
+        "Xiaoyong Du",
+        "Wuqiong Pan"
+      ],
+      "abstract": "Multi-agent systems (MAS) powered by large language models have shown promise for complex tasks but suffer from high failure rates. Current self-reflection methods for MAS require all agents to reflect upon failure, overlooking a critical reality: failures typically stem from a specific agent leading the task astray, namely the decisive error agent, while others merely fulfill their regular duties. Forcing regular-behaving agents to reflect contaminates their memory with wrong insights. Hence, we propose DoCtOR (Diagnose-then-Correct PPO-enhanced Reflection), a novel reflection framework that enhances multi-agent collaboration. DoCtOR first identifies the decisive error step and decisive error agent through automated failure attribution, then employs counterfactual reasoning to generate a corrected decisive error step, and finally engages only the decisive error agent to produce targeted reflections. Experimental results show DoCtOR achieves 22%, 26%, and 27% improvements over initial success rates on HotPotQA, ChartQAPro, and Mind2Web datasets, outperforming Reflexion, Retroformer, and COPPER. We further establish the generalizability of our diagnose-then-correct paradigm and demonstrate that in low-resource settings, focusing reflection on reasoning steps after the decisive error step achieves comparable quality to reflecting on the complete failure trajectory.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-28T12:26:03Z",
+      "updated": "2026-08-28T12:26:03Z",
+      "comment": "Accepted by EMNLP 2026 main",
+      "url": "https://arxiv.org/abs/2608.28264v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28264v1",
+      "rank": 101,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.2785,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Multi-agent systems (MAS) powered by large language models have shown promise for complex tasks but suffer from high failure rates. Current self-reflection methods for MAS require all agents to reflect upon failure, over…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.28475",
+      "title": "COVER: Identifiable Evaluation of Coalition Routing",
+      "authors": [
+        "Raghul Sugumar",
+        "Amrit Gopinath"
+      ],
+      "abstract": "When a multi-agent system changes its team, it also changes the messages and final answer it produces, so an end-to-end accuracy gap does not by itself identify a routing effect. We introduce method, an evaluation contract that fixes a public information boundary, downstream stack G, and finite legal team family before outcomes are generated. Complete coverage identifies exact finite-benchmark oracle regret conditional on that stack. For any finite collection of frozen policies, executing the union of their distinct selected teams is the minimal assumption-free support for every pairwise policy contrast, though not for absolute oracle regret. Two controlled tables with source-ID-disjoint splits test the instrument. On MuSiQue-12, a pre-specified privileged positive control improves regret from 0.532 to 0.402; a later public-interface control reaches 0.424 versus 0.554 but is retrospective. On HotpotQA-4, a pre-specified public direct scorer improves regret from 0.313 to 0.110. In fixed-stack Llama execution, verified route regret improves by 0.190, while the raw-answer gain is 0.010 with an interval crossing zero. A five-family ToolSandbox variant-shift validation exhaustively evaluates 16 declared teams on 14 untouched task variants (224/224 valid rows): the declared-family oracle reaches 0.768 safe-evidence completion, while the prospectively frozen router gets 0.637 (regret 0.131), failing the predeclared 0.10 criterion. A later retrospective comparator reaches 0.655, matching all-workers with 4.57 versus 5.00 workers on average. Thus COVER exposes selection headroom without manufacturing a routing win. A crossed-stack diagnostic shows absolute scores depend on G but finds no detectable router-by-finalizer interaction. COVER is an auditable measurement methodology, not a claim of stack-invariant or universal agent-routing superiority.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-28T16:01:07Z",
+      "updated": "2026-08-28T16:01:07Z",
+      "comment": "17 pages, 2 figures, 13 tables",
+      "url": "https://arxiv.org/abs/2608.28475v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28475v1",
+      "rank": 31,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.162,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "提出COVER评估契约，首次实现多智能体协作路由效果的可审计归因测量",
+      "one_liner": "建立固定信息边界与公开接口的评估契约，分离路由选择效应与端到端性能",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.28439",
+      "title": "Fidelity Is Not Enough: Dispatch-Level Instrumentation for Agentic Datasheet Extraction",
+      "authors": [
+        "Qing Ye",
+        "Meng-Hsuan Lin"
+      ],
+      "abstract": "One model passed our fidelity check without ever opening the datasheet. We found it while qualifying models for an internal extraction service: a structured-output constraint had silently disabled tool use, and the model answered anyway, with fabricated source text. Only the per-tool trace exposed it. Fidelity -- whether an extracted value matches the source -- is the standard measure for agentic document extraction, and it scores that run a success. We therefore log every tool call in an agentic benchmark of 25 hand-curated claims over three components, with 12 more on a fourth, 37 in all. From that dispatch record we build two instruments: a rule-based failure-attribution classifier, and a silent-failure detector whose two rules check only which tools were called, never the extracted value. The detector raises no flag on 207 clean fidelity-passing extractions across three model families, and recovers all 50 planted faults that withhold exactly the tools its rules check. The two results are not symmetric: the first bounds the false-positive rate, the second is recall by construction, and detection power against runs that call their tools and still answer wrongly is unmeasured. A second, independent oracle, a causal chamber that tests whether the datasheet's claims hold under physical measurement, is intentionally partial: it confirms only what the apparatus can exercise, a verifiable envelope of 2 of those 37 claims, and we give a taxonomy of why the rest are not physically gradable. Under a controlled perturbation, fidelity passes throughout while the chamber verdict flips exactly at the measurement uncertainty. Across three deployed model stacks (one destabilised by its serving stack, not by any capability gap) the tool layer buys portability and observability rather than accuracy, and earns its premium only once a document outgrows the context window.",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-28T15:25:12Z",
+      "updated": "2026-08-28T15:25:12Z",
+      "comment": "Accepted at EMNLP 2026 Industry Track. 7 pages + appendices",
+      "url": "https://arxiv.org/abs/2608.28439v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28439v1",
+      "rank": 43,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 12.2102,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "揭示代理文档提取中静默失败问题，提出工具层可观测性新范式",
+      "one_liner": "提出基于工具调用轨迹的静默失败检测器，挑战仅依赖结果准确性的评估惯性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.28578",
+      "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
+      "authors": [
+        "Nan Wang",
+        "Mohit Yadav",
+        "Jonathan Wulff",
+        "Aidan Rosenbaum",
+        "Kezhou Chen",
+        "Yuvan Sharma",
+        "Xu Dong",
+        "Yiwei Tao"
+      ],
+      "abstract": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-08-28T17:53:48Z",
+      "updated": "2026-08-28T17:53:48Z",
+      "comment": "20 pages, 9 figures. Project page: https://tetheria.github.io/aero-hand-open/",
+      "url": "https://arxiv.org/abs/2608.28578v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28578v1",
+      "rank": 2,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 14.0502,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the req…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2608.28499",
+      "title": "REPLICANT: Learning Policies for Evading and Hardening Malware Detectors",
+      "authors": [
+        "Shae McFadden",
+        "Ilias Tsingenopoulos",
+        "Mario D'Onghia",
+        "Alexander Herzog",
+        "Myles Foley",
+        "Chris Hicks",
+        "Lorenzo Cavallaro",
+        "Fabio Pierazzi"
+      ],
+      "abstract": "To determine the real-world effectiveness of machine learning based malware detection, it is vital to evaluate its robustness against highly capable adversaries. However, state-of-the-art attacks do not effectively model realistic adversaries, as they often assume access to privileged information such as the training data, feature space, or confidence scores of the target. In this work, we present Replicant, a deep reinforcement learning framework that learns the realistic task of evasion under a strict label-only black-box threat model. Replicant learns a reusable policy on how to modify a malware sample and when to query the target, which transfers across samples, detectors, and feature spaces. Across seven Android malware detectors and three feature spaces, Replicant is the strongest and most query-efficient approach achieving a mean attack success rate of 78.8%, a relative improvement of 20.9%-39.2% over the state-of-the-art. Furthermore, when used for adversarial training, Replicant also outperforms the state-of-the art by producing detectors with more generalizable robustness. With Replicant we demonstrate that learning the task of evasion not only results in stronger attack performance but, crucially, provides a better signal for hardening malware detectors.",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-28T16:29:17Z",
+      "updated": "2026-08-28T16:29:17Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.28499v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28499v1",
+      "rank": 22,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 13.8288,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "To determine the real-world effectiveness of machine learning based malware detection, it is vital to evaluate its robustness against highly capable adversaries. However, state-of-the-art attacks do not effectively model…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2093386528668172373",
+      "text": "New Fellows Research: Can Claude autonomously align other AIs? We gave Claude 48 hours and 1 GPU to improve the alignment of small models. It researched and proposed methods, then trained and tested the models on its own. It worked surprisingly well. https://t.co/nhlCMgQl46",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1619718,
+      "source_tier": "官方账号",
+      "created_at": 1787937216,
+      "published_date": "2026-08-28",
+      "like_count": 3681,
+      "retweet_count": 336,
+      "reply_count": 349,
+      "quote_count": 177,
+      "bookmark_count": 1358,
+      "view_count": 695032,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2093386528668172373",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 84,
+      "score": 84,
+      "title": "Claude 自主研究并改进小模型对齐",
+      "summary_zh": "Anthropic 发布新研究：Claude 在 48 小时内自主完成对齐方法探索、训练与测试，显著提升小模型对齐效果。",
+      "reason": "官方首次披露 AI 自主开展对齐研究的实证结果，具高信息增量与安全相关性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093038426140651791",
+      "text": "Today, we're kicking off the first phase of the research preview for Model Hardware Standard (MHS): a new standard for AI agents to safely operate physical equipment in scientific research and advanced manufacturing. Read more: https://t.co/XQ2y9EW7Af https://t.co/kgyCvZ6iYc",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1619718,
+      "source_tier": "官方账号",
+      "created_at": 1787854222,
+      "published_date": "2026-08-27",
+      "like_count": 10956,
+      "retweet_count": 1411,
+      "reply_count": 496,
+      "quote_count": 802,
+      "bookmark_count": 4187,
+      "view_count": 3052035,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2093038426140651791",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 83,
+      "score": 83,
+      "title": "Anthropic 推出物理设备操作新标准 MHS",
+      "summary_zh": "Anthropic 启动 Model Hardware Standard（MHS）研究预览，为 AI 代理安全操控科研与制造设备建立新标准。",
+      "reason": "官方发布全新跨领域基础设施标准，聚焦物理世界安全交互，主题关键且具可行动性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093515564786540695",
+      "text": "We’re ending our partnership with Cursor following its acquisition by SpaceX. Under our proposal, Cursor’s direct access to our models would end on November 12. We know that the people most affected by this decision are the developers who rely on OpenAI models in Cursor. We care about their experience in this transition and we’re ready to go above and beyond to support them. https://t.co/OzuCTzUjfX",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5139913,
+      "source_tier": "官方账号",
+      "created_at": 1787967980,
+      "published_date": "2026-08-29",
+      "like_count": 22068,
+      "retweet_count": 2285,
+      "reply_count": 3197,
+      "quote_count": 3522,
+      "bookmark_count": 4365,
+      "view_count": 14836684,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+      ],
+      "url": "https://x.com/OpenAI/status/2093515564786540695",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 80,
+      "score": 80,
+      "title": "OpenAI 终止与 Cursor 的模型合作",
+      "summary_zh": "OpenAI 宣布因 Cursor 被 SpaceX 收购，将于 11 月 12 日终止其直接访问 OpenAI 模型权限，并承诺支持开发者过渡。",
+      "reason": "重大商业关系变更，影响开发者生态，属需及时响应的官方策略动态。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2092315079576555806",
+      "text": "OpenWorker -- an open source agent that doesn't just chat but completes tasks on your laptop -- just released a new version with many features for security workflows. After our initial release, many users found it especially useful for cybersecurity. Attackers are already using AI; OpenWorker is committed to giving defenders the same leverage. Running an agent requires both (i) A model and (ii) A harness (the software around the model). Because the OpenWorker harness is fully open source, security teams can audit it to make sure we haven't built any backdoors that exfiltrate your code and data to some company or even a foreign adversary. OpenWorker now comes with built-in cybersecurity agents for (i) Scanning your code for vulnerabilities. (ii) Scanning dependencies for supply chain injections. (iii) Checking your cloud security configuration for attack surfaces. This enables developers to do much more security work before deployment (part of what's called the \"shift left\" movement). You choose the model: you can run open weight models fully locally so sensitive code never leaves your machine. This helps with legitimate security work (like reproducing a known exploit to defend against it) that can trigger refusals in leading closed models. Or use your ChatGPT subscription, or stealth preview models like Ox Alpha, or any model via API key. Thanks also to all the open source contributors! Join work with @rohitcprasad so please follow him too to get more frequent updates. Try it out: https://t.co/QPZLudn7ug Code: https://t.co/NYCiTD6hSq",
+      "author_name": "Andrew Ng",
+      "author_handle": "AndrewYNg",
+      "author_verified": true,
+      "author_followers": 1844854,
+      "source_tier": "领域专家",
+      "created_at": 1787681762,
+      "published_date": "2026-08-25",
+      "like_count": 3510,
+      "retweet_count": 433,
+      "reply_count": 153,
+      "quote_count": 41,
+      "bookmark_count": 3124,
+      "view_count": 256318,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://github.com/andrewyng/openworker",
+        "https://openworker.com/"
+      ],
+      "url": "https://x.com/AndrewYNg/status/2092315079576555806",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 79,
+      "score": 79,
+      "title": "OpenWorker 发布开源安全任务代理新版本",
+      "summary_zh": "Andrew Ng 推出 OpenWorker 新版，集成代码漏洞扫描、供应链检测与云配置审计等安全工作流，全栈开源可审计。",
+      "reason": "专家主导的高质量开源项目更新，明确聚焦防御侧安全杠杆，具强实践价值与可信度。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 35,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "254bce4fe7f9378fc848374768c64a959512ba762d358a899d6fc5cb5ede03d8"
+}
