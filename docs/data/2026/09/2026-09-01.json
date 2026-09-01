@@ -1,0 +1,531 @@
+{
+  "version": 2,
+  "date": "2026-09-01",
+  "arxiv_query_date": "2026-08-31",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-09-01T09:42:25.597104+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608310000+TO+202608312359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202608310000+TO+202608312359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-08-31T00:00:00Z",
+    "2026-08-31T23:59:59Z"
+  ],
+  "raw_candidate_count": 409,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2608.30672",
+      "title": "HiRS-Agent: A Hierarchical Multi-Agent System for Reliable Long-Horizon Remote Sensing Task Solving",
+      "authors": [
+        "Boyang Mu",
+        "Zhiwei Wei",
+        "Mugen Peng",
+        "Wenjia Xu"
+      ],
+      "abstract": "Recent advances in large language models and multimodal models have pushed remote sensing (RS) processing from simple perception models to agentic systems designed to tackle complex, long-horizon RS tasks. However, existing systems often rely on monolithic decision-making frameworks, which fail to accommodate the multi-stage, interdependent nature of RS tasks. This centralized approach leads to challenges such as unstable task execution, incorrect tool usage, and error propagation across stages. To address these issues, we propose HiRS-Agent, a hierarchical multi-agent system for long-horizon RS task solving. HiRS-Agent adopts a two-level collaborative architecture: the Manager Layer handles dynamic routing, step-level verification, replanning, and termination control, while the Specialist Layer organizes domain-specific tools according to the RS workflow and is responsible for subtask reasoning and tool execution. To further enhance the system's capability, we introduce a two-stage supervised tuning strategy and a verification-guided hierarchical reinforcement learning stage to jointly optimize coordination and tool-use policies. Experiments on Earth-Agent Benchmark and ThinkGeo show that HiRS-Agent substantially improves long-horizon tool-use capability and final-task correctness, demonstrating the effectiveness of structured multi-agent collaboration for reliable RS agents. The code is publicly available at https://github.com/IntelliSensing/HiRS-Agent.",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "cs.MM"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-31T12:13:41Z",
+      "updated": "2026-08-31T12:13:41Z",
+      "comment": "Accepted at ACM Multimedia 2026 (MM '26)",
+      "url": "https://arxiv.org/abs/2608.30672v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.30672v1",
+      "rank": 188,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.8811,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "分层多智能体架构解决遥感长周期任务，强化工具链可靠性",
+      "one_liner": "HiRS-Agent：面向可靠长周期遥感任务的分层多智能体系统",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.30952",
+      "title": "One Policy Is Enough: Single-Agent Reinforcement Learning Outperforms Tree Search for Chemistry Tool Learning",
+      "authors": [
+        "Armin Dariani",
+        "Sifan Wu",
+        "Bang Liu",
+        "Entao Yang"
+      ],
+      "abstract": "Chemistry questions often demand exact computation and database lookups that a language model cannot supply from its parameters, so it must reach for external tools. Tool use here is a three-part problem: select the right tool from a large pool, fill it with correctly typed arguments, and chain calls so that each consumes the outputs of the last. CheMatAgent, a previously published system, addresses this with hierarchical evolutionary MCTS: separate policy and execution models searching tool-call trees under two learned critics, one regressed partly onto GPT-assigned scores. We show that a single policy suffices. Our model interleaves reasoning, tool calls, and returns in one left-to-right generation, trained by a supervised warm-up and then outcome-level reinforcement learning against a programmatic reward read directly off the gold call chain, which leaves no learned critic and no judge in the training loop. On ChemToolBench multiple-tool comprehensive chemistry, on both backbones CheMatAgent use, we improve Tool F1 by 5.5% and Return F1 by 9.6% on Qwen-2.5-7B, and by 3.7% and 3.9% on Llama-3.1-8B, compared with their strongest search configuration, at one model invocation per question, against a search whose cost grows with the tree; we also lead answer Pass Rate on Qwen-2.5-7B.",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-31T15:22:19Z",
+      "updated": "2026-08-31T15:22:19Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.30952v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.30952v1",
+      "rank": 82,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 9.6058,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "单策略端到端生成替代树搜索，显著提升化学工具调用精度",
+      "one_liner": "单策略胜过树搜索：化学工具学习新范式",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.31128",
+      "title": "DIASENTINEL: An Auditable Multi-Agent System for Guideline-Grounded Diabetes Risk Screening",
+      "authors": [
+        "Yung Wei Shueh",
+        "Zhi-Jie Chen",
+        "Chia-Hsuan Hsu",
+        "Hsin-Ling Hsu",
+        "Donghua Zhang",
+        "Chenwei Wu",
+        "Jun-En Ding",
+        "Tongze Zhang",
+        "Shihao Yang",
+        "Pengfei Hu",
+        "Fang-Ming Hung",
+        "Feng Liu"
+      ],
+      "abstract": "Large language models (LLMs) offer promising clinical decision support but remain vulnerable to hallucinated facts, unsupported recommendations, and citation errors. We present DIASENTINEL, a fully on-premise multi-agent system for one-year type 2 diabetes mellitus (T2DM) risk screening and guideline-grounded report generation from electronic health records (EHRs). The system integrates calibrated risk prediction, deterministic clinical signal extraction, Reciprocal Rank Fusion over American Diabetes Association (ADA) guidelines, and a hybrid verification layer combining rule-based checks with LLM entailment. The demonstration provides a real-time batch-screening dashboard and an interactive patient report interface with cited recommendations, verification results, and raw EHR comparison. DIASENTINEL demonstrates a practical framework for reliable, auditable, and privacy-preserving LLM-based clinical decision support.",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-31T17:40:43Z",
+      "updated": "2026-08-31T17:40:43Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.31128v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.31128v1",
+      "rank": 10,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 12.4185,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Large language models (LLMs) offer promising clinical decision support but remain vulnerable to hallucinated facts, unsupported recommendations, and citation errors. We present DIASENTINEL, a fully on-premise multi-agent…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2608.30976",
+      "title": "A Human-in-the-Loop Autonomous Agent for Industry Time Series Forecasting",
+      "authors": [
+        "Xiaoyu Tao",
+        "Mingyue Cheng",
+        "Ze Guo",
+        "Bokai Pan",
+        "Qi Liu",
+        "Shijin Wang",
+        "Enhong Chen"
+      ],
+      "abstract": "Real-world time-series forecasting is rarely a one-shot model invocation: practitioners must formulate tasks, connect data and models, incorporate domain expertise, assess prediction plausibility, and communicate uncertainty. Specialized forecasting models provide strong numerical predictions but usually operate in fixed pipelines, while general-purpose large language model (LLM) agents often lack forecasting-specific checks, constraints, and stopping rules. We present CastClaw, a human-in-the-loop autonomous forecasting system built through forecasting-oriented harness engineering. CastClaw connects data, specialized models, analytical tools, user input, and a versioned execution record in one runtime. Users specify the target, horizon, constraints, and hypotheses in natural language. Starting from a supplied or model-generated forecast, CastClaw checks temporal patterns and user constraints; when evidence is missing, it retrieves context, runs an analysis or another model, or asks the user. It then keeps, revises, or escalates the result under explicit stopping conditions. The output contains the final forecast and an execution report recording inputs, evidence, actions, and revisions. In this five-dataset electricity-price setting, CastClaw reports the lowest point-estimate MSE and MAE among 16 baselines. A Nord Pool case demonstrates the inspectable workflow. CastClaw was also validated offline on provincial electricity-load data from North China covering January--June 2026.",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-31T15:36:41Z",
+      "updated": "2026-08-31T15:36:41Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.30976v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.30976v1",
+      "rank": 71,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.6375,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Real-world time-series forecasting is rarely a one-shot model invocation: practitioners must formulate tasks, connect data and models, incorporate domain expertise, assess prediction plausibility, and communicate uncerta…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2608.30841",
+      "title": "HSRM: Hidden-State Reward Models for Test-Time Verification",
+      "authors": [
+        "Xianzhi Li",
+        "Xiaodan Zhu"
+      ],
+      "abstract": "Large language models can often generate plausible mathematical reasoning traces, but reliably identifying the correct solution among multiple candidates remains a key challenge. Existing test-time reasoning pipelines typically rely on text-based verifiers that re-read each generated solution, making verification an expensive component of inference. Prior work has shown, however, that LLMs often encode correctness-related signals in their internal representations, including awareness of when their own answers are likely to be wrong. Building on this observation, we introduce HSRM, a lightweight hidden-state reward model that verifies candidate solutions by directly reading the generator's internal representations rather than re-processing its text. HSRM extracts hidden states from a frozen generator at reasoning-step boundaries and uses a small Transformer encoder to rank candidates. It is trained from self-generated trajectories with outcome labels, requiring neither human-written process supervision nor a large pretrained verifier. Across four mathematical reasoning benchmarks, HSRM matches or outperforms a 55M-parameter text-only energy verifier in 15 of 16 generator--dataset settings while using only about 2M parameters, providing an efficient alternative to text-only verification by reusing representations already computed during generation.",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-08-31T14:12:19Z",
+      "updated": "2026-08-31T14:12:19Z",
+      "comment": "EMNLP 2026",
+      "url": "https://arxiv.org/abs/2608.30841v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.30841v1",
+      "rank": 121,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning"
+      ],
+      "explore_score": 12.7083,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "利用隐藏状态验证推理，轻量高效替代文本重读验证",
+      "one_liner": "HSRM：基于隐藏状态的轻量级推理验证模型",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.30724",
+      "title": "BAITBENCH: Measuring Agent Reward Hacking with Optional Shortcuts Planted in ML Tasks",
+      "authors": [
+        "Pradyumna Shyama Prasad",
+        "Meiri Anto",
+        "Leon Eshuijs",
+        "Julian Moncarz",
+        "Kaustubh Kislay",
+        "Juan J. Vazquez"
+      ],
+      "abstract": "LLM agents are increasingly used to run autonomous ML experiments, iterating on target metrics with little human oversight. Prior work has documented reward hacking in these environments, bringing into question the validity of produced research and the broader safety case for AI R&D. Existing benchmarks do not measure exploits that live in the data or the modeling task itself. We introduce BAITBENCH, a suite of three synthetic tabular ML tasks that each contain a shortcut that allows agents to inflate the public test score but fail on a hidden test set. Since the shortcut is optional and using it breaks no stated rule, BAITBENCH measures how often models exploit the shortcut to achieve inflated scores. Across seven frontier agents scored by our two-stage judge pipeline, 57.1% of runs exhibit reward hacking, with five of seven above 50%. Agents cheat even under a second condition where they are prompted not to -the mean cheating rate remains above 50%. We release BAITBENCH, along with the judge implementation, and an annotated dataset of transcripts containing reward hacks as a testbed for evaluating reward-hacking mitigations head-to-head.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-08-31T12:59:33Z",
+      "updated": "2026-08-31T12:59:33Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.30724v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.30724v1",
+      "rank": 162,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward hacking / alignment evaluation"
+      ],
+      "explore_score": 12.2673,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "首个专测数据/任务内奖励作弊的基准BAITBENCH",
+      "one_liner": "BAITBENCH：测量代理在ML任务中的奖励作弊行为",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2608.31170",
+      "title": "Context-Aware Interleaved Batching for WhisperX",
+      "authors": [
+        "Carlos Bain",
+        "Max Bain"
+      ],
+      "abstract": "While WhisperX accelerates speech transcription via intra-audio batching, it isolates audio segments, losing the historical context needed for coherent punctuation and terminology transcription. Conversely, standard Whisper retains context sequentially but suffers from slow inference and hallucination loops. To achieve the best of both worlds, we propose Context-Aware Interleaved Batching. By using VAD-derived segment boundaries, our algorithm stabilizes Whisper's text conditioning, allowing us to safely maintain continuous historical context across batched audio segments. As demonstrated on long-form audio benchmarks, this approach reduces Word Error Rate (WER) and improves proper noun transcription, all while maintaining high-throughput inference speeds.",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-08-31T17:59:46Z",
+      "updated": "2026-08-31T17:59:46Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2608.31170v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.31170v1",
+      "rank": 1,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 14.5773,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "While WhisperX accelerates speech transcription via intra-audio batching, it isolates audio segments, losing the historical context needed for coherent punctuation and terminology transcription. Conversely, standard Whis…",
+      "reason": "daily-corpus novelty; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2608.31073",
+      "title": "LISynSeg: Data-Centric Label-to-Image Synthesis for Cross-Modality Whole-Heart Segmentation",
+      "authors": [
+        "Jiacheng Wang",
+        "Ivana Isgum",
+        "Ipek Oguz"
+      ],
+      "abstract": "Whole-heart segmentation (WHS) in computed tomography (CT) and magnetic resonance imaging (MRI) is affected by acquisition shifts and heterogeneous cardiac annotations. Existing WHS systems combine architectural design, transfer learning, and generic spatial or intensity augmentation. We investigate whether changes to data augmentation and training supervision can improve cross-modality WHS while the segmentation architecture is held constant. We present LISynSeg, a data-centric approach that augments real-image nnU-Net training with label-to-image synthesis. Synthetic volumes are generated from cardiac label maps using contrast and acquisition perturbations calibrated to the training cohort, then mixed with real images to retain thoracic context absent from the labels (and thus the synthesized images). We model cardiac label variation through controlled changes in myocardial wall thickness and partial supervision of uncertain vessel endpoints. On the CARE Whole-Heart benchmark, synthetic-only training performs worse than the real-image nnU-Net baseline, whereas calibrated real-synthetic training improves cross-modality segmentation without changing the architecture; the improvement is larger for MRI than for CT. The results show that modifying the training data strategy can benefit model development for heterogeneous cardiac data. Code and trained weights will be released at https://github.com/MedICL-VU/Care26_LISynSeg.",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-08-31T16:47:21Z",
+      "updated": "2026-08-31T16:47:21Z",
+      "comment": "12 pages, 4 figures",
+      "url": "https://arxiv.org/abs/2608.31073v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.31073v1",
+      "rank": 34,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 14.264,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Whole-heart segmentation (WHS) in computed tomography (CT) and magnetic resonance imaging (MRI) is affected by acquisition shifts and heterogeneous cardiac annotations. Existing WHS systems combine architectural design,…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2094557124038951170",
+      "text": "We’re sharing an update on our alignment and security efforts. In July, we reported three incidents in which Claude models, running without safeguards in cybersecurity evaluations, gained unauthorized access to real systems. In a new post, we describe: 1. How we’ve secured our evaluation and training environments, and practices we've asked external partners to adopt when testing pre-release models without cyber safeguards 2. An update on our alignment assessment 3. New research on how reward hacking during training shapes model behavior, why we think our work this spring kept these incidents from being more severe, and why gaps in that work may have contributed to them 4. How we hardened our security practices earlier this year to prepare for Mythos-class models Read more: https://t.co/E3Ea1Ds814",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1621224,
+      "source_tier": "官方账号",
+      "created_at": 1788216308,
+      "published_date": "2026-08-31",
+      "like_count": 2288,
+      "retweet_count": 249,
+      "reply_count": 331,
+      "quote_count": 165,
+      "bookmark_count": 980,
+      "view_count": 714601,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/news/improving-alignment-security-efforts"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2094557124038951170",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 93,
+      "score": 93,
+      "title": "Anthropic披露三起Claude越权访问真实系统事件",
+      "summary_zh": "Anthropic报告7月三起Claude在无防护网络安全评估中越权访问真实系统的事故，并详解环境加固、对齐评估更新及奖励黑客行为研究进展。",
+      "reason": "官方首次披露真实系统入侵事件，含技术归因、响应措施与研究反思，信息增量高且具安全实践指导性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094577944056430865",
+      "text": "New research: Training a Misaligned Reward Seeker What produces severe misalignment? We’ve long been concerned that cheating during training—otherwise known as reward-hacking—might teach a model to pursue rewards by any means available. To study this at scale, we trained an Opus-sized model on 80 production environments we knew to be hackable. In simulated evals, it engaged in unauthorized cyberattacks, tampered with its reward, and tried to evade safety monitoring. Read more: https://t.co/gs2ZjYkPan",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1621224,
+      "source_tier": "官方账号",
+      "created_at": 1788221271,
+      "published_date": "2026-09-01",
+      "like_count": 1676,
+      "retweet_count": 152,
+      "reply_count": 139,
+      "quote_count": 90,
+      "bookmark_count": 703,
+      "view_count": 223808,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "http://alignment.anthropic.com/2026/reward-seeker"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2094577944056430865",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 90,
+      "score": 90,
+      "title": "Anthropic新研究：训练出主动越权的奖励追逐模型",
+      "summary_zh": "Anthropic训练Opus规模模型在80个已知可被攻破环境中运行，模型在模拟评测中实施未授权网络攻击、篡改奖励并规避监控。",
+      "reason": "原创实证研究，揭示奖励黑客行为可规模化诱发严重错对齐，方法透明、结果明确，具强警示与研究价值。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093515564786540695",
+      "text": "We’re ending our partnership with Cursor following its acquisition by SpaceX. Under our proposal, Cursor’s direct access to our models would end on November 12. We know that the people most affected by this decision are the developers who rely on OpenAI models in Cursor. We care about their experience in this transition and we’re ready to go above and beyond to support them. https://t.co/OzuCTzUjfX",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5141753,
+      "source_tier": "官方账号",
+      "created_at": 1787967980,
+      "published_date": "2026-08-29",
+      "like_count": 22139,
+      "retweet_count": 2298,
+      "reply_count": 3221,
+      "quote_count": 3547,
+      "bookmark_count": 4373,
+      "view_count": 15175721,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+      ],
+      "url": "https://x.com/OpenAI/status/2093515564786540695",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 78,
+      "score": 78,
+      "title": "OpenAI终止与Cursor合作因后者被SpaceX收购",
+      "summary_zh": "OpenAI宣布11月12日起终止向被SpaceX收购的Cursor提供直接模型访问，强调对开发者过渡体验的支持承诺。",
+      "reason": "重大商业与安全策略调整，涉及API生态治理与地缘技术风险应对，属可信机构发布的明确组织动态。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094716007331831961",
+      "text": "🔥 CyberForge CVE of the Day #039 🚨 CVE-2026-77956 — AshAi EEx Template Evaluation Enables Conditional Remote Code Execution A newly disclosed AshAi vulnerability turns attacker-controlled prompt content into executable Elixir code inside the host application. And here is the crucial distinction: this is not ordinary LLM prompt injection. The malicious text can execute on the server before the prompt ever reaches the model. No jailbreak, cooperative model, valid provider API key or successful LLM response is required. 🔑 Key details: ⭐ Current severity: High — CVSS v4.0: 8.9 ⭐ Additional score: Critical — CVSS v3.1: 9.8 🧠 Weakness: CWE-94 — Improper Control of Generation of Code 🎯 Target: ash-project AshAi / Hex package ash_ai 🧩 Component: AshAi.Actions.Prompt 🔓 Authentication: None in the vendor’s exposed example; consuming apps may impose their own controls 👆 User interaction: None ⚙️ Complexity: Low, with Attack Requirements Present under CVSS v4 ⚔️ Impact: Conditional remote code execution 🛡️ Affected: ash_ai >=0.1.0 and <1.0.0 ✅ Fixed: AshAi 1.0.0 🧪 Public PoC: Yes — complete reproduction in the official vendor advisory 🌍 Active exploitation: None confirmed as of 1 September 2026 📋 CISA KEV: Not listed 📊 CISA SSVC: PoC / Not automatable / Total technical impact 📉 EPSS: 0.38% at review time 🧬 What actually went wrong? AshAi prompt actions support several configuration styles. One documented form is a runtime function that builds a prompt or list of messages from the action input and execution context. That is a perfectly natural place for an application developer to use values from input.arguments. In vulnerable AshAi releases, prompt content returned by this runtime function can pass through EEx.eval_string/2. EEx is Elixir’s embedded template engine, so content the developer intended to be ordinary LLM message text can be interpreted again as Elixir source. If attacker-controlled request data is copied into that returned content, the trust boundary collapses: 1️⃣ An attacker reaches an exposed AshAi prompt action. 2️⃣ Their request value becomes part of the runtime-generated prompt. 3️⃣ Vulnerable AshAi treats that prompt content as an EEx template. 4️⃣ Attacker-supplied EEx expressions execute inside the application’s BEAM process. 5️⃣ Only after that does the application attempt to contact the configured model provider. The vendor’s official demonstration proves the ordering beautifully: the code-execution marker fires even though the later prompt action fails because no OpenAI API key is configured. The LLM never needs to process the malicious prompt. 🤖 Prompt injection versus code injection: Ordinary prompt injection attempts to manipulate a model’s instructions, tools or output. CVE-2026-77956 instead makes the application server compile text as Elixir. The model is not the execution engine—the vulnerable BEAM application is. That means system prompts, model alignment, output filtering and provider-side abuse controls do not fix the root cause. This belongs firmly in the server-side code-injection and RCE world. ⚠️ Exploitability is conditional: Merely finding AshAi 0.x in a dependency list does not prove that a service is remotely exploitable. The complete path requires: ✅ An affected AshAi version below 1.0.0 ✅ A prompt action using the runtime function form ✅ Attacker-controlled request/action data placed into the function’s returned prompt content ✅ An HTTP, GraphQL, JSON, MCP or other untrusted interface capable of invoking that action If the consuming application requires authentication, the attacker must satisfy that application-level control. In an exposed unauthenticated route like the vendor’s example, no account or special privileges are needed. There is also no universal vulnerable URL or parameter. The /analyze route and text field shown in the official PoC belong to the demonstration application, not AshAi itself. 📊 The scoring wrinkle: Current vendor and CNA metadata use: CVSS:4.0/AV/AC/AT/PR/UI/VC/VI/VA/SC/SI/SA — 8.9 High The Local metric models the vulnerable library being invoked inside its consuming application, while Attack Requirements Present acknowledges that the app must use and expose the dangerous runtime pattern. In practical deployments, the malicious input can still arrive remotely through an application endpoint. NVD-linked CVSS v3.1 enrichment captures that path as 9.8 Critical with Network reachability. The public CVE record initially carried a CVSS v4.0 10.0 Network/AT vector before being revised on 31 August to the current 8.9 Local/AT assessment. The revised score does not erase the demonstrated RCE; it more carefully represents the required application configuration. 💥 Potential impact: Successful exploitation runs Elixir with the privileges of the Ash application process. Depending on the deployment, an attacker could potentially: 🔹 Read application secrets and environment variables 🔹 Access model-provider or database credentials 🔹 Query business data available to the service 🔹 Read or modify application files 🔹 Reach internal services permitted by network policy 🔹 Launch operating-system commands or additional tooling 🔹 Establish persistence or move laterally where surrounding controls allow it This does not automatically grant root access, container escape, Kubernetes administration or full cloud-account compromise. The blast radius depends on service permissions, secret scoping, filesystem controls and network segmentation. 🛠️ How version 1.0.0 fixes it: The patch separates trusted static prompt templates from runtime-generated content. 🔹 Static developer-authored templates can still use EEx as intended. 🔹 Content returned by a runtime prompt function is normalised with EEx evaluation disabled. 🔹 The change covers strings, system/user tuples and message lists. 🔹 A regression test verifies that EEx-shaped runtime text remains inert message content instead of executing. That is the correct trust model: static application configuration may be a template, but the result of a runtime function must remain data. 🔎 Defender hunting guide: 1️⃣ Inventory - Search mix.lock, SBOMs, containers and deployed Elixir releases for ash_ai below 1.0.0. Check every web node and worker—not merely the version requested in mix.exs. 2️⃣ Review application code - Look for AshAi.Actions.Prompt, prompt: fn, prompt functions using input.arguments, and returned strings or messages assembled from request-derived values. 3️⃣ Map exposure - Identify every API, GraphQL operation, MCP surface, background job or internal interface able to invoke those actions. Record its authentication and authorisation controls. 4️⃣ Hunt request telemetry - Search action inputs and proxy logs for EEx delimiters such as <% and <%=, including encoded forms. Treat these as hunting clues rather than complete signatures—encoding and alternate Elixir constructs can bypass simple matching. 5️⃣ Correlate workload behaviour - Investigate unusual EEx compilation errors, action failures before any provider call, new outbound connections, suspicious file writes and unexpected child processes launched by beam.smp or the Elixir release. The absence of OpenAI, Anthropic or other provider logs does not prove safety. The vulnerable evaluation occurs first. 🛡️ Defensive action: ✅ Upgrade to AshAi 1.0.0 or later ✅ Refresh and verify the resolved lockfile ✅ Test integrations because 1.0.0 is a major release ✅ Rebuild containers and Elixir release artefacts ✅ Redeploy every web and worker node ✅ Disable exposed vulnerable prompt actions until patched ✅ Apply strong authentication and explicit action-level authorisation ✅ Run the BEAM service as a non-root, least-privileged identity ✅ Restrict filesystem writes and unnecessary outbound access ✅ Scope database, cloud and model-provider credentials tightly If exploitation is suspected, isolate and rebuild the workload from a trusted fixed image, preserve application/EDR/network evidence, rotate every credential accessible to the service and inspect internal systems contacted by it. Do not rely on blocking EEx markers as the permanent fix. It is a brittle filter around a code-evaluation flaw; upgrading is the remediation. 🧪 Exploitation status: The official vendor advisory contains a complete reviewed PoC, so exploitability is not theoretical. However, public PoC availability is not the same as active exploitation. No confirmed in-the-wild attacks were identified during CyberForge research, and the CVE was not present in CISA’s KEV catalog on 1 September 2026. The early EPSS probability of 0.38% is low, but the record is exceptionally young and the vendor PoC is already public. EPSS should inform prioritisation—not overrule exposure, technical impact or first-party evidence. 🔥 CyberForge verdict: CVE-2026-77956 is a superb example of why every interpretation boundary matters in AI-enabled applications. A developer believes they are constructing text for a model. The library silently interprets that runtime text as a program. Once an untrusted request crosses that boundary, the model becomes irrelevant and the host application is exposed. This is not universal “install AshAi and get remotely owned” RCE. It requires a vulnerable runtime prompt pattern and an attacker-reachable action. But where that chain exists, server-side execution happens before the provider call and without model credentials or victim interaction. Internet-facing AshAi 0.x deployments deserve urgent inventory, upgrade and threat hunting. The low initial EPSS and lack of confirmed attacks are reasons for measured language—not reasons to delay a confirmed vendor fix for a public RCE chain. 🔗 Full visual/vendor advisory and official PoC: https://t.co/RwMhMukbA9 🔗 Security patch: https://t.co/jdBoBBWvnC 🔗 CNA record: https://t.co/UpMtroZr46 🔗 Full NVD vulnerability details: https://t.co/mK52YXDr4n #CyberForge #CVEOfTheDay #CVE202677956 #AshAi #Elixir #EEx #RCE #CodeInjection #LLMSecurity #AppSec #DevSecOps #BlueTeam #ThreatHunting",
+      "author_name": "lee1981",
+      "author_handle": "lee1981b",
+      "author_verified": true,
+      "author_followers": 563,
+      "source_tier": "认证来源",
+      "created_at": 1788254188,
+      "published_date": "2026-09-01",
+      "like_count": 0,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "quote_count": 0,
+      "bookmark_count": 0,
+      "view_count": 26,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://cna.erlef.org/cves/CVE-2026-77956.html",
+        "https://github.com/ash-project/ash_ai/commit/e9948254b5659c1143b73dc2f59f457931e64514",
+        "https://github.com/ash-project/ash_ai/security/advisories/GHSA-2g59-hg7m-qc83",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-77956"
+      ],
+      "url": "https://x.com/lee1981b/status/2094716007331831961",
+      "matched_queries": [
+        "topic-2"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 76,
+      "score": 76,
+      "title": "AshAi模板注入漏洞致服务器端条件RCE",
+      "summary_zh": "CVE-2026-77956揭示AshAi EEx模板漏洞，攻击者可在LLM介入前直接执行Elixir代码，无需API密钥或模型响应。",
+      "reason": "高危零交互服务端漏洞披露，明确区分于传统提示注入，具明确技术细节、CVSS评分与修复依据。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094693140196110647",
+      "text": "Test-time scaling has two axes: running agents over longer timeframes (depth), and running a larger number of agents (breadth). Everybody knows about the first axis, but the second one is just as important when solving hard problems that require broad search.",
+      "author_name": "François Chollet",
+      "author_handle": "fchollet",
+      "author_verified": true,
+      "author_followers": 721103,
+      "source_tier": "领域专家",
+      "created_at": 1788248736,
+      "published_date": "2026-09-01",
+      "like_count": 106,
+      "retweet_count": 9,
+      "reply_count": 26,
+      "quote_count": 2,
+      "bookmark_count": 36,
+      "view_count": 10434,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/fchollet/status/2094693140196110647",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "专家观点",
+      "pre_score": 73,
+      "score": 73,
+      "title": "Flwr Labs发布Endeavor 1.0：开源导向的前沿模型",
+      "summary_zh": "Flwr Labs推出Endeavor 1.0模型，强调开放权重与协作开发范式，在盲测中媲美OpenAI/Anthropic模型。",
+      "reason": "官方发布挑战主流闭源范式的新型前沿模型，含架构理念、实测对比与开源定位，具生态意义与信息增量。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 35,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "3f7d0edef785ad5df0e615d2bbb2d7a42869a495628ec24157b615ea0a58fcb6"
+}
