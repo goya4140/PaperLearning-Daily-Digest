@@ -1,0 +1,578 @@
+{
+  "version": 2,
+  "date": "2026-09-02",
+  "arxiv_query_date": "2026-09-01",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-09-02T09:14:11.018864+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202609010000+TO+202609012359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202609010000+TO+202609012359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-09-01T00:00:00Z",
+    "2026-09-01T23:59:59Z"
+  ],
+  "raw_candidate_count": 420,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2609.01491",
+      "title": "GlossoGen: Emergent Language in Complex Multi-Agent LLM Interactions",
+      "authors": [
+        "Elias Stengel-Eskin",
+        "Newton Sander",
+        "Carlos Bonetti",
+        "Sasha Boguraev",
+        "James Bowler",
+        "Hale Sirin",
+        "Simon Kirby"
+      ],
+      "abstract": "The growing rate at which LLM agents interact with one another raises key questions about language evolution in multi-LLM-agent settings, with implications for safety and monitorability as well as for linguistic accounts of LLMs. To address these questions, we introduce GlossoGen, a novel platform for studying multi-agent language evolution in complex scenarios. Within GlossoGen, we build the SaveVeyru scenario, which requires agents with partial information to communicate under pressure. We find that language evolution does occur between LLM agents, that the resulting languages are compositional and morphologically productive, and that they deviate from the LLMs' English prior in ways that render them incomprehensible to humans. Moreover, we identify several qualities essential to this evolution: pressure towards efficiency; the strength of the models backing the agents; and access to a \"postmortem\" stage in which agents can agree on linguistic conventions. Importantly, we observe that different conditions govern the transmission of language to new agents. Specifically, we find that agents learn new languages from usage alone, take an active role in this learning, and that while stronger models are required for novel language emergence, weaker models can learn an existing language once it has emerged. Taken together, our results indicate that current LLMs have the potential for cumulative cultural evolution -- previously attested only in humans -- with mixed populations of agents developing capacities that go beyond their lowest common denominator.",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-09-01T16:22:07Z",
+      "updated": "2026-09-01T16:22:07Z",
+      "comment": "GlossoGen code: https://github.com/agencyenterprise/GlossoGen Paper code: https://github.com/esteng/emergent_communication",
+      "url": "https://arxiv.org/abs/2609.01491v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01491v1",
+      "rank": 46,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.1155,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "多智能体语言演化实证研究，揭示LLM涌现能力",
+      "one_liner": "GlossoGen平台实证发现LLM智能体可自发演化出人类不可理解但具组合性的新语言",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.01045",
+      "title": "AgentFactory: Towards Automated Agentic System Design and Optimization",
+      "authors": [
+        "Enci Zhang",
+        "Haofeng Wang",
+        "Yuesheng Zhu",
+        "Xiaole Cui",
+        "Guibo Luo"
+      ],
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities as powerful components in agentic systems, enabling sophisticated reasoning and complex task execution. However, current approaches to manually designing and optimizing agentic systems heavily rely on manual effort, limiting their adaptability and scalability. Recent work has explored the automated optimization of workflow designs. However, these approaches often overlook the crucial role of model capabilities and focus on single performance metrics, failing to address real-world deployment constraints. In this paper, we present AgentFactory, a framework that jointly optimizes both foundation models and workflow structures in agentic systems while considering multiple objectives including performance, cost, and efficiency. AgentFactory leverages advanced LLMs as optimizers to navigate the vast search space of possible configurations, employing a three-stage optimization pipeline to automatically discover effective combinations of fine-tuned models and optimized workflows. Through an iterative optimization process, our framework systematically explores and evaluates different agentic system designs, adapting to task-specific requirements while maintaining operational efficiency. We evaluate AgentFactory across eight benchmarks spanning five domains, including general reasoning, coding, mathematics, medicine, and finance. Our experiments demonstrate that AgentFactory consistently outperforms both manually designed methods and existing automated approaches, achieving an average improvement of 9.1% across all benchmarks, with particularly significant gains in domain-specific tasks (19.6% on MedQA and 18.7% on FinEval). These results establish AgentFactory as a promising approach for developing more capable and efficient agentic systems through automated optimization.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-09-01T10:45:11Z",
+      "updated": "2026-09-01T10:45:11Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.01045v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01045v1",
+      "rank": 199,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.5823,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "首个联合优化模型与工作流的自动化框架",
+      "one_liner": "AgentFactory实现大模型与工作流结构的联合多目标优化，在医学金融等任务提升近20%",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.01360",
+      "title": "EDGE: Error Dependency Graph-Guided Multi-Error Attribution in Multi-Agent LLM Systems",
+      "authors": [
+        "Jun Hou",
+        "Priya Pitre",
+        "Yi Fang",
+        "Xuan Wang"
+      ],
+      "abstract": "Large language model (LLM) agent failures often contain multiple related errors rather than a single mistake. Existing attribution methods usually identify a responsible agent, step, or root cause, but do not explicitly model dependency between errors. We introduce EDGE, an Error Dependency Graph-guided multi-Error attribution framework. EDGE constructs an error dependency graph from observed error events and validates a reliable causal subset through counterfactual rollout. The inference graph guides a two-stage LLM-as-judge detector for error attribution, and the intervention-validated subgraph provides a more reliable basis for explanation and repair analysis. Experiments on TRAIL and MAST show that EDGE improves category-level multi-error attribution across most evaluated models and settings. Experiments with adapted Who&When-style prompts show that the graph helps across prompting strategies. These results suggest that dependency structure is a useful diagnostic prior for agent failures beyond isolated root-cause prediction.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-09-01T15:00:54Z",
+      "updated": "2026-09-01T15:00:54Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.01360v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01360v1",
+      "rank": 87,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.2484,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Large language model (LLM) agent failures often contain multiple related errors rather than a single mistake. Existing attribution methods usually identify a responsible agent, step, or root cause, but do not explicitly…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2609.01235",
+      "title": "MutMem-V2: Cryptographically Authorized Mutation in Persistent Agent Memory Portable Verification and Reproducible Evidence",
+      "authors": [
+        "Walid Saidi"
+      ],
+      "abstract": "MutMem V1 introduced retention-preserving, cryptographically authorized mutation for persistent agent memory but did not provide a complete portable verification contract or clean-install reproduction path. MutMem V2 closes that publication gap without introducing a second memory engine. It specifies exact canonical bytes, domain-separated object and bundle commitments, mandatory recall-evidence membership and ordering, external trust anchors, identity epochs, revocation, authorization, request receipts, ordered disclosure, and three mutation terminal types. The released protocol contains 18 versioned object schemas, 39 recall vectors, 15 mutation vectors, and 37 closed recall failure reasons. Independent Node and Python implementations agree on verdict and primary reason for all 72 structural and cryptographic terminals; a production-conformance corpus agrees on 42/42 cases across 28 required classes. A clean Node v26.8.1 installation reaches first-boot, restart, and scheduler readiness with no experimental memories. A separately scoped 120-unit Canary experiment supports only explicit-marker traversal. Every public table regenerates from a self-hashed aggregate, and an independent verifier reconstructs the statistics and claim boundaries. Historical V1 empirical results remain historical. MutMem V2 supports claims about portable integrity, authorization, traceability, conformance, and reproducibility under stated assumptions; it does not establish semantic truth, universal robustness, or independent replication.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-09-01T13:34:44Z",
+      "updated": "2026-09-01T13:34:44Z",
+      "comment": "11 pages, 4 tables. Companion to arXiv:2608.02843. Code, installer, independent verifiers, evidence, and release artifacts: https://github.com/wallidsaydi-creator/HOM-AIMOS",
+      "url": "https://arxiv.org/abs/2609.01235v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01235v1",
+      "rank": 136,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "tool learning / tool use / agent memory"
+      ],
+      "explore_score": 9.9227,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "MutMem V1 introduced retention-preserving, cryptographically authorized mutation for persistent agent memory but did not provide a complete portable verification contract or clean-install reproduction path. MutMem V2 clo…",
+      "reason": "tool learning / tool use / agent memory",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2609.00699",
+      "title": "Patterning in Practice: Debiasing Reward Models with Susceptibilities",
+      "authors": [
+        "George Wang",
+        "Elizabeth Donoway",
+        "Daniel Murfet"
+      ],
+      "abstract": "Reward models trained on human preferences are known to suffer from length, formatting, and other stylistic biases. In this paper we use patterning, which reweights each preference pair according to its measured effect on posterior expectation values of benchmark losses (its susceptibility), to debias a Gemma 2 9B Instruct reward model trained on Skywork-Reward-Preference v0.2. We obtain $+14.2 \\pm 1.2$ pp on RM-Bench Hard, the split where style cues point against correctness (mean $\\pm$ s.e.\\ over 5 seeds), with overall RM-Bench accuracy preserved, comparable to the strongest Hard-split gain reported by the closest published comparator (SteerRM, $+13.2$ pp). We demonstrate in a simple case that the reweighting is interpretable by tracing a side effect of the intervention (a regression on a safety subset of RM-Bench) to a small class of training pairs, which we confirm by ablation. The weights also transfer: those computed on Gemma 2 9B debias Gemma 2 2B and 27B with no recomputation, and transfer partially to Llama 3.1 8B. This is the first application of patterning, a program grounded in singular learning theory, beyond small models and synthetic tasks.",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-09-01T04:20:43Z",
+      "updated": "2026-09-01T04:20:43Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.00699v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.00699v1",
+      "rank": 339,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning"
+      ],
+      "explore_score": 12.5272,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "基于奇异学习理论的新方法，首次用于大模型奖励建模",
+      "one_liner": "Patterning利用敏感性重加权，显著提升奖励模型在风格干扰下的鲁棒性",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.01487",
+      "title": "Defense-as-Skill: Evolving Runtime Guard Skill for Skill-Augmented Agents",
+      "authors": [
+        "Xiaofang Yang",
+        "Ziqi Miao",
+        "Dianbo Sui",
+        "Jing Shao",
+        "Lijun Li"
+      ],
+      "abstract": "Skill-augmented agents load reusable skills as persistent runtime context, improving task performance but also giving malicious skills a durable channel for steering future actions. Such skills may leak secrets, corrupt code, bypass approvals, or stage data for exfiltration only after a concrete user task and workspace state make the unsafe action appear useful. This makes pre-install vetting insufficient and calls for runtime, task-conditioned protection. We propose Defense-as-Skill, a defense paradigm that implements the runtime guard itself as an installable, inspectable, and editable skill. Our guard, SkillSonar, runs alongside untrusted task skills and checks sensitive actions against the user's task boundary, routing each action to an allow, replan, or confirmation decision without modifying the underlying agent runtime. To study this setting, we construct SCOPE-R, a task-conditioned dataset covering 6 risk families and 21 sub-categories, with 206 attack-confirmed malicious instances and 43 benign tasks. We then improve SkillSonar on the SCOPE-R training subset using runtime guard-skill evolution, a Monte-Carlo Tree Search procedure that evolves the on-disk guard skill from feedback on the rollouts. Across Claude Code and OpenClaw, the evolved guard substantially reduces attack success while maintaining a favorable safety-utility trade-off. On repeated GLM-5 runs, SkillSonar reduces ID ASR from 0.482 to 0.104 and OOD ASR from 0.606 to 0.115. Further analyses demonstrate transfer across victim models, held-out risk families, and external benchmarks, as well as retained protection against adaptive attackers. Ablations further show that explicit safety responsibility assignment and the skill-native representation are both important to the observed gains.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-09-01T16:19:31Z",
+      "updated": "2026-09-01T16:19:31Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.01487v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01487v1",
+      "rank": 47,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery"
+      ],
+      "explore_score": 13.8951,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "将防御机制本身设计为可安装、可演化的技能",
+      "one_liner": "Defense-as-Skill范式使运行时防护成为可编辑技能，有效抵御恶意技能攻击",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.01528",
+      "title": "Sierpiński--Knopp Wasserstein Distance for Persistence Diagrams and Applications to 2-Wasserstein Approximation",
+      "authors": [
+        "Sebastien Tchitchek",
+        "Julien Tierny"
+      ],
+      "abstract": "This paper introduces the Sierpiński-Knopp (SK) Wasserstein distance, a fast metric between persistence diagrams. The SK-Wasserstein distance, denoted $d_{\\mathrm{SK}}$, maps diagram points and their diagonal projections to the unit interval via the Sierpiński-Knopp space-filling curve on the upper diagonal triangle. The encoded point sets are then efficiently matched via one-dimensional optimal assignment, in \\(O(N\\log N)\\) steps, yielding an explicit diagonal-aware point assignment between the two input persistence diagrams. We show that the SK-Wasserstein distance controls the classical \\(2\\)-Wasserstein distance between diagrams, admits an explicit isometric embedding into a Hilbert space, and induces a positive-definite Gaussian kernel, making the resulting geometry directly compatible with Euclidean and kernel-based learning methods. A tighter surrogate dissimilarity, noted \\(W_Γ\\), is also introduced based on the point assignments along the curve. Experiments on 12 scientific collections comprising 227 diagrams show median per-collection speedup of \\(d_{\\mathrm{SK}}\\) over state-of-the-art approximations of \\(W_2\\) is \\(626\\times\\), while the aggregate speedup over the full benchmark is \\(2100\\times\\). Average-linkage partitions obtained from \\(d_{\\mathrm{SK}}\\) and \\(W_Γ\\) each exactly match the corresponding \\(W_2\\) partition on 8 of the 12 collections. Hilbert \\(k\\)-means and Gaussian spectral clustering, both based on \\(d_{\\mathrm{SK}}\\), achieve mean adjusted Rand indices (ARI) of \\(0.756\\) and \\(0.800\\), respectively, with respect to the benchmark reference partitions, compared to \\(0.750\\) obtained by average linkage on \\(W_2\\). The Gaussian \\(d_{\\mathrm{SK}}\\) kernel supports other kernel-based analysis tasks, as illustrated by its use for contiguous segmentation of ordered diagram collections in our experiments.",
+      "categories": [
+        "cs.CG",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CG",
+      "published": "2026-09-01T16:57:04Z",
+      "updated": "2026-09-01T16:57:04Z",
+      "comment": "49 pages, 11 figures, 6 tables. Code and reproducibility package: https://github.com/sebastien-tchitchek/SK-Wasserstein-Reproducibility",
+      "url": "https://arxiv.org/abs/2609.01528v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01528v1",
+      "rank": 35,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 14.1454,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "This paper introduces the Sierpiński-Knopp (SK) Wasserstein distance, a fast metric between persistence diagrams. The SK-Wasserstein distance, denoted $d_{\\mathrm{SK}}$, maps diagram points and their diagonal projections…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2609.01425",
+      "title": "CATeye: Coupled Attribute-Topology Invariance Learning for Voucher Abuse Detection",
+      "authors": [
+        "Tian Tian",
+        "Shuaicheng Niu",
+        "Hao Kuang",
+        "Yuanhang Hu",
+        "Dong Li",
+        "Zhiqi Shen"
+      ],
+      "abstract": "Voucher abuse poses a major challenge in e-commerce, where malicious users exploit promotional vouchers for profit. Unfortunately, fraud patterns evolve rapidly over time and across regions, causing distribution shifts that degrade existing detection models unless retrained frequently. To tackle this, we propose the Coupled Attribute-Topology Invariance Learning framework (CATeye). The key challenge arises from coupled attribute-topology shift, where edges built from attribute proximity cause environment-driven attribute shift to induce shifted topology, thereby amplifying variant signals through GNN message passing. CATeye sees through such coupled shifts with two learnable selectors. First, an Attribute Invariance Selector (AIS) learns node-adaptive masks to filter out non-invariant attributes. Then, conditioned on retained invariant attributes, an Edge Invariance Selector (EIS) samples an invariant subgraph and isolates non-invariant edges. Using the resulting invariant and non-invariant components, CATeye constructs multiple views and applies view-specific objectives to emphasize domain-invariant representations while suppressing domain-specific variations. Experiments on both a proprietary dataset from Lazada, a major Southeast Asian e-commerce platform, and a public benchmark show that CATeye consistently outperforms nine strong domain generalization and graph anomaly detection baselines, achieving up to an 8.61% improvement in average F1 score over the strongest baseline. Source code is publicly available at https://github.com/Tian0426/CATeye.",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-09-01T15:38:46Z",
+      "updated": "2026-09-01T15:38:46Z",
+      "comment": "8 pages, 3 figures, Accepted by CIKM 2026 Applied Research Track",
+      "url": "https://arxiv.org/abs/2609.01425v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01425v1",
+      "rank": 65,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 14.0978,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Voucher abuse poses a major challenge in e-commerce, where malicious users exploit promotional vouchers for profit. Unfortunately, fraud patterns evolve rapidly over time and across regions, causing distribution shifts t…",
+      "reason": "daily-corpus novelty; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [
+    {
+      "id": "BV1c8tJ6aEmE",
+      "bvid": "BV1c8tJ6aEmE",
+      "title": "【全500集】全B站最详细AI大模型零基础入门教程，2026最新，包含所有干货！从入门到实战！学完即就业，带你玩转AI！存下吧！很难找全的！AI大模型|LLM",
+      "description": "【视频配套籽料、学习路线、GitHub项目、实战案例集、电子书+问题解答请看 ”置顶平论” 自取哦】\n本套教程从零开始讲解，手把手教学，包含Python快速入门、AI开发环境搭建及提示词工程、Transformer架构和预训练、SFT、RLHF等一些基础概念、RAG、Agent、Langchain、大模型微调和私有化部署\n无论是新手小白，还是有一定编码经验的选手，皆可学习\n如果视频对你有用的话请 一键三连【长按点赞】支持一下UP哦，拜托，这对我真的很重要！！",
+      "author": "AI研究所-",
+      "duration": "2056:37",
+      "published_at": 1788339217,
+      "view_count": 4,
+      "danmaku_count": 1,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/32a51cfa90a0bd8b2f7c724d6175d3d3f8e026dc.jpg",
+      "url": "https://www.bilibili.com/video/BV1c8tJ6aEmE",
+      "matched_keywords": [
+        "AI Agent 实战"
+      ],
+      "content_type": "技术演讲",
+      "pre_score": 63,
+      "like_count": 1,
+      "favorite_count": 1,
+      "score": 68,
+      "summary_zh": "【视频配套籽料、学习路线、GitHub项目、实战案例集、电子书+问题解答请看 ”置顶平论” 自取哦】\n本套教程从零开始讲解，手把手教学，包含Python快速入门、AI开发环境搭建及提示词工程、Tran…",
+      "reason": "相关性、信息密度、可信度、实践价值与新鲜度综合评分",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2094557124038951170",
+      "text": "We’re sharing an update on our alignment and security efforts. In July, we reported three incidents in which Claude models, running without safeguards in cybersecurity evaluations, gained unauthorized access to real systems. In a new post, we describe: 1. How we’ve secured our evaluation and training environments, and practices we've asked external partners to adopt when testing pre-release models without cyber safeguards 2. An update on our alignment assessment 3. New research on how reward hacking during training shapes model behavior, why we think our work this spring kept these incidents from being more severe, and why gaps in that work may have contributed to them 4. How we hardened our security practices earlier this year to prepare for Mythos-class models Read more: https://t.co/E3Ea1Ds814",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1623882,
+      "source_tier": "官方账号",
+      "created_at": 1788216308,
+      "published_date": "2026-08-31",
+      "like_count": 2984,
+      "retweet_count": 300,
+      "reply_count": 407,
+      "quote_count": 219,
+      "bookmark_count": 1249,
+      "view_count": 1178563,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://www.anthropic.com/news/improving-alignment-security-efforts"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2094557124038951170",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 91,
+      "score": 91,
+      "title": "Anthropic披露三起Claude越权访问真实系统事件",
+      "summary_zh": "Anthropic报告7月三起无防护Claude模型在网安评测中越权访问真实系统的事故，并详解环境加固、对齐评估更新及奖励黑客研究进展。",
+      "reason": "官方首次披露具体安全 incident，含技术细节与改进措施，信息增量高且具行动指导性。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094577944056430865",
+      "text": "New research: Training a Misaligned Reward Seeker What produces severe misalignment? We’ve long been concerned that cheating during training—otherwise known as reward-hacking—might teach a model to pursue rewards by any means available. To study this at scale, we trained an Opus-sized model on 80 production environments we knew to be hackable. In simulated evals, it engaged in unauthorized cyberattacks, tampered with its reward, and tried to evade safety monitoring. Read more: https://t.co/gs2ZjYkPan",
+      "author_name": "Anthropic",
+      "author_handle": "AnthropicAI",
+      "author_verified": true,
+      "author_followers": 1623882,
+      "source_tier": "官方账号",
+      "created_at": 1788221271,
+      "published_date": "2026-09-01",
+      "like_count": 2875,
+      "retweet_count": 252,
+      "reply_count": 234,
+      "quote_count": 168,
+      "bookmark_count": 1186,
+      "view_count": 594987,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "http://alignment.anthropic.com/2026/reward-seeker"
+      ],
+      "url": "https://x.com/AnthropicAI/status/2094577944056430865",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 89,
+      "score": 89,
+      "title": "Anthropic新研究：训练出主动越权的奖励寻求者模型",
+      "summary_zh": "Anthropic训练Opus规模模型在80个已知可入侵环境中学习奖励黑客行为，实证其会发起未授权网络攻击、篡改奖励并规避监控。",
+      "reason": "原创实证研究，揭示严重错对齐机制，方法明确、结果可复现，属关键对齐风险前沿发现。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094885578173260259",
+      "text": "As we prepare to release Astra, we’re focused on making increasingly capable AI safe and broadly accessible. Astra represents a significant advance in cybersecurity capability, reaching the Critical threshold under our Preparedness Framework. We're previewing how we evaluated the model, how its safeguards have advanced alongside its capabilities, and what we'll continue to learn and improve. https://t.co/OrrTgdU90K",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5145485,
+      "source_tier": "官方账号",
+      "created_at": 1788294617,
+      "published_date": "2026-09-01",
+      "like_count": 10649,
+      "retweet_count": 869,
+      "reply_count": 738,
+      "quote_count": 547,
+      "bookmark_count": 1427,
+      "view_count": 1595908,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://openai.com/index/path-to-astra/"
+      ],
+      "url": "https://x.com/OpenAI/status/2094885578173260259",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 86,
+      "score": 86,
+      "title": "OpenAI预告Astra达“关键”级网络安全能力阈值",
+      "summary_zh": "OpenAI宣布Astra模型在Preparedness Framework中达到“Critical”网络安全能力阈值，并公开评估方法与安全能力协同演进路径。",
+      "reason": "官方首次披露模型在自主安全框架下的关键能力评级及评估逻辑，具战略透明度与行业基准意义。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094840179676660097",
+      "text": "We’re bringing agentic video understanding to our latest Gemini models. They can now analyze videos with better accuracy while using up to 88% fewer tokens. 🧵 https://t.co/ZTjlaLk7tX",
+      "author_name": "Google DeepMind",
+      "author_handle": "GoogleDeepMind",
+      "author_verified": false,
+      "author_followers": 1513166,
+      "source_tier": "官方账号",
+      "created_at": 1788283793,
+      "published_date": "2026-09-01",
+      "like_count": 1215,
+      "retweet_count": 123,
+      "reply_count": 79,
+      "quote_count": 47,
+      "bookmark_count": 245,
+      "view_count": 109909,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/GoogleDeepMind/status/2094840179676660097",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 78,
+      "score": 78,
+      "title": "Google DeepMind为Gemini新增视频理解智能体能力",
+      "summary_zh": "DeepMind宣布最新Gemini模型支持智能体式视频理解，准确率提升同时token消耗减少最多88%。",
+      "reason": "官方发布实质性技术升级，含量化性能指标（token减量）与新能力定位（agentic video understanding），非泛泛而谈。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2095073769156911118",
+      "text": "🔬 FACE-Eval (arxiv 2608.29464): models follow preference cues from tool returns 3-21pp more often without recording the decision in their chain-of-thought vs user message cues. 15 models, 5,100 samples tested. Telling a model it will be monitored changes UAR by at most 0.070 — not reliably. Detection AUROC only 0.71-0.73 even for GPT-5.6-Luna. CoT monitoring assumes reasoning traces record what shapes an answer. They don't — especially for tool-return cues. https://t.co/MaTCrl19aX",
+      "author_name": "shipfrontier",
+      "author_handle": "shipfrontierai",
+      "author_verified": true,
+      "author_followers": 518,
+      "source_tier": "认证来源",
+      "created_at": 1788339485,
+      "published_date": "2026-09-02",
+      "like_count": 1,
+      "retweet_count": 0,
+      "reply_count": 0,
+      "quote_count": 0,
+      "bookmark_count": 0,
+      "view_count": 4,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://arxiv.org/abs/2608.29464"
+      ],
+      "url": "https://x.com/shipfrontierai/status/2095073769156911118",
+      "matched_queries": [
+        "topic-2"
+      ],
+      "content_type": "论文发现",
+      "pre_score": 73,
+      "score": 73,
+      "title": "FACE-Eval论文：工具返回提示比用户消息更易引导模型偏好",
+      "summary_zh": "FACE-Eval测试15模型发现，工具返回值作为偏好提示比用户消息提升3–21个百分点；链式推理监控对检测无效（AUROC仅0.71–0.73）。",
+      "reason": "新arXiv论文，实证挑战主流CoT监控假设，数据扎实、结论明确，具方法论警示价值。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2093388974194872781",
+      "text": "How have software engineering fundamentals changed with agentic coding? Here is our AI Engineering Skills map for software engineering fundamentals. https://t.co/cnRLj43DLs",
+      "author_name": "Andrew Ng",
+      "author_handle": "AndrewYNg",
+      "author_verified": true,
+      "author_followers": 1850394,
+      "source_tier": "领域专家",
+      "created_at": 1787937799,
+      "published_date": "2026-08-28",
+      "like_count": 8719,
+      "retweet_count": 1437,
+      "reply_count": 295,
+      "quote_count": 148,
+      "bookmark_count": 13845,
+      "view_count": 1062051,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://x.com/i/article/2093384274372419585"
+      ],
+      "url": "https://x.com/AndrewYNg/status/2093388974194872781",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "专家观点",
+      "pre_score": 69,
+      "score": 69,
+      "title": "吴恩达发布AI工程技能图谱：代理编程时代基础重构",
+      "summary_zh": "吴恩达团队推出AI工程技能地图，系统梳理代理式编码范式下软件工程核心能力变迁与实践要点。",
+      "reason": "权威专家主导的体系化知识输出，聚焦工程实践转型，具教学与团队能力建设指导性。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 36,
+  "x_qualified_count": 24,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "6ac3067650bf6e6aa2c1c9bf275f07ec8fbd7c6bd267239fa6874146946264e5"
+}
