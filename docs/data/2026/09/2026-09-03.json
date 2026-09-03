@@ -1,0 +1,627 @@
+{
+  "version": 2,
+  "date": "2026-09-03",
+  "arxiv_query_date": "2026-09-02",
+  "arxiv_reused_latest": false,
+  "generated_at": "2026-09-03T09:21:42.885216+00:00",
+  "source": "arxiv-api",
+  "source_url": "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202609020000+TO+202609022359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending",
+  "source_urls": [
+    "https://export.arxiv.org/api/query?search_query=%28cat%3Acs.CL+OR+cat%3Acs.LG+OR+cat%3Acs.CV+OR+cat%3Acs.AI%29+AND+submittedDate%3A%5B202609020000+TO+202609022359%5D&start=0&max_results=1000&sortBy=submittedDate&sortOrder=descending"
+  ],
+  "query_window_utc": [
+    "2026-09-02T00:00:00Z",
+    "2026-09-02T23:59:59Z"
+  ],
+  "raw_candidate_count": 301,
+  "llm_candidate_count": 36,
+  "focus": [
+    {
+      "id": "2609.02817",
+      "title": "Cliff: Learning Process Rewards from the First Mistake",
+      "authors": [
+        "Peixuan Han",
+        "Runhui Wang",
+        "Ketan Ramaneti",
+        "Jie Hao",
+        "Gerald Friedland",
+        "Chris Kong"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guidance on intermediate reasoning processes. Existing approaches such as process reward modeling and on-policy distillation introduce additional constraints, such as reliance on a specialized reward model or assuming identical reasoning patterns between teacher and student. Nevertheless, we observe that once a reasoning process first goes wrong, evaluating the subsequent reasoning provides limited additional information, as it is already conditioned on an invalid prefix. Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout. As a result, the rollout is naturally decomposed into two parts: a correct prefix and an incorrect suffix. Cliff then converts this signal into token-level advantages, assigning positive advantages for the correct prefix and negative feedback afterward. Experiments across 12 different scenarios demonstrate that Cliff consistently improves reasoning performance, outperforming on-policy distillation by 15% and standard GRPO by 7%, even with teachers of modest capability. Furthermore, we analyse the role of ``ground truth'' in Cliff and investigate its training dynamics. These results establish Cliff as a simple, general and effective approach for improving RLVR with richer, fine-grained supervision.",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-09-02T17:03:42Z",
+      "updated": "2026-09-02T17:03:42Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.02817v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02817v1",
+      "rank": 20,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Reward, Verification and Evaluation",
+      "focus_reasons": [
+        "reward model / process reward / preference learning"
+      ],
+      "explore_score": 11.2189,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": 10,
+      "reason": "Cliff提供细粒度过程奖励，直接强化RLVR范式",
+      "one_liner": "提出Cliff奖励塑形策略，利用LLM教师定位首个错误点，实现token级正负优势分配",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.02094",
+      "title": "MASkills: Continual Skills Optimization for Multi-Agent LLM Systems",
+      "authors": [
+        "Huaiyuan Yao",
+        "Xiaoou Liu",
+        "Charles Fleming",
+        "Tianlong Chen",
+        "Hua Wei"
+      ],
+      "abstract": "LLM-based multi-agent systems have shown strong performance on complex tasks, yet continual improvement from interaction experience remains challenging. Existing self-reflection methods build experience memories, but memories are mostly hard to invoke, refine, or scale, while agent skills offer a more actionable unit: structured procedural knowledge that specifies when to act, how to act, and which resources or tools to use. We introduce MASkills, a continual learning framework that optimizes multi-agent LLM systems through agent skills. MASkills presents a new agent-optimization pipeline that integrates skill-conditioned credit assignment, hierarchical credit aggregation, and momentum-smoothed optimization, enabling agent skill libraries to evolve through refinement, induction, consolidation, and pruning. Experiments on HotpotQA, LoCoMo, and GAIA demonstrate the effectiveness of MASkills across multiple agentic tasks. Our code is available at https://github.com/DaRL-GenAI/MASkills",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-09-02T04:34:17Z",
+      "updated": "2026-09-02T04:34:17Z",
+      "comment": "14 pages, 4 figures",
+      "url": "https://arxiv.org/abs/2609.02094v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02094v1",
+      "rank": 250,
+      "metadata_source": "arxiv-api",
+      "focus_score": 8.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "agent skill / skill library / skill discovery",
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.2903,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "focus",
+      "llm_score": 9,
+      "reason": "MASkills聚焦多智能体系统技能的持续优化与演化",
+      "one_liner": "提出MASkills框架，通过技能条件信用分配与动量平滑优化，实现多智能体LLM系统的技能库持续演进",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.02750",
+      "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+      "authors": [
+        "Yihang Chen",
+        "Yuxiang Chen",
+        "Yuxuan Huang",
+        "Meng Fang",
+        "Weilin Luo",
+        "Jun Wang"
+      ],
+      "abstract": "Multi-agent LLM systems commonly use an orchestrator to decompose a task for a team of workers and then improve through textual reflection. Despite strong empirical results, these systems lack a unified account of coordination, memory improvement, and the role of external verification. We model orchestrator-worker interaction as a bilevel coordination game: under bounded coupling, the workers' local-update game is an approximate potential game whose equilibrium slack is controlled by decomposition quality. We then analyse reflection as stochastic movement over semantic memory states. For free-form reflection, we derive a finite-time upper bound, prove worst-case tightness, and give a positive lower bound under a falsifiable persistent-harm condition. We further prove an information-theoretic impossibility result: no gate that observes only the generated transcript can improve uniformly over text-indistinguishable environments, whereas an environment-grounded gate can. Motivated by this separation, we introduce Stochastic Reflective Memory Ascent (SRMA), which accepts a candidate memory only after a grounded evaluation risk strictly decreases. Under calibration and non-degenerate corrective mass, SRMA converges exactly, geometrically or polynomially; matching constructions show that both rate regimes are order-tight. We also provide confidence gating for stochastic evaluation and re-anchoring guarantees for piecewise-stationary environments. Experiments instantiate these objects with environment-grounded metrics and test the predicted coordination and drift laws. On 500 SWE-bench instances, the complete Kimi-based system resolves 72.2% versus a 70.8% public mini-SWE-agent reference. Code: https://github.com/YihangChen9/Bilevel-Coordinated-Reflection",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-09-02T15:50:10Z",
+      "updated": "2026-09-02T15:50:10Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.02750v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02750v1",
+      "rank": 39,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 11.8857,
+      "explore_reasons": [
+        "daily-corpus novelty"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Multi-agent LLM systems commonly use an orchestrator to decompose a task for a team of workers and then improve through textual reflection. Despite strong empirical results, these systems lack a unified account of coordi…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2609.02191",
+      "title": "Examining the Vulnerability of Multi-Agent Medical Systems to Human Interventions for Clinical Reasoning",
+      "authors": [
+        "Benjamin C Liu",
+        "Dillon Mehta",
+        "Rishi Malhotra",
+        "Adam Zobian",
+        "Yong Ying Tan",
+        "Samir Chopra",
+        "Daniella Rand",
+        "Natalie Pang",
+        "Abhiram Gudimella",
+        "Kevin Zhu"
+      ],
+      "abstract": "Human interventions at fault points can alter the diagnostic accuracy of multi-agent medical systems. We defined fault points as moments in AI agent conversations, in which an agent's reasoning became most vulnerable to external influence. Using the MedQA dataset, this study analyzed simulated doctor-patient conversations to measure how interventions shifted reasoning and accuracy. Correct intervention methods showed an improvement in baseline diagnostic accuracy of up to 40%, while incorrect or bias-related interventions degraded performance by up to 6% and increased diagnostic drift and uncertainty. Beyond performance changes, our analysis revealed behavioral similarities between cognitive biases in simulated agent environments and real-world clinical practice. Examples included premature closure and susceptibility to misleading cues. Overall, these findings demonstrate that identifying and guiding fault points with human interventions may provide a mechanism for improving diagnostic robustness in multi-agent medical systems.",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-09-02T06:54:44Z",
+      "updated": "2026-09-02T06:54:44Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.02191v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02191v1",
+      "rank": 211,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 9.0277,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "empirical/release signal"
+      ],
+      "lane": "focus",
+      "llm_score": null,
+      "one_liner": "Human interventions at fault points can alter the diagnostic accuracy of multi-agent medical systems. We defined fault points as moments in AI agent conversations, in which an agent's reasoning became most vulnerable to…",
+      "reason": "multi-agent / agentic system / autonomous agent",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "explore": [
+    {
+      "id": "2609.02649",
+      "title": "Loom: Weaving Diagnostic Strands into Free-Text Consensus via Embedding-Space Reweighting",
+      "authors": [
+        "Ron Begleiter",
+        "Katya Egert Berg",
+        "Gilad Saban",
+        "Gil Shabat"
+      ],
+      "abstract": "Aggregating noisy, conflicting textual hypotheses into a reliable consensus is a fundamental challenge when deploying NLP systems in real-world industrial settings. While monolithic Large Language Model (LLM) agents offer unbounded expressivity for tasks like Root Cause Analysis (RCA), they suffer from context limits, compounding hallucinations, and prohibitive inference latency. Traditional weak supervision offers statistical rigor but is mathematically restricted to discrete classes. We present Loom, a generative consensus framework deployed for real-world RCA that bridges these paradigms. Loom aggregates open-form hypotheses emitted by modular heuristics (diagnostic templates dynamically populated with episode-specific entities, times, and metrics) by projecting them into a continuous embedding space, and resolves conflicting signals with an iterative centroid-based reweighting algorithm. The resulting consensus weights ground a single lightweight LLM synthesis step. Evaluated on the OpenRCA benchmark, Loom occupies the accuracy--efficiency Pareto frontier: it matches a state-of-the-art autonomous agent on Bank and Market-2 and trails on Market-1 and Telecom, while using a single LLM call per incident on all four datasets ($\\sim$26$\\times$ faster; $\\sim$33$\\times$ with an 8B-parameter synthesizer). We discuss our deployment experience, highlighting lessons learned regarding the trade-offs between agentic depth and inference latency, negative results in redundancy detection, and how deterministic consensus fosters trust among Subject Matter Experts~(SMEs).",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-09-02T14:24:32Z",
+      "updated": "2026-09-02T14:24:32Z",
+      "comment": "Accepted to EMNLP 2026",
+      "url": "https://arxiv.org/abs/2609.02649v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02649v1",
+      "rank": 71,
+      "metadata_source": "arxiv-api",
+      "focus_score": 2.7,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 13.3319,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 10,
+      "reason": "Loom首创嵌入空间重加权共识机制，兼顾准确性与工业级效率",
+      "one_liner": "提出Loom生成式共识框架，通过嵌入空间迭代质心重加权，以单次LLM调用达成高精度根因分析",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.02264",
+      "title": "Codebook Agent: Amortized Topology Design for LLM Multi-Agent Systems",
+      "authors": [
+        "Jinxi Yu",
+        "Yubei Li",
+        "Eric Hanchen Jiang",
+        "Zhi Zhang",
+        "Dong Liu",
+        "Wenxiao Zhao",
+        "Levina Li",
+        "Kai-Wei Chang",
+        "Ying Nian Wu"
+      ],
+      "abstract": "Adapting the communication topology of an LLM multi-agent system to each query improves both accuracy and efficiency, yet current designers treat this as conditional graph generation: a variational, autoregressive, or diffusion decoder searches the $N \\times N$ adjacency space, and a graph-network proxy trained on utility and a structural cost such as edge count ranks the sampled candidates. We argue that this formulation is misaligned with the problem. Empirically, topologies that survive a reward filter collapse to about six distinct graphs even when the codebook capacity grows from 8 to 64; edge count is negatively correlated with measured token consumption (Pearson $r \\approx -0.4$), so sparsifying the graph makes inference more expensive; and a message-passing scorer over agent-profile nodes is adjacency-invariant whenever agents share a profile---the default configuration of published benchmarks---so it cannot rank candidates at all in that regime. These three facts motivate Codebook Agent: a vector-quantized autoencoder compresses successful topologies into a query-independent 16-entry codebook; a reward-weighted MLP maps the query embedding to a distribution over codes; and an MLP proxy that reads the flattened adjacency, regressed on measured utility and per-task normalized token cost, reranks the top decoded candidates in a single batched forward pass. With no iterative search and no message passing at test time, Codebook Agent is the most accurate method on all six benchmarks we compare (84.6 average against 83.0 for the strongest prior designer), emits a topology in 2.4 ms, and uses 21.9--33.2% fewer LLM tokens.",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-09-02T08:10:22Z",
+      "updated": "2026-09-02T08:10:22Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.02264v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02264v1",
+      "rank": 182,
+      "metadata_source": "arxiv-api",
+      "focus_score": 6.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [
+        "multi-agent / agentic system / autonomous agent"
+      ],
+      "explore_score": 10.2267,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": 9,
+      "reason": "Codebook Agent用向量量化替代图生成，实现高效拓扑设计",
+      "one_liner": "提出Codebook Agent，将通信拓扑压缩为16项码本，实现毫秒级查询自适应拓扑生成",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2609.02833",
+      "title": "Learning Spectral-Like Mesh-Free Discretisations",
+      "authors": [
+        "Lucas Gerken Starepravo",
+        "Henry Broadley",
+        "Steven Lind",
+        "Jack R. C. King"
+      ],
+      "abstract": "Meshfree methods such as smoothed particle hydrodynamics (SPH) with kernel corrections, radial basis function-generated finite differences (RBF-FD), and the local anisotropic basis function method (LABFM) construct discrete differential operators by imposing polynomial consistency on a local stencil. For stencils containing more nodes than there are consistency constraints, the resulting linear system is underdetermined, and the remaining degrees of freedom are fixed implicitly by the choice of kernel, basis preconditioning, or a minimum-norm condition. Polynomial consistency constrains the operator only in the low-wavenumber limit, and no part of the construction selects for accuracy at the wavenumbers where fine-scale content resides. We introduce Spectral-like Neural Discretisation (SpeND), in which the choice of those degrees of freedom is cast as a learning problem: stencil weights are parametrised by a neural network conditioned on the local node geometry, trained to approximate the modal response of a spectral operator over the resolvable band. A hard-constrained projection layer maps the network output onto the affine subspace of consistent weights, so that polynomial consistency holds exactly by construction rather than as a penalty. Training is self-supervised and physics-agnostic, requiring no reference solutions; the objective minimises dispersion and dissipation error over a prescribed band-limited function space. Modal analysis on disordered two-dimensional node distributions shows that the learned fourth-order operator follows the exact response over a substantially wider band than either explicit LABFM at equal stencil size or fourth-order finite differences on a structured grid, whilst recovering the expected fourth-order convergence rate under refinement.",
+      "categories": [
+        "physics.comp-ph",
+        "cs.LG"
+      ],
+      "primary_category": "physics.comp-ph",
+      "published": "2026-09-02T17:16:16Z",
+      "updated": "2026-09-02T17:16:16Z",
+      "comment": "",
+      "url": "https://arxiv.org/abs/2609.02833v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02833v1",
+      "rank": 17,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Agent Capabilities and Skills",
+      "focus_reasons": [],
+      "explore_score": 14.5949,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Meshfree methods such as smoothed particle hydrodynamics (SPH) with kernel corrections, radial basis function-generated finite differences (RBF-FD), and the local anisotropic basis function method (LABFM) construct discr…",
+      "reason": "daily-corpus novelty; cross-category",
+      "ranking_source": "deterministic-fallback"
+    },
+    {
+      "id": "2609.02391",
+      "title": "PolERo: Studying Political Evasion in Romanian",
+      "authors": [
+        "Gabriel Stefan",
+        "Sergiu Nisioi"
+      ],
+      "abstract": "Political evasion refers to responses that engage with a question while withholding the requested information. Recent NLP work frames political evasion as a classification task using a two-level taxonomy of response clarity and fine-grained evasion strategies. Existing work on response clarity and evasion classification is limited to English, leaving open whether the taxonomy and model behavior transfer across languages and political contexts. We introduce PolERo, a dataset of 3,574 human-annotated question-answer pairs extracted from official transcripts of five Romanian presidents. We evaluate multiple classification approaches on both datasets under matched conditions, including TF-IDF baselines, fine-tuned encoder models, a proposed sliding-window encoder, and zero/few-shot LLM prompting. We study cross-lingual transfer through joint bilingual training and machine-translation-based data augmentation. Our results indicate that fine-tuned encoders are competitive, cross-lingual transfer is asymmetric, and ambivalent evasion categories involving pragmatic cues remain the main challenge across all model families.",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-09-02T10:02:57Z",
+      "updated": "2026-09-02T10:02:57Z",
+      "comment": "Accepted to EMNLP 2026 Main Conference",
+      "url": "https://arxiv.org/abs/2609.02391v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02391v1",
+      "rank": 134,
+      "metadata_source": "arxiv-api",
+      "focus_score": 0.5,
+      "focus_profile": "Affective Reasoning",
+      "focus_reasons": [],
+      "explore_score": 14.0053,
+      "explore_reasons": [
+        "daily-corpus novelty",
+        "cross-category",
+        "empirical/release signal"
+      ],
+      "lane": "explore",
+      "llm_score": null,
+      "one_liner": "Political evasion refers to responses that engage with a question while withholding the requested information. Recent NLP work frames political evasion as a classification task using a two-level taxonomy of response clar…",
+      "reason": "daily-corpus novelty; cross-category; empirical/release signal",
+      "ranking_source": "deterministic-fallback"
+    }
+  ],
+  "xhs": [],
+  "xhs_candidate_count": 0,
+  "xhs_status": "empty-or-cookie-expired",
+  "bilibili": [
+    {
+      "id": "BV1fJ8v63Etp",
+      "bvid": "BV1fJ8v63Etp",
+      "title": "【人物访谈】前谷歌首席科学家杰夫·迪恩（Jeff Dean）：AI驱动科学发现 | 告别谷歌27年，首度公开演讲",
+      "description": "视频原链接：https://www.youtube.com/watch?v=0kC3xOZChdA\n原视频发布时间：2026-08-18 21:34\nJeff Dean离开谷歌后的首次公开亮相，在斯坦福大学的 Frontier & Pioneer Symposium 上，与UC Berkeley教授Dawn Song进行了一场深度对谈。这位谷歌前首席科学家回顾了自己27年的职业生涯，从早期的基础计算设施、TensorFlow到Gemini的演进，并首次公开分享了他离开谷歌后的新方向——创办Discover",
+      "author": "KrillinAI俊希",
+      "duration": "48:56",
+      "published_at": 1787552208,
+      "view_count": 1189,
+      "danmaku_count": 1,
+      "cover_url": "https://i1.hdslb.com/bfs/archive/e294865818b11b00df5714edbb2cc6da903e6705.jpg",
+      "url": "https://www.bilibili.com/video/BV1fJ8v63Etp",
+      "matched_keywords": [
+        "人工智能 技术演讲"
+      ],
+      "content_type": "深度访谈",
+      "pre_score": 52,
+      "like_count": 25,
+      "favorite_count": 44,
+      "score": 78,
+      "summary_zh": "前谷歌首席科学家Jeff Dean离开谷歌后首度公开演讲，回顾TensorFlow到Gemini演进，并介绍新创公司Discover。",
+      "reason": "权威人物、真实会议录播、高信息密度、技术演进脉络清晰、内容新鲜可信。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "BV1xUtR6KEjz",
+      "bvid": "BV1xUtR6KEjz",
+      "title": "完整访谈：Anthropic的Tom Brown在G20讨论AI的爆炸性增长、AGI与医疗影响 | AI1G",
+      "description": "美国商务部长霍华德·卢特尼克在G20创新部长级会议上与Anthropic联合创始人兼首席计算官汤姆·布朗进行了一场炉边对话。布朗预测，人工智能将推动科学快速进步，他敦促各国建设数据中心，并表示先进的AI模型可以帮助攻克癌症等疾病，同时加速全球经济增长。\n\n“我们可以在治愈癌症方面取得重大突破”：Anthropic的汤姆·布朗在G20发言\n\n我们将低估AI的影响”：Anthropic联合创始人做出大胆预测\n\n霍华德·卢特尼克与Anthropic的汤姆·布朗在G20讨论AI的爆炸性增长",
+      "author": "硅谷神奇",
+      "duration": "29:6",
+      "published_at": 1788420328,
+      "view_count": 18,
+      "danmaku_count": 0,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/e2f6c5526fba4208fa55897871d213580b43b69b.jpg",
+      "url": "https://www.bilibili.com/video/BV1xUtR6KEjz",
+      "matched_keywords": [
+        "AI 访谈"
+      ],
+      "content_type": "深度访谈",
+      "pre_score": 52,
+      "like_count": 2,
+      "favorite_count": 2,
+      "score": 72,
+      "summary_zh": "Anthropic联合创始人Tom Brown在G20就AI爆炸性增长、AGI进展与医疗影响发表政策级访谈。",
+      "reason": "国际多边场合实录、聚焦AI科学影响与基础设施建设、主题重大且具实践导向。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "BV1964R6mEfQ",
+      "bvid": "BV1964R6mEfQ",
+      "title": "视频流可以无限生成，也可以中途随时改。｜InfinityEdit 论文解读",
+      "description": "轻量 Adapter 把编辑请求注入连续视频流，同时保留原模型的无限生成能力。\n\n论文：InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter\narXiv：2608.20910\n来源：Hugging Face Daily Papers 2026-08-24\n\n#AI #论文解读 #大模型",
+      "author": "学习型零六",
+      "duration": "5:5",
+      "published_at": 1788256800,
+      "view_count": 117,
+      "danmaku_count": 0,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/72c4804d684870ba1bc7cc92f65b3116e229e90e.png",
+      "url": "https://www.bilibili.com/video/BV1964R6mEfQ",
+      "matched_keywords": [
+        "论文解读 大模型"
+      ],
+      "content_type": "论文解读",
+      "pre_score": 51,
+      "like_count": 0,
+      "favorite_count": 0,
+      "score": 68,
+      "summary_zh": "解读InfinityEdit论文：轻量Adapter实现连续视频流的无限生成与实时编辑能力。",
+      "reason": "前沿视频生成方向、方法明确、arXiv新论文、技术细节可验证、工程价值清晰。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "BV11atU6XEU9",
+      "bvid": "BV11atU6XEU9",
+      "title": "OPD 是骗局？教师信号全是噪声，去掉教师效果反而更好｜OPSA 新方法",
+      "description": "论文、博客、代码、译文 链接：https://pan.quark.cn/s/38c973a1bfef",
+      "author": "每日Arxiv",
+      "duration": "5:25",
+      "published_at": 1788351846,
+      "view_count": 237,
+      "danmaku_count": 0,
+      "cover_url": "https://i2.hdslb.com/bfs/archive/e7a70d9522760faf09ebd4d79b329bb139ed60f3.jpg",
+      "url": "https://www.bilibili.com/video/BV11atU6XEU9",
+      "matched_keywords": [
+        "论文解读 大模型"
+      ],
+      "content_type": "论文解读",
+      "pre_score": 45,
+      "like_count": 6,
+      "favorite_count": 24,
+      "score": 65,
+      "summary_zh": "质疑OPD监督信号有效性的新发现，提出OPSA方法并验证去教师训练更优。",
+      "reason": "批判性工程复盘、挑战主流范式、结论有实证支撑、对训练实践具启发性。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "bilibili_candidate_count": 30,
+  "bilibili_qualified_count": 12,
+  "bilibili_status": "fetched",
+  "bilibili_stats_status": "fetched",
+  "zhihu": [],
+  "zhihu_candidate_count": 0,
+  "zhihu_qualified_count": 0,
+  "zhihu_status": "cookie-expired-or-risk-control",
+  "x": [
+    {
+      "id": "2095175498967949359",
+      "text": "Two new Gemini models are here to help scale your AI agents and secure code: 🔘 3.8 Flash: our most intelligent model yet with significant gains from 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning. 🔘 3.8 Flash Cyber: our most capable cybersecurity model with frontier-level vulnerability detection and automated patching.",
+      "author_name": "Google DeepMind",
+      "author_handle": "GoogleDeepMind",
+      "author_verified": false,
+      "author_followers": 1514576,
+      "source_tier": "官方账号",
+      "created_at": 1788363740,
+      "published_date": "2026-09-02",
+      "like_count": 2121,
+      "retweet_count": 253,
+      "reply_count": 158,
+      "quote_count": 95,
+      "bookmark_count": 212,
+      "view_count": 365392,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/GoogleDeepMind/status/2095175498967949359",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 86,
+      "score": 86,
+      "title": "Google DeepMind发布Gemini 3.8 Flash与3.8 Flash Cyber双模型",
+      "summary_zh": "新增两款Gemini模型：3.8 Flash强化智能体任务与多步推理；3.8 Flash Cyber专注前沿级漏洞检测与自动修复。",
+      "reason": "官方首次发布双模型，明确技术定位与能力跃迁，信息增量高、主题聚焦AI安全与智能体。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094885578173260259",
+      "text": "As we prepare to release Astra, we’re focused on making increasingly capable AI safe and broadly accessible. Astra represents a significant advance in cybersecurity capability, reaching the Critical threshold under our Preparedness Framework. We're previewing how we evaluated the model, how its safeguards have advanced alongside its capabilities, and what we'll continue to learn and improve. https://t.co/OrrTgdU90K",
+      "author_name": "OpenAI",
+      "author_handle": "OpenAI",
+      "author_verified": true,
+      "author_followers": 5149755,
+      "source_tier": "官方账号",
+      "created_at": 1788294617,
+      "published_date": "2026-09-01",
+      "like_count": 12611,
+      "retweet_count": 1020,
+      "reply_count": 925,
+      "quote_count": 664,
+      "bookmark_count": 1722,
+      "view_count": 2477949,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [
+        "https://openai.com/index/path-to-astra/"
+      ],
+      "url": "https://x.com/OpenAI/status/2094885578173260259",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "产品发布",
+      "pre_score": 84,
+      "score": 84,
+      "title": "OpenAI预告Astra模型达“关键”级网络安全能力",
+      "summary_zh": "OpenAI宣布Astra在Preparedness Framework中达到Critical阈值，并公开评估方法与安全演进路径。",
+      "reason": "官方披露模型安全评级框架落地进展，具可验证性与可行动性，非泛泛而谈。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2095226833293685100",
+      "text": "Claude can now use your computer in the background in Claude Cowork and Claude Code. Give it something to do on your desktop and Claude clicks, types, and opens apps just like you would, while you work on something else. https://t.co/AOiup03pQK",
+      "author_name": "Claude",
+      "author_handle": "claudeai",
+      "author_verified": true,
+      "author_followers": 1762415,
+      "source_tier": "官方账号",
+      "created_at": 1788375979,
+      "published_date": "2026-09-02",
+      "like_count": 9343,
+      "retweet_count": 525,
+      "reply_count": 389,
+      "quote_count": 218,
+      "bookmark_count": 2375,
+      "view_count": 873520,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": false,
+      "external_urls": [],
+      "url": "https://x.com/claudeai/status/2095226833293685100",
+      "matched_queries": [
+        "official"
+      ],
+      "content_type": "官方动态",
+      "pre_score": 79,
+      "score": 79,
+      "title": "Claude推出桌面后台自动化功能（Claude Cowork/Code）",
+      "summary_zh": "Claude可在后台模拟用户操作电脑，执行点击、输入、启动应用等任务，支持并行工作流。",
+      "reason": "属实质性产品能力升级，明确技术行为边界（“像你一样操作桌面”），非营销话术。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2095191106665284046",
+      "text": "Introducing Gemini 3.8 Flash, another upgrade in under a month! And the new 3.8 Flash Cyber pushes the frontier of cyber defense. Relentless progress 🚀 More on the models &amp; our cyber security work in the blog - happy building! https://t.co/C5h14qANIV",
+      "author_name": "Demis Hassabis",
+      "author_handle": "demishassabis",
+      "author_verified": true,
+      "author_followers": 1817060,
+      "source_tier": "领域专家",
+      "created_at": 1788367461,
+      "published_date": "2026-09-02",
+      "like_count": 2847,
+      "retweet_count": 176,
+      "reply_count": 159,
+      "quote_count": 17,
+      "bookmark_count": 159,
+      "view_count": 137912,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": true,
+      "external_urls": [
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      ],
+      "url": "https://x.com/demishassabis/status/2095191106665284046",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "专家观点",
+      "pre_score": 77,
+      "score": 77,
+      "title": "Demis Hassabis确认Gemini 3.8 Flash系列进展与网络安全方向",
+      "summary_zh": "DeepMind CEO证实3.8 Flash系列快速迭代，并强调3.8 Flash Cyber推动网络防御前沿，附技术博客链接。",
+      "reason": "权威人物对官方动态的补充阐释，强化可信度与技术意图，含可验证信源。",
+      "ranking_source": "batched-llm"
+    },
+    {
+      "id": "2094840371675283673",
+      "text": "I'm so excited that our @theworldlabs team has achieved a major milestone today! Introducing Atlas - a first of its kind multimodal world model trained from scratch! 🚀 Atlas is capable of generating frames with pixel-perfect camera control, reconstructing large scenes from as few as one single input image, simulating space-time by reframing videos, natively outputting 3D spaces from one or more input images, composing multiple posed images into a consistent 3d world, and more! This is the best camera conditioned world model ever, opening doors to many possible use cases from VFX to robotics. I'm so so so proud of our team!♥️",
+      "author_name": "Fei-Fei Li",
+      "author_handle": "drfeifei",
+      "author_verified": true,
+      "author_followers": 1037807,
+      "source_tier": "领域专家",
+      "created_at": 1788283839,
+      "published_date": "2026-09-01",
+      "like_count": 9324,
+      "retweet_count": 1024,
+      "reply_count": 288,
+      "quote_count": 183,
+      "bookmark_count": 2832,
+      "view_count": 1076374,
+      "lang": "en",
+      "in_reply_to": null,
+      "is_retweet": false,
+      "is_quote": true,
+      "external_urls": [],
+      "url": "https://x.com/drfeifei/status/2094840371675283673",
+      "matched_queries": [
+        "expert"
+      ],
+      "content_type": "专家观点",
+      "pre_score": 75,
+      "score": 75,
+      "title": "Fei-Fei Li团队发布首个从零训练的多模态世界模型Atlas",
+      "summary_zh": "Atlas支持单图重建大场景、像素级相机控制、视频时空模拟及原生3D生成，为世界模型新基准。",
+      "reason": "领域权威宣布原创架构突破，技术指标具体（单图重建、3D原生输出），属研究级增量。",
+      "ranking_source": "batched-llm"
+    }
+  ],
+  "x_candidate_count": 34,
+  "x_qualified_count": 23,
+  "x_status": "fetched",
+  "ranking_source": [
+    "batched-llm",
+    "deterministic-fallback"
+  ],
+  "disclaimer": "发现阶段摘要：仅基于 arXiv 官方元数据、标题和摘要，不等同于论文精读结论。",
+  "schema_version": 1,
+  "content_sha256": "45ceb56e3dbf104956c95436c92962cb5b5ac93a7175cbbf815f273062312704"
+}
